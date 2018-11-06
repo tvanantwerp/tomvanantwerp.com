@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Tom VanAntwerp',
+    description: 'Personal Website of Tom VanAntwerp',
+    keywords: 'Tom VanAntwerp',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

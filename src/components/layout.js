@@ -13,6 +13,8 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            description
+            keywords
           }
         }
       }
@@ -21,7 +23,10 @@ const Layout = ({ children }) => (
       <Fragment>
         <Helmet
           title={data.site.siteMetadata.title}
-          meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
+          meta={[
+            { name: 'description', content: data.site.siteMetadata.description },
+            { name: 'keywords', content: data.site.siteMetadata.keywords },
+          ]}
         >
           <html lang="en" />
         </Helmet>
