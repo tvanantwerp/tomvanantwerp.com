@@ -1,18 +1,28 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
+import Tom from '../images/tom_poly.svg';
+
+const Container = styled.div`
+  align-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 480px;
+`;
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Container>
+      <img src={Tom} style={{ width: '100%' }} />
+    </Container>
   </Layout>
 );
 
