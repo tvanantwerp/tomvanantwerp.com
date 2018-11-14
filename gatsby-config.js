@@ -3,12 +3,12 @@ module.exports = {
     title: 'Tom VanAntwerp',
     description: 'Personal Website of Tom VanAntwerp',
     keywords: 'Tom VanAntwerp',
-    externalLinks: {
-      twitter: { url: 'https://twitter.com/tvanantwerp', icon: 'src/images/social-icons/' },
-      github: { url: 'https://github.com/tvanantwerp', icon: 'src/images/social-icons/' },
-      dribbble: { url: 'https://dribbble.com/tvanantwerp', icon: 'src/images/social-icons/' },
-      linkedin: { url: 'https://linkedin.com/in/tvanantwerp/', icon: 'src/images/social-icons/' },
-    },
+    externalLinks: [
+      { name: 'Twitter', url: 'https://twitter.com/tvanantwerp', icon: 'src/images/social-icons/' },
+      { name: 'Github', url: 'https://github.com/tvanantwerp', icon: 'src/images/social-icons/' },
+      { name: 'Dribbble', url: 'https://dribbble.com/tvanantwerp', icon: 'src/images/social-icons/' },
+      { name: 'LinkedIn', url: 'https://linkedin.com/in/tvanantwerp/', icon: 'src/images/social-icons/' },
+    ],
   },
   plugins: [
     'gatsby-plugin-styled-components',
