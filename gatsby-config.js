@@ -19,13 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'tomvanantwerp.com',
+        short_name: 'tomvanantwerp.com',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#f9ad8a',
+        theme_color: '#f1696f',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/tom_poly.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
