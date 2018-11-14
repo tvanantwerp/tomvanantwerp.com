@@ -4,10 +4,10 @@ module.exports = {
     description: 'Personal Website of Tom VanAntwerp',
     keywords: 'Tom VanAntwerp',
     externalLinks: [
-      { name: 'Twitter', url: 'https://twitter.com/tvanantwerp', icon: 'src/images/social-icons/' },
-      { name: 'Github', url: 'https://github.com/tvanantwerp', icon: 'src/images/social-icons/' },
-      { name: 'Dribbble', url: 'https://dribbble.com/tvanantwerp', icon: 'src/images/social-icons/' },
-      { name: 'LinkedIn', url: 'https://linkedin.com/in/tvanantwerp/', icon: 'src/images/social-icons/' },
+      { name: 'Twitter', url: 'https://twitter.com/tvanantwerp' },
+      { name: 'Github', url: 'https://github.com/tvanantwerp' },
+      { name: 'Dribbble', url: 'https://dribbble.com/tvanantwerp' },
+      { name: 'LinkedIn', url: 'https://linkedin.com/in/tvanantwerp/' },
     ],
   },
   plugins: [
