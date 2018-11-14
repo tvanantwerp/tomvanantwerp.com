@@ -4,7 +4,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
 import './layout.css';
 
 const GlobalStyles = createGlobalStyle`
@@ -16,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
 
 const LayoutContainer = styled.div`
   display: grid;
-  grid-template: 100px 1fr / 1fr;
-  min-height: calc(100vh - 100px);
+  grid-template: 1fr / 1fr;
+  min-height: 100vh;
 `;
 
 const Layout = ({ children }) => (
@@ -46,7 +45,6 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <LayoutContainer>
-          <Header siteTitle={data.site.siteMetadata.title} />
           <div>{children}</div>
         </LayoutContainer>
       </Fragment>

@@ -3,6 +3,12 @@ module.exports = {
     title: 'Tom VanAntwerp',
     description: 'Personal Website of Tom VanAntwerp',
     keywords: 'Tom VanAntwerp',
+    externalLinks: {
+      twitter: { url: 'https://twitter.com/tvanantwerp', icon: 'src/images/social-icons/' },
+      github: { url: 'https://github.com/tvanantwerp', icon: 'src/images/social-icons/' },
+      dribbble: { url: 'https://dribbble.com/tvanantwerp', icon: 'src/images/social-icons/' },
+      linkedin: { url: 'https://linkedin.com/in/tvanantwerp/', icon: 'src/images/social-icons/' },
+    },
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -25,7 +31,7 @@ module.exports = {
         background_color: '#f9ad8a',
         theme_color: '#f1696f',
         display: 'minimal-ui',
-        icon: 'src/images/tom_poly.png', // This path is relative to the root of the site.
+        icon: 'src/images/tom.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
