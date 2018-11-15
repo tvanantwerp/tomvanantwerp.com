@@ -18,32 +18,35 @@ const ListOfLinks = styled.ul`
 `;
 
 const SocialLinks = () => (
-  <ListOfLinks>
-    <StaticQuery
-      query={graphql`
-        query ExternalLinksQuery {
-          site {
-            siteMetadata {
-              externalLinks {
-                name
-                url
-              }
+  <StaticQuery
+    query={graphql`
+      query ExternalLinksQuery {
+        site {
+          siteMetadata {
+            externalLinks {
+              name
+              url
             }
           }
         }
-      `}
-      render={data => {
-        return data.site.siteMetadata.externalLinks.map(link => (
-          <li key={link.name}>
-            <a href={link.url} target="_blank" rel="noopener noreferrer">
-              <img src={withPrefix(`social-icons/${link.name.toLowerCase()}-logo.svg`)} alt={link.name} />
-              {link.name}
-            </a>
-          </li>
-        ));
-      }}
-    />
-  </ListOfLinks>
+      }
+    `}
+    render={data => {
+      const links = data.site.siteMetadata.externalLinks;
+      return (
+        <ListOfLinks style={{ gridTemplateColumns: `repeat(${links.length}, 1fr)` }}>
+          {links.map(({ url, name }) => (
+            <li key={name}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                <img src={withPrefix(`social-icons/${name.toLowerCase()}-logo.svg`)} alt={name} />
+                {name}
+              </a>
+            </li>
+          ))}
+        </ListOfLinks>
+      );
+    }}
+  />
 );
 
 export default SocialLinks;
