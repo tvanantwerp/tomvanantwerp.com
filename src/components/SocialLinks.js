@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { withPrefix, StaticQuery, graphql } from 'gatsby';
 
+import SocialIcons from './SocialIcons';
+
 const ListOfLinks = styled.ul`
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -38,7 +40,7 @@ const SocialLinks = () => (
           {links.map(({ url, name }) => (
             <li key={name}>
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <img src={withPrefix(`social-icons/${name.toLowerCase()}-logo.svg`)} alt={name} />
+                <SocialIcons service={name.toLowerCase()} fill="#fff" />
                 {name}
               </a>
             </li>
