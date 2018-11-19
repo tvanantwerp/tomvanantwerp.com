@@ -18,11 +18,17 @@ const Container = styled.div`
   max-width: 480px;
 `;
 
+const Name = styled.h1`
+  color: #fff;
+  text-align: center;
+`;
+
 const IndexPage = () => {
   return (
     <Layout>
       <Container>
         <img src={Tom} style={{ padding: '1rem', width: '100%' }} />
+        <Name>Tom VanAntwerp</Name>
         <SocialLinks />
       </Container>
     </Layout>
