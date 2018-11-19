@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SVGIconWrapper = props => (
-  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <svg style={props.style} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     {props.children}
   </svg>
 );
@@ -10,7 +10,7 @@ const SocialIcons = props => {
   switch (props.service) {
     case 'twitter':
       return (
-        <SVGIconWrapper>
+        <SVGIconWrapper style={props.style}>
           <title>Twitter icon</title>
           <path
             fill={props.fill || '#1DA1F2'}
@@ -20,7 +20,7 @@ const SocialIcons = props => {
       );
     case 'dribbble':
       return (
-        <SVGIconWrapper>
+        <SVGIconWrapper style={props.style}>
           <title>Dribbble icon</title>
           <path
             fill={props.fill || '#EA4C89'}
@@ -30,7 +30,7 @@ const SocialIcons = props => {
       );
     case 'github':
       return (
-        <SVGIconWrapper>
+        <SVGIconWrapper style={props.style}>
           <title>GitHub icon</title>
           <path
             fill={props.fill || '#181717'}
@@ -40,7 +40,7 @@ const SocialIcons = props => {
       );
     case 'linkedin':
       return (
-        <SVGIconWrapper>
+        <SVGIconWrapper style={props.style}>
           <title>LinkedIn icon</title>
           <path
             fill={props.fill || '#0077B5'}

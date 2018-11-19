@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { withPrefix, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 import SocialIcons from './SocialIcons';
 
@@ -11,6 +11,10 @@ const ListOfLinks = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+
+  li {
+    text-align: center;
+  }
 
   a {
     color: #fff;
@@ -40,8 +44,7 @@ const SocialLinks = () => (
           {links.map(({ url, name }) => (
             <li key={name}>
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <SocialIcons service={name.toLowerCase()} fill="#fff" />
-                {name}
+                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ maxWidth: '2rem' }} />
               </a>
             </li>
           ))}
