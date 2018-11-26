@@ -1,3 +1,3 @@
-https://tomvanantwerp.com/alea http://tvanantwerp.github.io/alea 301!
-https://tomvanantwerp.com/ld36 http://tvanantwerp.github.io/ld36 301!
+/alea http://tvanantwerp-alea.netlify.com/alea 200
+/ld36 http://tvanantwerp-ld36.netlify.com/ld36 200
 https://tomvanantwerp.netlify.com/* https://tomvanantwerp.com/:splat 301!
