@@ -1,6 +1,3 @@
-
-/alea https://tvanantwerp-alea.netlify.com 200
-/alea/* https://tvanantwerp-alea.netlify.com/:splat 200
-/ld36 https://tvanantwerp-ld36.netlify.com 200
+/alea https://alea.tomvanantwerp.com 301
 /ld36/* https://tvanantwerp-ld36.netlify.com/:splat 200
 https://tomvanantwerp.netlify.com/* https://tomvanantwerp.com/:splat 301!
