@@ -29,7 +29,7 @@ const Name = styled.h1`
 const Description = styled.div`
   border-top: 1px solid #fff;
   margin: 1rem;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   text-align: justify;
 `;
 
@@ -40,10 +40,7 @@ const IndexPage = () => {
         <img src={Tom} style={{ padding: '1rem', width: '100%' }} />
         <Name>Tom VanAntwerp</Name>
         <Description>
-          <p style={{ padding: '0 1rem' }}>
-            A comprehensive meat-based solution for converting water, food, and oxygen into code. Pre-order now for
-            exclusive collector's edition wearing silly socks.
-          </p>
+          <p style={{ textAlign: 'center' }}>Web Development / Design / IT</p>
           <SocialLinks />
         </Description>
       </Container>
