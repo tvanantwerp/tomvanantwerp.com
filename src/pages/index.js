@@ -40,7 +40,7 @@ const IndexPage = () => {
         <img src={Tom} style={{ padding: '1rem', width: '100%' }} />
         <Name>Tom VanAntwerp</Name>
         <Description>
-          <p style={{ textAlign: 'center' }}>Web Development / Design / IT</p>
+          <p style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
           <SocialLinks />
         </Description>
       </Container>

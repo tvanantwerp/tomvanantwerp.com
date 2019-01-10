@@ -7,7 +7,7 @@ import SocialIcons from './SocialIcons';
 const ListOfLinks = styled.ul`
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 3rem;
+  grid-gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -45,7 +45,7 @@ const SocialLinks = () => (
           {links.map(({ url, name }) => (
             <li key={name}>
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ maxWidth: '2rem' }} />
+                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ maxWidth: '1.2rem' }} />
               </a>
             </li>
           ))}
