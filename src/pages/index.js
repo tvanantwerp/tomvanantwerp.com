@@ -22,14 +22,12 @@ const Name = styled.h1`
   color: #fff;
   font-size: 3rem;
   line-height: 1;
-  margin-bottom: 0;
   text-align: center;
 `;
 
 const Description = styled.div`
-  border-top: 1px solid #fff;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0 1rem;
+  padding: 0 1rem;
   text-align: justify;
 `;
 
@@ -39,6 +37,7 @@ const IndexPage = () => {
       <Container>
         <img src={Tom} style={{ padding: '1rem', width: '100%' }} />
         <Name>Tom VanAntwerp</Name>
+        <hr />
         <Description>
           <p style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
           <SocialLinks />
