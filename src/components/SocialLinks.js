@@ -13,6 +13,7 @@ const ListOfLinks = styled.ul`
   padding: 0;
 
   li {
+    margin: 0;
     text-align: center;
   }
 
