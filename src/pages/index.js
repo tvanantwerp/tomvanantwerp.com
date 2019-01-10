@@ -22,8 +22,15 @@ const Name = styled.h1`
   color: #fff;
   font-size: 3rem;
   line-height: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   text-align: center;
+`;
+
+const Description = styled.div`
+  border-top: 1px solid #fff;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  text-align: justify;
 `;
 
 const IndexPage = () => {
@@ -32,13 +39,13 @@ const IndexPage = () => {
       <Container>
         <img src={Tom} style={{ padding: '1rem', width: '100%' }} />
         <Name>Tom VanAntwerp</Name>
-        <div style={{ border: '1px solid #fff', margin: '1rem', padding: '1rem' }}>
+        <Description>
           <p style={{ padding: '0 1rem' }}>
             A comprehensive meat-based solution for converting water, food, and oxygen into code. Pre-order now for
             exclusive collector's edition wearing silly socks.
           </p>
           <SocialLinks />
-        </div>
+        </Description>
       </Container>
     </Layout>
   );
