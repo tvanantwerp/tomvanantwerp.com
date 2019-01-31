@@ -8,6 +8,7 @@ module.exports = {
       { name: 'Github', url: 'https://github.com/tvanantwerp' },
       { name: 'Dribbble', url: 'https://dribbble.com/tvanantwerp' },
       { name: 'LinkedIn', url: 'https://linkedin.com/in/tvanantwerp/' },
+      { name: 'dev.to', url: 'https://dev.to/tvanantwerp' },
     ],
   },
   plugins: [
