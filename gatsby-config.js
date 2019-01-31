@@ -8,11 +8,20 @@ module.exports = {
       { name: 'Github', url: 'https://github.com/tvanantwerp' },
       { name: 'Dribbble', url: 'https://dribbble.com/tvanantwerp' },
       { name: 'LinkedIn', url: 'https://linkedin.com/in/tvanantwerp/' },
+      { name: 'dev.to', url: 'https://dev.to/tvanantwerp' },
     ],
   },
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Fira Sans:400,400i,700'],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,6 +43,14 @@ module.exports = {
         icon: 'src/images/tom.png', // This path is relative to the root of the site.
       },
     },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'content',
+    //     path: `${__dirname}/src/content`,
+    //   },
+    // },
+    // 'gatsby-transformer-remark',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
