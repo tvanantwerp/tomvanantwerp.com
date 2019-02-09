@@ -2,19 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-
-const Heading = styled.h1`
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 2rem;
-  text-align: center;
-
-  @media screen and (min-width: 760px) {
-    font-size: 3rem;
-  }
-`;
+import { Heading1 } from '../components/Headings';
 
 const StyledLink = styled(Link)`
   background-color: #fff;
@@ -30,7 +18,7 @@ const StyledLink = styled(Link)`
 const NotFoundPage = () => (
   <Layout>
     <div style={{ alignSelf: 'center', textAlign: 'center' }}>
-      <Heading>¯\_(ツ)_/¯</Heading>
+      <Heading1 style={{ marginBottom: '1rem' }}>¯\_(ツ)_/¯</Heading1>
       <p>Sorry, no idea what you're looking for.</p>
       <StyledLink to="/">Best go home, now.</StyledLink>
     </div>

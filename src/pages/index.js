@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
+import { Heading1 } from '../components/Headings';
 import Tom from '../images/tom.svg';
 import SocialLinks from '../components/SocialLinks';
 
@@ -14,18 +15,6 @@ const Container = styled.div`
   place-items: center;
   margin: 0 auto;
   max-width: 480px;
-`;
-
-const Name = styled.h1`
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-
-  @media screen and (min-width: 760px) {
-    font-size: 3rem;
-  }
 `;
 
 const HR = styled.hr`
@@ -51,7 +40,7 @@ const IndexPage = () => {
     <Layout>
       <Container>
         <img src={Tom} style={{ width: '100%' }} />
-        <Name>Tom VanAntwerp</Name>
+        <Heading1>Tom VanAntwerp</Heading1>
         <HR />
         <Description>
           <p style={{ marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
