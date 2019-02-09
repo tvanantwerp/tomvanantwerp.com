@@ -3,8 +3,10 @@ import Layout from '../components/layout';
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div style={{ alignSelf: 'center', textAlign: 'center' }}>
+      <h1>¯\_(ツ)_/¯</h1>
+      <p>Sorry, no idea what you're looking for.</p>
+    </div>
   </Layout>
 );
 
