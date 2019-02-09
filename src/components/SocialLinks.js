@@ -5,21 +5,22 @@ import { StaticQuery, graphql } from 'gatsby';
 import SocialIcons from './SocialIcons';
 
 const ListOfLinks = styled.ul`
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin: 1rem 0 0;
   padding: 0;
+  text-align: center;
 
   li {
-    margin: 0;
+    display: inline-block;
+    margin: 0 4px;
     text-align: center;
   }
 
   a {
     color: #fff;
+    display: block;
     font-family: sans-serif;
+    padding: 12px;
     text-decoration: none;
   }
 `;
@@ -45,7 +46,7 @@ const SocialLinks = () => (
           {links.map(({ url, name }) => (
             <li key={name}>
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ maxWidth: '1.2rem' }} />
+                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ maxWidth: '24px' }} />
               </a>
             </li>
           ))}

@@ -21,10 +21,14 @@ const Container = styled.div`
 
 const Name = styled.h1`
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 1;
   text-align: center;
+
+  @media screen and (min-width: 760px) {
+    font-size: 3rem;
+  }
 `;
 
 const HR = styled.hr`
@@ -35,9 +39,14 @@ const HR = styled.hr`
 `;
 
 const Description = styled.div`
+  font-size: 1rem;
   margin: 0 1rem;
   padding: 0.5rem 1rem 0;
   text-align: justify;
+
+  @media screen and (min-width: 760px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const IndexPage = () => {
@@ -48,7 +57,7 @@ const IndexPage = () => {
         <Name>Tom VanAntwerp</Name>
         <HR />
         <Description>
-          <p style={{ fontSize: '1.2rem', marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
+          <p style={{ marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
           <SocialLinks />
         </Description>
       </Container>
