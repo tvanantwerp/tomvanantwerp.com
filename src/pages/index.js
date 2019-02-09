@@ -6,15 +6,12 @@ import Tom from '../images/tom.svg';
 import SocialLinks from '../components/SocialLinks';
 
 const Container = styled.div`
-  align-content: center;
-  align-items: center;
   color: #fff;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  justify-content: center;
-  justify-items: center;
-  height: 100%;
+  place-content: center;
+  place-items: center;
   margin: 0 auto;
   max-width: 480px;
 `;
@@ -53,7 +50,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Container>
-        <img src={Tom} style={{ padding: '1rem', width: '100%' }} />
+        <img src={Tom} style={{ width: '100%' }} />
         <Name>Tom VanAntwerp</Name>
         <HR />
         <Description>
