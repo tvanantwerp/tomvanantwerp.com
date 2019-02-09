@@ -14,9 +14,12 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const LayoutContainer = styled.div`
+  color: #fff;
   display: grid;
   grid-template: 1fr / 1fr;
   min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1024px;
 `;
 
 const Layout = ({ children }) => (
@@ -44,9 +47,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <LayoutContainer>
-          <div>{children}</div>
-        </LayoutContainer>
+        <LayoutContainer>{children}</LayoutContainer>
       </Fragment>
     )}
   />
