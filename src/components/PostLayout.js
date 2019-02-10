@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Layout from './layout';
 import { Heading1 } from './Headings';
@@ -28,6 +29,13 @@ const PostLayout = ({ data }) => {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
+      <Helmet
+        title={frontmatter.title}
+        meta={[
+          { name: 'description', content: frontmatter.description },
+          { name: 'keywords', content: frontmatter.keywords },
+        ]}
+      />
       <PostContainer>
         <Post>
           <PostContent>
