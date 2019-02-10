@@ -15,10 +15,6 @@ const PostLayout = ({ data }) => {
   );
 };
 
-PostLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
 export default PostLayout;
 
 export const pageQuery = graphql`
