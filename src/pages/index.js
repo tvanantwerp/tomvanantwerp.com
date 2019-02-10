@@ -15,6 +15,7 @@ const Container = styled.div`
   place-items: center;
   margin: 0 auto;
   max-width: 480px;
+  min-height: 100vh;
 `;
 
 const HR = styled.hr`
