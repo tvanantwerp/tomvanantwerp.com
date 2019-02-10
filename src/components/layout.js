@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const LayoutContainer = styled.div`
-  color: #fff;
+  color: #333;
   margin: 0 auto;
   max-width: 1024px;
 `;

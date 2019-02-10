@@ -13,7 +13,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   place-content: center;
   place-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 480px;
   min-height: 100vh;
 `;
@@ -41,7 +41,7 @@ const IndexPage = () => {
     <Layout>
       <Container>
         <img src={Tom} style={{ width: '100%' }} />
-        <Heading1>Tom VanAntwerp</Heading1>
+        <Heading1 style={{ color: '#fff' }}>Tom VanAntwerp</Heading1>
         <HR />
         <Description>
           <p style={{ marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
