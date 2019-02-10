@@ -6,6 +6,7 @@ import { Heading1 } from './Headings';
 
 const PostContainer = styled.div`
   display: grid;
+  grid-template-columns: 1fr;
   min-height: 100vh;
   place-content: stretch;
 `;
@@ -15,7 +16,11 @@ const Post = styled.div`
   color: #333;
   margin: 1rem;
   padding: 2rem;
-  width: 100%;
+`;
+
+const PostContent = styled.div`
+  margin: 0 auto;
+  max-width: 760px;
 `;
 
 const PostLayout = ({ data }) => {
@@ -25,8 +30,11 @@ const PostLayout = ({ data }) => {
     <Layout>
       <PostContainer>
         <Post>
-          <Heading1>{frontmatter.title}</Heading1>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <PostContent>
+            <Heading1>{frontmatter.title}</Heading1>
+            <p style={{ textAlign: 'center' }}>{frontmatter.date}</p>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </PostContent>
         </Post>
       </PostContainer>
     </Layout>
