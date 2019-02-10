@@ -41,7 +41,7 @@ const IndexPage = () => {
     <Layout>
       <Container>
         <img src={Tom} style={{ width: '100%' }} />
-        <Heading1 style={{ color: '#fff' }}>Tom VanAntwerp</Heading1>
+        <Heading1 color="#fff">Tom VanAntwerp</Heading1>
         <HR />
         <Description>
           <p style={{ marginBottom: '1rem', textAlign: 'center' }}>Web Development / Design / IT</p>
