@@ -46,7 +46,7 @@ const SocialLinks = () => (
           {links.map(({ url, name }) => (
             <li key={name}>
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ maxWidth: '24px' }} />
+                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ width: '24px' }} />
               </a>
             </li>
           ))}
