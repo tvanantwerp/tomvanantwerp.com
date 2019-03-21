@@ -22,6 +22,11 @@ const Post = styled.div`
 const PostContent = styled.div`
   margin: 0 auto;
   max-width: 760px;
+
+  p,
+  pre {
+    margin-bottom: 1rem;
+  }
 `;
 
 const PostLayout = ({ data }) => {
