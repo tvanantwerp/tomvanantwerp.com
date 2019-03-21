@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Heading1 = styled.h1`
-  color: #fff;
+  color: ${props => props.color || '#333'};
   font-size: 2rem;
   font-weight: bold;
   line-height: 1;

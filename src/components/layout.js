@@ -14,10 +14,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const LayoutContainer = styled.div`
-  color: #fff;
-  display: grid;
-  grid-template: 1fr / 1fr;
-  min-height: 100vh;
+  color: #333;
   margin: 0 auto;
   max-width: 1024px;
 `;
