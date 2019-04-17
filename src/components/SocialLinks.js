@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import SocialIcons from './SocialIcons';
 
@@ -25,35 +25,32 @@ const ListOfLinks = styled.ul`
   }
 `;
 
-const SocialLinks = () => (
-  <StaticQuery
-    query={graphql`
-      query ExternalLinksQuery {
-        site {
-          siteMetadata {
-            externalLinks {
-              name
-              url
-            }
+const SocialLinks = () => {
+  const data = useStaticQuery(graphql`
+    query ExternalLinksQuery {
+      site {
+        siteMetadata {
+          externalLinks {
+            name
+            url
           }
         }
       }
-    `}
-    render={data => {
-      const links = data.site.siteMetadata.externalLinks;
-      return (
-        <ListOfLinks style={{ gridTemplateColumns: `repeat(${links.length}, 1fr)` }}>
-          {links.map(({ url, name }) => (
-            <li key={name}>
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ width: '24px' }} />
-              </a>
-            </li>
-          ))}
-        </ListOfLinks>
-      );
-    }}
-  />
-);
+    }
+  `);
+  const links = data.site.siteMetadata.externalLinks;
+
+  return (
+    <ListOfLinks style={{ gridTemplateColumns: `repeat(${links.length}, 1fr)` }}>
+      {links.map(({ url, name }) => (
+        <li key={name}>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <SocialIcons service={name.toLowerCase()} fill="#fff" style={{ width: '24px' }} />
+          </a>
+        </li>
+      ))}
+    </ListOfLinks>
+  );
+};
 
 export default SocialLinks;
