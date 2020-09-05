@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { createGlobalStyle } from 'styled-components';
 
-import Head, { siteTitle } from './head';
+import Head from './head';
+import Nav from './nav';
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -36,13 +37,7 @@ export default function Layout({ children }) {
     <>
       <GlobalStyle />
       <Head />
-      <header>
-        <Link href="/">
-          <a>
-            <h1>{siteTitle}</h1>
-          </a>
-        </Link>
-      </header>
+      <Nav />
       <main>{children}</main>
       <footer></footer>
     </>
