@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const siteTitle = 'Tom VanAntwerp';
 
