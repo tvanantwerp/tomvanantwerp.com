@@ -1,8 +1,7 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { createGlobalStyle } from 'styled-components';
 
-export const siteTitle = 'Tom VanAntwerp';
+import Head, { siteTitle } from './head';
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -34,17 +33,9 @@ html, body {
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <>
       <GlobalStyle />
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Personal website of Tom VanAntwerp."
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <Head />
       <header>
         <Link href="/">
           <a>
@@ -54,6 +45,6 @@ export default function Layout({ children }) {
       </header>
       <main>{children}</main>
       <footer></footer>
-    </div>
+    </>
   );
 }
