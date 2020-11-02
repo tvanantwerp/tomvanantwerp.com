@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-import Head from './head';
-import Nav from './nav';
+import Head from '@components/head';
+import Nav from '@components/nav';
 
 const GlobalStyle = createGlobalStyle`
 :root {

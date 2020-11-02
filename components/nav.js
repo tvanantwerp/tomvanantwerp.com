@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { siteTitle } from './head';
+import { siteTitle } from '@components/head';
 
 const StyledHeader = styled.header`
 
