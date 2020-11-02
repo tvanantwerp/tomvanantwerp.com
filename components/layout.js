@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Head from './head';
 import Nav from './nav';
@@ -33,14 +33,13 @@ html, body {
 * {
   box-sizing: border-box;
 }
+`;
 
-header,
-main,
-footer {
-  margin: 0 auto;
+const Wrapper = styled.div`
+  margin: 1rem auto;
   max-width: var(--max-width);
+  min-height: calc(100vh - 2rem);
   padding: 1rem;
-}
 `;
 
 export default function Layout({ children }) {
@@ -48,9 +47,11 @@ export default function Layout({ children }) {
     <>
       <GlobalStyle />
       <Head />
-      <Nav />
-      <main>{children}</main>
-      <footer></footer>
+      <Wrapper>
+        <Nav />
+        <main>{children}</main>
+        <footer></footer>
+      </Wrapper>
     </>
   );
 }
