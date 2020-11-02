@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { createGlobalStyle } from 'styled-components';
 
 import Head from './head';
@@ -6,13 +5,17 @@ import Nav from './nav';
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --light-bg: #fff;
-  --light-color: #333;
-  --dark-bg: #333;
-  --dark-color: #fff;
+  --light-bg: #eee;
+  --light-color: #21252B;
+  --dark-bg: #21252B;
+  --dark-color: #eee;
+  --max-width: 960px;
 }
 
 html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+               "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
 
@@ -29,6 +32,14 @@ html, body {
 
 * {
   box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 1rem;
 }
 `;
 

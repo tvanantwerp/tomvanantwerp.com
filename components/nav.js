@@ -3,7 +3,17 @@ import styled from 'styled-components';
 
 import { siteTitle } from './head';
 
-const Heading = styled.a`
+const StyledHeader = styled.header`
+
+`;
+
+const Nav = styled.nav`
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const NavLink = styled.a`
   cursor: pointer;
   text-decoration: none;
 
@@ -34,12 +44,29 @@ const Heading = styled.a`
 
 export default function Header() {
   return (
-    <header>
-      <Link href="/">
-        <Heading>
-          <h1>{siteTitle}</h1>
-        </Heading>
-      </Link>
-    </header>
+    <StyledHeader>
+      <Nav>
+        <Link href="/" passHref>
+          <NavLink>
+            <h1>{siteTitle}</h1>
+          </NavLink>
+        </Link>
+        <Link href="/about" passHref>
+          <NavLink>
+            About
+          </NavLink>
+        </Link>
+        <Link href="/writing" passHref>
+          <NavLink>
+            Writing
+          </NavLink>
+        </Link>
+        <Link href="/projects" passHref>
+          <NavLink>
+            Projects
+          </NavLink>
+        </Link>
+      </Nav>
+    </StyledHeader>
   );
 }
