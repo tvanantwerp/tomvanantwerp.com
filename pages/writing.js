@@ -1,11 +1,9 @@
-import Head from 'next/head';
+import Head from '../components/head';
 
-export default function Home() {
+export default function Writing() {
   return (
     <div>
-      <Head>
-        <title>Writings of Tom VanAntwerp</title>
-      </Head>
+      <Head title="Writing" />
 
       <div>Writings</div>
     </div>
