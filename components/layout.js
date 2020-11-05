@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import {reset} from 'styled-reset';
 
 import Head from '@components/head';
 import Nav from '@components/nav';
@@ -11,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
   --dark-color: #eee;
   --max-width: 960px;
 }
+
+${reset}
 
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -36,6 +39,8 @@ html, body {
 `;
 
 const Wrapper = styled.div`
+  display: grid;
+  grid-template: auto 1fr auto;
   margin: 1rem auto;
   max-width: var(--max-width);
   min-height: calc(100vh - 2rem);

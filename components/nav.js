@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import { siteTitle } from '@components/head';
 
 const StyledHeader = styled.header`
-
+  position: sticky;
 `;
 
 const Nav = styled.nav`
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
+  align-items: end;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template: auto / 1fr repeat(3, auto);
 `;
 
 const NavLink = styled.a`
@@ -39,6 +40,9 @@ const NavLink = styled.a`
 
   h1 {
     display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
   }
 `;
 
