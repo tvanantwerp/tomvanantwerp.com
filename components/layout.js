@@ -5,37 +5,41 @@ import Head from '@components/head';
 import Nav from '@components/nav';
 
 const GlobalStyle = createGlobalStyle`
-:root {
-  --light-bg: #eee;
-  --light-color: #21252B;
-  --dark-bg: #21252B;
-  --dark-color: #eee;
-  --max-width: 960px;
-}
-
-${reset}
-
-html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-               "Helvetica Neue", sans-serif;
-  margin: 0;
-  padding: 0;
-
-  @media (prefers-color-scheme: light) {
-    background-color: var(--ligt-bg);
-    color: var(--light-color);
+  :root {
+    --light-bg: #eee;
+    --light-color: #21252B;
+    --dark-bg: #21252B;
+    --dark-color: #eee;
+    --max-width: 960px;
   }
 
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-bg);
-    color: var(--dark-color);
-  }
-}
+  ${reset}
 
-* {
-  box-sizing: border-box;
-}
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+                "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+
+    @media (prefers-color-scheme: light) {
+      background-color: var(--ligt-bg);
+      color: var(--light-color);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--dark-bg);
+      color: var(--dark-color);
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  p {
+    line-height: 1.4;
+  }
 `;
 
 const Wrapper = styled.div`

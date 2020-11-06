@@ -1,25 +1,71 @@
 import styled from 'styled-components';
 
 const Splash = styled.div`
+  align-items: center;
+  display: grid;
   font-size: 1.4rem;
-  font-style: italic;
   font-weight: 300;
+  grid-gap: 1rem;
+  grid-template: repeat(2, auto) / 1fr;
+  grid-template-areas:
+    "image"
+    "text";
+
+  img {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: 560px) {
+    grid-template: auto / 2fr 1fr;
+    grid-template-areas:
+      "text image";
+  }
+`;
+
+const Image = styled.img`
+  grid-area: image;
+`;
+
+const Text = styled.div`
+  grid-area: text;
 `;
 
 const Intro = styled.p`
-  display: block;
-  font-size: calc(2rem + 2vw);
+  @media screen and (max-width: 400px) {
+    font-size: max(6vw, 1rem);
+  }
+
+  font-size: max(6.5vw, 1rem);
   font-style: normal;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
+
+  @media screen and (min-width: 560px) {
+    font-size: 1rem;
+    text-align: left;
+  }
+`;
+
+const Description = styled.p`
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+
+  @media screen and (min-width: 560px) {
+    font-size: calc(1rem + 1vw);
+  }
 `;
 
 export default function Home() {
   return (
     <div>
       <Splash>
-        <Intro>Hi there! I'm Tom.</Intro>
-        <p>I build web stuff, write sometimes, and metabolize ingested organic matter.</p>
+        <Image src="/tom.png" alt="Illustration of Tom VanAntwerp" />
+        <Text>
+          <Intro>Hi there! I'm Tom VanAntwerp.</Intro>
+          <Description>I build web apps and metabolize ingested organic matter.</Description>
+        </Text>
       </Splash>
     </div>
   );
