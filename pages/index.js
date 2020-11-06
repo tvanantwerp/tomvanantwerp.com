@@ -31,15 +31,16 @@ const Text = styled.div`
 `;
 
 const Intro = styled.p`
-  @media screen and (max-width: 400px) {
-    font-size: max(6vw, 1rem);
-  }
-
-  font-size: max(6.5vw, 1rem);
+  font-size: 1rem;
+  font-size: max(6vw, 1rem);
   font-style: normal;
   font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
+
+  @media screen and (min-width: 400px) and (max-width: 560px) {
+    font-size: max(6.5vw, 1rem);
+  }
 
   @media screen and (min-width: 560px) {
     font-size: 1rem;
