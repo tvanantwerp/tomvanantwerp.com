@@ -3,6 +3,7 @@ import {reset} from 'styled-reset';
 
 import Head from '@components/head';
 import Nav from '@components/nav';
+import Footer from '@components/footer';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -40,11 +41,20 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.4;
   }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-style: bold;
+  }
 `;
 
 const Wrapper = styled.div`
+  align-items: center;
   display: grid;
-  grid-template: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
   margin: 1rem auto;
   max-width: var(--max-width);
   min-height: calc(100vh - 2rem);
@@ -59,7 +69,7 @@ export default function Layout({ children }) {
       <Wrapper>
         <Nav />
         <main>{children}</main>
-        <footer></footer>
+        <Footer />
       </Wrapper>
     </>
   );
