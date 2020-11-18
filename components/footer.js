@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import { siteTitle } from '@components/head';
 
 const StyledFooter = styled.footer`
+  color: var(--gray);
+  display: grid;
+  grid-template: auto / 1fr auto;
   font-size: 0.8rem;
-  text-align: center;
 
   a {
     color: inherit;

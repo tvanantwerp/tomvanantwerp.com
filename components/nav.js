@@ -15,28 +15,9 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
+  color: inherit;
   cursor: pointer;
   text-decoration: none;
-
-  @media (prefers-color-scheme: light) {
-    color: var(--light-color);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--dark-color);
-  }
-
-  &:hover,
-  &:active,
-  &:visited {
-    @media (prefers-color-scheme: light) {
-      color: var(--light-color);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color: var(--dark-color);
-    }
-  }
 
   h1 {
     display: inline-block;

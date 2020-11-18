@@ -7,8 +7,9 @@ import Footer from '@components/footer';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --light-bg: #eee;
+    --light-bg: #f5f5f5;
     --light-color: #21252B;
+    --gray: #999;
     --dark-bg: #21252B;
     --dark-color: #eee;
     --max-width: 960px;
@@ -24,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
 
     @media (prefers-color-scheme: light) {
-      background-color: var(--ligt-bg);
+      background-color: var(--light-bg);
       color: var(--light-color);
     }
 
