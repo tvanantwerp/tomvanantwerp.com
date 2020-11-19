@@ -41,6 +41,11 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     line-height: 1.4;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   em {
@@ -50,11 +55,21 @@ const GlobalStyle = createGlobalStyle`
   strong {
     font-style: bold;
   }
+
+  a {
+    color: inherit;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
 `;
 
 const Wrapper = styled.div`
-  align-items: center;
   display: grid;
+  grid-gap: 2rem;
   grid-template-rows: auto 1fr auto;
   margin: 1rem auto;
   max-width: var(--max-width);

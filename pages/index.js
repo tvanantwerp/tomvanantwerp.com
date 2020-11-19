@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  align-items: center;
+  display: grid;
+  grid-auto-flow: row;
+  height: 100%;
+`;
+
 const Splash = styled.div`
   align-items: center;
   display: grid;
@@ -60,7 +67,7 @@ const Description = styled.p`
 
 export default function Home() {
   return (
-    <div>
+    <Wrapper>
       <Splash>
         <Image src="/tom.png" alt="Illustration of Tom VanAntwerp" />
         <Text>
@@ -68,6 +75,6 @@ export default function Home() {
           <Description>Forget the sales copy; this is my site and I'll put what I want here. Web development, fermentation experiments, dog photos—whatever I like!</Description>
         </Text>
       </Splash>
-    </div>
+    </Wrapper>
   );
 }

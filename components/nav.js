@@ -15,7 +15,6 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: inherit;
   cursor: pointer;
   text-decoration: none;
 
