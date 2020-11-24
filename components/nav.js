@@ -14,27 +14,28 @@ const Nav = styled.nav`
   grid-template: auto / 1fr repeat(3, auto);
 `;
 
+const SiteName = styled.h1`
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+`;
 const NavLink = styled.a`
   cursor: pointer;
   text-decoration: none;
-
-  h1 {
-    display: inline-block;
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin: 0;
-  }
 `;
 
 export default function Header() {
   return (
     <StyledHeader>
       <Nav>
-        <Link href="/" passHref>
-          <NavLink>
-            <h1>{siteTitle}</h1>
-          </NavLink>
-        </Link>
+        <SiteName>
+          <Link href="/" passHref>
+              <NavLink>
+                {siteTitle}
+              </NavLink>
+          </Link>
+        </SiteName>
         <Link href="/about" passHref>
           <NavLink>
             About
