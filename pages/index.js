@@ -72,7 +72,7 @@ export default function Home() {
         <Image src="/tom.png" alt="Illustration of Tom VanAntwerp" />
         <Text>
           <Intro>Hi there! I'm Tom VanAntwerp.</Intro>
-          <Description>I write code to make life easier. Apps, data visualizations, automation—I build them all and more.</Description>
+          <Description>I write code to make life easier. Apps, data visualizations, task automation—I do it all and then some.</Description>
         </Text>
       </Splash>
     </Wrapper>
