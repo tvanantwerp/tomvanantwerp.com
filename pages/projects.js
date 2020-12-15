@@ -2,8 +2,6 @@ import Head from '@components/head';
 import Link from 'next/link';
 
 const Projects = () => {
-
-
   return (
     <div>
       <Head title="About" />

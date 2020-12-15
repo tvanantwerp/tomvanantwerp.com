@@ -1,9 +1,7 @@
 import Head from '@components/head';
 import Link from 'next/link';
 
-const Projects = () => {
-
-
+const Writing = () => {
   return (
     <div>
       <Head title="About" />
