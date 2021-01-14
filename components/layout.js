@@ -41,12 +41,26 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     line-height: 1.4;
-    margin-bottom: 1rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    margin: 1rem 0;
   }
+
+  ul, ol {
+    line-height: 1.4;
+    margin: 1rem 0;
+  }
+
+  ul {
+    list-style: circle;
+  }
+
+  ol {
+    list-style: decimal-leading-zero;
+  }
+
+  li {
+    margin-left: 1rem;
+  }
+
 
   em {
     font-style: italic;
@@ -64,6 +78,17 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 1rem;
+  }
+
+  pre, code {
+    font-family: monospace;
+  }
+
+  pre {
+    overflow-x: auto;
+    margin: 1rem 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 `;
 
