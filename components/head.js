@@ -20,6 +20,7 @@ export default function MyHead({ title, description, children }) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link href="/prism-material-oceanic.css" rel="stylesheet" />
       {children}
     </Head>
   );
