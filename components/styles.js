@@ -39,6 +39,8 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
   h2 {
@@ -87,7 +89,6 @@ const GlobalStyle = createGlobalStyle`
     margin-left: 1rem;
   }
 
-
   em {
     font-style: italic;
   }
@@ -100,11 +101,20 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-  h1 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  sub, sup {
+    font-size: 0.7em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
   }
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
 
   pre {
     line-height: 1.5em;
