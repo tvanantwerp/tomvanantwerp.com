@@ -46,13 +46,14 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     border-bottom: 1px solid var(--color);
     font-size: 2rem;
+    font-weight: 300;
     margin: 2rem 0;
     padding-bottom: 0.5rem;
-    font-style: italic;
   }
 
   h3 {
     font-size: 1.6rem;
+    font-weight: 700;
   }
 
   h4 {
