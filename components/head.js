@@ -20,6 +20,12 @@ export default function MyHead({ title, description, children }) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css"
+        integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG"
+        crossOrigin="anonymous"
+      />
       {children}
     </Head>
   );
