@@ -23,8 +23,9 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-                "Helvetica Neue", sans-serif;
+                 Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+                 "Helvetica Neue", sans-serif, "Apple Color Emoji",
+                 "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -45,7 +46,9 @@ const GlobalStyle = createGlobalStyle`
 
   h2 {
     border-bottom: 1px solid var(--color);
+    font-family: serif;
     font-size: 2rem;
+    font-style: italic;
     font-weight: 300;
     margin: 2rem 0;
     padding-bottom: 0.5rem;
@@ -109,13 +112,25 @@ const GlobalStyle = createGlobalStyle`
     vertical-align: baseline;
   }
 
-sub {
-  bottom: -0.25em;
-}
+  sub {
+    bottom: -0.25em;
+  }
 
-sup {
-  top: -0.5em;
-}
+  sup {
+    top: -0.5em;
+  }
+
+  code,
+  pre {
+    background: #263238;
+    color: #c3cee3;
+    font-family: SFMono-Regular, Menlo, Monaco,
+                 Consolas, "Liberation Mono",
+                 "Courier New", monospace;;
+    font-size: 0.9rem;
+    hyphens: none;
+    text-align: left;
+  }
 
   pre {
     line-height: 1.5em;
@@ -133,19 +148,10 @@ sup {
   *:not(pre) > code {
     background: var(--background-color);
     border: 1px solid var(--gray);
-    border-radius: 6px;
+    border-radius: 0.375em;
     color: var(--color);
+    font-size: 0.8125em;
     padding: 0.24rem 0.22rem 0.1rem;
-  }
-
-  code,
-  pre {
-    background: #263238;
-    color: #c3cee3;
-    font-family: monospace;
-    font-size: 1rem;
-    hyphens: none;
-    text-align: left;
   }
 
   .language-css > code,
