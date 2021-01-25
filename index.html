@@ -1,0 +1,73 @@
+---
+layout: layouts/home.njk
+templateEngineOverride: njk
+---
+
+<style>
+  .home__main {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: row;
+    height: 100%;
+  }
+
+  .home__splash {
+    align-items: center;
+    display: grid;
+    font-size: 1.4rem;
+    font-weight: 300;
+    grid-gap: 1rem;
+    grid-template: repeat(2, auto) / 1fr;
+    grid-template-areas:
+      "image"
+      "text";
+  }
+
+
+  .home__splash img {
+    grid-area: image;
+    max-width: 100%;
+  }
+
+  .home__splash__intro {
+    font-size: 1rem;
+    font-size: max(6vw, 1rem);
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .home__splash__text {
+    grid-area: text;
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 560px) {
+    .home__splash__intro {
+      font-size: max(6.5vw, 1rem);
+    }
+  }
+
+  @media screen and (min-width: 560px) {
+    .home__splash {
+      grid-template: auto / 2fr 1fr;
+      grid-template-areas:
+        "text image";
+    }
+
+    .home__splash__intro {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+</style>
+
+<div class="home__main">
+  <div class="home__splash">
+    <img src="/tom.png" alt="Illustration of Tom VanAntwerp"/>
+    <div>
+      <p class="home__splash__intro">Hi there! I'm Tom VanAntwerp.</p>
+      <p class="home__splash__text">I write code to make life easier. Apps, data visualizations, task automation—I do it all and then some.</p>
+    </div>
+  </div class="home__splash">
+</div>
