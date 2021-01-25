@@ -1,3 +1,7 @@
+---
+title: 8. String to Interger (atoi)
+---
+
 # 8. String to Interger (atoi)
 
 ## The Problem

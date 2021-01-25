@@ -1,3 +1,7 @@
+---
+title: 237. Delete Node in a Linked List
+---
+
 # 237. Delete Node in a Linked List
 
 [Link to original problem on Leetcode](https://leetcode.com/problems/delete-node-in-a-linked-list/)

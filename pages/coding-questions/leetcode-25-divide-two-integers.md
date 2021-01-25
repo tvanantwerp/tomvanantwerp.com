@@ -1,3 +1,6 @@
+---
+title: 25. Divide Two Integers
+---
 # 25. Divide Two Integers
 
 ## The Problem

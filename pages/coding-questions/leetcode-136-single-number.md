@@ -1,3 +1,7 @@
+---
+title: 136. Single Number
+---
+
 # 136. Single Number
 
 [Link to original problem on Leetcode](https://leetcode.com/problems/single-number/)
