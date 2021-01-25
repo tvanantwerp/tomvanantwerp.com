@@ -5,6 +5,8 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItKatex = require('@iktakahiro/markdown-it-katex');
+const uslug = require('uslug');
 const pluginSass = require("eleventy-plugin-sass");
 
 module.exports = function(eleventyConfig) {
@@ -81,9 +83,10 @@ module.exports = function(eleventyConfig) {
     linkify: true
   }).use(markdownItAnchor, {
     permalink: true,
-    permalinkClass: "direct-link",
-    permalinkSymbol: "#"
-  });
+    permalinkClass: "heading-anchor",
+    permalinkSymbol: "#",
+    slugify: s => uslug(s)
+  }).use(markdownItKatex);
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
