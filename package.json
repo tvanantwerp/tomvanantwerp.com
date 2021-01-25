@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve",
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy",
     "lint": "eslint --fix .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
