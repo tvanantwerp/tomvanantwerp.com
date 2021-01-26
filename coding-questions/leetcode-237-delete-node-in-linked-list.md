@@ -1,12 +1,14 @@
 ---
 title: 237. Delete Node in a Linked List
+description: Write a function to delete a node in a singly-linked list. You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
+tags:
+  - coding-questions
+layout: layouts/coding-questions.html
 ---
 
-# 237. Delete Node in a Linked List
+## The Problem
 
 [Link to original problem on Leetcode](https://leetcode.com/problems/delete-node-in-a-linked-list/)
-
-## The Problem
 
 Write a function to delete a node in a singly-linked list. You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
 

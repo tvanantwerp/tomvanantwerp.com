@@ -1,8 +1,12 @@
 ---
 title: 136. Single Number
+description: Given a non-empty array of integers, every element appears twice except for one. Find that single one.
+tags:
+  - coding-questions
+layout: layouts/coding-questions.html
 ---
 
-# 136. Single Number
+## The Problem
 
 [Link to original problem on Leetcode](https://leetcode.com/problems/single-number/)
 

@@ -1,0 +1,92 @@
+h1 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	border-bottom: 1px solid var(--color);
+	font-family: serif;
+	font-size: 2rem;
+	font-style: italic;
+	font-weight: 300;
+	margin: 2rem 0;
+	padding-bottom: 0.5rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-weight: 700;
+}
+p {
+	line-height: 1.4;
+	margin: 1rem 0;
+}
+
+ul,
+ol {
+	line-height: 1.4;
+	margin: 1rem 0;
+}
+
+ul {
+	list-style: circle;
+}
+
+ol {
+	list-style: decimal-leading-zero;
+}
+
+li {
+	margin-left: 1rem;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-style: bold;
+}
+
+a {
+	color: inherit;
+}
+
+sub,
+sup {
+	font-size: 0.7em;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+.heading-anchor {
+	color: var(--gray);
+	font-size: 0.7em;
+	opacity: 0.7;
+	position: relative;
+	text-decoration: none;
+	top: -0.5em;
+	vertical-align: baseline;
+}

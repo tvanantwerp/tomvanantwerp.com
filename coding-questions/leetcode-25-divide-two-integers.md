@@ -1,7 +1,10 @@
 ---
 title: 25. Divide Two Integers
+description: Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator. Return the quotient after dividing dividend by divisor.
+tags:
+  - coding-questions
+layout: layouts/coding-questions.html
 ---
-# 25. Divide Two Integers
 
 ## The Problem
 

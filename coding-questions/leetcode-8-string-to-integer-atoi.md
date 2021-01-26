@@ -1,8 +1,10 @@
 ---
 title: 8. String to Interger (atoi)
+description: Implement `atoi` which converts a string to an integer.
+tags:
+  - coding-questions
+layout: layouts/coding-questions.html
 ---
-
-# 8. String to Interger (atoi)
 
 ## The Problem
 
