@@ -6,6 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
+const mila = require('markdown-it-link-attributes');
 const uslug = require('uslug');
 const pluginSass = require("eleventy-plugin-sass");
 
@@ -86,7 +87,13 @@ module.exports = function(eleventyConfig) {
     permalinkClass: "heading-anchor",
     permalinkSymbol: "#",
     slugify: s => uslug(s)
-  }).use(markdownItKatex);
+  }).use(markdownItKatex).use(mila, {
+    pattern: /^https:\/\/(www\.)?(?!tomvanantwerp\.com|localhost).*/,
+    attrs: {
+      target: '_blank',
+      rel: 'noopener'
+    }
+  });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
