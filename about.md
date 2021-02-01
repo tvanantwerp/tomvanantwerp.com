@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.html
+layout: layouts/narrow-page.html
 title: Who is this Tom VanAntwerp guy anyway?
 ---
 
