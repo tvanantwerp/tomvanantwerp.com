@@ -32,6 +32,10 @@ body {
 	box-sizing: border-box;
 }
 
+img {
+	max-width: 100%;
+}
+
 .content {
 	display: grid;
 	grid-gap: 2rem;
