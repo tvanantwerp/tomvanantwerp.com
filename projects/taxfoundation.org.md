@@ -7,4 +7,4 @@ tags:
 layout: layouts/project.html
 ---
 
-![The "About Us" page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.](/img/taxfoundation-splash.jpg)
+{% image "./img/taxfoundation-splash.jpg", "The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose." %}

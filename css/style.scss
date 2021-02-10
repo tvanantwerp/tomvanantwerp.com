@@ -32,7 +32,7 @@ body {
 	box-sizing: border-box;
 }
 
-img {
+img, picture {
 	max-width: 100%;
 }
 
@@ -46,8 +46,8 @@ img {
 	padding: 1rem;
 }
 
-@import './typeography';
-@import './navigation';
+@import './_typeography';
+@import './_navigation';
 @import './_code';
 @import './_footer';
 @import './layouts/_pages';

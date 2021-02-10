@@ -3,12 +3,40 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const Image = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const mila = require('markdown-it-link-attributes');
 const uslug = require('uslug');
 const pluginSass = require("eleventy-plugin-sass");
+
+async function imageShortcode(src, alt, sizes=[400, 800, 1200]) {
+  let metadata = await Image(src, {
+    widths: sizes,
+    formats: ["avif", "webp", "jpeg"],
+    outputDir: '_site/img',
+    filenameFormat: (id, src, width, format) => {
+      const splitSrc = src.split('/');
+      const filename = splitSrc[splitSrc.length - 1].split('.')[0];
+      if (width) {
+        return `${filename}-${id}-${width}.${format}`
+      }
+      return `${filename}-${id}.${format}`
+    }
+  });
+
+  let imageAttributes = {
+    alt,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: "inline"
+  });
+}
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -18,10 +46,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
 
+  // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
-  // eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-
+  // Filters
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
@@ -44,35 +75,7 @@ module.exports = function(eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
-  // eleventyConfig.addCollection("tagList", function(collection) {
-  //   let tagSet = new Set();
-  //   collection.getAll().forEach(function(item) {
-  //     if( "tags" in item.data ) {
-  //       let tags = item.data.tags;
-
-  //       tags = tags.filter(function(item) {
-  //         switch(item) {
-  //           // this list should match the `filter` list in tags.njk
-  //           case "all":
-  //           case "nav":
-  //           case "post":
-  //           case "posts":
-  //             return false;
-  //         }
-
-  //         return true;
-  //       });
-
-  //       for (const tag of tags) {
-  //         tagSet.add(tag);
-  //       }
-  //     }
-  //   });
-
-  //   // returning an array in addCollection works in Eleventy 0.5.3
-  //   return [...tagSet];
-  // });
-
+  // Passthroughs
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon");
