@@ -12,10 +12,11 @@ pre {
 pre {
 	line-height: 1.5em;
 	margin: 1rem 0;
-	max-width: 100%;
+	max-width: calc(var(--max-width) - 2rem);
 	overflow-x: auto;
 	padding: 1rem;
 	tab-size: 2;
+	width: 100%;
 	white-space: pre-wrap;
 	word-break: normal;
 	word-spacing: normal;
