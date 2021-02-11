@@ -32,7 +32,9 @@ body {
 	box-sizing: border-box;
 }
 
-img, picture {
+img {
+	display: block;
+	margin: 0 auto;
 	max-width: 100%;
 }
 
