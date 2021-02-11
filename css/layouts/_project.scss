@@ -1,0 +1,46 @@
+.project {
+    &__splash {
+        align-content: center;
+        bottom: 0;
+        display: grid;
+        height: 95vh;
+        justify-items: center;
+        grid-template-columns: 1fr;
+
+        &__background {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+    
+            img {
+                height: 100vh;
+                object-fit: cover;
+                opacity: 0.5;
+                width: 100vw;
+            }
+        }
+    }
+
+    &__title {
+        &--with-splash {
+            background-color: var(--background-color);
+            background-blend-mode: overlay;
+            font-size: calc(1rem + 4vw);
+            margin: 0;
+            padding: 1rem 2rem;
+        }
+    }
+    
+    &__date {
+        &--with-splash {
+            background-color: var(--background-color);
+            background-blend-mode: overlay;
+            margin: 0;
+            padding: 1rem 2rem 1.4rem;
+        }
+
+    }
+}

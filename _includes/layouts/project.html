@@ -2,6 +2,18 @@
 layout: layouts/base.html
 ---
 
-<h1>{{ title }}</h1>
-{{ page.date | readableDate }}
-{{ content | safe }}
+<article>
+    {% if splash %}
+        <div class="project__splash__background">
+            {% image splash, splash_alt %}
+        </div>
+        <div class="project__splash">
+            <h1 class="project__title--with-splash">{{ title }}</h1>
+            <p class="project__date--with-splash">{{ page.date | readableDate }}</p>
+        </div>
+    {% else %}
+        <h1 class="project__title">{{ title }}</h1>
+        <p class="project__date">{{ page.date | readableDate }}</p>
+    {% endif %}
+    {{ content | safe }}
+</article>

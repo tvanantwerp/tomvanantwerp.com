@@ -16,8 +16,7 @@
 	}
 }
 
-html,
-body {
+html {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
 		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -55,3 +54,4 @@ img {
 @import './layouts/_pages';
 @import './layouts/_home';
 @import './layouts/_projects';
+@import './layouts/_project';
