@@ -10,9 +10,9 @@ splash: ./img/taxfoundation-splash.jpg
 splash_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.
 ---
 
-The [Tax Foundation](https://taxfoundation.org) is one of America's oldest think tanks. Founded in 1937, they research and publish on tax policy with the goal of funding government while causing minimal distortions that harm economic growth. Things have changed, of course, since 1937, and now [taxfoundation.org](https://taxfoundation.org) is their primary publishing platform to reach policymakers and taxpayers alike.
+The [Tax Foundation](https://taxfoundation.org) is one of America's oldest think tanks. Founded in 1937, they research and publish on how to create tax policy that funds government without unduly harming economic growth. Strategy has changed, of course, since 1937; now [taxfoundation.org](https://taxfoundation.org) is their primary publishing platform to reach policymakers and taxpayers alike.
 
-Since launching its latest incarnation in early 2017, the website has seen nearly 50 million visitors. This new site was not just a cosmetic refresh, but a complete migration from Drupal to WordPress and onto AWS for hosting. It represents the Tax Foundation's intentional shift to being digital-first with publication and distribution.
+Since launching its latest incarnation in early 2017, the website has seen nearly 50 million visitors. This new site was not just a cosmetic refresh, but a complete migration from Drupal to WordPress, and onto AWS for hosting. It represents the Tax Foundation's intentional shift to being digital-first with publication and distribution.
 
 ## Design
 
@@ -24,12 +24,12 @@ Nobody was particularly happy with the older version of taxfoundation.org's desi
   <figcaption>Compare the previous version and new version of taxfoundation.org.</figcaption>
 </figure>
 
-Taking inspiration from high-quality news websites, the new version of taxfoundation.org puts content legibility first. We implemented light colors, improved typography, and plenty of white space to improve the reading experience. Since many of our visitors are older, the site layout scales to work at high magnification as well as it does at default. And not only is it now responsive for mobile devices, but it also implements styles for print.
+Taking inspiration from high-quality news websites, the new version of taxfoundation.org puts content legibility first. It implements lighter colors, improved typography, and plenty of white space to improve the reading experience. Since many of our visitors are older, the site layout scales to work at high magnification as well as it does at default. And not only is it now responsive for mobile devices, but it also looks good when printed.
 
 ## Technology
 
-Design was the fun, almost easy part. The real challenge was extracting our content from a tangled mess of roughyl 300 database tables (no, I do not know why there were so many tables!) and into a format that could be ingested by WordPress.
+Design was the fun, almost easy part. The real challenge was extracting content from a tangled mess of roughyl 300 database tables (no, I do not know why there were so many tables!) and into a format that could be ingested by WordPress.
 
-To do this, I wrote Python scripts to pull the data from MySQL, parse it to correct various HTML errors somehow introduced by the editor in Drupal, and stitch it all back together into CSV files that could be imported to WordPress. Getting this right took trial and error, but eventually we managed to cleanly extract the ≈12,000 pages of content and migrate them.
+To do this, I wrote Python scripts to pull the data from MySQL, parse it to correct various HTML errors somehow introduced by the editor in Drupal, and stitch it all back together into CSV files that could be imported to WordPress. Getting this right took trial and error, but eventually I managed to cleanly extract the ≈12,000 pages of content and migrate them.
 
 Files and images are stored in an S3 bucket with Cloudfront as a CDN in front of it. The site itself runs on an AWS EC2 instance, with a MariaDB database in RDS. The site runs on a single EC2 instance without any performance issues—even during traffic spikes—thanks in part to nginx caching.
