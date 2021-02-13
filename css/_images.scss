@@ -1,0 +1,24 @@
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.images {
+    &__two-side-by-side {
+        // For use with a pair of images an accompanying figcaption
+        display: grid;
+        grid-gap: 1rem;
+        grid-template: auto / 1fr;
+        
+        @media screen and (min-width: 800px) {
+            grid-template: auto / repeat(2, 1fr);
+
+            figcaption {
+                font-style: italic;
+                grid-column: 1 / 3;
+                text-align: center;
+            }
+        }
+    }
+}

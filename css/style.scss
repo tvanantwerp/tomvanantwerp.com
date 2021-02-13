@@ -31,12 +31,6 @@ html {
 	box-sizing: border-box;
 }
 
-img {
-	display: block;
-	margin: 0 auto;
-	max-width: 100%;
-}
-
 .content {
 	display: grid;
 	grid-gap: 2rem;
@@ -48,6 +42,7 @@ img {
 }
 
 @import './_typeography';
+@import './_images';
 @import './_navigation';
 @import './_code';
 @import './_footer';

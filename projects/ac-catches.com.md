@@ -10,7 +10,7 @@ layout: layouts/project.html
 
 ## Catching Fish and Bugs in *Animal Crossing: New Horizons*
 
-Like many people during this pandemic, I've spent longer than I should have playing the new Animal Crossing: New Horizons for Nintendo Switch. Being a completionist and perfectionist, I've been trying to catch every fish and every bug in the game. But I was disappointed with most online lists of the fish and bugs and their available times: there was no easy way to sort and filter the lists by various criteria. On the last day of the month, I really need to know what's available today but not tomorrow. Or maybe I'm just out to make some bells today, and I want to know where to fish to get the most bang for my buck.
+Like many people during the COVID-19 pandemic, I've spent longer than I should have playing the new Animal Crossing: New Horizons for Nintendo Switch. Being a completionist and perfectionist, I've been trying to catch every fish and every bug in the game. But I was disappointed with most online lists of the fish and bugs and their available times: there was no easy way to sort and filter the lists by various criteria. On the last day of the month, I really need to know what's available today but not tomorrow. Or maybe I'm just out to make some bells today, and I want to know where to fish to get the most bang for my buck.
 
 Dissatisfied with existing static tables, I set out to build my own tool in React which I've made available at [ac-catches.com](http://ac-catches.com/).
 
