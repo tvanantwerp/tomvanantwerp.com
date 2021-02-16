@@ -4,7 +4,8 @@ date: 2020-05-11
 description: While quoting an odd environment variable might make sense to deal with special characters normally, Docker just assumes the quotes are part of the value.
 tags: 
     - technical-writing
-layout: layouts/coding-questions.html
+    - Docker
+layout: layouts/writing.html
 ---
 
 It's usually a good idea to store your app's environment variables separate from the app itself in a `.env` file. This allows you to easily have different values for development, staging, and production.
