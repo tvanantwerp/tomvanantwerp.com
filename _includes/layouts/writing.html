@@ -1,0 +1,33 @@
+---
+layout: layouts/base.html
+---
+
+<article>
+    {% if splash %}
+        <div class="writing__splash__background">
+            {% image splash, splash_alt %}
+        </div>
+        <div class="writing__splash">
+            <h1 class="writing__title--with-splash">{{ title }}</h1>
+            {% if page.date %}
+            <time
+                datetime="{{ page.date | htmlDateString }}"
+                class="writing__date--with-splash"
+            >
+                {{ page.date | readableDate }}
+            </time>
+        {% endif %}
+        </div>
+    {% else %}
+        <h1 class="writing__title">{{ title }}</h1>
+        {% if page.date %}
+            <time
+                datetime="{{ page.date | htmlDateString }}"
+                class="writing__date"
+            >
+                {{ page.date | readableDate }}
+            </time>
+        {% endif %}
+    {% endif %}
+    {{ content | safe }}
+</article>

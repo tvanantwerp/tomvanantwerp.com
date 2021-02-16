@@ -4,7 +4,7 @@ excerpt: How I built taxfoundation.org to serve tens of millions of users per ye
 tags:
   - projects
   - programmingProjects
-layout: layouts/project.html
+layout: layouts/writing.html
 image: ./img/taxfoundation-splash.jpg
 splash: ./img/taxfoundation-splash.jpg
 splash_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.

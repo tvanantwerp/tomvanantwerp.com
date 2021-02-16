@@ -5,7 +5,7 @@ date: 2020-05-23
 tags:
   - projects
   - programmingProjects
-layout: layouts/project.html
+layout: layouts/writing.html
 ---
 
 ## Catching Fish and Bugs in *Animal Crossing: New Horizons*
