@@ -18,11 +18,13 @@ Since launching its latest incarnation in early 2017, the website has seen nearl
 
 Nobody was particularly happy with the older version of taxfoundation.org's design. I'd call it dated, if it were appropriate to any known age of the web. The colors were jarring and the layouts harsh. It was not responsive, looked bad when printed, and was very difficult to modify due to previous technical decisions.
 
-<figure class="images__two-side-by-side">
-  {% image './img/2017-02-01-old-tf-site.jpg', "The previous incarnation of taxfoundation.org." %}
-  {% image './img/2017-02-01-new-tf-site.jpg', "The current incarnation of taxfoundation.org." %}
-  <figcaption>Compare the previous version and new version of taxfoundation.org.</figcaption>
-</figure>
+{% include components/images-two-side-by-side,
+  image1: './img/2017-02-01-old-tf-site.jpg',
+  image1alt: 'The previous incarnation of taxfoundation.org.',
+  image2: './img/2017-02-01-new-tf-site.jpg',
+  image2alt: 'The current incarnation of taxfoundation.org.',
+  caption: 'Compare the previous version and new version of taxfoundation.org.'
+%}
 
 Taking inspiration from high-quality news websites, the new version of taxfoundation.org puts content legibility first. It implements lighter colors, improved typography, and plenty of white space to improve the reading experience. Since many of our visitors are older, the site layout scales to work at high magnification as well as it does at default. And not only is it now responsive for mobile devices, but it also looks good when printed.
 
