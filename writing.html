@@ -1,17 +1,17 @@
 ---
-layout: layouts/base.html
+layout: layouts/base.liquid
 ---
 
 <h1>Writing</h1>
 <h2>Coding Questions</h2>
 <ul>
-	{%- for cq in collections['coding-questions'] %}
+	{% for cq in collections['coding-questions'] %}
 	<li><a href="{{cq.url | url }}">{{cq.data.title}}</a></li>
-	{%- endfor %}
+	{% endfor %}
 </ul>
 <h2>Technical Writing</h2>
 <ul>
-	{%- for cq in collections['technical-writing'] | reverse %}
-	<li><a href="{{cq.url | url }}">{{cq.data.title}}</a></li>
-	{%- endfor %}
+	{% for tw in collections['technical-writing'] reversed %}
+	<li><a href="{{tw.url | url }}">{{tw.data.title}}</a></li>
+	{% endfor %}
 </ul>

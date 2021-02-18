@@ -3,7 +3,7 @@ title: 8. String to Interger (atoi)
 description: Implement `atoi` which converts a string to an integer.
 tags:
   - coding-questions
-layout: layouts/coding-questions.html
+layout: layouts/coding-questions.liquid
 ---
 
 ## The Problem

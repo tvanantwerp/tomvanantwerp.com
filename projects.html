@@ -1,10 +1,10 @@
 ---
 title: Projects
-layout: layouts/projects.html
+layout: layouts/projects.liquid
 ---
 
 <ul>
-    {%- for project in collections.programmingProjects %}
+    {% for project in collections.programmingProjects %}
         <li><a href="{{project.url}}">{{project.data.title}}</a></li>
-    {%- endfor %}
+    {% endfor %}
 </ul>

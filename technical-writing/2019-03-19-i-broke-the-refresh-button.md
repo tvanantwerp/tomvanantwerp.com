@@ -5,7 +5,7 @@ description: What happens when you used to have a service worker but don't anymo
 tags: 
     - technical-writing
     - Service Workers
-layout: layouts/writing.html
+layout: layouts/writing.liquid
 ---
 
 I was quite happy to launch a new version of a website last week. I was less happy when, come Monday, people were still seeing the old version. The standard "have you tried refreshing" had no effect: no matter home many times people refreshed, the old content would keep coming back. This was some aggressive caching!

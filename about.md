@@ -1,5 +1,5 @@
 ---
-layout: layouts/narrow-page.html
+layout: layouts/narrow-page.liquid
 title: Who is this Tom VanAntwerp guy anyway?
 ---
 

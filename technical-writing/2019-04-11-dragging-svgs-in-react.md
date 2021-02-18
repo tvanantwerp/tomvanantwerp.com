@@ -6,7 +6,7 @@ tags:
     - technical-writing
     - React
     - SVG
-layout: layouts/writing.html
+layout: layouts/writing.liquid
 ---
 I've recently started a new version of a mapping tool at work that lets people create [choropleths](https://en.wikipedia.org/wiki/Choropleth_map) from CSV files. The tool combines React and some D3 libraries to create SVG maps of the United States, including data labels.
 

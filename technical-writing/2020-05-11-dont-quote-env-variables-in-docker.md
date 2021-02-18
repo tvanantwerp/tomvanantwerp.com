@@ -5,7 +5,7 @@ description: While quoting an odd environment variable might make sense to deal 
 tags: 
     - technical-writing
     - Docker
-layout: layouts/writing.html
+layout: layouts/writing.liquid
 ---
 
 It's usually a good idea to store your app's environment variables separate from the app itself in a `.env` file. This allows you to easily have different values for development, staging, and production.
