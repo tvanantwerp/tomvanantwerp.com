@@ -3,8 +3,14 @@ title: Projects
 layout: layouts/projects.liquid
 ---
 
-<ul>
+<ul class="cards" style="list-style: none;">
     {% for project in collections.programmingProjects %}
-        <li><a href="{{project.url}}">{{project.data.title}}</a></li>
+        {% include components/card,
+            url: project.url,
+            title: project.data.title,
+            image: project.data.image,
+            alt: project.data.splash_alt
+        %}
+        <!-- <li><a href="{{project.url}}">{{project.data.title}}</a></li> -->
     {% endfor %}
 </ul>
