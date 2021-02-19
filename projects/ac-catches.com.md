@@ -6,6 +6,9 @@ tags:
   - projects
   - programmingProjects
 layout: layouts/writing.liquid
+image: ./img/2020-05-23-ac-catches.jpg
+splash: ./img/2020-05-23-ac-catches.jpg
+splash_alt: The above-the-fold interface for ac-catches.com, showing all of the controls for filtering and sorting the table of Animal Crossing fish and bugs.
 ---
 
 ## Catching Fish and Bugs in *Animal Crossing: New Horizons*
