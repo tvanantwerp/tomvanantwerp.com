@@ -3,7 +3,7 @@ title: Don't Quote Environment Variables in Docker
 date: 2020-05-11
 description: While quoting an odd environment variable might make sense to deal with special characters normally, Docker just assumes the quotes are part of the value.
 tags: 
-    - technical-writing
+    - Technical Writing
     - Docker
 layout: layouts/writing.liquid
 ---

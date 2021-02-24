@@ -3,7 +3,7 @@ title: Dragging SVGs with React
 date: 2019-04-11
 description: How to reposition SVGs and their children via click-and-drag in React.
 tags: 
-    - technical-writing
+    - Technical Writing
     - React
     - SVG
 layout: layouts/writing.liquid

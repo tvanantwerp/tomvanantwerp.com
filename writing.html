@@ -3,15 +3,11 @@ layout: layouts/base.liquid
 ---
 
 <h1>Writing</h1>
-<h2>Coding Questions</h2>
-<ul>
-	{% for cq in collections['coding-questions'] %}
-	<li><a href="{{cq.url | url }}">{{cq.data.title}}</a></li>
-	{% endfor %}
-</ul>
-<h2>Technical Writing</h2>
-<ul>
-	{% for tw in collections['technical-writing'] reversed %}
-	<li><a href="{{tw.url | url }}">{{tw.data.title}}</a></li>
-	{% endfor %}
-</ul>
+{% for collection in featuredCollections %}
+	<h2>{{collection}}</h2>
+	<ul>
+		{% for post in collections[collection] reversed %}
+			<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
+		{% endfor %}
+	</ul>
+{% endfor %}

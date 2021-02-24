@@ -3,7 +3,7 @@ title: "I Broke the Refresh Button: Dealing with a Rogue Service Worker"
 date: 2019-03-19
 description: What happens when you used to have a service worker but don't anymore.
 tags: 
-    - technical-writing
+    - Technical Writing
     - Service Workers
 layout: layouts/writing.liquid
 ---
