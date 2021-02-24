@@ -3,11 +3,15 @@ layout: layouts/base.liquid
 ---
 
 <h1>Writing</h1>
-{% for collection in featuredCollections %}
-	<h2>{{collection}}</h2>
-	<ul>
-		{% for post in collections[collection] reversed %}
-			<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
-		{% endfor %}
-	</ul>
-{% endfor %}
+<div class="writing__collections">
+	{% for collection in featuredCollections %}
+		<div class="writing__collection">
+			<h2 class="writing__collection__title">{{collection}}</h2>
+			<ul class="writing__collection__list">
+				{% for post in collections[collection] reversed %}
+				<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endfor %}
+</div>

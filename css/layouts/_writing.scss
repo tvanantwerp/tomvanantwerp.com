@@ -43,4 +43,25 @@
         }
 
     }
+
+    &__collections {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(#{"min(20rem, 100%)"}, 1fr));
+    }
+
+    &__collection {
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__list {
+            line-height: 1.4;
+            padding: 0;
+
+            li {
+                padding: calc(0.7 * 1em) 0;
+            }
+        }
+    }
 }
