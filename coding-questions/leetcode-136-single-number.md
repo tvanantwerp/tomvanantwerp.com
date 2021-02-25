@@ -3,7 +3,7 @@ title: 136. Single Number
 description: Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 tags:
   - Coding Questions
-layout: layouts/coding-questions.liquid
+layout: layouts/writing.liquid
 ---
 
 ## The Problem

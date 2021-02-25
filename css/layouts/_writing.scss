@@ -1,4 +1,7 @@
 .writing {
+    display: grid;
+    grid-gap: 1rem;
+
     &__splash {
         align-content: center;
         bottom: 0;
