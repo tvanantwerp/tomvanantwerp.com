@@ -4,52 +4,15 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSEO = require("eleventy-plugin-seo");
-const Image = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
+const markdownItFootnote = require('markdown-it-footnote');
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const mila = require('markdown-it-link-attributes');
 const uslug = require('uslug');
 const pluginSass = require("eleventy-plugin-sass");
 
-async function imageShortcode(src, alt, sizes=[400, 800, 1200]) {
-  if(alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
-  }
-
-  let metadata = await Image(src, {
-    widths: sizes,
-    formats: ["avif", "webp", "jpeg"],
-    outputDir: '_site/img',
-    filenameFormat: (id, src, width, format) => {
-      const filename = src.split('/').slice(-1)[0].split('.')[0];
-      if (width) {
-        return `${filename}-${id}-${width}.${format}`
-      }
-      return `${filename}-${id}.${format}`
-    }
-  });
-
-  let lowsrc = metadata.jpeg[0];
-
-  const theSizes = sizes.reverse().map(
-    (size, i) => {
-      return i === sizes.length - 1 ? `${size}px` : `(min-width: ${size}px) ${size}px`
-    }
-  );
-
-  return `<picture>
-    ${Object.values(metadata).map(imageFormat => {
-      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${theSizes}">`;
-    }).join("\n")}
-      <img
-        src="${lowsrc.url}"
-        alt="${alt}"
-        loading="lazy"
-        decoding="async">
-    </picture>`;
-}
+const {imageShortcode, figureShortcode} = require('./images');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -62,9 +25,8 @@ module.exports = function(eleventyConfig) {
 
   // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
-  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+  eleventyConfig.addShortcode("image", imageShortcode);
+  eleventyConfig.addShortcode("figure", figureShortcode);
 
   // Filters
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -99,7 +61,8 @@ module.exports = function(eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true
-  }).use(markdownItAnchor, {
+  }).use(markdownItFootnote)
+  .use(markdownItAnchor, {
     permalink: true,
     permalinkClass: "heading-anchor",
     permalinkSymbol: "#",
@@ -111,6 +74,15 @@ module.exports = function(eleventyConfig) {
       rel: 'noopener'
     }
   });
+  markdownLibrary.renderer.rules.footnote_caption = (tokens, idx) => {
+    const n = Number(tokens[idx].meta.id + 1).toString();
+
+    if (tokens[idx].meta.subId > 0) {
+      n += ':' + tokens[idx].meta.subId;
+    }
+  
+    return n;
+  }
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides
