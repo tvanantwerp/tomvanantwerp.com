@@ -1,7 +1,6 @@
 h1 {
 	font-size: 2.4rem;
 	font-weight: 700;
-	margin-bottom: 1rem;
 }
 
 h2 {
@@ -10,8 +9,6 @@ h2 {
 	font-size: 2rem;
 	font-style: italic;
 	font-weight: 300;
-	margin: 2rem 0;
-	padding-bottom: 0.5rem;
 
 	em {
 		font-style: normal;
@@ -82,6 +79,11 @@ sub {
 
 sup {
 	top: -0.5em;
+}
+
+figcaption {
+	font-style: italic;
+	text-align: center;
 }
 
 .heading-anchor {
