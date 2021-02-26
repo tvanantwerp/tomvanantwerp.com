@@ -1,6 +1,6 @@
 ---
-title: The Second Pile of Stuff
-subtitle: Moving through different dimensions, fun and games, and DIY vaccines
+title: "The Second Pile of Stuff: Moving through different dimensions, fun and games, and DIY vaccines"
+subtitle: 
 date: 2020-02-22
 description: 
 layout: layouts/writing.liquid

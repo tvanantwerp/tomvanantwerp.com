@@ -1,6 +1,5 @@
 ---
-title: The First Pile of Stuff
-subtitle: The collapse of civilization, crypto art, and MSG
+title: "The First Pile of Stuff: The collapse of civilization, crypto art, and MSG"
 date: 2020-02-08
 description: 
 layout: layouts/writing.liquid
