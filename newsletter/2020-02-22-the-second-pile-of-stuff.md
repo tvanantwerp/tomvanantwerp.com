@@ -4,6 +4,13 @@ subtitle: Moving through different dimensions, fun and games, and DIY vaccines
 date: 2020-02-22
 description: 
 layout: layouts/writing.liquid
+tags:
+    - Newsletter
+    - Non-Euclidean Geometry
+    - Television
+    - Comedy
+    - COVID-19
+    - Biohacking
 ---
 
 Eating a diet of highly-processed, low-nutrient, artificially-satisfying junk food is bad.

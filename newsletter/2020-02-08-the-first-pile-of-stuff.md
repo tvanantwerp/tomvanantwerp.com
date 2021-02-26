@@ -4,6 +4,15 @@ subtitle: The collapse of civilization, crypto art, and MSG
 date: 2020-02-08
 description: 
 layout: layouts/writing.liquid
+tags:
+    - Newsletter
+    - Programming
+    - Institutions
+    - Cryptocurrency
+    - Art
+    - Diet
+    - Health
+    - Medicine
 ---
 
 ## Hello and welcome!
@@ -50,7 +59,7 @@ My own failure to understand why I should make or buy crypto art doesn’t mean 
 
 ## MSG Concerns are a Joke. Literally.
 
-{% figure './img/2020-02-08-msg.jpg', 'Bags of MSG on a store shelf.', 'Source: <a href="https://commons.wikimedia.org/wiki/File:Monosodium_glutamate_1_2017-03-13.jpg" target="_blank" rel="noopener noreferrer">Source: Wikimedia Commons</a>' %}
+{% figure './img/2020-02-08-msg.jpg', 'Bags of MSG on a store shelf.', 'Source: <a href="https://commons.wikimedia.org/wiki/File:Monosodium_glutamate_1_2017-03-13.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>' %}
 
 
 You’ve likely heard that monosodium glutamate (MSG), an ingredient associated with Chinese food, can cause headaches and other distressing symptoms. You may have also heard that this is all bunk, and is just the result of anti-Chinese racism. But here is a more detailed look at the history of MSG concerns.
