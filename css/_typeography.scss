@@ -92,6 +92,11 @@ figcaption {
 	text-align: center;
 }
 
+blockquote {
+	border-left: 2px solid var(--color);
+	padding-left: var(--line-height);
+}
+
 .heading-anchor {
 	color: var(--gray);
 	font-size: 0.7em;
