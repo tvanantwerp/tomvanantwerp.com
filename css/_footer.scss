@@ -2,7 +2,7 @@
 	color: var(--gray);
 	display: grid;
 	grid-template: auto / 1fr auto;
-	font-size: 0.8rem;
+	font-size: calc(3 * var(--baseline-grid));
 
 	a {
 		color: inherit;

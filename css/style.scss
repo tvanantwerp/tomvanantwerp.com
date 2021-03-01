@@ -10,8 +10,9 @@
 	--sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
 		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	--font-size-root: 18px;
-	--line-height: 24px;
+	--baseline-grid: 5px;
+	--font-size-root: calc(4 * var(--baseline-grid));
+	--line-height: calc(6 * var(--baseline-grid));
 }
 
 @media (prefers-color-scheme: dark) {
