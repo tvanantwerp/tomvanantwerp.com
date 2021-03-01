@@ -21,7 +21,7 @@
 	}
 }
 
-html {
+html, body {
 	font-family: var(--sans-serif);
 	font-size: var(--font-size-root);
 	line-height: var(--line-height);
@@ -40,10 +40,10 @@ html {
 	display: grid;
 	grid-gap: 2rem;
 	grid-template-rows: auto 1fr auto;
-	margin: 1rem auto;
+	margin: 0 auto;
 	max-width: var(--max-width);
 	min-height: calc(100vh - 2rem);
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
 @import './_typeography';
