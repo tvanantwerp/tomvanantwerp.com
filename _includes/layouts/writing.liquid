@@ -10,23 +10,28 @@ layout: layouts/base.liquid
         <div class="writing__splash">
             <h1 class="writing__title--with-splash">{{ title }}</h1>
             {% if page.date %}
-            <time
-                datetime="{{ page.date | htmlDateString }}"
-                class="writing__date--with-splash"
-            >
-                {{ page.date | readableDate }}
-            </time>
-        {% endif %}
+                <div class="writing__byline writing__byline--with-splash">
+                    By Tom VanAntwerp on 
+                    <time
+                        datetime="{{ page.date | htmlDateString }}"
+                        class="writing__date--with-splash"
+                    >
+                        {{ page.date | readableDate }}
+                    </time>
+                </div>
+            {% endif %}
         </div>
     {% else %}
         <h1 class="writing__title">{{ title }}</h1>
         {% if page.date %}
+        <div class="writing__byline writing__byline--with-splash">By Tom VanAntwerp on 
             <time
                 datetime="{{ page.date | htmlDateString }}"
                 class="writing__date"
             >
                 {{ page.date | readableDate }}
             </time>
+        </div>
         {% endif %}
     {% endif %}
     {{ content }}

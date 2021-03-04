@@ -33,15 +33,20 @@
             padding: 1rem 2rem;
         }
     }
-    
-    &__date {
+
+    &__byline {
+        font-family: var(--serif);
+        font-size: 0.75rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
         &--with-splash {
             background-color: var(--background-color);
             background-blend-mode: overlay;
+            font-family: var(--sans-serif);
             margin: 0;
             padding: 1rem 2rem 1.4rem;
         }
-
     }
 
     &__collections {
