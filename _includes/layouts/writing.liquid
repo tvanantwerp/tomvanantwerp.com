@@ -24,14 +24,15 @@ layout: layouts/base.liquid
     {% else %}
         <h1 class="writing__title">{{ title }}</h1>
         {% if page.date %}
-        <div class="writing__byline writing__byline--with-splash">By Tom VanAntwerp on 
-            <time
-                datetime="{{ page.date | htmlDateString }}"
-                class="writing__date"
-            >
-                {{ page.date | readableDate }}
-            </time>
-        </div>
+            <div class="writing__byline">By Tom VanAntwerp on 
+                <time
+                    datetime="{{ page.date | htmlDateString }}"
+                    class="writing__date"
+                >
+                    {{ page.date | readableDate }}
+                </time>
+            </div>
+            <hr />
         {% endif %}
     {% endif %}
     {{ content }}
