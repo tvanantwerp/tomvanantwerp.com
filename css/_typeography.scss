@@ -14,7 +14,6 @@ p, ol, ul {
 h1 {
 	font-size: #{'min(10vw, 3.052rem)'};
 	font-weight: 700;
-	line-height: calc(12 * var(--baseline-grid));
 	margin-top: 0;
 }
 
@@ -24,7 +23,6 @@ h2 {
 	font-size: #{'min(8vw, 2.441rem)'};
 	font-style: italic;
 	font-weight: 300;
-	line-height: calc(8 * var(--baseline-grid));
 	margin-bottom: 1rem;
 	
 	em {
