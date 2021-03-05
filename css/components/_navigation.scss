@@ -1,12 +1,13 @@
 .nav {
 	&__header {
-		position: sticky;
+		background-color: var(--background-color);
+		padding: 1rem 0;
 	}
 
 	&__nav {
 		align-items: end;
 		display: grid;
-		grid-gap: 1rem;
+		grid-gap: 0.5rem;
 		grid-template: repeat(2, auto) / 1fr;
 		text-align: center;
 		
@@ -17,7 +18,6 @@
 	}
 
 	&__site-name {
-		display: inline-block;
 		font-size: 1.4rem;
 		font-weight: 700;
 		margin: 0;

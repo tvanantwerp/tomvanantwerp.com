@@ -44,7 +44,7 @@ html, body {
 
 .content {
 	display: grid;
-	grid-gap: 2rem;
+	grid-gap: 1rem;
 	grid-template-rows: auto 1fr auto;
 	margin: 0 auto;
 	max-width: var(--max-width);
@@ -53,12 +53,12 @@ html, body {
 }
 
 @import './_typography';
-@import './_images';
-@import './_navigation';
 @import './_code';
-@import './components/_footer';
 @import './components/_cards';
-@import './layouts/_pages';
+@import './components/_footer';
+@import './components/_images';
+@import './components/_navigation';
 @import './layouts/_home';
-@import './layouts/_writing';
+@import './layouts/_pages';
 @import './layouts/_projects';
+@import './layouts/_writing';
