@@ -1,9 +1,15 @@
 .footer {
+	background-color: var(--background-color);
 	color: var(--gray);
-	display: grid;
-	grid-template: auto / 1fr auto;
 	font-size: 0.75rem;
-	margin-bottom: 1rem;
+	
+	&__content {
+		display: grid;
+		grid-template: auto / 1fr auto;
+		margin: 0 auto 1rem;
+		max-width: var(--max-width);
+		padding: 0 1rem;
+	}
 
 	a {
 		color: inherit;

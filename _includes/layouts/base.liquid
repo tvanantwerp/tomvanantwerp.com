@@ -38,11 +38,9 @@
 		/>
 		{% seo "" %}
 	</head>
-	<body>
-		<div class="content">
-			{% include components/navigation %}
-			<main>{{ content }}</main>
-			{% include components/footer %}
-		</div>
+	<body class="layout">
+		{% include components/navigation %}
+		<main class="content">{{ content }}</main>
+		{% include components/footer %}
 	</body>
 </html>
