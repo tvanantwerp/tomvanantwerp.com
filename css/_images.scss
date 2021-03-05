@@ -4,6 +4,10 @@ img {
 	max-width: 100%;
 }
 
+figure {
+    margin-bottom: 1rem;
+}
+
 .images {
     &__two-side-by-side {
         // For use with a pair of images an accompanying figcaption

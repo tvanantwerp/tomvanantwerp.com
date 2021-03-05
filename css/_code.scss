@@ -4,13 +4,14 @@ pre {
 	color: #c3cee3;
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
 		'Courier New', monospace;
-	font-size: 0.9rem;
+	font-size: 16px;
 	hyphens: none;
 	text-align: left;
 }
 
 pre {
-	line-height: 1.5em;
+	line-height: 1.5;
+	margin-bottom: 1rem;
 	max-width: calc(var(--max-width) - 2rem);
 	overflow-x: auto;
 	padding: 1rem;
