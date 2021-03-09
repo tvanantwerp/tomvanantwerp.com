@@ -15,19 +15,25 @@
 		text-align: center;
 		
 		@media screen and (min-width: 520px) {
-			grid-template: auto / 1fr auto;
+			align-items: baseline;
+			display: flex;
+			gap: 0.5rem;
 			text-align: left;
 		}
 	}
-
+	
 	&__site-name {
 		font-size: 1.4rem;
 		font-weight: 700;
 		margin: 0;
-
+		
 		a {
 			color: var(--color);
 			text-decoration: none;
+		}
+
+		@media screen and (min-width: 520px) {
+			flex: 1;
 		}
 	}
 
