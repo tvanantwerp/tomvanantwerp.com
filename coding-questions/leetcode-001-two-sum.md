@@ -64,7 +64,7 @@ const twoSum = (nums, target) => {
 }
 ```
 
-This solution is bad. I've taken a problem with a single input array and somehow made it take $O(n{^2})$ time and $O(n)$ space. I can only assume I didn't know about hashmaps when I wrote this.
+This solution is bad. I've taken a problem with a single input array and somehow made it take $O(n{^2})$ time and $O(n)$ space. (If I'd just looped through `nums` itself twice looking for complements rather than store previously seen numbers in the `list` array, I could've at least gotten space complexity of $O(1)$.) I can only assume I didn't know about hashmaps when I wrote this.
 
 The next attempt I found was much better.
 
@@ -80,7 +80,7 @@ const twoSum = function(nums, target) {
 };
 ```
 
-Here I use a JavaScript object to keep track of numbers I've seen and their indices. This gets runtime back down to $O(n)$.
+Here I use a JavaScript object to keep track of numbers I've seen and their indices. This gets runtime back down to $O(n)$ with space complexity of $O(n)$.
 
 My most recent solution is basically the same, except that it uses the newer built-in `Map` in JavaScript.
 

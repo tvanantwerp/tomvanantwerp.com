@@ -27,8 +27,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addShortcode("image", imageShortcode);
   eleventyConfig.addShortcode("figure", figureShortcode);
-
+  
   // Filters
+  eleventyConfig.addFilter('sortByTitle', (values) => {
+    return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title));
+  });
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("DDD");
   });

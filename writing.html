@@ -8,7 +8,8 @@ layout: layouts/base.liquid
 		<div class="writing__collection">
 			<h2 class="writing__collection__title">{{collection}}</h2>
 			<ul class="writing__collection__list">
-				{% for post in collections[collection] reversed %}
+				{% assign posts = collections[collection] | sortByTitle %}
+				{% for post in posts %}
 				<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
 				{% endfor %}
 			</ul>
