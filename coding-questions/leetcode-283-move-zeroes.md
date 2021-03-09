@@ -26,7 +26,7 @@ Note:
 
 ## My Solution
 
-This simple $O(n)$ solution uses two variables, `i` and `j`, in a `for` loop. The first, `i`, is used to actually count iterations and stop before hitting the array's length. The second, `j`, keeps track of which index in the constantly mutating `nums` array you're currently looking at.
+This $O(n)$ time solution uses two variables, `i` and `j`, in a `for` loop. The first, `i`, is used to actually count iterations and stop before hitting the array's length. The second, `j`, keeps track of which index in the constantly mutating `nums` array you're currently looking at.
 
 Every time `nums[j]` is a `0`, it gets `splice`d out and `push`ed to the end. Everything that was after `nums[j]` will shift ahead by `1` index value, so `j` is decremented by `1` to make sure we're look at what came after that `0` instead of what was two places after it. After `i` iterations, we can safely assume we've checked the entire `nums` array.
 
