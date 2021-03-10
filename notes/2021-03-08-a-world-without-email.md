@@ -13,7 +13,7 @@ splash: ./img/2021-03-08-hide-the-pain-harold.jpg
 splash_alt: "The 'Hide the Pain Harold' meme image, featuring an older man at a laptop with an unconvincing smile."
 ---
 
-Intro
+I've been a fan of [Cal Newport](https://www.calnewport.com/)'s previous writing about [building career capital](https://amzn.to/3tbuq4v) and [doing deep work](https://amzn.to/3rzJ9px). Since implementing his [time-block planning system](https://youtu.be/eff9h1WYxSo), my personal productivity has increased 2-3x at least. So I was very excited to read *[A World Without Email](https://amzn.to/3ryZPNS)*. Whereas much of Newport's previous work on professional productivity focuses on the individual, this new book examines the entire knowledge work enterprise and how it can be improved.
 
 ### The Hyperactive Hive Mind
 
