@@ -1,6 +1,6 @@
 ---
 title: "A World Without Email"
-excerpt: A summary of Cal Newport's vision of a workplace divorced from the frantic back-and-forth of email and instant messaging.
+description: A summary of Cal Newport's vision of a workplace divorced from the frantic back-and-forth of email and instant messaging.
 tags:
   - Notes
   - Cal Newport
@@ -11,7 +11,7 @@ tags:
   - Scrum
   - Borders
 layout: layouts/writing.liquid
-image: /img/2021-03-08-hide-the-pain-harold.jpg
+image: img/2021-03-08-hide-the-pain-harold.jpg
 ---
 
 I've been a fan of [Cal Newport](https://www.calnewport.com/)'s previous writing about [building career capital](https://amzn.to/3tbuq4v) and [doing deep work](https://amzn.to/3rzJ9px). Since implementing his [time-block planning system](https://youtu.be/eff9h1WYxSo), my personal productivity has increased 2-3x at least. So I was very excited to read his 2021 book *[A World Without Email](https://amzn.to/3ryZPNS)*. Where much of Newport's previous work focused on individual productivity, this new book examines the entire knowledge work enterprise and how it can be improved.

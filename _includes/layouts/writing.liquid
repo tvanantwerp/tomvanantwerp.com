@@ -9,9 +9,9 @@ layout: layouts/base.liquid
         </div>
         <div class="writing__splash">
             <h1 class="writing__title--with-splash">{{ title }}</h1>
-            {% if excerpt %}
+            {% if description %}
                 <div class="writing__excerpt writing__excerpt--with-splash">
-                    {{ excerpt }}
+                    {{ description }}
                 </div>
             {% endif %}
             {% if page.date %}
@@ -28,9 +28,9 @@ layout: layouts/base.liquid
         </div>
     {% else %}
         <h1 class="writing__title">{{ title }}</h1>
-        {% if excerpt %}
+        {% if description %}
                 <div class="writing__excerpt">
-                    {{ excerpt }}
+                    {{ description }}
                 </div>
             {% endif %}
         {% if page.date %}

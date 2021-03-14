@@ -5,8 +5,8 @@ tags:
   - projects
   - programmingProjects
 layout: layouts/writing.liquid
-image: /img/taxfoundation-splash.jpg
-splash: /img/taxfoundation-splash.jpg
+image: img/taxfoundation-splash.jpg
+splash: img/taxfoundation-splash.jpg
 splash_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.
 ---
 

@@ -3,7 +3,6 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginSEO = require("eleventy-plugin-seo");
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require('markdown-it-footnote');
 const markdownItAnchor = require("markdown-it-anchor");
@@ -19,19 +18,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginSass);
-  eleventyConfig.addPlugin(pluginSEO, {
-    title: "Tom VanAntwerp",
-    description: "TVA's Digital Garden",
-    url: "https://tomvanantwerp.com",
-    author: "Tom VanAntwerp",
-    twitter: "tvanantwerp",
-    image: "img/tom.png",
-    options: {
-      titleDivider: "|",
-      imageWithBaseUrl: true,
-      twitterCardType: "summary_large_image"
-    }
-  });
 
   eleventyConfig.setDataDeepMerge(true);
 
