@@ -2,9 +2,10 @@
 {
   "title": "Tom VanAntwerp",
   "description": "TVA's Digital Garden",
-  "url": "https://tomvanantwerp.com/",
+  "url": "https://tomvanantwerp.com",
   "author": "Tom VanAntwerp",
   "twitter": "tvanantwerp",
+  "image": "./img/tom.png",
   "feed": {
     "subtitle": "TVA's Digital Garden",
     "filename": "feed.xml",

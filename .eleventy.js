@@ -19,7 +19,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginSass);
-  eleventyConfig.addPlugin(pluginSEO, require("./_data/metadata.json"));
+  eleventyConfig.addPlugin(pluginSEO, {
+    title: "Tom VanAntwerp",
+    description: "TVA's Digital Garden",
+    url: "https://tomvanantwerp.com",
+    author: "Tom VanAntwerp",
+    twitter: "tvanantwerp",
+    image: "img/tom.png",
+    options: {
+      titleDivider: "|",
+      imageWithBaseUrl: true,
+      twitterCardType: "summary_large_image"
+    }
+  });
 
   eleventyConfig.setDataDeepMerge(true);
 
