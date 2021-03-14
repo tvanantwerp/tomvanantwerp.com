@@ -1,10 +1,8 @@
 .writing {
     &__splash {
         align-content: center;
-        bottom: 0;
         display: grid;
         height: 95vh;
-        justify-items: center;
         grid-template-columns: 1fr;
 
         &__background {
@@ -35,6 +33,20 @@
         }
     }
 
+    &__excerpt {
+        font-family: var(--serif);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        
+        &--with-splash {
+            background-color: var(--background-color);
+            background-blend-mode: overlay;
+            margin: 0;
+            padding: 1rem 2rem 1.4rem;
+            text-align: center;
+        }
+    }
+
     &__byline {
         font-family: var(--serif);
         font-size: 0.75rem;
@@ -44,7 +56,6 @@
         &--with-splash {
             background-color: var(--background-color);
             background-blend-mode: overlay;
-            font-family: var(--sans-serif);
             margin: 0;
             padding: 1rem 2rem 1.4rem;
         }
