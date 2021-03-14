@@ -38,6 +38,7 @@ h3 {
 
 h4 {
 	font-size: 1.6rem;
+	font-weight: 700;
 }
 
 
@@ -57,7 +58,7 @@ ul {
 }
 
 ol {
-	list-style: decimal-leading-zero;
+	list-style: decimal;
 }
 
 li {
@@ -102,7 +103,12 @@ figcaption {
 
 blockquote {
 	border-left: 2px solid var(--color);
+	font-style: italic;
 	padding-left: 1rem;
+
+	em {
+		font-style: normal;
+	}
 }
 
 hr {

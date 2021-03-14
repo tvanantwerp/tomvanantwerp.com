@@ -9,6 +9,11 @@ layout: layouts/base.liquid
         </div>
         <div class="writing__splash">
             <h1 class="writing__title--with-splash">{{ title }}</h1>
+            {% if excerpt %}
+                <div class="writing__excerpt writing__excerpt--with-splash">
+                    {{ excerpt }}
+                </div>
+            {% endif %}
             {% if page.date %}
                 <div class="writing__byline writing__byline--with-splash">
                     By Tom VanAntwerp on 
@@ -23,6 +28,11 @@ layout: layouts/base.liquid
         </div>
     {% else %}
         <h1 class="writing__title">{{ title }}</h1>
+        {% if excerpt %}
+                <div class="writing__excerpt">
+                    {{ excerpt }}
+                </div>
+            {% endif %}
         {% if page.date %}
             <div class="writing__byline">By Tom VanAntwerp on 
                 <time
