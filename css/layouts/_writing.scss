@@ -23,20 +23,23 @@
     }
 
     &__title {
+        margin: 0;
+        text-align: center;
+
         &--with-splash {
             background-color: var(--background-color);
             background-blend-mode: overlay;
             font-size: calc(1rem + 4vw);
-            margin: 0;
             padding: 1rem 2rem;
-            text-align: center;
         }
     }
 
     &__excerpt {
         font-family: var(--serif);
         font-size: 1rem;
-        margin-bottom: 1rem;
+        margin: 0 auto 1rem;
+        max-width: 480px;
+        text-align: justify;
         
         &--with-splash {
             background-color: var(--background-color);
