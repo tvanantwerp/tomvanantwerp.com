@@ -5,7 +5,7 @@
   "url": "https://tomvanantwerp.com",
   "author": "Tom VanAntwerp",
   "twitter": "tvanantwerp",
-  "image": "./img/tom.png",
+  "image": "/img/tom.png",
   "feed": {
     "subtitle": "TVA's Digital Garden",
     "filename": "feed.xml",
