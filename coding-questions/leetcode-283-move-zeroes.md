@@ -1,9 +1,6 @@
 ---
 title: 283. Move Zeroes
 description: Given an array, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-tags:
-  - Coding Questions
-layout: codingQuestions
 ---
 
 ## The Problem

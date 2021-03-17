@@ -1,9 +1,6 @@
 ---
 title: First Recurring Character
 description: Given an array, return the first character to occur twice. Else, return undefined.
-tags:
-  - Coding Questions
-layout: codingQuestions
 ---
 
 ## The Problem

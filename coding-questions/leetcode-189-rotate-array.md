@@ -1,9 +1,6 @@
 ---
 title: 189. Rotate Array
 description: Given an array, rotate the array to the right by k steps, where k is non-negative.
-tags:
-  - Coding Questions
-layout: codingQuestions
 ---
 
 ## The Problem
