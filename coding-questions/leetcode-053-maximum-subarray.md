@@ -4,7 +4,7 @@ description: Given an integer array, find the contiguous subarray (containing at
 tags:
   - Coding Questions
   - Dynamic Programming
-layout: layouts/writing.liquid
+layout: codingQuestions
 ---
 
 ## The Problem

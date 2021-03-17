@@ -3,7 +3,7 @@ title: 206. Reverse Linked List
 description: Reverse a singly linked list.
 tags:
   - Coding Questions
-layout: layouts/writing.liquid
+layout: codingQuestions
 ---
 
 ## The Problem

@@ -52,6 +52,9 @@ module.exports = function(eleventyConfig) {
     return Math.min.apply(null, numbers);
   });
 
+  // Layout aliases
+  eleventyConfig.addLayoutAlias('codingQuestions', 'layouts/coding-questions.liquid');
+
   // Passthroughs
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");

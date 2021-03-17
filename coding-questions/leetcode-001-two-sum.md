@@ -3,7 +3,7 @@ title: 001. Two Sum
 description: Given an array of integers and a target sum, return indices of two numbers in array that add to the target sum.
 tags:
   - Coding Questions
-layout: layouts/writing.liquid
+layout: codingQuestions
 ---
 
 ## The Problem

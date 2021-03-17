@@ -3,7 +3,7 @@ title: First Recurring Character
 description: Given an array, return the first character to occur twice. Else, return undefined.
 tags:
   - Coding Questions
-layout: layouts/writing.liquid
+layout: codingQuestions
 ---
 
 ## The Problem
