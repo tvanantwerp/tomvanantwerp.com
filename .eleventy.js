@@ -9,7 +9,6 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const mila = require('markdown-it-link-attributes');
 const uslug = require('uslug');
-const pluginSass = require("eleventy-plugin-sass");
 
 const {imageShortcode, figureShortcode} = require('./images');
 
@@ -17,7 +16,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(pluginSass);
 
   eleventyConfig.setDataDeepMerge(true);
 
@@ -55,9 +53,9 @@ module.exports = function(eleventyConfig) {
   // Layout aliases
   eleventyConfig.addLayoutAlias('codingQuestions', 'layouts/coding-questions.liquid');
 
+  eleventyConfig.addWatchTarget('css');
   // Passthroughs
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon");
   eleventyConfig.addPassthroughCopy("fonts");
 
