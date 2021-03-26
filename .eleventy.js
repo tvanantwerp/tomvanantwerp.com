@@ -53,11 +53,11 @@ module.exports = function(eleventyConfig) {
   // Layout aliases
   eleventyConfig.addLayoutAlias('codingQuestions', 'layouts/coding-questions.liquid');
 
-  eleventyConfig.addWatchTarget('css');
+  eleventyConfig.addWatchTarget('src/css');
   // Passthroughs
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("favicon");
-  eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/favicon");
+  eleventyConfig.addPassthroughCopy("src/fonts");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -129,9 +129,7 @@ module.exports = function(eleventyConfig) {
 
     // These are all optional, defaults are shown:
     dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
+      input: "src",
       output: "_site"
     }
   };
