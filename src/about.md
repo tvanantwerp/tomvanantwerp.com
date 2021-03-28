@@ -7,6 +7,8 @@ Tom is a technologist living and working around Washington, DC. Since <span styl
 
 To see some examples of Tom's work, check out [projects](/projects).
 
+To learn more about the hardware, software, and other gear Tom uses day-to-day, see the [Uses](/uses) page.
+
 To contact Tom, just yell really loud and maybe he'll hear you. Alternatively, get in touch via <a href="https://twitter.com/{{metadata.author.twitter}}" target="_blank" rel="noopener noreferrer">Twitter</a>.
 
 <script>
