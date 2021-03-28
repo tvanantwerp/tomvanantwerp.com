@@ -9,6 +9,15 @@ p, ol, ul {
 	font-family: var(--serif);
 	font-weight: 300;
 	margin-bottom: 1rem;
+
+	a {
+		color: var(--color-highlight);
+	}
+}
+
+
+ul ul {
+	margin: 0;
 }
 
 h1 {
@@ -24,7 +33,7 @@ h2 {
 	font-style: italic;
 	font-weight: 300;
 	margin-bottom: 1rem;
-	
+
 	em {
 		font-style: normal;
 	}
@@ -99,6 +108,10 @@ figcaption {
 	font-size: 0.75rem;
 	font-style: italic;
 	text-align: center;
+
+	a {
+		color: var(--color-highlight);
+	}
 }
 
 blockquote {
@@ -108,6 +121,10 @@ blockquote {
 
 	em {
 		font-style: normal;
+	}
+
+	a {
+		color: var(--color-highlight);
 	}
 }
 

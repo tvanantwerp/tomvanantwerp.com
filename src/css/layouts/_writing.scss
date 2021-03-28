@@ -12,7 +12,7 @@
             left: 0;
             right: 0;
             z-index: -1;
-    
+
             img {
                 height: 100vh;
                 object-fit: cover;
@@ -40,7 +40,7 @@
         margin: 0 auto 1rem;
         max-width: 480px;
         text-align: justify;
-        
+
         &--with-splash {
             background-color: var(--background-color);
             background-blend-mode: overlay;
