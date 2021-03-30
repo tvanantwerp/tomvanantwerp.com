@@ -64,6 +64,7 @@ module.exports = function (eleventyConfig) {
 	// Passthroughs
 	eleventyConfig.addPassthroughCopy('src/img');
 	eleventyConfig.addPassthroughCopy('src/favicon');
+	eleventyConfig.addPassthroughCopy('src/files');
 	eleventyConfig.addPassthroughCopy('src/fonts');
 
 	/* Markdown Overrides */
