@@ -36,3 +36,4 @@ The following is a list of personal directives that, when followed, have improve
 - Get a dog if your living situation permits it. Even when they destroy your house, you can't help feeling good when you see those cute puppy eyes.
 - Design your environment. Add things that bring you joy, remove things that irritate you.
 - Get enough sunlight.
+- Always learn new things. (I mean things like advanced math or ancient history, not "research" from conspiracy theory YouTube.)

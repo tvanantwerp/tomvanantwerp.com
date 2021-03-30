@@ -2,17 +2,17 @@
 layout: layouts/base.liquid
 ---
 
-<h1>Writing</h1>
+<h1 class="writing__title">Writing</h1>
 <div class="writing__collections">
 	{% for collection in featuredCollections %}
-		<div class="writing__collection">
-			<h2 class="writing__collection__title">{{collection}}</h2>
-			<ul class="writing__collection__list">
-				{% assign posts = collections[collection] | sortByTitle %}
-				{% for post in posts %}
-				<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
-				{% endfor %}
-			</ul>
-		</div>
+	<div class="writing__collection">
+		<h2 class="writing__collection__title">{{collection}}</h2>
+		<ul class="writing__collection__list">
+			{% assign posts = collections[collection] | sortByTitle %} {% for post in
+			posts %}
+			<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
 	{% endfor %}
 </div>

@@ -29,6 +29,7 @@
         &--with-splash {
             background-color: var(--background-color);
             background-blend-mode: overlay;
+            font-family: var(--sans-serif);
             font-size: calc(1rem + 4vw);
             padding: 1rem 2rem;
         }
