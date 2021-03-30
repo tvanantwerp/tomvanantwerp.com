@@ -7,6 +7,9 @@ tags:
   - Security
   - Operations
 layout: writing
+image: img/2021-03-30-keyboard-unlock.jpg
+splash: img/2021-03-30-keyboard-unlock.jpg
+splash_alt: 'An unlocked padlock sitting on a laptop keyboard. Sorry, but the stock photos available for a topic like this are awful. Source: FLY:D on Unsplash.'
 ---
 
 Nobody enjoys typing passwords to log in. Nobody!
