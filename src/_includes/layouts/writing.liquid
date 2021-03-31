@@ -28,6 +28,11 @@ layout: layouts/base.liquid
         </div>
     {% else %}
         <h1 class="writing__title">{{ title }}</h1>
+        {% if description %}
+            <div class="writing__excerpt">
+                {{ description }}
+            </div>
+        {% endif %}
         {% if page.date %}
             <div class="writing__byline">By Tom VanAntwerp on 
                 <time
@@ -38,12 +43,6 @@ layout: layouts/base.liquid
                 </time>
             </div>
         {% endif %}
-        {% if description %}
-                <div class="writing__excerpt">
-                    {{ description }}
-                </div>
-            {% endif %}
-        <hr />
     {% endif %}
     {{ content }}
 </article>

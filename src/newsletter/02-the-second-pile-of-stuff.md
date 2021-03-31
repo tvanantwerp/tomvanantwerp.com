@@ -1,15 +1,15 @@
 ---
-title: "The Second Pile of Stuff: Moving through different dimensions, fun and games, and DIY vaccines"
+title: 'The Second Pile of Stuff'
 date: 2020-02-22
-description: 
+description: Moving through different dimensions, fun and games, and DIY vaccines
 layout: layouts/writing.liquid
 tags:
-    - Newsletter
-    - Non-Euclidean Geometry
-    - Television
-    - Comedy
-    - COVID-19
-    - Biohacking
+  - Newsletter
+  - Non-Euclidean Geometry
+  - Television
+  - Comedy
+  - COVID-19
+  - Biohacking
 ---
 
 Eating a diet of highly-processed, low-nutrient, artificially-satisfying junk food is bad.
@@ -31,7 +31,7 @@ It’s hard to intuit what non-Euclidean space is like. What would the experienc
 Watch these to blow your mind:
 
 - [A spherical geometry world](https://youtu.be/yY9GAyJtuJ0)
-- [Strong *Alice in Wonderland* Vibes](https://youtu.be/kEB11PQ9Eo8)
+- [Strong _Alice in Wonderland_ Vibes](https://youtu.be/kEB11PQ9Eo8)
 - [DO NOT take drugs before visiting this reality. (Or maybe do?)](https://youtu.be/ztsi0CLxmjw)
 
 ## Some Light Television
@@ -48,7 +48,7 @@ And that’s why you should watch [Taskmaster](https://www.youtube.com/channel/U
 
 Start at the beginning [here](https://www.youtube.com/playlist?list=PLRWvNQVqAeWKT-Ouq4ICzdyyOaJELZUlc).
 
-*Disclaimer: Often family friendly, but not 100%. Includes occasional swearing, partial nudity, and sexual themes.*
+_Disclaimer: Often family friendly, but not 100%. Includes occasional swearing, partial nudity, and sexual themes._
 
 ## Skip the Vaccine Queue by Making Your Own
 
@@ -73,9 +73,6 @@ Thanks for reading. I hope you’ve enjoyed all this stuff and that you look for
 If you know someone else who might enjoy reading this newsletter, please point them to the sign-up page [here](https://tvanantwerp.substack.com/). For smaller bits of stuff, you can also follow Tom on [Twitter](https://twitter.com/tvanantwerp).
 
 [^1]: Or maybe just mad.
-
 [^2]: Of all the golden ages we could be living through… To quote Peter Thiel: “We wanted flying cars, instead we got 140 characters.” (At least Twitter doubled it to 280 since he first said that!)
-
-[^3]: I often hear *Thought Leaders™* say “play stupid games, win stupid prizes” as an admonition against zero-sum games (status, power) and for positive-sum games (wealth creation and free trade). I’m tickled that the phrase also describes the premise of a TV show with equal precision.
-
+[^3]: I often hear _Thought Leaders™_ say “play stupid games, win stupid prizes” as an admonition against zero-sum games (status, power) and for positive-sum games (wealth creation and free trade). I’m tickled that the phrase also describes the premise of a TV show with equal precision.
 [^4]: [British comedy is superior to American comedy](https://www.youtube.com/watch?v=8k2AbqTBxao), and watching the contestants of Taskmaster is a great reminder why.

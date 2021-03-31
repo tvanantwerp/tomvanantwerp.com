@@ -2,7 +2,7 @@
     &__splash {
         align-content: center;
         display: grid;
-        height: 95vh;
+        height: calc(100vh - var(--nav-height) - 1rem);
         grid-template-columns: 1fr;
 
         &__background {
@@ -39,12 +39,14 @@
         font-family: var(--serif);
         font-size: 1rem;
         margin: 0 auto 1rem;
-        text-align: justify;
+        max-width: 480px;
+        text-align: center;
 
         &--with-splash {
             background-color: var(--background-color);
             background-blend-mode: overlay;
             margin: 0;
+            max-width: 100%;
             padding: 1rem 2rem 1.4rem;
             text-align: center;
         }

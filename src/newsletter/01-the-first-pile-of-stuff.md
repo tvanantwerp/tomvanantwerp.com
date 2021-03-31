@@ -1,17 +1,17 @@
 ---
-title: "The First Pile of Stuff: The collapse of civilization, crypto art, and MSG"
+title: 'The First Pile of Stuff'
 date: 2020-02-08
-description: 
+description: The collapse of civilization, crypto art, and MSG
 layout: layouts/writing.liquid
 tags:
-    - Newsletter
-    - Programming
-    - Institutions
-    - Cryptocurrency
-    - Art
-    - Diet
-    - Health
-    - Medicine
+  - Newsletter
+  - Programming
+  - Institutions
+  - Cryptocurrency
+  - Art
+  - Diet
+  - Health
+  - Medicine
 ---
 
 ## Hello and welcome!
@@ -60,7 +60,6 @@ My own failure to understand why I should make or buy crypto art doesn’t mean 
 
 {% figure './img/2020-02-08-msg.jpg', 'Bags of MSG on a store shelf.', 'Source: <a href="https://commons.wikimedia.org/wiki/File:Monosodium_glutamate_1_2017-03-13.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>' %}
 
-
 You’ve likely heard that monosodium glutamate (MSG), an ingredient associated with Chinese food, can cause headaches and other distressing symptoms. You may have also heard that this is all bunk, and is just the result of anti-Chinese racism. But here is a more detailed look at the history of MSG concerns.
 
 > In 1968, a [Letter to the Editor](https://www.nejm.org/doi/full/10.1056/NEJM196804042781419) warning readers about “Chinese Restaurant Syndrome” (CRS) appeared in the New England Journal of Medicine (NEJM). You may know about CRS. Maybe you’ve experienced it yourself—the syndrome refers to the complex of symptoms, often attributed to MSG, like burning sensations in the mouth, facial pressure, headache, maybe some chest pain.
@@ -76,11 +75,9 @@ Thanks for reading. I hope you’ve enjoyed all this stuff and that you look for
 If you know someone else who might enjoy reading this newsletter, please point them to the sign-up page here. For smaller bits of stuff, you can also follow Tom on Twitter.
 
 [^1]: Thinking about our broken institutions also reminds me of chapters 1 through 4 of Inadequate Equilibria by Eliezer Yudkowsky. He tries to examine how we can have such awful yet persistent failures in institutions by looking at the incentives of all parties in a game-theoretical way. The goal of his book: learn how to look at a system to understand whether or not you—as a lone outsider—have any chance of doing better than just following expert concensus. Pro tip: in stock picking, the answer is no.
-
-
 [^2]: Seriously, I’ve rewritten this section at least 5 times!
-
-[^3]: I think like the Ship of Theseus question, but instead of “replace one bit at a time with an identical bit until all is replaced”, you create an exact copy all at once. Is it the same thing?
+[^3]:
+    I think like the Ship of Theseus question, but instead of “replace one bit at a time with an identical bit until all is replaced”, you create an exact copy all at once. Is it the same thing?
 
     Personally, I think it comes down to whether you care about the pattern or the narrative. If you could emulate my brain on a supercomputer, perfectly replicating my memories and thoughts, then I consider that me—the pattern is the same and that’s the part of my consciousness I care about, not specifically which atoms in the universe comprise me.
 
