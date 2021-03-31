@@ -1,8 +1,8 @@
 ---
 title: 'The First Pile of Stuff'
-date: 2020-02-08
+date: 2021-02-08
 description: The collapse of civilization, crypto art, and MSG
-layout: layouts/writing.liquid
+layout: writing
 tags:
   - Newsletter
   - Programming
@@ -24,7 +24,7 @@ Don’t expect any over-arching theme to these emails. I’m not trying to make 
 
 [This talk](https://www.youtube.com/watch?v=ZSRHeXYDLko) by Jonathan Blow, given May 17th 2019, is one that I keep coming back to. It’s something I feel in my bones.
 
-{% image './img/2020-02-08-jonathan-blow.jpg', "Slide from Jonathan Blow's talk. Text reads: 'Only the elite could read or write. These skills weren't widespread, so they were fragile. Almost nobody knows what is happening on a CPU. That skill isn't widespread, so it is fragile.'" %}
+{% image './img/2021-02-08-jonathan-blow.jpg', "Slide from Jonathan Blow's talk. Text reads: 'Only the elite could read or write. These skills weren't widespread, so they were fragile. Almost nobody knows what is happening on a CPU. That skill isn't widespread, so it is fragile.'" %}
 
 His thesis: computer software is in the middle of a technological decline.
 
@@ -42,7 +42,7 @@ Whether or not you’re a programmer, I highly recommend this talk for a look at
 
 ## Crypto Art
 
-{% figure './img/2020-02-08-beeple.jpg', 'Sold works of crypto art by Beeple.', 'Source: <a href="https://niftygateway.com/collections/beepletwo" target="_blank" rel="noopener noreferrer">Beeple 2020 Collection</a>' %}
+{% figure './img/2021-02-08-beeple.jpg', 'Sold works of crypto art by Beeple.', 'Source: <a href="https://niftygateway.com/collections/beepletwo" target="_blank" rel="noopener noreferrer">Beeple 2020 Collection</a>' %}
 
 I know a bit about blockchains. I know less about art. Combined, I know very little about art on blockchains. I’m still [trying](https://justincone.com/posts/nft-skeptics-guide/) to [wrap](https://www.schoolofmotion.com/blog/what-is-crypto-art-why-motion-designers-should-care) my [head](https://art.art/blog/whats-this-non-fungible-token-nfts-craze-all-about-anyway) [around](https://niftygateway.com/whatisanifty) [this](https://foundation.app/blog/nfts-are-transforming-the-digital-art-world).[^2]
 
@@ -58,7 +58,7 @@ My own failure to understand why I should make or buy crypto art doesn’t mean 
 
 ## MSG Concerns are a Joke. Literally.
 
-{% figure './img/2020-02-08-msg.jpg', 'Bags of MSG on a store shelf.', 'Source: <a href="https://commons.wikimedia.org/wiki/File:Monosodium_glutamate_1_2017-03-13.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>' %}
+{% figure './img/2021-02-08-msg.jpg', 'Bags of MSG on a store shelf.', 'Source: <a href="https://commons.wikimedia.org/wiki/File:Monosodium_glutamate_1_2017-03-13.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>' %}
 
 You’ve likely heard that monosodium glutamate (MSG), an ingredient associated with Chinese food, can cause headaches and other distressing symptoms. You may have also heard that this is all bunk, and is just the result of anti-Chinese racism. But here is a more detailed look at the history of MSG concerns.
 

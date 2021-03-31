@@ -1,8 +1,8 @@
 ---
 title: 'The Second Pile of Stuff'
-date: 2020-02-22
+date: 2021-02-22
 description: Moving through different dimensions, fun and games, and DIY vaccines
-layout: layouts/writing.liquid
+layout: writing
 tags:
   - Newsletter
   - Non-Euclidean Geometry
@@ -22,7 +22,7 @@ This newsletter has a dual purpose: first, to serve you a variety of interesting
 
 ## Adventures in Non-Euclidean Space
 
-{% figure './img/2020-02-22-non-euclidian-space.jpg', 'View of a world with spherical geometry.', 'Source: <a href="https://youtu.be/yY9GAyJtuJ0" target="_blank" rel="noopener noreferrer">this video</a>' %}
+{% figure './img/2021-02-22-non-euclidian-space.jpg', 'View of a world with spherical geometry.', 'Source: <a href="https://youtu.be/yY9GAyJtuJ0" target="_blank" rel="noopener noreferrer">this video</a>' %}
 
 Our everyday experience is of Euclidean space. Parallel lines are always the same distance apart, triangle’s angles always sum to 180°, etc. But these truths don’t work so well to describe space when it becomes curved. In spherical space, a triangle’s angles can sum to 270°. Parallel lines get closer to each other in spherical space, and farther apart in hyperbolic space. It’s weird!
 
@@ -36,7 +36,7 @@ Watch these to blow your mind:
 
 ## Some Light Television
 
-{% figure './img/2020-02-22-taskmaster.jpg', 'View of a world with spherical geometry.', 'Source: <a href="https://www.youtube.com/playlist?list=PLRWvNQVqAeWJ5s_KxAOQ3IzRpIhelv6kU" target="_blank" rel="noopener noreferrer">Taskmaster’s Best Ever Tasks</a>' %}
+{% figure './img/2021-02-22-taskmaster.jpg', 'View of a world with spherical geometry.', 'Source: <a href="https://www.youtube.com/playlist?list=PLRWvNQVqAeWJ5s_KxAOQ3IzRpIhelv6kU" target="_blank" rel="noopener noreferrer">Taskmaster’s Best Ever Tasks</a>' %}
 
 We’re living through a golden age of television.[^2] Streaming services are competing fiercely to produce a smörgåsbord of incredible shows. But there’s just one problem…
 
@@ -52,7 +52,7 @@ _Disclaimer: Often family friendly, but not 100%. Includes occasional swearing, 
 
 ## Skip the Vaccine Queue by Making Your Own
 
-{% figure './img/2020-02-22-vaccine.jpg', 'Self-administration of self-made COVID-19 vaccine.', 'Source: <a href="https://www.lesswrong.com/posts/niQ3heWwF6SydhS7R/making-vaccine" target="_blank" rel="noopener noreferrer">Less Wrong</a>' %}
+{% figure './img/2021-02-22-vaccine.jpg', 'Self-administration of self-made COVID-19 vaccine.', 'Source: <a href="https://www.lesswrong.com/posts/niQ3heWwF6SydhS7R/making-vaccine" target="_blank" rel="noopener noreferrer">Less Wrong</a>' %}
 
 In the [Red Dead Redemption 2](https://en.wikipedia.org/wiki/Big_Tech), a major theme of the Western genre game was the closing of the frontier. That sense of a loss of opportunity and freedom as the institutions of the world ossified around you. As a programmer, I sometimes feel this. What once felt like an open world with boundless opportunity now looks like [FAANG](https://en.wikipedia.org/wiki/Big_Tech)\-shaped boot stomping on a human face forever.
 
