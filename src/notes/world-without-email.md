@@ -61,7 +61,7 @@ Structured workflows help to safeguard the time needed to work on tasks requirin
 
 #### Task Boards
 
-{% figure './img/2021-03-08-jared-scrum.jpg', 'The character Jared from the show Silicon Valley explains a Scrum task board to Pied Piper employees.', 'Source: <a href="https://www.hbo.com/silicon-valley" target="_blank" rel="noopener noreferrer">Silicon Valley</a>' %}
+{% figure './img/2021-03-08-jared-scrum.jpg', 'The character Jared from the show Silicon Valley explains a Scrum task board to Pied Piper employees.', 'Source: <a href="https://amzn.to/3wuwJSL" target="_blank" rel="noopener noreferrer">Silicon Valley</a>' %}
 
 Task boards are a simple way to visually keep track of work to be done in a project. You have a board divided into columns—at its simplest, 1) To Do, 2) Doing, and 3) Done—and cards in those columns representing tasks. As work is picked up and completed, the card representing it moves from column to column. This makes it easy to know what needs to be done, what's happening now, and what is complete.
 
