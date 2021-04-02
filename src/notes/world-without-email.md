@@ -12,6 +12,8 @@ tags:
   - Borders
 layout: layouts/writing.liquid
 image: img/2021-03-08-hide-the-pain-harold.jpg
+splash: img/2021-03-08-open-office.jpg
+splash_alt: "A number of people in an open office using MacBooks. Source: Alex Kotliarskyi on Unsplash."
 ---
 
 I've been a fan of [Cal Newport](https://www.calnewport.com/)'s previous writing about [building career capital](https://amzn.to/3tbuq4v) and [doing deep work](https://amzn.to/3rzJ9px). Since implementing his [time-block planning system](https://youtu.be/eff9h1WYxSo), my personal productivity has increased 2-3x at least. So I was very excited to read his 2021 book *[A World Without Email](https://amzn.to/3ryZPNS)*. Where much of Newport's previous work focused on individual productivity, this new book examines the entire knowledge work enterprise and how it can be improved.
@@ -79,7 +81,7 @@ While I'd happily replace my working self with `Tombot9000`, that's not what New
 - **Signaling**: have a system to track which phase of the workflow a piece of work is in. Workers can check this system to see what is ready for them to work on.
 - **Channeling**: clarity around how/where deliverables are handled. (E.g., when I finish my work on X, I will put it in this agreed upon shared Dropbox folder.)
 
-> Whether you’re deploying complex automation or just following handcrafted procedures, these processes will reduce your dependence on the hyperactive hive mind workflow and reward you with extra cognitive energy and mental peace. Make automatic what you can reasonably make automatic, and only then worry about what to do with what remains. 
+> Whether you’re deploying complex automation or just following handcrafted procedures, these processes will reduce your dependence on the hyperactive hive mind workflow and reward you with extra cognitive energy and mental peace. Make automatic what you can reasonably make automatic, and only then worry about what to do with what remains.
 
 ### Protocols
 
