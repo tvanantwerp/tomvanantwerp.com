@@ -3,9 +3,13 @@
 :root {
 	--light-bg: rgb(225, 228, 232);
 	--light-color: rgb(24, 24, 26);
+	--light-bg-transparent: rgba(155, 159, 165, 0.85);
+	--light-color-transparent: rgba(24, 24, 26, 0.8);
 	--gray: #999;
-	--dark-bg: rgb(24, 24, 26);
-	--dark-color: rgb(225, 228, 232);
+	--dark-bg: var(--light-color);
+	--dark-color: var(--light-bg);
+	--dark-bg-transparent: var(--light-color-transparent);
+	--dark-color-transparent: var(--light-bg-transparent);
 	--blue-highlight: rgba(66, 165, 245);
 	--red-highlight: rgb(247, 116, 130);
 	--pink-highlight: rgb(255, 125, 233);
@@ -14,7 +18,9 @@
 
 	--max-width: 800px;
 	--background-color: var(--light-bg);
+	--background-color-transparent: var(--light-bg-transparent);
 	--color: var(--light-color);
+	--color-transparent: var(--light-color-transparent);
 	--color-highlight: var(--blue-highlight);
 	--serif: 'Source Serif Pro', serif;
 	--sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -28,7 +34,9 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--dark-bg);
+		--background-color-transparent: var(--dark-bg-transparent);
 		--color: var(--dark-color);
+		--color-transparent: var(--dark-color-transparent);
 		--color-highlight: var(--pink-highlight);
 	}
 }
@@ -39,7 +47,8 @@ html {
 	font-size: var(--font-size-root);
 }
 
-html, body {
+html,
+body {
 	font-family: var(--sans-serif);
 	line-height: var(--line-height);
 	margin: 0;

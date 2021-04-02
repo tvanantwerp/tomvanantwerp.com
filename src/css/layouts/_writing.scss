@@ -17,7 +17,6 @@
 			img {
 				height: 100vh;
 				object-fit: cover;
-				opacity: 0.5;
 				width: 100vw;
 			}
 		}
@@ -28,7 +27,7 @@
 		text-align: center;
 
 		&--with-splash {
-			background-color: var(--background-color);
+			background-color: var(--background-color-transparent);
 			background-blend-mode: overlay;
 			font-family: var(--sans-serif);
 			font-size: calc(1rem + 4vw);
@@ -44,7 +43,7 @@
 		text-align: center;
 
 		&--with-splash {
-			background-color: var(--background-color);
+			background-color: var(--background-color-transparent);
 			background-blend-mode: overlay;
 			margin: 0;
 			max-width: 100%;
@@ -60,7 +59,7 @@
 		margin-bottom: 1rem;
 
 		&--with-splash {
-			background-color: var(--background-color);
+			background-color: var(--background-color-transparent);
 			background-blend-mode: overlay;
 			margin: 0;
 			padding: 1rem 2rem 1.4rem;

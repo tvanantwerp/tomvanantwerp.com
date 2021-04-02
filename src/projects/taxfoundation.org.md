@@ -1,10 +1,10 @@
 ---
 title: TaxFoundation.org
-excerpt: How I built taxfoundation.org to serve tens of millions of users per year with clarity and accessibility in mind.
+description: How I built taxfoundation.org to serve tens of millions of users per year with clarity and accessibility in mind.
 tags:
   - projects
   - programmingProjects
-layout: layouts/writing.liquid
+layout: writing
 image: img/taxfoundation-splash.jpg
 splash: img/taxfoundation-splash.jpg
 splash_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.
