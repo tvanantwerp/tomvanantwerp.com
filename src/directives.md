@@ -37,3 +37,4 @@ The following is a list of personal directives that, when followed, have improve
 - Design your environment. Add things that bring you joy, remove things that irritate you.
 - Get enough sunlight.
 - Always learn new things. (I mean things like advanced math or ancient history, not "research" from conspiracy theory YouTube.)
+- Listen to fiction audiobooks read by actors, and non-fiction audiobooks read by the author. The reverse often disappoints.
