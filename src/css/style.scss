@@ -3,14 +3,14 @@
 :root {
 	--light-bg: rgb(225, 228, 232);
 	--light-color: rgb(24, 24, 26);
-	--light-bg-transparent: rgba(155, 159, 165, 0.85);
+	--light-bg-transparent: rgba(225, 228, 232, 0.85);
 	--light-color-transparent: rgba(24, 24, 26, 0.8);
 	--gray: #999;
 	--dark-bg: var(--light-color);
 	--dark-color: var(--light-bg);
 	--dark-bg-transparent: var(--light-color-transparent);
 	--dark-color-transparent: var(--light-bg-transparent);
-	--blue-highlight: rgba(66, 165, 245);
+	--blue-highlight: rgba(66, 155, 225);
 	--red-highlight: rgb(247, 116, 130);
 	--pink-highlight: rgb(255, 125, 233);
 	--purple-highlight: rgb(179, 146, 240);
