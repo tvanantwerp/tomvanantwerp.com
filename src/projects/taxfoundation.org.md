@@ -14,6 +14,8 @@ The [Tax Foundation](https://taxfoundation.org) is one of America's oldest think
 
 Since launching its latest incarnation in early 2017, the website has seen nearly 50 million visitors. This new site was not just a cosmetic refresh, but a complete migration from Drupal to WordPress, and onto AWS for hosting. It represents the Tax Foundation's intentional shift to being digital-first with publication and distribution.
 
+{% include components/button-style-link, url: https://taxfoundation.org/, text: 'Go to taxfoundation.org' %}
+
 ## Design
 
 Nobody was particularly happy with the older version of taxfoundation.org's design. I'd call it dated, if it were appropriate to any known age of the web. The colors were jarring and the layouts harsh. It was not responsive, looked bad when printed, and was very difficult to modify due to previous technical decisions.
