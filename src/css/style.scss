@@ -1,9 +1,9 @@
 @import './components/_fonts';
 
 :root {
-	--light-bg: rgb(253, 248, 235);
+	--light-bg: rgb(249, 244, 240);
 	--light-color: rgb(28, 24, 20);
-	--light-bg-transparent: rgba(253, 248, 235, 0.85);
+	--light-bg-transparent: rgba(249, 244, 240, 0.85);
 	--light-color-transparent: rgba(28, 24, 20, 0.8);
 	--gray: #999;
 	--dark-bg: var(--light-color);
@@ -76,6 +76,7 @@ body {
 
 @import './_typography';
 @import './_code';
+@import './components/_buttons';
 @import './components/_cards';
 @import './components/_footer';
 @import './components/_images';
