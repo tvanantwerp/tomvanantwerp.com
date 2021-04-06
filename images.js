@@ -40,6 +40,7 @@ async function imageShortcode(src, alt, sizes = [400, 800, 1200]) {
 				})
 				.join('\n')}
         <img
+					class="image-section"
           src="${lowsrc.url}"
           alt="${alt}"
           loading="lazy"
@@ -76,7 +77,7 @@ async function figureShortcode(src, alt, caption, sizes = [400, 800, 1200]) {
 			: `(min-width: ${size}px) ${size}px`;
 	});
 
-	return `<figure>
+	return `<figure class="image-section">
     <picture>
       ${Object.values(metadata)
 				.map(imageFormat => {
