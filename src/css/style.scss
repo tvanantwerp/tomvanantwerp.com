@@ -1,17 +1,17 @@
 @import './components/_fonts';
 
 :root {
-	--light-bg: rgb(225, 228, 232);
-	--light-color: rgb(24, 24, 26);
-	--light-bg-transparent: rgba(225, 228, 232, 0.85);
-	--light-color-transparent: rgba(24, 24, 26, 0.8);
+	--light-bg: rgb(253, 248, 235);
+	--light-color: rgb(28, 24, 20);
+	--light-bg-transparent: rgba(253, 248, 235, 0.85);
+	--light-color-transparent: rgba(28, 24, 20, 0.8);
 	--gray: #999;
 	--dark-bg: var(--light-color);
 	--dark-color: var(--light-bg);
 	--dark-bg-transparent: var(--light-color-transparent);
 	--dark-color-transparent: var(--light-bg-transparent);
-	--blue-highlight: rgba(66, 155, 225);
-	--red-highlight: rgb(247, 116, 130);
+	--blue-highlight: rgb(42, 153, 238);
+	--red-highlight: rgb(237, 102, 116);
 	--pink-highlight: rgb(255, 125, 233);
 	--purple-highlight: rgb(179, 146, 240);
 	--green-highlight: rgb(133, 232, 157);
@@ -37,7 +37,7 @@
 		--background-color-transparent: var(--dark-bg-transparent);
 		--color: var(--dark-color);
 		--color-transparent: var(--dark-color-transparent);
-		--color-highlight: var(--pink-highlight);
+		--color-highlight: var(--red-highlight);
 	}
 }
 
