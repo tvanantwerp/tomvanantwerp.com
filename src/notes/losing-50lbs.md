@@ -1,6 +1,6 @@
 ---
-title: "Losing 50 lbs."
-description: "How I combined activity tracking, diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and time-restricted feeding to get into the best shape of my life."
+title: "Overcoming a Lifetime of Weight: How I Lost 50 Pounds"
+description: "I combined activity tracking, diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and time-restricted feeding to get into the best shape of my life."
 date: 2021-04-22
 emoji: 💪
 tags:
@@ -24,11 +24,11 @@ I struggled with my weight, gaining and losing and gaining again, for years. I m
 
 ## Accidental Weight Loss During Youthful Ignorance
 
-My first major weight loss, from 210 to 180, happened in late high school. It wasn't something I planned. I was such a nerd—with no confidence in my physical ability—that I don't think I believed weight loss was possible. It happened because of the popularity of [Dance Dance Revolution](https://www.youtube.com/watch?v=02ndthPNTVM) (DDR) in my school. I've always been a gamer, and for the first time I'd found a form of exercise that—by way of being a video game—I neither hated nor found myself bad at.[^2]
+My first major weight loss, from 210 to 180, happened in late high school. It wasn't something I planned. I was such a nerd—with no confidence in my physical ability—that I don't think I believed weight loss was possible. I can remember having a gut in kindergarten, and my weight problem had only gotten worse from then. So the first time I lost weight, it wasn't something I did on purpose; it happened because of the popularity of [Dance Dance Revolution](https://www.youtube.com/watch?v=02ndthPNTVM) (DDR) in my school. I've always been a gamer, and for the first time I'd found a form of exercise that—by way of being a video game—I neither hated nor found myself bad at.[^2]
 
-I bought a cheap padded dance mat for the Playstation 2 (and later a USB adpater to hook it up to my PC and the software Stepmania), and started playing for half an hour daily. DDR is essentially a form of [high-intensity interval training](https://en.wikipedia.org/wiki/High-intensity_interval_training), and playing it was my first introduction to the concept. Each song was roughly 3 minutes, with alternative periods of easier and more intense footwork. A few songs in, and I was sweaty and breathless. But because the game aspect occupied my mind in a way that PE class never did, I was able to keep going song after song—until my brain was telling my feet where to go but they just couldn't get there in time. That's when I'd call it a day. After months of playing, I had lost a lot of weight and gotten [very good](https://www.youtube.com/watch?v=T2ICTbPfrZ0).
+I bought a cheap padded dance mat for the Playstation 2 (and later a USB adpater to hook it up to my PC and the software Stepmania), and started playing for half an hour daily. DDR is essentially a form of [high-intensity interval training](https://en.wikipedia.org/wiki/High-intensity_interval_training), and playing it was my first introduction to the concept. Each song was roughly 3 minutes, with alternative periods of easier and more intense footwork. A few songs in, and I was sweaty and breathless. But because the game aspect occupied my mind in a way that PE class never did, I was able to keep going song after song—until my brain was telling my feet where to go but they just couldn't get there in time. That's when I'd call it a day. After months of playing, I had lost a lot of weight and [played DDR very well](https://www.youtube.com/watch?v=T2ICTbPfrZ0).[^3]
 
-DDR was a high-quality introduction to exercise. I'm still tempted to buy a nice metal dance pad—except that I would probably drive my wife mad using it.[^3] But DDR alone does not make for a healthy lifestyle—I still ate like crap and didn't really understand anything about fitness. I'd fallen into a good workout routine by accident, and I fell right back out of it when I left for college.
+DDR was a high-quality introduction to exercise. I'm still tempted to buy a nice metal dance pad—except that I would probably drive my wife mad using it. But DDR alone does not make for a healthy lifestyle—I still ate like crap and didn't really understand anything about fitness. I'd fallen into a good workout routine by accident, and I fell right back out of it when I left for college.
 
 Lots of people complain about the freshmen fifteen, but I mercifully experienced the opposite. By the end of freshman year, I weighed close to 165 pounds. Again, this was an accident. I did not realize at the time what I was doing. What happened? Simply, I was too lazy to eat.
 
@@ -47,6 +47,24 @@ I didn't weight myself for many of these years. When I started weighing in regul
 ## This Section for What I Did
 
 Lorem ipsum...
+
+### Tracking the Data
+
+I began regular weight tracking in February of 2017 with a cheap [smart scale](https://amzn.to/3tRuw20), which I'm still using today. I could probably upgrade to something nicer, but this works fine. I weight myself every morning after using the bathroom. Consistency of circumstnace is important—it would be hard to understand trends if some days I weight myself naked and hungry, while others fully dressed and overfed.
+
+The day-to-day weight isn't so important. It can fluctuate for any number of reasons. What matters is seeing the trend, so that I know if I'm going in the desired direction and can correct my behavior if not.
+
+More important than tracking my weight, however, was tracking my diet. I used to use MyFitnessPal, but I felt it was oversimplified and lacked good data on what I ate. The only way to do this fitness journey was by staying true to my nerdy self, and that meant I needed the best data I could get—not just for macronutrients like carbs, protein, and fat, but for all my vitamins and minerals too. I found the perfect diet tracker in [Cronometer](https://cronometer.com/).
+
+MyFitnessPal focused on having precisely what you ate in the database, but with low data amount and quality. Cronometer's food database may not have a different entry for every conceiveable permutation of a fast food hamburger, but it's got several very close entries from government databases which will include 77 nutrients. It took a while to get past my perfectionism over logging *exactly* the thing I ate and being OK with logging something pretty close, but the data I have is on the whole better for it.
+
+When I log my food in Cronometer, I usually weight it first to get a sense of how much I'm eating. Just logging a "serving" of whatever is often quite wrong. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU) to weight whatever I'm eating in grams. I prefer grams for the precision, and because it makes me feel both scientific and international.
+
+With weighing myself and logging it, I can see long term trends and adjust behavior. But with weighing food and logging it, I can adjust within the space of a day if I'm going in a bad direction.
+
+### Ketogenic Diet and Time-Restricted Eating
+
+### Resistance Training
 
 ## This Section for What I've Learned
 
