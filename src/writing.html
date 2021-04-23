@@ -10,7 +10,10 @@ layout: layouts/base.liquid
 		<ul class="writing__collection__list">
 			{% assign posts = collections[collection] | sortByTitle %} {% for post in
 			posts %}
-			<li><a href="{{post.url | url }}">{{post.data.title}}</a></li>
+			<li>
+				{% if post.data.emoji %}{{post.data.emoji}}{% endif %}
+				<a href="{{post.url | url }}">{{post.data.title}}</a>
+			</li>
 			{% endfor %}
 		</ul>
 	</div>

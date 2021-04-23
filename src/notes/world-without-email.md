@@ -1,6 +1,7 @@
 ---
 title: "A World Without Email"
 description: A summary of Cal Newport's vision of a workplace divorced from the frantic back-and-forth of email and instant messaging.
+emoji: 📚
 tags:
   - Notes
   - Cal Newport
