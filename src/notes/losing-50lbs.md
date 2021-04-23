@@ -5,6 +5,7 @@ date: 2021-04-22
 emoji: 💪
 tags:
   - Notes
+  - Health
   - Fitness
   - Ketogenic Diet
   - Intermittent Fasting
@@ -39,7 +40,17 @@ Looking back, I really had no idea what I was doing regarding exercise. I would 
 
 ## Early Career and the Return of Weight
 
-After college, both my diet and physical activity took a hit. Employment is not so leisurely as college, so a lot of the time I had spent walking to the local co-op to get something healthy-ish from the hot bar was replaced with a quick trip to the sandwich place catty-corner to my office, which was aptly named [Potbelly](https://www.potbelly.com/). I didn't weight myself for many of these years, but by late 2018 I was back up to 180 pounds and trending upward. I was very unhappy with my appearance, and I was feeling myriad health effects from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to pain and illness down the road.
+After college, both my diet and physical activity took a hit. Employment is not so leisurely as college, so a lot of the time I had spent walking to the local co-op to get something healthy-ish from the hot bar was replaced with a quick trip to the sandwich place catty-corner to my office, which was aptly named [Potbelly](https://www.potbelly.com/).
+
+I didn't weight myself for many of these years. When I started weighing in regularly in 2017, I was still hovering around 165 pounds. But by late 2018 I was back up to 180 pounds and trending upward. I was very unhappy with my appearance, and I was feeling myriad health effects from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to pain and illness down the road.
+
+## This Section for What I Did
+
+Lorem ipsum...
+
+## This Section for What I've Learned
+
+Lorem ipsum...
 
 [^1]: A few years ago, when my maternal grandmother died, I attended her funeral and saw much of my extened family for the first time in a long time. I was 164 pounds (little of it muscle) at the time, and so comparably thin next to my cousins that people thought I was sick or had cancer. Note that I was in no way skinny—I still had a gut sticking out—I was just _so much skinnier_ than the others there.
 
