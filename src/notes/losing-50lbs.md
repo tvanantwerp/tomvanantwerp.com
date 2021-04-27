@@ -44,13 +44,22 @@ After college, both my diet and physical activity took a hit. Employment is not 
 
 I didn't weight myself for many of these years. When I started weighing in regularly in 2017, I was still hovering around 165 pounds. But by late 2018 I was back up to 180 pounds and trending upward. I was very unhappy with my appearance, and I was feeling myriad health effects from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to pain and illness down the road.
 
-## This Section for What I Did
+## How I Got Fit
 
-Lorem ipsum...
+I heard it said that no one knows more about fitness than the out-of-shape. All that time spent reading and learning about fitness rather than just doing it. There's some truth to that in my case; I had been reading about diet and exercise for years, starting with [The 4-Hour Body](https://amzn.to/3tLiMOn) by Tim Ferriss. I'd tried that book's slow-carb diet and even got a kettlebell, but I didn't stick with it.[^5]
+
+But the experience got me thinking about nutrition seriously for the first time in my life, and my mind was finally open to the possibility that I had no idea what I was doing before. Nothing I'd learned growing up could seriously be considered good diet advice. The cultural baggage I'd inherited from my poor Southern upbringing was weighing me down—literally—and it was time I dropped it for something I consciously chose for myself.
+
+After a lot of reading, I settled on trying a ketogenic diet. Later on I added in time-restriction / intermittent fasting. And to make sure I wasn't getting fooled by some more dubious health advice, I made sure to track my data to verify that I was getting the desired results.
+
+### Ketogenic Diet and Time Restriction
+
+The ketogenic diet is often described as a "high fat" diet, which is a misleading oversimplification. There are plenty of studies showing how bad a "high fat" diet is for you, which neglect to emphasize that the diets were *also* high in sugar. I prefer how it's described in [r/ketogains](https://www.reddit.com/r/ketogains/wiki/index#wiki_why_is_macro_breakdown_so_important_for_ketogains.3F): **protein is a goal, carbs are a limit, fat is a lever**. That is to say, you need to hit a protein target to build (or at least not lose) muscle; you need to limit your net carbohydrate intake; and you can hit your calorie targets beyond what you get from protein and carbs with fat.
+
 
 ### Tracking the Data
 
-I began regular weight tracking in February of 2017 with a cheap [smart scale](https://amzn.to/3tRuw20), which I'm still using today. I could probably upgrade to something nicer, but this works fine. I weight myself every morning after using the bathroom. Consistency of circumstnace is important—it would be hard to understand trends if some days I weight myself naked and hungry, while others fully dressed and overfed.
+I began regular weight tracking in February of 2017 with a cheap [smart scale](https://amzn.to/3tRuw20), which I'm still using today. I could probably upgrade to something nicer, but this works fine. I weigh myself every morning after using the bathroom. Consistency of circumstnace is important—it would be hard to understand trends if some days I weigh myself naked and hungry, while others fully dressed and overfed.
 
 The day-to-day weight isn't so important. It can fluctuate for any number of reasons. What matters is seeing the trend, so that I know if I'm going in the desired direction and can correct my behavior if not.
 
@@ -62,17 +71,19 @@ For those times when I am eating some specific food all the time, I try to recre
 
 Where Cronometer often fails me is with logging Chinese food. I don't mean that sugary Americanized crap like General Tso's; I mean _real_ Chinese food, which I often eat with my Chinese wife. These delicious meals don't have an English name, much less an entry in a nutrition database from the US or Europe. This is a case where I usually find the nearest Western equivalent and log that. Or if it's something I have a lot and there's no real equivalent, I'll get my wife to help me research it and create a custom recipe.
 
-When I log my food in Cronometer, I usually weight it first to get a sense of how much I'm eating. Just logging a "serving" of whatever is often quite wrong. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU) to weigh whatever I'm eating in grams.[^5] I prefer grams for the precision, and because it makes me feel both scientific and international.
+When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^6] to weigh it in grams[^7].
 
-Before logging my food, I didn't really have a good sense of what I was eating. But after doing it for years, I now have a very good intuition for what's in my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? I used to answer those questions very poorly, but not anymore. Just having this knowledge in the back of my mind helps greatly toward making good diet choices in the moment.
+Before logging my food, I had only poor idea of what I ate. But after doing it for years, I acquired good intuition about my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? The answers were once mysteries; but now I make an accurate guess at a glance. Having this knowledge in the back of my mind lets me make good diet choices in the moment.
 
-With weighing myself and logging it, I can see long term trends and adjust behavior. But with weighing food and logging it, I can adjust within the space of a day if I'm going in a bad direction.
-
-### Ketogenic Diet and Time-Restricted Eating
+When weighing myself and logging it, I can see long term trends and adjust behavior. But by weighing food and logging it, I can adjust within the space of a day if I'm going in a bad direction.
 
 ### Resistance Training
 
-## This Section for What I've Learned
+### Mindset
+
+Understanding the process of weightloss was obviously necessary to achive my results. But most important was correcting my thinking about fitness. Without realizing it, I had internalized that I was just an unfit nerdy guy and that I would never have a good body. That sort of thing just wasn't for guys like me, and I shouldn't even contemplate it. This hidden belief was toxic and held me back for so many years. I'm still working to eradicate it from my mind and undo the damage it did to me.
+
+## TLDR
 
 Lorem ipsum...
 
@@ -84,4 +95,8 @@ Lorem ipsum...
 
 [^4]: Most people call this intermittent fasting, but [I agree with Dr. Peter Attia](https://peterattiamd.com/intermittent-fasting/) that only eating in a narrow range of hours each day isn't much of a fast. No eating for 24 hours or more? That's a fast. Skipping breakfast every day? Mere time-restriction.
 
-[^5]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
+[^5]: While he acknowledge the benefits of ketogenic diets (he credits it with helping him recover from long-term symptoms of Lyme disease), Tim Ferriss says he prefers his slow-carb diet to keto because he gets bored of what he's able to eat on keto. Personally, I find keto easier than slow-carb because I can't think of any foods more boring than lentils and beans.
+
+[^6]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
+
+[^7]: I prefer grams for the precision, and because it makes me feel both scientific and international.
