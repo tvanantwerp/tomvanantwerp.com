@@ -58,7 +58,9 @@ The ketogenic diet is often described as a "high fat" diet, which is a misleadin
 
 Without a lot of exogenous carbohydrate to break down for energy, the body starts to switch over to using stored fat. This fat is broken down into chemicals called ketones, hence the diet's name. You can measure this innaccurately with urine tests or accurately with blood tests; I did neither because my only goal was fat loss, which the scale measured well enough.
 
-Restricting the window of time in which I ate helped as well. One of the obstacles to weight loss is high insulin, which can be thought of as a storage hormone. When we eat, the body releases insulin to tell cells to store excess energy for later. While insulin is high, you can't really use what's in storage in your fat cells. This is one of the reasons a lot of dieters end up hungry and cold all the time: they are consuming fewer calories, but not lowering insulin—so their body compensates by lowering metabolic rate.[^6]
+Thankfully I already didn't drink soda (a massive source of sugar), nor were breads and pastas a staple of my diet. It wasn't too hard to cut out carbs by just paying more attention to what I was eating. Simple actions, like: Not buy that box of Trader Joe's ice cream sandwiches that you finish in one sitting. Choosing salads instead of sandwiches for lunch. Passing up leftover cookies in the office kitchen. [Tracking what I ate and keeping myself within bounds.](#tracking-the-data)
+
+Restricting the window of time in which I ate helped as well. One of the obstacles to weight loss is high insulin. Insulin can be thought of as a storage hormone telling cells to take energy out of the blood and save it for later. Eating triggers insulin release, though in different amounts depending on what and how much you ate. While insulin is high, you can't really use what's in storage in your fat cells. This is one of the reasons a lot of dieters end up hungry and cold all the time: they are consuming fewer calories, but not lowering insulin—so their body compensates by lowering metabolic rate.[^6]
 
 The popular label for my time-restricted feeding plan was 18:6, or 18 hours fasted each day with a 6 hour eating window. It's honestly very easy (e.g., lunch and noon and dinner before 6pm, skipping breakfast) and was the longest eating window I could use and still see results. 16:8 is another popular window, but I noticed my weight loss stalled if I used it. Sometimes I did extended fasts for an entire day or two, which were helpful for breaking through plateaus.
 
@@ -78,7 +80,7 @@ For those times when I am eating some specific food all the time, I try to recre
 
 Where Cronometer often fails me is with logging Chinese food. I don't mean that sugary Americanized crap like General Tso's; I mean _real_ Chinese food, which I often eat with my Chinese wife. These delicious meals don't have an English name, much less an entry in a nutrition database from the US or Europe. This is a case where I usually find the nearest Western equivalent and log that. Or if it's something I have a lot and there's no real equivalent, I'll get my wife to help me research it and create a custom recipe.
 
-When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^76] to weigh it in grams[^8].
+When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^7] to weigh it in grams[^8].
 
 Before logging my food, I had only poor idea of what I ate. But after doing it for years, I acquired good intuition about my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? The answers were once mysteries; but now I make an accurate guess at a glance. Having this knowledge in the back of my mind lets me make good diet choices in the moment.
 
@@ -95,6 +97,8 @@ While I used to enjoy HIIT with DDR, it's hard to fit into a busy schedule. HIIT
 Not so with weights, which—no matter how sore I get—leave me with the sensation that *I* did the butt-kicking. Weights are also easier to do at random throughout the day. I don't need to change into gym clothes to do a quick set of bicep curls, followed by a shower. I frequently do a couple sets while waiting for water to boil for my morning coffee. It just fits into my life better.
 
 Weight loss with keto and fasting was relatively easy and fast. Hypertrophy (muscle growth) is not. Muscles are metabolicly expensive, and the body doesn't want to build them bigger if it can avoid it. It's taken a long time to start to see positive changes in my musculature. But it's very satisfying. I feel fitter than I have in years, maybe ever. For the first time in my life, I can look in the mirror and be proud.
+
+When lifting weights, it's important to have proper form. Doing things sloppily will get you injured, leaving you in a worse state than when you started. I actually recommend looking on YouTube, not for gym exercises, but for physical therapy exercises. These are movements that are going to be safe and are focused on building strength that you're probably missing. It will also help you learn enough anatomy that you can better evaluate other exercises for incorporation into or exclusion from your workout routine.
 
 ### Mindset
 
