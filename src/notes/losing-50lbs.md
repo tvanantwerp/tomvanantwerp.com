@@ -86,6 +86,16 @@ When weighing myself and logging it, I can see long term trends and adjust behav
 
 ### Resistance Training
 
+For approximately the first year of my fitness journey, I explicitly avoided exercise. Body recomposition (losing fat while also gaining muscle) is difficult. And I knew heavy workouts would make me hungry, increasing the difficulty of my diet. I decided to focus initially just on weight loss until I got rid of most of my unwanted fat, and then add it exercise.
+
+I started working out on a regulay basis in 2019, and got more serious about it in 2020. I used to work out in my apartment gym until COVID. Then I used resistance bands in the park. In June 2020, I bought a house; now I've got a simple workout bench and some dumbbells that are fine for most of what I do.
+
+While I used to enjoy HIIT with DDR, it's hard to fit into a busy schedule. HIIT is exhausting, and leaves me a sweaty mess. And outside of DDR, I usually just don't enjoy cardio. I always finish feeling like I got my butt kicked.
+
+Not so with weights, which—no matter how sore I get—leave me with the sensation that *I* did the butt-kicking. Weights are also easier to do at random throughout the day. I don't need to change into gym clothes to do a quick set of bicep curls, followed by a shower. I frequently do a couple sets while waiting for water to boil for my morning coffee. It just fits into my life better.
+
+Weight loss with keto and fasting was relatively easy and fast. Hypertrophy (muscle growth) is not. Muscles are metabolicly expensive, and the body doesn't want to build them bigger if it can avoid it. It's taken a long time to start to see positive changes in my musculature. But it's very satisfying. I feel fitter than I have in years, maybe ever. For the first time in my life, I can look in the mirror and be proud.
+
 ### Mindset
 
 Understanding the process of weightloss was obviously necessary to achive my results. But most important was correcting my thinking about fitness. Without realizing it, I had internalized that I was just an unfit nerdy guy and that I would never have a good body. That sort of thing just wasn't for guys like me, and I shouldn't even contemplate it. This hidden belief was toxic and held me back for so many years. I'm still working to eradicate it from my mind and undo the damage it did to me.
