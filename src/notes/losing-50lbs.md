@@ -44,7 +44,7 @@ After college, both my diet and physical activity took a hit. Employment is not 
 
 I didn't weight myself for many of these years. When I started weighing in regularly in 2017, I was still hovering around 165 pounds. But by late 2018 I was back up to 180 pounds and trending upward. I was very unhappy with my appearance, and I was feeling myriad health effects from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to pain and illness down the road.
 
-## How I Got Fit
+## Getting Fit
 
 I heard it said that no one knows more about fitness than the out-of-shape. All that time spent reading and learning about fitness rather than just doing it. There's some truth to that in my case; I had been reading about diet and exercise for years, starting with [The 4-Hour Body](https://amzn.to/3tLiMOn) by Tim Ferriss. I'd tried that book's slow-carb diet and even got a kettlebell, but I didn't stick with it.[^5]
 
@@ -56,6 +56,13 @@ After a lot of reading, I settled on trying a ketogenic diet. Later on I added i
 
 The ketogenic diet is often described as a "high fat" diet, which is a misleading oversimplification. There are plenty of studies showing how bad a "high fat" diet is for you, which neglect to emphasize that the diets were *also* high in sugar. I prefer how it's described in [r/ketogains](https://www.reddit.com/r/ketogains/wiki/index#wiki_why_is_macro_breakdown_so_important_for_ketogains.3F): **protein is a goal, carbs are a limit, fat is a lever**. That is to say, you need to hit a protein target to build (or at least not lose) muscle; you need to limit your net carbohydrate intake; and you can hit your calorie targets beyond what you get from protein and carbs with fat.
 
+Without a lot of exogenous carbohydrate to break down for energy, the body starts to switch over to using stored fat. This fat is broken down into chemicals called ketones, hence the diet's name. You can measure this innaccurately with urine tests or accurately with blood tests; I did neither because my only goal was fat loss, which the scale measured well enough.
+
+Restricting the window of time in which I ate helped as well. One of the obstacles to weight loss is high insulin, which can be thought of as a storage hormone. When we eat, the body releases insulin to tell cells to store excess energy for later. While insulin is high, you can't really use what's in storage in your fat cells. This is one of the reasons a lot of dieters end up hungry and cold all the time: they are consuming fewer calories, but not lowering insulin—so their body compensates by lowering metabolic rate.[^6]
+
+The popular label for my time-restricted feeding plan was 18:6, or 18 hours fasted each day with a 6 hour eating window. It's honestly very easy (e.g., lunch and noon and dinner before 6pm, skipping breakfast) and was the longest eating window I could use and still see results. 16:8 is another popular window, but I noticed my weight loss stalled if I used it. Sometimes I did extended fasts for an entire day or two, which were helpful for breaking through plateaus.
+
+By eating very few carbs (which trigger insulin release much more than fat), and only eating during a narrow time window (6 hours or less each day), I could keep insulin lower and make it easier for my body to access stored fat for energy. My metabolic rate, as measured by by a resting energy expenditure test in early 2020, is a perfectly normal 1,714 calories per day. I lost weight, and never went through extreme hunger, weakness, tiredness, or cold.
 
 ### Tracking the Data
 
@@ -71,7 +78,7 @@ For those times when I am eating some specific food all the time, I try to recre
 
 Where Cronometer often fails me is with logging Chinese food. I don't mean that sugary Americanized crap like General Tso's; I mean _real_ Chinese food, which I often eat with my Chinese wife. These delicious meals don't have an English name, much less an entry in a nutrition database from the US or Europe. This is a case where I usually find the nearest Western equivalent and log that. Or if it's something I have a lot and there's no real equivalent, I'll get my wife to help me research it and create a custom recipe.
 
-When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^6] to weigh it in grams[^7].
+When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^76] to weigh it in grams[^8].
 
 Before logging my food, I had only poor idea of what I ate. But after doing it for years, I acquired good intuition about my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? The answers were once mysteries; but now I make an accurate guess at a glance. Having this knowledge in the back of my mind lets me make good diet choices in the moment.
 
@@ -97,6 +104,8 @@ Lorem ipsum...
 
 [^5]: While he acknowledge the benefits of ketogenic diets (he credits it with helping him recover from long-term symptoms of Lyme disease), Tim Ferriss says he prefers his slow-carb diet to keto because he gets bored of what he's able to eat on keto. Personally, I find keto easier than slow-carb because I can't think of any foods more boring than lentils and beans.
 
-[^6]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
+[^6]: Some of the worst dieting advice is "eat many small meals throughout the day." It's bad advice because it keeps your insulin elevated at all times, making it very difficult for your body to access stored fat.
 
-[^7]: I prefer grams for the precision, and because it makes me feel both scientific and international.
+[^7]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
+
+[^8]: I prefer grams for the precision, and because it makes me feel both scientific and international.
