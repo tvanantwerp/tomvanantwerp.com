@@ -20,7 +20,7 @@ I don't remember the exact figure—it was not a time in my life where I tracked
 
 I struggled with my weight, gaining and losing and gaining again, for years. I managed to lose weight mostly by accident of circumstance in late high school and college, but it crept back during my early career due to bad eating habits and too much time at a desk. In early 2019, I was done letting my health be a non-priority. I'd read enough by then to know what I needed to do, and I set about making permanent changes to my lifestyle that persist to this day. Where I was once over 200 pounds, I now average 155.
 
-**Disclaimer**: This article shares everything I did—right and wrong—to get my weight where I want it and replace flab with muscle. I'm not a nutritionist, a personal training, or a medical professional. What works for me may not work for you. This is only a personal account, which I hope will inspire people who find themselves in the same situation I was in.
+**Disclaimer**: This article shares everything I did—right and wrong—to get my weight where I want it and replace flab with muscle. I'm not a dietician, a personal trainer, nor a medical professional of any kind. What works for me may not work for you. This is only a personal account, which I hope will inspire people who find themselves in the same situation I was in.
 
 ## Accidental Weight Loss During Youthful Ignorance
 
@@ -42,27 +42,39 @@ Looking back, I really had no idea what I was doing regarding exercise. I would 
 
 After college, both my diet and physical activity took a hit. Employment is not so leisurely as college, so a lot of the time I had spent walking to the local co-op to get something healthy-ish from the hot bar was replaced with a quick trip to the sandwich place catty-corner to my office, which was aptly named [Potbelly](https://www.potbelly.com/).
 
-I didn't weight myself for many of these years. When I started weighing in regularly in 2017, I was still hovering around 165 pounds. But by late 2018 I was back up to 180 pounds and trending upward. I was very unhappy with my appearance, and I was feeling myriad health effects from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to pain and illness down the road.
+I didn't weigh myself for many of these years. When I started weighing in regularly in 2017, I was still hovering around 165 pounds. But by late 2018 I was back to 180 pounds and trending upward. I was very unhappy with my appearance, and I was in a variety of pain from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to more pain and illness down the road.
 
 ## Getting Fit
 
-I heard it said that no one knows more about fitness than the out-of-shape. All that time spent reading and learning about fitness rather than just doing it. There's some truth to that in my case; I had been reading about diet and exercise for years, starting with [The 4-Hour Body](https://amzn.to/3tLiMOn) by Tim Ferriss. I'd tried that book's slow-carb diet and even got a kettlebell, but I didn't stick with it.[^5]
+I heard it said that no one knows more about fitness than the out-of-shape—all that time spent reading and learning about fitness rather than just doing it. There's some truth to that. I had been reading about diet and exercise for years, starting with [The 4-Hour Body](https://amzn.to/3tLiMOn) by Tim Ferriss. I'd tried that book's slow-carb diet and even got a kettlebell, but I didn't stick with it long-term.[^5]
 
-But the experience got me thinking about nutrition seriously for the first time in my life, and my mind was finally open to the possibility that I had no idea what I was doing before. Nothing I'd learned growing up could seriously be considered good diet advice. The cultural baggage I'd inherited from my poor Southern upbringing was weighing me down—literally—and it was time I dropped it for something I consciously chose for myself.
+But the reading got me thinking about nutrition seriously for the first time in my life, and my mind was finally open to the possibility that I had no idea what I was doing. Whatever I unconsciously thought "nutrition" and "exercise" were, the truth might be completely different. Nothing I'd learned growing up could seriously be considered good diet advice. The cultural baggage I'd inherited from my poor Southern upbringing was weighing me down—literally—and it was time I dropped it.
 
-After a lot of reading, I settled on trying a ketogenic diet. Later on I added in time-restriction / intermittent fasting. And to make sure I wasn't getting fooled by some more dubious health advice, I made sure to track my data to verify that I was getting the desired results.
+### The Worst Diet Advice
 
-### Ketogenic Diet and Time Restriction
+If there's one bit of diet advice that drives me nuts, it's "calories in, calories out" (CICO). The idea is, just reduce the calories you eat below what your body burns, and you lose weight. This isn't entirely wrong, but it's an oversimplification the leads to a lot of misery and failed diets.
 
-The ketogenic diet is often described as a "high fat" diet, which is a misleading oversimplification. There are plenty of studies showing how bad a "high fat" diet is for you, which neglect to emphasize that the diets were *also* high in sugar. I prefer how it's described in [r/ketogains](https://www.reddit.com/r/ketogains/wiki/index#wiki_why_is_macro_breakdown_so_important_for_ketogains.3F): **protein is a goal, carbs are a limit, fat is a lever**. That is to say, you need to hit a protein target to build (or at least not lose) muscle; you need to limit your net carbohydrate intake; and you can hit your calorie targets beyond what you get from protein and carbs with fat.
+A major obstacle to weight loss is high insulin. One of insulin's functions is to act as a storage hormone, telling cells to take energy out of the blood and save it for later. Eating triggers insulin release, though in different amounts depending on what and how much you ate. While insulin is high, you can't really use what's in storage in your fat cells.
 
-Without a lot of exogenous carbohydrate to break down for energy, the body starts to switch over to using stored fat. This fat is broken down into chemicals called ketones, hence the diet's name. You can measure this innaccurately with urine tests or accurately with blood tests; I did neither because my only goal was fat loss, which the scale measured well enough.
+This is one of the reasons a lot of dieters end up hungry and cold all the time: they are consuming fewer calories, but not lowering insulin. With the body still stuck in storage mode, they can't used stored fat. To compensate, the body lowers metabolic rate.[^6]
 
-Thankfully I already didn't drink soda (a massive source of sugar), nor were breads and pastas a staple of my diet. It wasn't too hard to cut out carbs by just paying more attention to what I was eating. Simple actions, like: Not buy that box of Trader Joe's ice cream sandwiches that you finish in one sitting. Choosing salads instead of sandwiches for lunch. Passing up leftover cookies in the office kitchen. [Tracking what I ate and keeping myself within bounds.](#tracking-the-data)
+This is why I hate it when people talk about CICO: the advice doesn't work if, every time you reduce calories in, your body reduces the calories out in response. Dieters following this advice are "doing everything right", but can't lose weight and physically feel terrible. It's demoralizing. So how to get around this? There are two good ways that can be used independently or in combination: a ketogenic diet and fasting.
 
-Restricting the window of time in which I ate helped as well. One of the obstacles to weight loss is high insulin. Insulin can be thought of as a storage hormone telling cells to take energy out of the blood and save it for later. Eating triggers insulin release, though in different amounts depending on what and how much you ate. While insulin is high, you can't really use what's in storage in your fat cells. This is one of the reasons a lot of dieters end up hungry and cold all the time: they are consuming fewer calories, but not lowering insulin—so their body compensates by lowering metabolic rate.[^6]
+### Ketogenic Diet
 
-The popular label for my time-restricted feeding plan was 18:6, or 18 hours fasted each day with a 6 hour eating window. It's honestly very easy (e.g., lunch and noon and dinner before 6pm, skipping breakfast) and was the longest eating window I could use and still see results. 16:8 is another popular window, but I noticed my weight loss stalled if I used it. Sometimes I did extended fasts for an entire day or two, which were helpful for breaking through plateaus.
+The ketogenic diet is a good start to addressing the problem of insulin. Carbohydrates stimulate insulin release much more than other macronutrients. Fat barely triggers an insulin release at all. So eating a ketogenic diet can help you avoid chronically high insulin levels that prevent your body from using stored fat.
+
+The ketogenic diet is often described as a "high fat" diet, which is a misleading oversimplification. (There are plenty of studies showing how bad a "high fat" diet is for you, which neglect to emphasize that the diets were *also* high in sugar.) I prefer how it's described in [r/ketogains](https://www.reddit.com/r/ketogains/wiki/index#wiki_why_is_macro_breakdown_so_important_for_ketogains.3F): **protein is a goal, carbs are a limit, fat is a lever**. That is to say, you need to hit a protein target to build (or at least not lose) muscle; you need to limit your net carbohydrate intake; and you can hit your calorie targets beyond what you get from protein and carbs with fat. For my ketogenic diet, I calculated target macronutrient intake of ≤ 20g of carbohydrate, ≥ 100g of protein, and about 110g of fat per day.
+
+The body will preferrentially use consumed carbohydrates as an energy source. Without a lot of exogenous carbohydrates in your diet, the body starts to switch over to using fat as fuel. This fat is broken down into chemicals called ketones, hence the diet's name. You can measure ketones roughly with urine tests or accurately with blood tests; I did neither because my only goal was fat loss, which the scale measured well enough.
+
+Carbohydrates are easy to consume in large quantities on a standard American diet, especially in the form of sugar. Thankfully I already didn't drink soda (a massive source of sugar), nor were breads and pastas a staple of my diet. It wasn't too hard to cut out carbs by just paying more attention to what I was eating. Simple actions, like: don't buy that box of Trader Joe's ice cream sandwiches that you finish in one sitting; choose salads instead of sandwiches for lunch; pass up leftover cookies in the office kitchen; and [track what I eat to keep myself within bounds.](#tracking-the-data) My diet has become one of meat and non-starchy vegetables, which is both flavorful and satiating.
+
+### Fasting
+
+Another approach to reducing insulin is fasting. If you just don't eat, you're not going to release insulin. Eventually the body's hormonal signals switch you over to ketosis. Once you're burning fat, the body still has access to energy and doesn't down-regulate your metabolism. This can be as simple as restricting the times you eat during the day and avoiding snacks, or as intense not eating food for several days.[^7]
+
+The popular label for my time-restricted feeding plan was 18:6, or 18 hours fasted each day with a 6 hour eating window. It's honestly very easy (e.g., lunch and noon and dinner before 6pm, skipping breakfast) and was the longest eating window I could use and still see positive results. 16:8 is another popular window, but I noticed my weight loss stalled if I used it. Sometimes I did extended fasts for an entire day or two, which were helpful for breaking through plateaus. I find it socially difficult to do a 3-day or longer fast.
 
 By eating very few carbs (which trigger insulin release much more than fat), and only eating during a narrow time window (6 hours or less each day), I could keep insulin lower and make it easier for my body to access stored fat for energy. My metabolic rate, as measured by by a resting energy expenditure test in early 2020, is a perfectly normal 1,714 calories per day. I lost weight, and never went through extreme hunger, weakness, tiredness, or cold.
 
@@ -80,7 +92,7 @@ For those times when I am eating some specific food all the time, I try to recre
 
 Where Cronometer often fails me is with logging Chinese food. I don't mean that sugary Americanized crap like General Tso's; I mean _real_ Chinese food, which I often eat with my Chinese wife. These delicious meals don't have an English name, much less an entry in a nutrition database from the US or Europe. This is a case where I usually find the nearest Western equivalent and log that. Or if it's something I have a lot and there's no real equivalent, I'll get my wife to help me research it and create a custom recipe.
 
-When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^7] to weigh it in grams[^8].
+When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're actually eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^8] to weigh it in grams[^9].
 
 Before logging my food, I had only poor idea of what I ate. But after doing it for years, I acquired good intuition about my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? The answers were once mysteries; but now I make an accurate guess at a glance. Having this knowledge in the back of my mind lets me make good diet choices in the moment.
 
@@ -120,6 +132,8 @@ Lorem ipsum...
 
 [^6]: Some of the worst dieting advice is "eat many small meals throughout the day." It's bad advice because it keeps your insulin elevated at all times, making it very difficult for your body to access stored fat.
 
-[^7]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
+[^7]: The world record is [382 days](https://en.wikipedia.org/wiki/Angus_Barbieri%27s_fast) without food.
 
-[^8]: I prefer grams for the precision, and because it makes me feel both scientific and international.
+[^8]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
+
+[^9]: I prefer grams for the precision, and because it makes me feel both scientific and international.
