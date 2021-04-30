@@ -4,7 +4,7 @@ description: "I combined activity tracking, diet tracking, high-intensity interv
 date: 2021-04-22
 emoji: 💪
 tags:
-  - Notes
+  - Essays
   - Health
   - Fitness
   - Ketogenic Diet
@@ -102,6 +102,8 @@ When I log my food in Cronometer, I usually weigh it first to accurately record 
 
 Before logging my food, I had a poor idea of what I ate. But after doing it for years, I acquired good intuition about my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? The answers were once mysteries; but now I make an accurate guess at a glance. Having this knowledge in the back of my mind lets me make good diet choices in the moment, even without Cronometer and my food scale.
 
+Secondary to food logging is activity tracking. I used to wear a [Fitbit](https://amzn.to/3vrhVCO), and I'm currently wearing an [Oura Ring](https://ouraring.com/). The data is cool and a bit useful, but not nearly as important to weight loss as food logging. It's more of a useful notifier if you're not active enough or doing something to disrupt your sleep. Interestingly, these activity trackers showed me that burning extra calories did *not* give me extra room for eating more in a day. If I burned an extra 500 calories and then ate an extra 500 calories, the effect of the food was greater than the effect of the calorie burn. This may just be my own body's response, but it was useful data to reinforce my plan to lose weight before focusing on workouts.
+
 When weighing myself and logging it, I can see long term trends and adjust behavior. But by weighing food and logging it, I can adjust within the space of a day if I'm going in a bad direction.
 
 ### Resistance Training
@@ -117,6 +119,10 @@ Not so with weights, which—no matter how sore I get—leave me with the sensat
 Weight loss with keto and fasting was relatively easy and fast. Hypertrophy (muscle growth) is not. Muscles are metabolicly expensive, and the body doesn't want to build them bigger if it can avoid it. It's taken a long time to start to see positive changes in my musculature. But it's very satisfying. I feel fitter than I have in years, maybe ever. For the first time in my life, I can look in the mirror and be proud.
 
 When lifting weights, it's important to have proper form. Doing things sloppily will get you injured, leaving you in a worse state than when you started. I actually recommend looking on YouTube, not for gym exercises, but for physical therapy exercises.[^11] These are movements that are going to be safe and are focused on building strength that you're probably missing. It will also help you learn enough anatomy that you can better evaluate other exercises for incorporation into or exclusion from your workout routine.
+
+### Sleep
+
+I've never had a problem getting good sleep, for which I'm thankful. But for those of you who aren't making sleep a priority, definitely do that. [Why We Sleep](https://amzn.to/3e4vqCy) is a good starting point for learning more about sleep, it's function, and how to improve it. Getting adequate amounts of quality sleep is foundational to physical fitness.
 
 ### Mindset
 
