@@ -20,7 +20,7 @@ I don't remember the exact figure—it was not a time in my life where I tracked
 
 I struggled with my weight, gaining and losing and gaining again, for years. I managed to lose weight mostly by accident of circumstance in late high school and college, but it crept back during my early career due to bad eating habits and too much time at a desk. In early 2019, I was done letting my health be a non-priority. I'd read enough by then to know what I needed to do, and I set about making permanent changes to my lifestyle that persist to this day. Where I was once over 200 pounds, I now average 155.
 
-**Disclaimer**: This article shares everything I did—right and wrong—to get my weight where I want it and replace flab with muscle. I'm not a dietician, a personal trainer, nor a medical professional of any kind. What works for me may not work for you. This is only a personal account, which I hope will inspire people who find themselves in the same situation I was in.
+**Disclaimer**: This article shares everything I did—right and wrong—to get my weight where I want it and replace flab with muscle. I'm not a dietician, a personal trainer, nor a medical professional of any kind. What works for me may not work for you. This is only a *personal* account, which I hope will inspire people who are in a situation similar to my own.
 
 {% include components/button-style-link, url: #too-long-didnt-read, text: "I don't want to read all this. Skip to the summary!" %}
 
@@ -133,6 +133,7 @@ Exercise is even harder mentally than diet and fasting. Weight loss with the lat
 So that was a lot of text, and I don't blame you for wanting to skip it and go straight to a bulleted list of what I did to get fit. Ok, here you go:
 
 * Identify limiting beliefs you have around fitness and confront them. I was a "nerdy guy", so of course I wasn't fit. But that's nonsense, and I shouldn't let that stereotype hold me back from being the best version of myself.
+* Identify your mistaken diet beliefs, which you probably picked up in childhood and haven't thought about critically since. Did you know "breakfast is the most important meal of the day" is literally a [marketing slogan](https://www.theatlantic.com/business/archive/2016/06/how-marketers-invented-the-modern-version-of-breakfast/487130/)?
 * Find ways to make it easy to stick with the plan. If you have a weakness for potato chips, don't buy potato chips. If you're averse to the gym, keep weights at home.
 * Track your food intake with [Cronometer](https://cronometer.com/) and a [food scale](https://amzn.to/32DYhXU). Weigh yourself with a [smart scale](https://amzn.to/3tRuw20) to track trends. What gets measured, gets managed.
 * Focus on losing fat before building muscle. It's easier this way.
