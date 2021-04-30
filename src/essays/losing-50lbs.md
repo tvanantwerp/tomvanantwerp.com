@@ -134,11 +134,12 @@ So that was a lot of text, and I don't blame you for wanting to skip it and go s
 
 * Identify limiting beliefs you have around fitness and confront them. I was a "nerdy guy", so of course I wasn't fit. But that's nonsense, and I shouldn't let that stereotype hold me back from being the best version of myself.
 * Identify your mistaken diet beliefs, which you probably picked up in childhood and haven't thought about critically since. Did you know "breakfast is the most important meal of the day" is literally a [marketing slogan](https://www.theatlantic.com/business/archive/2016/06/how-marketers-invented-the-modern-version-of-breakfast/487130/)?
-* Find ways to make it easy to stick with the plan. If you have a weakness for potato chips, don't buy potato chips. If you're averse to the gym, keep weights at home.
+* Find ways to make it easy to stick with the plan. If you have a weakness for potato chips, don't buy potato chips. If you're averse to the gym, keep weights at home. (See [Atomic Habits](https://amzn.to/2R9Zsfe) and/or [Tiny Habits](https://amzn.to/2QA97Ml) for help with this.)
 * Track your food intake with [Cronometer](https://cronometer.com/) and a [food scale](https://amzn.to/32DYhXU). Weigh yourself with a [smart scale](https://amzn.to/3tRuw20) to track trends. What gets measured, gets managed.
 * Focus on losing fat before building muscle. It's easier this way.
-* Eat a ketogenic diet. Keep carbs below 20g per day.
+* Eat a ketogenic diet. Keep net carbs (total carbs minus fiber) below 20g per day.
 * Use time restricted feeding. Only eat within a 6 hour window or less.
+* Use extended fasting (1-2 days or more) for breaking through weight loss plateaus.
 * Look up simple exercises—preferably from physical therapists so you know it's safe—that you can do to start working out.
 * Work up to lifting heavier and heavier weights. Proper form is key to avoid injury.
 
