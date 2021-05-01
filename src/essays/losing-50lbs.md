@@ -122,7 +122,11 @@ When lifting weights, it's important to have proper form. Doing things sloppily 
 
 ### Sleep
 
-I've never had a problem getting good sleep, for which I'm thankful. But for those of you who aren't making sleep a priority, definitely do that. [Why We Sleep](https://amzn.to/3e4vqCy) is a good starting point for learning more about sleep, it's function, and how to improve it. Getting adequate amounts of quality sleep is foundational to physical fitness.
+If I don't sleep well, I'm useless the next day. Some people burn the midnight oil again and again without problems (or so they think), but I'm not one of them. For this reason, I've always prioritized sleep. It's key to staying fit.
+
+But for those of you who aren't making sleep a priority, definitely do that. Failing to sleep well will make you hungrier and less able to resist foods that are bad for you. You're more likely to make poor health decisions overall while sleep deprived. And, it should go without saying, missing sleep is just plain bad for you. Over the long term, not getting enough sleep is linked to neurological decline.
+
+[Why We Sleep](https://amzn.to/3e4vqCy) is a good starting point for learning more about sleep, it's function, and how to improve it. Getting adequate amounts of quality sleep is foundational to physical fitness.
 
 ### Mindset
 
