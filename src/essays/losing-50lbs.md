@@ -82,6 +82,8 @@ The popular label for my time-restricted feeding plan was 18:6, or 18 hours fast
 
 By eating very few carbs and only eating during a narrow time window, I could keep insulin lower and make it easier for my body to access stored fat for energy. My metabolic rate, as measured by by a resting energy expenditure test in early 2020, is a perfectly normal 1,714 calories per day—exactly where it should be for a person my size and age. I lost weight, and never went through extreme hunger, weakness, tiredness, or cold that accompanies a downregulated metabolism.
 
+(Another benefit: I used to have [GERD](https://en.wikipedia.org/wiki/Gastroesophageal_reflux_disease) symptoms, and after going on keto they vanished.)
+
 ### Tracking the Data
 
 I wouldn't have done well at either keto or fasting without tracking my data. Knowing what I'm eating, when, and how my weight responded was critical.
@@ -120,6 +122,8 @@ Weight loss with keto and fasting was relatively easy and fast. Hypertrophy (mus
 
 When lifting weights, it's important to have proper form. Doing things sloppily will get you injured, leaving you in a worse state than when you started. I actually recommend looking on YouTube, not for gym exercises, but for physical therapy exercises.[^11] These are movements that are going to be safe and are focused on building strength that you're probably missing. It will also help you learn enough anatomy that you can better evaluate other exercises for incorporation into or exclusion from your workout routine.
 
+Cardio is, of course, also good for you. I'm trying to work more of it into my routine. But resistance training is still my preference.
+
 ### Sleep
 
 If I don't sleep well, I'm useless the next day. Some people burn the midnight oil again and again without problems (or so they think), but I'm not one of them. For this reason, I've always prioritized sleep. It's key to staying fit.
@@ -152,6 +156,9 @@ So that was a lot of text, and I don't blame you for wanting to skip it and go s
 * Use extended fasting (1-2 days or more) for breaking through weight loss plateaus.
 * Look up simple exercises—preferably from physical therapists so you know it's safe—that you can do to start working out.
 * Work up to lifting heavier and heavier weights. Proper form is key to avoid injury.
+* Sleep enough (7-8 hours sleeping, time in bed awake doesn't count) every night, and make sure it's high quality. Use a sleep tracker to see what might be impacting your sleep if this is difficult for you.
+
+I don't think much of this is revelatory. But that doesn't mean it was easy to internalize these ideas and habits well enough to get fit. It's still a day-to-day struggle, and probably always will be. But I want you to know that it's 100% worthwhile.
 
 [^1]: A few years ago, when my maternal grandmother died, I attended her funeral and saw much of my extened family for the first time in a long time. I was 164 pounds (little of it muscle) at the time, and so comparably thin next to my cousins that people thought I was sick or had cancer. Note that I was in no way skinny—I still had a gut sticking out—I was just _so much skinnier_ than the others there.
 
