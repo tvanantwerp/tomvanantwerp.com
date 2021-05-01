@@ -1,7 +1,7 @@
 ---
 title: "Overcoming a Lifetime of Weight: How I Lost 50 Pounds"
-description: "I combined activity tracking, diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and time-restricted feeding to get into the best shape of my life."
-date: 2021-04-22
+description: "I combined activity/diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and fasting to get into the best shape of my life."
+date: 2021-04-30
 emoji: 💪
 tags:
   - Essays
@@ -9,8 +9,9 @@ tags:
   - Fitness
   - Ketogenic Diet
   - Intermittent Fasting
-  - High-Intensity Interval Training
   - Resistance Training
+  - Sleep
+  - High-Intensity Interval Training
 layout: layouts/writing.liquid
 ---
 
