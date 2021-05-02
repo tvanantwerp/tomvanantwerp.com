@@ -38,15 +38,15 @@ DDR was a high-quality introduction to exercise. I'm still tempted to buy a nice
 
 Lots of people complain about the freshmen fifteen, but I mercifully experienced the opposite. By the end of freshman year, I weighed close to 165 pounds. Again, this was an accident. I did not realize at the time what I was doing. What happened? Simply, I was too lazy to eat.
 
-I had no kitchen and only a mini-fridge in my dorm room, so I couldn't keep much food there. And I was usually too engrossed in video games or other computer use to actually go out and pick up something to eat. Freed from my mother's cooking—three large meals a day whether I was hungry or not—I started eating less, and less often. In hindsight, I had begun [time-restricted feeding](https://peterattiamd.com/intermittent-fasting/).[^4] Oversimplified: restricting the times you eat during the day helps to stabilize and reduce insulin throughout the day, allowing your body to use stored fat rather than try to store even more.
+I had no kitchen and only a mini-fridge in my dorm room, so I couldn't keep much food there. And I was usually too engrossed in video games or other computer use to actually go out and pick up something to eat. Freed from my mother's cooking—three large meals a day whether I was hungry or not—I started eating less, and less often. In hindsight, I had begun [time-restricted feeding](https://peterattiamd.com/intermittent-fasting/).[^4] More on that [later](#fasting).
 
 I didn't have a college workout routine. I did pick up the habit of walking, everywhere and often. And that's certainly healthy for body and mind, but the calorie burn from that would have been minimal. My HIIT routine from DDR was gone, and I failed at every other attempt to build a new routine.
 
-Looking back, I really had no idea what I was doing regarding exercise. I would start by going to a campus gym (which I never felt comfortable entering due to self-consciousness around my appearance and lack of knowledge), and usually getting on a treadmill. I have always hated doing steady-state cardio, so of course I had little motivation to show up the first time, much less the second, third, etc. I don't think I ever touched any weights or machines, which I now know I really enjoy.
+Looking back, I really had no idea what I was doing regarding exercise. I would start by going to a campus gym (which I never felt comfortable entering due to self-consciousness about my appearance and my lack of knowledge), and usually getting on a treadmill. I have always hated doing steady-state cardio—so of course I had little motivation to show up the first time, much less the second, third, etc. I don't think I ever touched any weights, which I now know I really enjoy.
 
 ## Early Career and the Return of Weight
 
-After college, both my diet and physical activity took a hit. Employment is not so leisurely as college, so a lot of the time I had spent walking to the local co-op to get something healthy-ish from the hot bar was replaced with a quick trip to the sandwich place catty-corner to my office, which was aptly named [Potbelly](https://www.potbelly.com/).
+After college, both my diet and physical activity took a hit. Employment is not so leisurely as college, so a lot of the time I had spent walking to the local co-op to get something healthy-ish from the salad bar was replaced with a quick trip to the corner sandwich place, which was aptly named [Potbelly](https://www.potbelly.com/).
 
 I didn't weigh myself for many of these years. When I started weighing in regularly in 2017, I was still hovering around 165 pounds. But by late 2018 I was back to 180 pounds and trending upward. I was very unhappy with my appearance, and I was in a variety of pain from sitting at a desk all day. It was beginning to dawn on me that I was getting older, and that now was the time to make physical fitness a central part of my life if I didn't want to succumb to more pain and illness down the road.
 
@@ -134,7 +134,7 @@ If I don't sleep well, I'm useless the next day. Some people burn the midnight o
 
 But for those of you who aren't making sleep a priority, definitely do that. Failing to sleep well will make you hungrier and less able to resist foods that are bad for you. You're more likely to make poor health decisions overall while sleep deprived. And, it should go without saying, missing sleep is just plain bad for you. Over the long term, not getting enough sleep is linked to neurological decline.
 
-[Why We Sleep](https://amzn.to/3e4vqCy) is a good starting point for learning more about sleep, it's function, and how to improve it. Getting adequate amounts of quality sleep is foundational to physical fitness.
+[Why We Sleep](https://amzn.to/3e4vqCy) is a good starting point for learning more about sleep, it's function, and how to improve it. Getting adequate amounts of quality sleep is foundational. If you're not addressing it, I urge you to do so.
 
 ### Mindset
 
@@ -154,12 +154,12 @@ So that was a lot of text, and I don't blame you for wanting to skip it and go s
 * Identify your mistaken diet beliefs, which you probably picked up in childhood and haven't thought about critically since. Did you know "breakfast is the most important meal of the day" is literally a [marketing slogan](https://www.theatlantic.com/business/archive/2016/06/how-marketers-invented-the-modern-version-of-breakfast/487130/)?
 * Find ways to make it easy to stick with the plan. If you have a weakness for potato chips, don't buy potato chips. If you're averse to the gym, keep weights at home. (See [Atomic Habits](https://amzn.to/2R9Zsfe) and/or [Tiny Habits](https://amzn.to/2QA97Ml) for help with this.)
 * Track your food intake with [Cronometer](https://cronometer.com/) and a [food scale](https://amzn.to/32DYhXU). Weigh yourself with a [smart scale](https://amzn.to/3tRuw20) to track trends. What gets measured, gets managed.
-* Focus on losing fat before building muscle. It's easier this way.
+* Focus on losing fat before building muscle. It's less to do, less to think about, and easier to track one thing at a time.
 * Eat a ketogenic diet. Keep net carbs (total carbs minus fiber) below 20g per day.
 * Use time restricted feeding. Only eat within a 6 hour window or less.
 * Use extended fasting (1-2 days or more) for breaking through weight loss plateaus.
 * Look up simple exercises—preferably from physical therapists so you know it's safe—that you can do to start working out.
-* Work up to lifting heavier and heavier weights. Proper form is key to avoid injury.
+* Move on to lifting heavier and heavier weights. Proper form is key to avoid injury.
 * Sleep enough (7-8 hours sleeping, time in bed awake doesn't count) every night, and make sure it's high quality. Use a sleep tracker to see what might be impacting your sleep if this is difficult for you.
 
 I don't think much of this is revelatory. But that doesn't mean it was easy to internalize these ideas and habits well enough to get fit. It's still a day-to-day struggle, and probably always will be. But I want you to know that it's 100% worthwhile.
