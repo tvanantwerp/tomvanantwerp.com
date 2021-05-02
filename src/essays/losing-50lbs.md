@@ -1,7 +1,7 @@
 ---
 title: "Overcoming a Lifetime of Weight: How I Lost 50 Pounds"
 description: "I combined activity/diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and fasting to get into the best shape of my life."
-date: 2021-04-30
+date: 2021-05-02
 emoji: 💪
 tags:
   - Essays
@@ -13,9 +13,12 @@ tags:
   - Sleep
   - High-Intensity Interval Training
 layout: layouts/writing.liquid
+image: img/2021-05-02-before-after-weight-loss.jpg
 ---
 
-At my heaviest over 15 years ago, I weight between 200 and 210 pounds.
+{% figure './img/2021-05-02-before-after-weight-loss.jpg', 'Before (2003, quite fat) and after (2021, slim with some muscle).', 'Me at my heaviest (2003) and me today (2021).' %}
+
+At my heaviest in high school years ago—over 15 years ago—I weighed between 200 and 210 pounds.
 
 I don't remember the exact figure—it was not a time in my life where I tracked that sort of thing. Growing up in a small-to-medium size Southern city, it wasn't abnormal to be overweight. While I wasn't happy with my appearance, I wasn't alarmed either. And there was no one in my life to tell me: "Hey, kid, you really need to lose some weight so that you'll look good and feel good and not get metabolic syndrome." To this day, I do not think my mother was ever aware that I was fat, despite being at the border between overweight and obese.[^1]
 
