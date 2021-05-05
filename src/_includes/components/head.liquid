@@ -40,7 +40,11 @@
 	{% endif %}
 </title>
 <meta name="description" content="{% if description %}{{description}}{% else %}{{ metadata.description }}{% endif %}">
-<meta name="robots" content="index,follow">
+{% if ignore %}
+	<meta name="robots" content="noindex"/>
+{% else %}
+	<meta name="robots" content="index,follow">
+{% endif %}
 <meta name="author" content="{{ metadata.author }}">
 <link rel="canonical" href="{{ metadata.url | append: page.url}}">
 <meta property="og:title" content="{% if title %}{{title}} | {{ metadata.title}}{% else %}{{ metadata.title}}{% endif %}">
