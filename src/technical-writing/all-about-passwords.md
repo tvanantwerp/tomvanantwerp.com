@@ -14,7 +14,7 @@ splash_alt: 'An unlocked padlock sitting on a laptop keyboard. Sorry, but the st
 
 Nobody enjoys typing passwords to log in. Nobody!
 
-Every website has slightly different requirements. Your standard `RoverIsAGoodBoy` didn't work on this site? Oh, must've needed a number—try `RoverIsAGoodBoy1`. No? Maybe a symbol. `RoverIsAGoodBoy!`. Or both? `RoverIsAGoodBoy1!`. Wait, when did you create this account? Maybe is was your previous standard password: `password1234`.
+Every website has slightly different requirements. Your standard `RoverIsAGoodBoy` didn't work on this site? Oh, must've needed a number—try `RoverIsAGoodBoy1`. No? Maybe a symbol. `RoverIsAGoodBoy!`. Or both? `RoverIsAGoodBoy1!`. Wait, when did you create this account? Maybe it was your previous standard password: `password1234`.
 
 If the above looks familiar to you: 1) I empathize and 2) I am here to rescue you from this hell!
 
