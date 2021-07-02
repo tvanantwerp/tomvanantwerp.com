@@ -20,7 +20,8 @@ layout: narrow
 - [Sony WF-1000XM3](https://amzn.to/3cv16QO) noise-cancelling earbuds used mainly on the go, with [Comply TrueGrip Pro Memory Foam Tips](https://amzn.to/39n6F1H) to not fall out of my apparently massive earholes
 - [APC BX850M Battery Backup and Surge Protector](https://amzn.to/3cRPB5L) (which uses [RBC17 replacement batteries](https://amzn.to/3q7A1IQ)) to keep my equipment running during power outages
 - [Sakura Pigma 005 pens](https://amzn.to/3tZaaDt), which are great for tiny writers like me who hate to see their letters bleed together
-- [Muji A5 gridded notebooks](https://amzn.to/3cuCd84) for everyday scribbling (e.g., my time-block planning)
+- [A6 Spiral-bound Dot Grid Notebooks](https://amzn.to/3xd6MXL) are perfect for daily time-block planning
+- [Muji A5 gridded notebooks](https://amzn.to/3cuCd84) for everyday scribbling
 - [Rhodia A5 dot grid notebook](https://amzn.to/3u1p248) for more substantial journaling
 - [Autonomous.ai SmartDesk 2](https://www.autonomous.ai/standing-desks/smartdesk-2-home), bamboo top with black frame
 
