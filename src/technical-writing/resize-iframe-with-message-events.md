@@ -11,13 +11,13 @@ tags:
 layout: layouts/writing.liquid
 ---
 
-For the past several years, whenever I needed to embed a React into another site, I would use the [Pym.js](http://blog.apps.npr.org/pym.js/) library written by NPR. With Pym, I was able to embed React apps in iframes with widths and heights that dynamically adjusted to the iframe's content. For example, if an app had conditional UI that was hidden unless you picked a certain option, I didn't need to worry that adding in the new UI would cause overflowing content in the iframe—it's height would simply adjust to match.
+For the past several years, whenever I needed to embed a React app into another site, I would use the [Pym.js](http://blog.apps.npr.org/pym.js/) library written by NPR. With Pym, I was able to embed React apps in iframes with widths and heights that dynamically adjusted to the iframe's content. For example, if an app had conditional UI that was hidden unless you picked a certain option, I didn't need to worry that adding in the new UI would cause overflowing content in the iframe—it's height would simply adjust as the new content became visible.
 
-But Pym is getting a bit old; I don't think it's been updated since 2018. And when I recently created my first interactive using Svelte instead of React, I absolutely could not get Pym to play nice with it. No matter how I tried to configure it, the iframe was always the default 150px height. The time had come to ditch Pym and write the code to do this myself using the `window.postMessage()` method.
+But Pym is getting a bit old; I don't think it's been updated since 2018. And when I recently created my first embedded app using Svelte instead of React, I absolutely could not get Pym to play nice with it. No matter how I tried to configure it, the iframe was always the default 150px height. The time had come to ditch Pym and write the code to do this myself using the `window.postMessage()` method.
 
-With `postMessage`, the embedded iframe site is able to send messages to the parent window. Scripts in the parent `window` can then listen for the `message` event and take action based on the `data` sent. In this case, I'm sending a message with the `clientHeight` of the interactive and the parent window is using that information to adjust the height of the iframe. [More detailed information can be found on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
+With `postMessage`, the embedded iframe site is able to send data to the parent window. Scripts in the parent `window` can then listen for the `message` event and take action based on the `data` sent. In this case, I'm sending a message with the `clientHeight` of the app content and the parent window is using that information to adjust the height of the iframe. [More detailed information can be found on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
-Here are examples of a parent HTML page and the iframe-embedded child using the `message` event to set the iframe's height. In the child page, I use `setInterval` to regularly update the parent about the height so that I don't have to think too hard about what, precisely, might cause height changes in the app. If you know exactly what would or wouldn't trigger a change, you could send the event manually instead of updating at regular intervals.
+Here are examples of a parent HTML page and the iframe-embedded child using the `message` event to set the iframe's height. In the child page, I use `setInterval` to regularly update the parent with the height so that I don't have to think too hard about what, precisely, might cause height changes in the app. If you know exactly what would or wouldn't trigger a change, you could send the event manually instead of updating at regular intervals.
 
 ```html
 <!-- parent.html -->
@@ -109,4 +109,4 @@ Here are examples of a parent HTML page and the iframe-embedded child using the 
 </html>
 ```
 
-This simple example only concerns itself with dynamically adjusting iframe height. But you can of course use this technique to send all sorts of messages to the parent window.
+This example only concerns itself with dynamically adjusting iframe height. But you can of course use this technique to send all sorts of messages to the parent window.
