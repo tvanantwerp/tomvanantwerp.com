@@ -11,15 +11,15 @@ layout: layouts/writing.liquid
 image: img/2021-08-03-adhd-cover.jpg
 ---
 
-For a couple of years now, I suspected that I may have [ADHD Predominately Inattentive](https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder_predominantly_inattentive) (ADHD-PI). I first started thinking this while reading a Hacker News thread of programmers with ADHD describing their various non-pharmaceutical interventions that they use to manage their work and lives. The thing that struck me was how many of their strategies were things I'd learned to employ myself. I'm forgetful, so I write todo lists, checklists, and other reminders. I'm distractable, so I wear noise-cancelling headphones and block out external stimuli whenever I can. I forget about things without environmental triggers, so I leave dumbbells lying around so I remember to exercise. My mind wanders in conversation, so I prefer instructions in writing. Nearly every response I read made me think, "Huh, that sounds like me." Did I have ADHD and not know it? Had I learned to do all of these things as a coping mechanism without realizing what I was trying to fix?
+For a couple of years now, I suspected that I may have [ADHD Predominately Inattentive](https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder_predominantly_inattentive) (ADHD-PI). I've never been hyper, or energetic in general, so I never gave ADHD much thought in the past. But I first suspected it while reading a Hacker News thread of programmers with ADHD, describing their various non-pharmaceutical interventions that they use to manage their work and lives. It struck me that many of their coping strategies were things I did too. I'm forgetful, so I write todo lists, checklists, and other reminders. I'm distractable, so I wear noise-cancelling headphones and block out external stimuli whenever I can. I forget about things without environmental triggers, so I leave dumbbells lying around so I remember to exercise. My mind wanders in conversation, so I prefer instructions in writing. Nearly every response I read made me think, "Huh, that sounds like me." Did I have ADHD and not know it? Had I learned to do all of these things as a coping mechanism without realizing what I was trying to fix?
 
-Given these apparent deficits and the behaviors I adopted around them, I decided to get properly tested.[^1] After an extremely boring 20 minute [n-back](https://en.wikipedia.org/wiki/N-back) test, I finally have hard data about my liklihood of having ADHD.
+Given these perceived deficits and the behaviors I adopted around them, I decided to get properly tested.[^1] After an extremely boring 20 minute [n-back](https://en.wikipedia.org/wiki/N-back) test, I finally have hard data about my liklihood of having ADHD.
 
 The data suggest that I **do not** have ADHD.
 
 {% image './img/2021-08-03-adhd-gauge.png', 'An overall result of 8, where any number between 0 and 10 indicates low likelihood of ADHD.' %}
 
-The test involved watching a series of colored shapes pop up briefly on a screen. I had to hit the spacebar if the same color and shape showed up twice in a row. My webcam was monitoring eye movement during the test as well. Despite being excruciatingly dull within the first few seconds, I somehow managed to stay focused on the task.
+The test itself involved watching a series of colored shapes pop up briefly on a screen. I had to hit the spacebar if the same color and shape showed up twice in a row. My webcam was monitoring eye movement during the test as well, looking for signs of distraction. Despite being excruciatingly dull after only a few seconds, I somehow managed to stay focused on the task.
 
 {% figure './img/2021-08-03-adhd-test-deviations.png', 'Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time.', "Statistics for my performance. I was much higher on impulsivity measures than I would've guessed going into it, but my reaction speeds are good. Makes me wonder if a lifetime of trying to time button presses in video games contributed to this score." %}
 
@@ -37,11 +37,11 @@ The overall distribution of correct answers and errors was very much in line wit
 
 The psychologist, upon reviewing my test results with me, put it this way: "I think you're just a smart guy who gets impatient with the slow pace of things. And you're probably too hard on yourself about what you expect to get done."
 
-He may be right. I can be extremely impatient at times. I listen to podcasts and YouTube videos at more than 2x speed, and I skim rapidly while reading. I hate standing in lines. And I'm definitely hard on myself regarding what I feel like I should be achieving and what I actually do.
+He may be right. I can be extremely impatient at times. I listen to podcasts and YouTube videos at more than 2x speed, I mostly skim while reading, and I hate standing in lines. And I'm definitely hard on myself, feeling like I should accomplish more than I do.
 
-I told all of this—my test results and the doctor's interpretation—to a friend of mine with an ADHD diagnosis. His first reaction was: "...kinda sounds like ADHD". He also said that his testing took 4 full hours and included many more types of evaluation than n-back. I'm now wondering if the n-back test was too calibrated to specific aspects of ADHD that I don't display. Some of my data look borderline, and I still identify with many of the DSM-V crieria for ADHD-PI. I'm debating whether I should take a more rigorous test.[^2]
+I told all of this—my test results and the doctor's interpretation—to a friend of mine with an ADHD diagnosis. His first reaction was: "...kinda sounds like ADHD". He also said that his testing took 4 full hours and included many more types of evaluation than n-back. I'm now wondering if my test was too calibrated to specific aspects of ADHD that I don't display. Some of my data look borderline, and I still identify with many of the DSM-V crieria for ADHD-PI. I'm debating whether I should take a more rigorous test.[^2]
 
-For now, I'll just keep writing [checklists](https://amzn.to/3ysvu74).
+In any case, I'll keep writing todos and [checklists](https://amzn.to/3ysvu74).
 
 [^1]: But only after putting it off for several years...
 
