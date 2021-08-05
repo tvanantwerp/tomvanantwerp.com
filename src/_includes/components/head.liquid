@@ -53,13 +53,10 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ metadata.url | append: page.url}}">
 <meta property="og:description" content="{% if description %}{{description}}{% else %}{{ metadata.description }}{% endif %}">
-<meta property="og:image" content="{% if image %}{{ metadata.url | append: image }}{% else %}{{ metadata.url | append: metadata.image }}{% endif %}">
+<meta property="og:image" content="{% if image %}{{ metadata.url | append: '/' | append: image }}{% else %}{{ metadata.url | append: metadata.image }}{% endif %}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="{{ metadata.twitter }}">
 <meta name="twitter:url" content="{{ metadata.url | append: page.url}}">
 <meta name="twitter:title" content="{% if title %}{{title}} | {{ metadata.title}}{% else %}{{ metadata.title}}{% endif %}">
 <meta name="twitter:description" content="{% if description %}{{description}}{% else %}{{ metadata.description }}{% endif %}">
-<meta name="twitter:image" content="{% if image %}{{ metadata.url | append: image }}{% else %}{{ metadata.url | append: metadata.image }}{% endif %}">
-
-
-	
+<meta name="twitter:image" content="{% if image %}{{ metadata.url | append: '/' | append: image }}{% else %}{{ metadata.url | append: metadata.image }}{% endif %}">
