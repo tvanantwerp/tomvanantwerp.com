@@ -4,8 +4,13 @@ img {
 	max-width: 100%;
 }
 
-.image-section {
-	// for use in image shortcodes
+:not(figure) > picture > img {
+	margin-bottom: 1rem;
+}
+
+figure {
+	display: grid;
+	grid-gap: 1rem;
 	margin-bottom: 1rem;
 }
 
