@@ -47,7 +47,9 @@ layout: narrow
 
 ## Cooking
 
-- Almost anything is easy to cook with minimal mess using a combination of an [air fryer](http://www.tidylife.cc/products/air-fryer-1855a/?tax=af1855a), [pressure cooker](https://amzn.to/31okg4H), and [sous vide](https://amzn.to/3sykTV5) and [12 quart container](https://amzn.to/3sykUID). For an easy way to cook veggies, throw a frozen stir fry mix into a [wok](https://amzn.to/3cyfyrv) for around ten minutes.
+- Almost anything is easy to cook with minimal mess using a combination of an [air fryer](http://www.tidylife.cc/products/air-fryer-1855a/?tax=af1855a), [pressure cooker](https://amzn.to/31okg4H), and [sous vide](https://amzn.to/3sykTV5) and [12 quart container](https://amzn.to/3sykUID).
+- For an easy way to cook veggies, pour a bag of your preferred frozen veggies into a hot oiled [wok](https://amzn.to/3cyfyrv) for around ten minutes. I add salt, pepper, red pepper flakes, and soy sauce for extra flavor.
+- [Müeller Vacuum Sealer](https://amzn.to/37odgaL) for preparing food for sous vide, or for storage.
 - Some good general accessories: [OXO Tongs](https://amzn.to/3rx1gbm), [Kuhn Rikon soft edge slotted spatula](https://amzn.to/3ddnUnl)
 - I'm a weirdo who tracks literally everything I eat to the gram. The [OXO food scale](https://amzn.to/3w189Zr) makes that a lot easier.
 - My current coffee stack:
