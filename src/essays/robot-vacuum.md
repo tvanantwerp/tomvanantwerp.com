@@ -2,7 +2,7 @@
 title: "Spend Money to Solve Problems"
 description: "Sweep the Floor With a Broom? What Are We, Farmers?"
 date: 2021-07-12
-emoji: 😵‍💫
+emoji: 💸
 tags:
   - Essays
   - Finance
