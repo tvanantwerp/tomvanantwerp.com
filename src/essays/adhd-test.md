@@ -1,7 +1,7 @@
 ---
 title: "What I Learned Getting Tested for ADHD"
 description: "After years of suspecting that I might have ADHD Inattentive Type, I finally got psychological testing. The results surprised me!"
-date: 2021-05-02
+date: 2021-08-03
 emoji: 😵‍💫
 tags:
   - Essays
