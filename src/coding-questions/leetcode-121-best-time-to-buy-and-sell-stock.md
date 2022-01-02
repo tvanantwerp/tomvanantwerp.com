@@ -60,7 +60,7 @@ The solution goes through each price, and then compares it to the highest _futur
 
 ### Better Attempt
 
-This solution does a single pass through the array, and thus only has a time complexity of $O(n)$. Instead of comparing each price against the maximum future price—which requires comparing all future prices to find the maxium—it simply checks whether each new price is the _minimum_ so far, and if not it compares the current price to the smallest value seen so far. If the difference between the current price and the current minimum is greater than the current value of `max`, update it.
+This solution does a single pass through the array, giving it an $O(n)$ time complexity.
 
 ```javascript
 const maxProfit = function(prices) {
@@ -76,3 +76,5 @@ const maxProfit = function(prices) {
   return max;
 };
 ```
+
+Instead of comparing each price against the maximum future price—which requires comparing all future prices to find the maxium—it simply checks whether each new price is the _minimum_ so far, and if not it compares the current price to the smallest value seen so far. If the difference between the current price and the current minimum is greater than the current value of `max`, update it.
