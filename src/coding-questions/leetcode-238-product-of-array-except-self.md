@@ -59,7 +59,44 @@ This is correct, but it is much too slow—it has $O(n{^2})$ time complexity. Le
 
 ### Better Solution
 
-Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. Since we no longer check each value to the left and right, this brings us down to $O(n)$ time complexity.
+Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. We'll store these values as the `prefix` array and the `suffix` array. Since we no longer check each value to the left and right, this brings us down to $O(n)$ time complexity.
+
+```javascript
+const productExceptSelf = (nums) => {
+    let prefix = [];
+    let suffix = [];
+    let answer = [];
+
+    // Compute the prefix values by multiplying whatever the previous prefix is by the number to the immediate left of nums[i]
+    for (let i = 0; i < nums.length; i++) {
+        if (i > 0) {
+            prefix[i] = prefix[i - 1] * nums[i - 1]
+        } else {
+            prefix[i] = 1
+        }
+    }
+
+    // Loop backwards to compute the suffix values by multiplying the last suffix value computed by the number to the immediate right of nums[i]
+    for (let i = nums.length - 1; i >= 0; i--) {
+        if (i === nums.length - 1) {
+            suffix[i] = 1
+        } else {
+            suffix[i] = suffix[i + 1] * nums[i + 1];
+        }
+    }
+
+    // Finally, fill in the answer array by multiplying prefixes and suffixes
+    for (let i = 0; i < nums.length; i++) {
+        answer[i] = prefix[i] * suffix[i]
+    }
+
+    return answer
+};
+```
+
+### Still Better Solution
+
+The previous solution works, but isn't as space efficient as it could be. We don't actually need to store `prefix` and `suffix` arrays at all!
 
 ```javascript
 const productExceptSelf = (nums) => {
@@ -75,6 +112,25 @@ const productExceptSelf = (nums) => {
         answer[j] *= suffix;
         suffix *= nums[j]
     }
+    return answer;
+};
+```
+
+### Amazing Solution
+
+Can we still improve? Yes! We don't need two separate loops for computing the prefixes and suffixes while filling out the `answer` array.
+
+```javascript
+const productExceptSelf = (nums) => {
+    const answer = Array.from({length: nums.length}, () => 1);
+
+    for (let i = 0, prefix = 1, suffix = 1; i < nums.length; i++) {
+        answer[i] *= prefix;
+        prefix *= nums[i];
+        answer[nums.length - 1 - i] *= suffix;
+        suffix *= nums[nums.length - 1 - i];
+    }
+
     return answer;
 };
 ```
