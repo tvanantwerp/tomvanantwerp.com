@@ -41,4 +41,42 @@ Constraints:
 
 This would be fairly easy without the caveat "without using the division operation". If division were allowed, you could just compute the product of all `nums` values and then return `nums.map(num => numsProduct / num)`.[^1] But alas, we must do something more complicated.
 
+### Bad Solution
+
+Instead of computing total product and dividing by each value, we can compute the product of all the values to the left and all the values on the right and then multiply those.
+
+```javascript
+const productExceptSelf = (nums) => {
+    return nums.map((_, i) => {
+        return product(nums.slice(0, i)) * product(nums.slice(i + 1))
+    })
+};
+
+const product = nums => nums.reduce((prev, curr) => prev * curr, 1)
+```
+
+This is correct, but it is much too slow—it has $O(n{^2})$ time complexity. Leetcode will time out if you try this.
+
+### Better Solution
+
+Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. Since we no longer check each value to the left and right, this brings us down to $O(n)$ time complexity.
+
+```javascript
+const productExceptSelf = (nums) => {
+    // First, initialize the answer array with length equal to nums' length and all values equal to 1.
+    const answer = Array.from({length: nums.length}, () => 1);
+
+    // Next, we reset the values in the answer array to serve as our prefix array. Each answer[i] will be equal to the product of all values in nums.slice(0, i).
+    for (let i = 1; i < nums.length; i++) {
+        answer[i] = answer[i - 1] * nums[i - 1];
+    }
+    // Finally, we loop backwards to simultaneously update the answer values with suffix products and compute those suffix products. We reduce space complexity by keeping our computations in the answer array rather than storing separate prefix and suffix arrays.
+    for (let j = nums.length - 1, suffix = 1; j >= 0; j--) {
+        answer[j] *= suffix;
+        suffix *= nums[j]
+    }
+    return answer;
+};
+```
+
 [^1]: Ok, it would be _a bit_ more complicated than this. If `nums` contained two or more `0`s, the answer is just an array of `0`s with the same length as `nums`. If there is exactly one `0`, then everything in the answer array is `0` _except_ for the index of that `0`, which should be the product of all other numbers. Take care not to divide by zero!
