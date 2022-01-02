@@ -29,12 +29,16 @@ Output: [0,0,9,0,0]
 
 Constraints:
 
-- 2 <= nums.length <= 10<sup>5</sup>
-- -30 <= nums[i] <= 30
+- 2 <= `nums.length` <= 10<sup>5</sup>
+- -30 <= `nums[i]` <= 30
 - The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
 
-**Follow up**: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+**Follow up**: Can you solve the problem in $O(1)$ extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
 ## My Solution
 
-This would be fairly easy without the caveat "without using the division operation". If division were allowed, you could just compute the product of all `nums` values and then return `nums.map(num => numsProduct / num)`. But alas, we must do something more complicated.
+### Ignoring the Instructions
+
+This would be fairly easy without the caveat "without using the division operation". If division were allowed, you could just compute the product of all `nums` values and then return `nums.map(num => numsProduct / num)`.[^1] But alas, we must do something more complicated.
+
+[^1]: Ok, it would be _a bit_ more complicated than this. If `nums` contained two or more `0`s, the answer is just an array of `0`s with the same length as `nums`. If there is exactly one `0`, then everything in the answer array is `0` _except_ for the index of that `0`, which should be the product of all other numbers. Take care not to divide by zero!
