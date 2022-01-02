@@ -39,3 +39,40 @@ Constraints:
 
 ## My Solution
 
+### Naive Attempt
+
+First stab at an answer is naive. I knew when writing it that it wouldn't scale, but it's usually to get a poorly-done solution out first, then identify the weak points and fix it.
+
+```javascript
+const maxProfit = function(prices) {
+  let max = 0;
+  for (let i = 0; i < prices.length; i++) {
+    const bestFuturePrice = Math.max(...prices.slice(i + 1))
+    if (bestFuturePrice - prices[i] > max) {
+      max = bestFuturePrice - prices[i]
+    }
+  }
+  return max;
+};
+```
+
+The solution goes through each price, and then compares it to the highest _future_ price (i.e., the maximum of the remainder of the `prices` array). The function returns a variable `max`, which is updated every time that the future price minus the current price is greater than the previous maximum profit. This solution is bad because it's got $O(n{^2})$ time complexity. The larger the prices array, the worse this performs. The Leetcode platform times out if you submit this answer. Lets do better.
+
+### Better Attempt
+
+This solution does a single pass through the array, and thus only has a time complexity of $O(n)$. Instead of comparing each price against the maximum future price—which requires comparing all future prices to find the maxium—it simply checks whether each new price is the _minimum_ so far, and if not it compares the current price to the smallest value seen so far. If the difference between the current price and the current minimum is greater than the current value of `max`, update it.
+
+```javascript
+const maxProfit = function(prices) {
+  let min = Infinity;
+  let max = 0;
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] < min) {
+      min = prices[i];
+    } else {
+      max = Math.max(prices[i] - min, max);
+    }
+  }
+  return max;
+};
+```
