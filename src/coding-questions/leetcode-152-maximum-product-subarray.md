@@ -39,4 +39,32 @@ Constraints:
 
 ## My Solution
 
+Much like [053 Maximum Subarray](/coding-questions/leetcode-053-maximum-subarray), we can use dynamic programming with [Kadane's Algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm) to solve this in $O(n)$ time. Check out the solution to that problem for a full explanation of the algorithm and what it's superior to a naïve approach.
 
+In this implementation, we have to keep track not only of the current maxium number so far, but also the minimum so far. This is because we can have negative numbers, and two negatives multiplied could give us a larger number than the product of the current number and the current maximum.
+
+```javascript
+const maxProduct = function(nums) {
+    let numberTimesMax,
+        numberTimesMin,
+        currentMax = nums[0],
+        currentMin = nums[0],
+        best = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        // We keep these numberTimesMax and numberTimesMin
+        // variables because both values are needed to update
+        // currentMax and currentMin. We couldn't successfully
+        // updated currentMin if currentMax had already been
+        // altered. You could do this with only a numberTimesMax
+        // variable, but I like the readability of using both.
+        numberTimesMax = currentMax * nums[i]
+        numberTimesMin = currentMin * nums[i];
+        currentMax = Math.max(numberTimesMax, numberTimesMin, nums[i])
+        currentMin = Math.min(numberTimesMax, numberTimesMin, nums[i])
+        best = Math.max(currentMax, best);
+    }
+    return best;
+};
+```
+
+Credit to [AmehPls](https://leetcode.com/AmehPls) for his [thorough explanation of his own implementation](https://leetcode.com/problems/maximum-product-subarray/discuss/1598311/Javascript-Solution-using-Dynamic-Programming-in-O(n)-time-(w-explanation)), which I used to update my own from [problem 53](/coding-questions/leetcode-053-maximum-subarray).
