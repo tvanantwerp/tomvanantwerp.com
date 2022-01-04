@@ -11,6 +11,9 @@ Write a function to delete a node in a singly-linked list. You will not be given
 
 It is guaranteed that the node to be deleted is not a tail node in the list.
 
+<details>
+<summary>Examples</summary>
+
 Example 1:
 ```
 Input: head = [4,5,1,9], n = 5
@@ -23,14 +26,17 @@ Example 2:
 Input: head = [4,5,1,9], n = 1
 Output: [4,5,9]
 Explanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
-
-Constraints:
-  -  The number of the nodes in the given list is in the range `[2, 1000]`.
-  -  `-1000 <= Node.val <= 1000`
-  -  The value of each node in the list is unique.
-  -  The node given to be deleted exists in the list, and cannot be the tail value.
-
 ```
+</details>
+
+<details>
+<summary>Constraints</summary>
+
+-  The number of the nodes in the given list is in the range `[2, 1000]`.
+-  `-1000 <= Node.val <= 1000`
+-  The value of each node in the list is unique.
+-  The node given to be deleted exists in the list, and cannot be the tail value.
+</details>
 
 ## My solution
 
@@ -46,11 +52,8 @@ This works with the given constraints, such as the knowledge that we're never as
  *     this.next = null;
  * }
  */
-/**
- * @param {ListNode} node
- * @return {void} Do not return anything, modify node in-place instead.
- */
-const deleteNode = function(node) {
+
+const deleteNode = (node) => {
     node.val = node.next.val;
     node.next = node.next.next;
 };
@@ -61,7 +64,7 @@ const deleteNode = function(node) {
 Pretty much every other JavaScript solution looked like mine. One clever one, though, used JavaScript's `Object.assign()` to make it a one-liner. Runtime and memory came out identically to my original submission.
 
 ```javascript
-var deleteNode = function(node) {
+var deleteNode = (node) => {
     Object.assign(node, node.next);
 };
 ```

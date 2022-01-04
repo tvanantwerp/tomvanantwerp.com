@@ -9,15 +9,16 @@ description: Reverse a singly linked list.
 
 Reverse a singly linked list.
 
-Example:
+<details>
+<summary>Example</summary>
+
 ```
 Input: 1->2->3->4->5->NULL
 Output: 5->4->3->2->1->NULL
 ```
+</details>
 
-Follow up:
-
-A linked list can be reversed either iteratively or recursively. Could you implement both?
+**Follow up**: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
 ## My Solution
 
@@ -37,11 +38,8 @@ Got a 98.12% on speed (68ms), but only 38.39% (38.7mb) on memory.
  *     this.next = (next===undefined ? null : next)
  * }
  */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-const reverseList = function(head) {
+
+const reverseList = (head) => {
     let currentNode = head;
     let reversedList = null;
 
@@ -61,7 +59,7 @@ If `head` is `null`, then return the value of `reversed` immediately. Otherwise,
 Got a 86.52% on speed (76ms), but only 5% (39.5mb) on memory.
 
 ```javascript
-const reverseList = function(head, reversed = null) {
+const reverseList = (head, reversed = null) => {
     if (!head) return reversed;
     return reverseList(head.next, new ListNode(head.val, reversed));
 };
@@ -73,14 +71,14 @@ I need to review more of these solutions. Rather than create new ListNodes, they
 
 Example:
 ```javascript
-var reverseList = function(head, prev=null) {
+const reverseList = (head, prev=null) => {
     if(!head) return prev;
     let temp = head.next;
     head.next = prev;
     return reverseList(temp, head);
 };
 
-var reverseList = function(head) {
+const reverseList = (head) => {
     let node = head, reversed = null;
     while(node){
         let temp = node;
