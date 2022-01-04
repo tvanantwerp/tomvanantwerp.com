@@ -15,6 +15,9 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 
 A **subarray** is a contiguous subsequence of the array.
 
+<details>
+<summary>Examples</summary>
+
 Example 1:
 
 ```
@@ -30,12 +33,15 @@ Input: nums = [-2,0,-1]
 Output: 0
 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 ```
+</details>
 
-Constraints:
+<details>
+<summary>Constraints</summary>
 
 - 1 <= `nums.length` <= 2 * 10<sup>4</sup>
 - -10 <= `nums[i]` <= 10
 - The product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit integer.
+</details>
 
 ## My Solution
 
@@ -44,7 +50,7 @@ Much like [053 Maximum Subarray](/coding-questions/leetcode-053-maximum-subarray
 In this implementation, we have to keep track not only of the current maxium number so far, but also the minimum so far. This is because we can have negative numbers, and two negatives multiplied could give us a larger number than the product of the current number and the current maximum.
 
 ```javascript
-const maxProduct = function(nums) {
+const maxProduct = (nums) => {
     let numberTimesMax,
         numberTimesMin,
         currentMax = nums[0],

@@ -11,9 +11,10 @@ Given a binary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
-Note: A leaf is a node with no children.
+**Note**: A leaf is a node with no children.
 
-Example:
+<details>
+<summary>Example</summary>
 
 Given binary tree `[3,9,20,null,null,15,7]`,
 ```
@@ -24,10 +25,11 @@ Given binary tree `[3,9,20,null,null,15,7]`,
    15   7
 ```
 return its depth = 3.
+</details>
 
 ## My Solution
 
-This solution uses recursion. It beat 91.16% of submissions in runtime and 82.15% in memory usage.
+This solution uses recursion.
 
 ```javascript
 const maxDepth = (root) => {
@@ -45,7 +47,7 @@ const maxDepth = (root) => {
 }
 ```
 
-## Best Solution
+## Others' Solutions
 
 Solutions page locked, but here is another JS answer that is roughly equivalent to mine. Could be a one-liner, but I find it easier to read as three.
 

@@ -9,9 +9,10 @@ description: Given a non-empty array of integers, every element appears twice ex
 
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
-Note:
+**Note**: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
-Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+<details>
+<summary>Examples</summary>
 
 Example 1:
 
@@ -25,15 +26,16 @@ Example 2:
 Input: [4,1,2,1,2]
 Output: 4
 ```
+</details>
 
 ## My Solution
 
 This solution avoids creating anything new in memory, such as another list or hash map to keep track. I don't really want to track numbers--just find the unique one. To make it easier to do this in a single loop over the existing array, I sort it. Then I can just compare each number to its neighbors and return whichever one doesn't have a matching neighbor.
 
-Time complexity of O(N) for my operation not counting the sort. I *think* space complexity is O(1), since I created nothing new. Not sure how the sort might affect that, however.
+Time complexity of $O(n)$ for my operation not counting the sort. I *think* space complexity is $O(1)$, since I created nothing new. Not sure how the sort might affect that, however.
 
 ```javascript
-var singleNumber = function(nums) {
+const singleNumber = (nums) => {
     // First sort the numbers so I can loop through only once
     // without creating another array or hashmap
     nums.sort();
@@ -68,8 +70,8 @@ If you XOR each number in the array together, all the duplicates cancel out.
 
 Time complexity of O(N) and space complexity of O(1).
 
-```
-var singleNumber = function(nums) {
+```javascript
+const singleNumber = (nums) => {
     return nums.reduce((result, num) => result ^ num)
 };
 ```

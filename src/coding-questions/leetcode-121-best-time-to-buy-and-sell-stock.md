@@ -13,6 +13,9 @@ You want to maximize your profit by choosing a **single day** to buy one stock a
 
 Return *the maximum profit you can achieve from this transaction*. If you cannot achieve any profit, return `0`.
 
+<details>
+<summary>Examples</summary>
+
 Example 1:
 
 ```
@@ -29,22 +32,23 @@ Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 ```
+</details>
 
-Constraints:
+<details>
+<summary>Constraints</summary>
 
 - 1 <= `prices.length` <= 10<sup>5</sup>
 - 0 <= `prices[i]` <= 10<sup>4</sup>
-
-
+</details>
 
 ## My Solution
 
-### Naive Attempt
+### Naïve Attempt
 
 First stab at an answer is naive. I knew when writing it that it wouldn't scale, but it's usually to get a poorly-done solution out first, then identify the weak points and fix it.
 
 ```javascript
-const maxProfit = function(prices) {
+const maxProfit = (prices) => {
   let max = 0;
   for (let i = 0; i < prices.length; i++) {
     const bestFuturePrice = Math.max(...prices.slice(i + 1))
@@ -63,7 +67,7 @@ The solution goes through each price, and then compares it to the highest _futur
 This solution does a single pass through the array, giving it an $O(n)$ time complexity.
 
 ```javascript
-const maxProfit = function(prices) {
+const maxProfit = (prices) => {
   let min = Infinity;
   let max = 0;
   for (let i = 0; i < prices.length; i++) {

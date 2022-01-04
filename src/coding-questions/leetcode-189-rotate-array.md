@@ -14,6 +14,9 @@ Given an array, rotate the array to the right by `k` steps, where `k` is non-neg
 - Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 - Could you do it in-place with $O(1)$ extra space?
 
+<details>
+<summary>Examples</summary>
+
 Example 1:
 
 ```
@@ -32,33 +35,34 @@ Example 2:
 Input: nums = [-1,-100,3,99], k = 2
 Output: [3,99,-1,-100]
 
-Explanation: 
+Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 ```
+</details>
 
-Constraints:
+<details>
+<summary>Constraints</summary>
 
 - 1 <= `nums.length` <= 2 * 10<sup>4</sup>
 - -2<sup>31</sup> <= `nums[i]` <= 2<sup>31</sup> - 1
 - 0 <= k <= 10<sup>5</sup>
-
-
+</details>
 
 ## My Solution
 
-### Naive Approach
+### Naïve Approach
 
 Never hurts to start with a good brute-forcing. For each rotation `k`, loop through the array `num` and shift everything right by one. This will rotate the array with $O(n \times k)$ time complexity.
 
 ```javascript
 // Bad solution, don't use this
-const rotate = function(nums, k) {
+const rotate = (nums, k) => {
     // First, get k down to a manageable size to avoid
     // needlessly rotating the whole array multiple times
     // for large values of k
     k = k % nums.length;
-    
+
     for (let j = 0; j < k; j++) {
         let previous = nums[nums.length - 1];
         for (let i = 0; i < nums.length; i++) {
@@ -81,9 +85,9 @@ I think it would've been cleaner to `splice` off the end, then `push` the remain
 I'm sure the fact that I didn't write some elaborate algorithm to do this is a violation of the spirit of Leetcode. Time complexity should be $O(n)$.
 
 ```javascript
-const rotate = function(nums, k) {
+const rotate = (nums, k) => {
     k = k % nums.length;
-    
+
     // Splice can delete and insert!
     // The inner splice deletes from nums
     // starting at the index of nums.length - k,

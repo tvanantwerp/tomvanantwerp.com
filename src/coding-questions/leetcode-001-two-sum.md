@@ -13,6 +13,9 @@ You may assume that each input would have ***exactly* one solution**, and you ma
 
 You can return the answer in any order.
 
+<details>
+<summary>Examples</summary>
+
 Example 1:
 
 ```
@@ -34,14 +37,16 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 ```
+</details>
 
-Constraints:
+<details>
+<summary>Constraints</summary>
 
 - 2 <= `nums.length` <= 10<sup>3</sup>
 - -10<sup>9</sup> <= `nums[i]` <= 10<sup>9</sup>
 - -10<sup>9</sup> <= `target` <= 10<sup>9</sup>
 - Only one valid answer exists.
-
+</details>
 
 ## My Solution
 
@@ -66,7 +71,7 @@ This solution is bad. I've taken a problem with a single input array and somehow
 The next attempt I found was much better.
 
 ```javascript
-const twoSum = function(nums, target) {
+const twoSum = (nums, target) => {
   let reference = {};
     for (let i = 0, j = nums.length; i<j; i++) {
         if (target - nums[i] in reference) {
@@ -82,7 +87,7 @@ Here I use a JavaScript object to keep track of numbers I've seen and their indi
 My most recent solution is basically the same, except that it uses the newer built-in `Map` in JavaScript.
 
 ```javascript
-const twoSum = function(nums, target) {
+const twoSum = (nums, target) => {
     let complements = new Map();
     for (let i = 0; i < nums.length; i++) {
         if (complements.has(target - nums[i])) {
