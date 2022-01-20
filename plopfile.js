@@ -25,7 +25,7 @@ module.exports = function (plop) {
 		actions: [
 			{
 				type: 'add',
-				path: `src/coding-questions/leetcode-{{leadingZero number}}-{{kebabCase name}}.md`,
+				path: `packages/eleventy/src/coding-questions/leetcode-{{leadingZero number}}-{{kebabCase name}}.md`,
 				templateFile: 'plop-templates/leetcode.hbs',
 			},
 		],
