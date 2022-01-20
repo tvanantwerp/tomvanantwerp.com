@@ -1,3 +1,4 @@
 [build]
-  publish = "_site"
-  command = "npm run build"
+  publish = "packages/eleventy/_site"
+  command = "yarn build"
+  environment = { NODE_VERSION = "16.13.2" }

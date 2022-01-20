@@ -1,0 +1,14 @@
+{
+	"name": "@tomvanantwerp-com/eleventy",
+	"version": "1.0.0",
+	"scripts": {
+		"watch:sass": "sass  --no-source-map --watch src/css:_site/css",
+		"watch:eleventy": "eleventy --serve",
+		"build:sass": "sass  --no-source-map src/css:_site/css",
+		"build:eleventy": "eleventy",
+		"postbuild": "postcss _site/css/*.css -u autoprefixer cssnano -r --no-map",
+		"start": "npm-run-all build:sass --parallel watch:*",
+		"build": "npm-run-all build:*",
+		"debug": "DEBUG=* eleventy"
+	}
+}
