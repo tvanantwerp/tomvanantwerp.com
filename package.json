@@ -3,15 +3,18 @@
 	"version": "0.1.0",
 	"private": true,
 	"author": "Tom VanAntwerp",
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
-		"watch:sass": "sass  --no-source-map --watch src/css:_site/css",
-		"watch:eleventy": "eleventy --serve",
-		"build:sass": "sass  --no-source-map src/css:_site/css",
-		"build:eleventy": "eleventy",
-		"postbuild": "postcss _site/css/*.css -u autoprefixer cssnano -r --no-map",
-		"start": "npm-run-all build:sass --parallel watch:*",
-		"build": "npm-run-all build:*",
-		"debug": "DEBUG=* eleventy",
+		"watch:sass": "yarn workspace @tomvanantwerp-com/eleventy watch:sass",
+		"watch:eleventy": "yarn workspace @tomvanantwerp-com/eleventy watch:eleventy",
+		"build:sass": "yarn workspace @tomvanantwerp-com/eleventy build:sass",
+		"build:eleventy": "yarn workspace @tomvanantwerp-com/eleventy build:eleventy",
+		"postbuild": "yarn workspace @tomvanantwerp-com/eleventy postbuild",
+		"start": "yarn workspace @tomvanantwerp-com/eleventy start",
+		"build": "yarn workspace @tomvanantwerp-com/eleventy build",
+		"debug": "yarn workspace @tomvanantwerp-com/eleventy debug",
 		"lint": "eslint --fix .",
 		"format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
 		"new": "plop"
