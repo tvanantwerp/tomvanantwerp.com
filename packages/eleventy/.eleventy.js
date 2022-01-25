@@ -28,7 +28,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('sortByTitle', values => {
 		return values
 			.slice()
-			.sort((a, b) => a.data.title.localeCompare(b.data.title));
+			.sort((a, b) =>
+				a.data.title.localeCompare(b.data.title, undefined, { numeric: true }),
+			);
 	});
 	eleventyConfig.addFilter('readableDate', dateObj => {
 		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('DDD');
