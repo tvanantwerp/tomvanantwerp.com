@@ -19,3 +19,21 @@ layout: layouts/base.liquid
 	</div>
 	{% endfor %}
 </div>
+<div>
+	<h2 class="writing__collection__title">Data Structures and Algorithms</h2>
+	<p>
+		I don't know if anybody enjoys doing technical interviews. But I
+		<em>do</em> enjoy solving code puzzles in my own time, just for fun! Here is
+		a list of problems I've gone through, including an explanation of how I
+		solved each one.
+	</p>
+	<ul class="writing__collection__list writing__collection__list--columns">
+		{% assign posts = collections['Coding Questions'] | sortByTitle %} {% for
+		post in posts %}
+		<li>
+			{% if post.data.emoji %}{{post.data.emoji}}{% endif %}
+			<a href="{{post.url | url }}">{{post.data.title}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
