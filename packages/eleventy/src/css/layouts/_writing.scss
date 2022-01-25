@@ -81,7 +81,15 @@
 			line-height: 1.4;
 			padding: 0;
 
+			&--columns {
+				@media (min-width: 800px) {
+					column-count: 2;
+					column-gap: 1rem;
+				}
+			}
+
 			li {
+				break-inside: avoid;
 				padding: calc(0.7 * 1em) 0;
 			}
 		}

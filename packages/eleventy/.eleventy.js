@@ -9,6 +9,7 @@ const markdownItAnchor = require('markdown-it-anchor');
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const mila = require('markdown-it-link-attributes');
 const uslug = require('uslug');
+const { kebabCase } = require('lodash');
 
 const { imageShortcode, figureShortcode } = require('./images');
 
@@ -28,7 +29,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('sortByTitle', values => {
 		return values
 			.slice()
-			.sort((a, b) => a.data.title.localeCompare(b.data.title));
+			.sort((a, b) =>
+				a.data.title.localeCompare(b.data.title, undefined, { numeric: true }),
+			);
 	});
 	eleventyConfig.addFilter('readableDate', dateObj => {
 		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('DDD');
@@ -50,6 +53,10 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addFilter('min', (...numbers) => {
 		return Math.min.apply(null, numbers);
+	});
+
+	eleventyConfig.addFilter('slugify', string => {
+		return kebabCase(string);
 	});
 
 	// Layout aliases

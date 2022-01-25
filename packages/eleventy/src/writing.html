@@ -6,7 +6,15 @@ layout: layouts/base.liquid
 <div class="writing__collections">
 	{% for collection in featuredCollections %}
 	<div class="writing__collection">
-		<h2 class="writing__collection__title">{{collection}}</h2>
+		<h2
+			id="{{ collection | slugify }}"
+			tabindex="-1"
+			class="writing__collection__title"
+		>
+			<a class="header-anchor" href="#{{ collection | slugify }}"
+				><span>{{collection}}</span></a
+			>
+		</h2>
 		<ul class="writing__collection__list">
 			{% assign posts = collections[collection] | sortByTitle %} {% for post in
 			posts %}
@@ -18,4 +26,26 @@ layout: layouts/base.liquid
 		</ul>
 	</div>
 	{% endfor %}
+</div>
+<div>
+	<h2 id="ds-and-a" tabindex="-1" class="writing__collection__title">
+		<a class="header-anchor" href="#ds-and-a"
+			><span>Data Structures and Algorithms</span></a
+		>
+	</h2>
+	<p>
+		I don't know if anybody enjoys doing technical interviews. But I
+		<em>do</em> enjoy solving code puzzles in my own time, just for fun! Here is
+		a list of problems I've gone through, including an explanation of how I
+		solved each one.
+	</p>
+	<ul class="writing__collection__list writing__collection__list--columns">
+		{% assign posts = collections['Coding Questions'] | sortByTitle %} {% for
+		post in posts %}
+		<li>
+			{% if post.data.emoji %}{{post.data.emoji}}{% endif %}
+			<a href="{{post.url | url }}">{{post.data.title}}</a>
+		</li>
+		{% endfor %}
+	</ul>
 </div>
