@@ -8,7 +8,6 @@ const markdownItFootnote = require('markdown-it-footnote');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItKatex = require('@iktakahiro/markdown-it-katex');
 const mila = require('markdown-it-link-attributes');
-const uslug = require('uslug');
 const { kebabCase } = require('lodash');
 
 const { imageShortcode, figureShortcode } = require('./images');
