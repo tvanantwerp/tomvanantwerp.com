@@ -71,9 +71,3 @@ If you'd like to learn more about the `postMessage` API, [more detailed informat
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
-
----
-
-*This Dot Labs is a modern web consultancy focused on helping companies realize their digital transformation efforts. For expert architectural guidance, training, or consulting in React, Angular, Vue, Web Components, GraphQL, Node, Bazel, or Polymer, visit [thisdotlabs.com](https://www.thisdotlabs.com).*
-
-*This Dot Media is focused on creating an inclusive and educational web for all.  We keep you up to date with advancements in the modern web through events, podcasts, and free content. To learn, visit [thisdot.co](https://www.thisdot.co).*
