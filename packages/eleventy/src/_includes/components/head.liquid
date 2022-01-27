@@ -48,7 +48,11 @@
 	<meta name="robots" content="index,follow">
 {% endif %}
 <meta name="author" content="{{ metadata.author }}">
-<link rel="canonical" href="{{ metadata.url | append: page.url}}">
+{% if canonical %}
+  <link rel="canonical" href="{{ canonical }}" />
+{% else %}
+	<link rel="canonical" href="{{ metadata.url | append: page.url}}">
+{% endif %}
 <meta property="og:title" content="{% if title %}{{title}} | {{ metadata.title}}{% else %}{{ metadata.title}}{% endif %}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ metadata.url | append: page.url}}">
