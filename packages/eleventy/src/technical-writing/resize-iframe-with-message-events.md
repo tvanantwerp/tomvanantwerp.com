@@ -20,7 +20,7 @@ The [`window.postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Wi
 
 [In this example](https://codesandbox.io/s/iframe-postmessage-example-3iyqy?file=/index.html "CodeSandbox code sample"), I'm sending a message from a child window in an iframe to a parent window with the `clientHeight` of the child's content. The parent window is using that information to adjust the height of the iframe. Every time you `ADD` or `REMOVE` a box in the child window, it sends a new message to the parent with the updated height. [Click here to see it in action.](https://codesandbox.io/s/iframe-postmessage-example-3iyqy?file=/index.html "CodeSandbox code sample")
 
-![Dynamically Resizing IFrame](//images.contentful.com/zojzzdop0fzx/5Zx6eVfyOy01Ix14bmkmQJ/718365acf39a9061b0c2049fcf1c3e37/Aug-13-2021_11-12-32.gif)
+![Resizing child height in an iframe with postmessage.](/img/2021-08-26-postmessage-demo.gif)
 
 First, a script in the child window checks the height of itself, and then sends that height information to the parent window.
 
