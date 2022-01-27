@@ -2,6 +2,7 @@
 title: Understanding CSS Gradients
 date: 2021-11-10
 description: The code for CSS gradients can be confusing. Building up your understanding of gradients one step at a time can give you confidence writing them yourself, without relying on gradient generator tools.
+canonical: https://labs.thisdot.co/blog/understanding-css-gradients
 tags: 
     - Technical Writing
     - CSS

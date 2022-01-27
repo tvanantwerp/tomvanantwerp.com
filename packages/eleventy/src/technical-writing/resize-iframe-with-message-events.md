@@ -2,6 +2,7 @@
 title: Using Message Events to Resize an IFrame
 date: 2021-08-26
 description: Sometimes you want to embed an app into another web page using an iframe, but the height of the iframe must respond dynamically to the content. Here's how to do that with message events.
+canonical: https://labs.thisdot.co/blog/using-message-events-to-resize-an-iframe
 tags: 
     - Technical Writing
     - iframe
