@@ -28,6 +28,22 @@ layout: layouts/base.liquid
 	{% endfor %}
 </div>
 <div>
+	<h2 id="technical-writing" tabindex="-1" class="writing__collection__title">
+		<a class="header-anchor" href="#technical-writing"
+			><span>Technical Writing</span></a
+		>
+	</h2>
+	<ul class="writing__collection__list writing__collection__list--columns">
+		{% assign posts = collections['Technical Writing'] | sortByTitle %} {% for
+		post in posts %}
+		<li>
+			{% if post.data.emoji %}{{post.data.emoji}}{% endif %}
+			<a href="{{post.url | url }}">{{post.data.title}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+<div>
 	<h2 id="ds-and-a" tabindex="-1" class="writing__collection__title">
 		<a class="header-anchor" href="#ds-and-a"
 			><span>Data Structures and Algorithms</span></a
