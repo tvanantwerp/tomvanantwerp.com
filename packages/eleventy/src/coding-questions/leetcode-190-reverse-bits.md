@@ -45,15 +45,15 @@ If you choose to ignore that this is a problem about binary operations, you can 
 
 ```javascript
 const reverseBits = n => {
-  return Number.parseInt(
-    n
-      .toString(2)
-      .split("")
-      .reverse()
-      .join("")
-      .padEnd(32, "0"),
-    2
-  );
+	return Number.parseInt(
+		n
+			.toString(2)
+			.split("")
+			.reverse()
+			.join("")
+			.padEnd(32, "0"),
+		2
+	);
 };
 ```
 
@@ -65,26 +65,26 @@ A more appropriate approach is to loop 32 times (because 32-bit int) and fill in
 
 ```javascript
 const reverseBits = n => {
-  let result = 0;
-  for (let i = 0; i < 32; i++) {
-      // We're going to add to the result whatever is the ith
-      // bit from the right of n. So we shift right 0 times,
-      // then once, then twice, until we've shifted right 32
-      // times. By using AND to compare that bit to 1, we can
-      // add either 1 or 0 to result as appropriate.
-      result += ((n >>> i) & 1);
-      // Don't shift on the final loop!
-      if (i < 31) {
-          result <<= 1;
-      }
-  }
-  // This is particular to JavaScript. When we were shifting
-  // left (<<) above, JS coerced the result to a signed int!
-  // By right-shifting 0 places, we can coerce it back to an
-  // unsigned integer. You could also use Math.abs() on the
-  // result. Or in the loop, instead of left-shifting, you
-  // could multiply the result by 2 for the same effect.
-  return result >>>= 0;
+	let result = 0;
+	for (let i = 0; i < 32; i++) {
+		// We're going to add to the result whatever is the ith
+		// bit from the right of n. So we shift right 0 times,
+		// then once, then twice, until we've shifted right 32
+		// times. By using AND to compare that bit to 1, we can
+		// add either 1 or 0 to result as appropriate.
+		result += ((n >>> i) & 1);
+		// Don't shift on the final loop!
+		if (i < 31) {
+			result <<= 1;
+		}
+	}
+	// This is particular to JavaScript. When we were shifting
+	// left (<<) above, JS coerced the result to a signed int!
+	// By right-shifting 0 places, we can coerce it back to an
+	// unsigned integer. You could also use Math.abs() on the
+	// result. Or in the loop, instead of left-shifting, you
+	// could multiply the result by 2 for the same effect.
+	return result >>>= 0;
 };
 ```
 
@@ -94,14 +94,14 @@ This is a perfectly good way to get the reversed binary value with bitwise opera
 
 ```javascript
 const reverseBits = n => {
-    let result = n;
-    result = result >>> 16 | result << 16;
-    result = (result & 0xff00ff00) >>> 8 | (result & 0x00ff00ff) << 8;
-    result = (result & 0xf0f0f0f0) >>> 4 | (result & 0x0f0f0f0f) << 4;
-    result = (result & 0xcccccccc) >>> 2 | (result & 0x33333333) << 2;
-    result = (result & 0xaaaaaaaa) >>> 1 | (result & 0x55555555) << 1;
-    // Don't forget to coerce to unsigned int for JavaScript!
-    return result >>> 0;
+	let result = n;
+	result = result >>> 16 | result << 16;
+	result = (result & 0xff00ff00) >>> 8 | (result & 0x00ff00ff) << 8;
+	result = (result & 0xf0f0f0f0) >>> 4 | (result & 0x0f0f0f0f) << 4;
+	result = (result & 0xcccccccc) >>> 2 | (result & 0x33333333) << 2;
+	result = (result & 0xaaaaaaaa) >>> 1 | (result & 0x55555555) << 1;
+	// Don't forget to coerce to unsigned int for JavaScript!
+	return result >>> 0;
 };
 ```
 
