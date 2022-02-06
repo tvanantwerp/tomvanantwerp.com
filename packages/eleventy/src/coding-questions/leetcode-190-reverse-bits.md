@@ -13,7 +13,9 @@ Reverse bits of a given 32 bits unsigned integer.
 
 <details>
 <summary>Examples</summary>
+
 Example 1:
+
 ```
 Input: n = 00000010100101000001111010011100
 Output:    964176192 (00111001011110000010100101000000)
@@ -21,6 +23,7 @@ Explanation: The input binary string 00000010100101000001111010011100 represents
 ```
 
 Example 2:
+
 ```
 Input: n = 11111111111111111111111111111101
 Output:   3221225471 (10111111111111111111111111111111)
