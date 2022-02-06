@@ -6,8 +6,7 @@ code,
 pre {
 	background: #263238;
 	color: #c3cee3;
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-		'Courier New', monospace;
+	font-family: var(--mono);
 	font-size: 16px;
 	hyphens: none;
 	text-align: left;
