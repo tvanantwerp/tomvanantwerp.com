@@ -46,7 +46,7 @@ Explanation: There are three ways to climb to the top.
 
 Looking at the examples should hopefully give a clue: we're dealing with a Fibonacci sequence!
 
-If we've got one step, then there's one way to climb it—in a single step. Two steps, two ways: step once two times, or step two steps one time. Three steps, and we can step once three times, or one step one time and two steps one time and vice versa for three total unique step sequences.
+If we've got one step, then there's one way to climb it—in a single step. Two steps, two ways: step once two times, or step twice one time. Three steps, and we can step once three times, or one step one time and two steps one time and vice versa for three total unique step sequences. Below is a breakdown of this pattern for a few more numbers:
 
 ```
 n = 0 => 0
@@ -77,7 +77,7 @@ n = 5 => 8
 ...
 ```
 
-In a Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $F_{n} = F_{n - 1} + F_{n - 2}$. So if we know $F_{n - 1}$ and $F_{n - 2}$, we know $F_{n}$. Easy enough to calculate!
+In this Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $F_{n} = F_{n - 1} + F_{n - 2}$. So if we know $F_{n - 1}$ and $F_{n - 2}$, we know $F_{n}$. Easy enough to calculate!
 
 ```javascript
 const climbStairs = n => {
@@ -85,20 +85,20 @@ const climbStairs = n => {
 	if (n <= 2) return n;
 
 	// Let's assume we start counting from step 3,
-	// so the step before F_{n - 1} (or n1) has 2 ways
-	// and the one before that F_{n - 2} (or n2) has
-	// only one way. We'll be setting the value of
-	// the nth step in our loop, so initialize to
-	// zero for now.
+	// so the step before F[n - 1] (or n1) has 2 ways
+	// and the one before that F[n - 2] (or n2) has
+	// only one way.
+	let n1 = 2;
+	let n2 = 1;
+	// We'll be setting the value of the nth step in our loop,
+	// so initialize to zero for now.
+	let sum = 0;
 	// We could store the values in an array and access
 	// them by index, but that creates O(n) space
 	// complexity that we don't actually need.
-	let n1 = 2;
-	let n2 = 1;
-	let sum = 0;
 
 	for (let i = 3; i <= n; i++) {
-		// F_{n} = F_{n - 1} + F_{n - 2}
+		// F[n] = F[n - 1] + F[n - 2]
 		sum = n1 + n2;
 		// Reset the step two back to be the step one back
 		n2 = n1;
@@ -110,12 +110,12 @@ const climbStairs = n => {
 };
 ```
 
-We can also implement this recursively (with memoization as an added bonus):
+We can also solve this recursively (with memoization as an added bonus):
 
 ```javascript
 const climbStairs = (n, memo = new Map([[1, 1], [2, 2]])) => {
-    if (memo.has(n)) return memo.get(n);
-    memo.set(n, climbStairs(n - 1, memo) + climbStairs(n - 2, memo));
-    return memo.get(n);
+	if (memo.has(n)) return memo.get(n);
+	memo.set(n, climbStairs(n - 1, memo) + climbStairs(n - 2, memo));
+	return memo.get(n);
 };
 ```
