@@ -90,6 +90,9 @@ const climbStairs = n => {
 	// only one way. We'll be setting the value of
 	// the nth step in our loop, so initialize to
 	// zero for now.
+	// We could store the values in an array and access
+	// them by index, but that creates O(n) space
+	// complexity that we don't actually need.
 	let n1 = 2;
 	let n2 = 1;
 	let sum = 0;
@@ -104,5 +107,15 @@ const climbStairs = n => {
 	}
 
 	return sum;
+};
+```
+
+We can also implement this recursively (with memoization as an added bonus):
+
+```javascript
+const climbStairs = (n, memo = new Map([[1, 1], [2, 2]])) => {
+    if (memo.has(n)) return memo.get(n);
+    memo.set(n, climbStairs(n - 1, memo) + climbStairs(n - 2, memo));
+    return memo.get(n);
 };
 ```
