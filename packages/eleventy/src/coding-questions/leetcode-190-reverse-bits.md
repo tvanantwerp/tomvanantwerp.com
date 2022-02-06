@@ -126,7 +126,7 @@ result = qrstuvwxyzABCDEFabcdefghijklmnop
 (n & 0xff00ff00) >>> 8 | (n & 0x00ff00ff) << 8 = yzABCDEFqrstuvwxijklmnopabcdefgh
 ```
 
-With each step, we break the previously shifted sections in half and shift them. Here's how each step transforms the result, color coded to make it easier to see the pattern:
+With each step, we break the previously shifted sections in half and shift them. Here's how each step transforms the result, color coded to make it easier to see the pattern:[^2]
 
 <p style="font-family: var(--mono)">
   <span style="color: var(--blue-highlight)">abcdefghijklmnop</span><span style="color: var(--red-highlight)">qrstuvwxyzABCDEF</span> to <span style="color: var(--red-highlight)">qrstuvwxyzABCDEF</span><span style="color: var(--blue-highlight)">abcdefghijklmnop</span>
@@ -145,6 +145,8 @@ With each step, we break the previously shifted sections in half and shift them.
   </p>
 </p>
 
-We've reduced out already amazing $O(32)$ to $O(1)$! This is much better optimized if you've got an absolute ton of binary numbers to reverse, though it's perhaps not the most intuitive or legible.
+We've reduced our already amazing $O(32)$ to $O(1)$! This is much better optimized if you've got an absolute ton of binary numbers to reverse, though it's perhaps not the most intuitive or legible.
 
 [^1]: For simpicity's sake, the hexidecimal numbers are omitted from the first shift because they are not strictly necessary there. But if you want to be a completionist, then `n >>> 16` is equivalent to `(n & 0xffff0000) >>> 16`, and `n << 16` is equivalent to `(n & 0x0000ffff) << 16`.
+
+[^2]: I hand-coded the HTML to highlight those shifts like a moron, so I hope you appreciate it!
