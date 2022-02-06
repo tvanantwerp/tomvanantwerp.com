@@ -44,4 +44,65 @@ Explanation: There are three ways to climb to the top.
 
 ## My Solution
 
+Looking at the examples should hopefully give a clue: we're dealing with a Fibonacci sequence!
 
+If we've got one step, then there's one way to climb it—in a single step. Two steps, two ways: step once two times, or step two steps one time. Three steps, and we can step once three times, or one step one time and two steps one time and vice versa for three total unique step sequences.
+
+```
+n = 0 => 0
+n = 1 => 1
+  1 step
+n = 2 => 2
+  1 step + 1 step
+  2 steps
+n = 3 => 3
+  1 + 1 + 1
+  2 + 1
+  1 + 2
+n = 4 => 5
+  1 + 1 + 1 + 1
+  1 + 1 + 2
+  1 + 2 + 1
+  2 + 1 + 1
+  2 + 2
+n = 5 => 8
+  1 + 1 + 1 + 1 + 1
+  1 + 1 + 1 + 2
+  1 + 1 + 2 + 1
+  1 + 2 + 1 + 1
+  2 + 1 + 1 + 1
+  2 + 2 + 1
+  2 + 1 + 2
+  1 + 2 + 1
+...
+```
+
+In a Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $F_{n} = F_{n - 1} + F_{n - 2}$. So if we know $F_{n - 1}$ and $F_{n - 2}$, we know $F_{n}$. Easy enough to calculate!
+
+```javascript
+const climbStairs = n => {
+	// No point calculating these low numbers
+	if (n <= 2) return n;
+
+	// Let's assume we start counting from step 3,
+	// so the step before F_{n - 1} (or n1) has 2 ways
+	// and the one before that F_{n - 2} (or n2) has
+	// only one way. We'll be setting the value of
+	// the nth step in our loop, so initialize to
+	// zero for now.
+	let n1 = 2;
+	let n2 = 1;
+	let sum = 0;
+
+	for (let i = 3; i <= n; i++) {
+		// F_{n} = F_{n - 1} + F_{n - 2}
+		sum = n1 + n2;
+		// Reset the step two back to be the step one back
+		n2 = n1;
+		// Reset the step one back to be this step
+		n1 = sum;
+	}
+
+	return sum;
+};
+```
