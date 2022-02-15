@@ -49,4 +49,33 @@ Output: 1
 
 ## My Solution
 
+### Naïve Solution: Brute Force
 
+First we can attempt to brute-force the solution. We can't just go across the array and count every time we encounter a new digit greater than the previous counted digit. We risk missing longer combinations of monotonic subsequences that way. So each step along the way, we have to compare what would happen if we did or did not accept the `i`th digit into our subsequence.
+
+```typescript
+// We will recursively go over nums, using the i argument
+// which we're initializing to 0. We also initialize a
+// previous argument to -Infinity for comparisons.
+const lengthOfLIS = (nums: number[], i = 0, previous = -Infinity): number => {
+    // If we're past the last element of nums, return 0
+    if (i === nums.length) return 0;
+
+    // We use recursion to compute the length of the subsequence
+    // if we did skip nums[i] and if we instead accepted it.
+    // The +1 in the accept variable represents the increase in
+    // subsequence length if we accept the digit.
+    const skip = lengthOfLIS(nums, i + 1, previous);
+    const accept = 1 + lengthOfLIS(nums, i + 1, nums[i]);
+
+    // Return the greater of the subsequences if we skipped
+    // nums[i] or accepted it. Of course, we would only accept
+    // if nums[i] is actually greater than the previous value.
+    return Math.max(
+        skip,
+        (nums[i] > previous) ? accept : 0
+    )
+};
+```
+
+This is a functional solution, but a rather bad one. Because we're comparing two possible paths at every iteration of the loop, we're creating $(O^{n})$ time complexity. If you actually plug this solution into LeetCode, it will timeout before solving. We must do better.
