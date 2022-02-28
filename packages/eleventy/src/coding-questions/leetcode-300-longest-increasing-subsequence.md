@@ -78,4 +78,6 @@ const lengthOfLIS = (nums: number[], i = 0, previous = -Infinity): number => {
 };
 ```
 
-This is a functional solution, but a rather bad one. Because we're comparing two possible paths at every iteration of the loop, we're creating $(O^{n})$ time complexity. If you actually plug this solution into LeetCode, it will timeout before solving. We must do better.
+This is a functional solution, but a rather bad one. Because we're comparing two possible paths at every iteration of the loop, we're creating $O(2^{n})$ time complexity. If you actually plug this solution into LeetCode, it will timeout before solving. We must do better.
+
+### Better Solution: Dynamic Programming
