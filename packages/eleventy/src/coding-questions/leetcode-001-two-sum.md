@@ -50,25 +50,25 @@ Output: [0,1]
 
 ## My Solution
 
-I've done this one a few times. This is the oldest solution I found, and it's a doozy.
+### Naïve Solution
+
+The simplest approach is nested for loops, solving in $O(n{^2})$ time and $O(1)$ space.
 
 ```javascript
 const twoSum = (nums, target) => {
-    let list = [nums[0]]
-    for (let i = 1, j = nums.length; i < j; i++) {
-        for (let k = 0, l = list.length; k < l; k++) {
-            if (nums[i] + list[k] === target) {
-                return [k, i];
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums.length; j++) {
+            if (i !== j && nums[i] + nums[j] === target) {
+                return [i, j];
             }
         }
-        list.push(nums[i]);
     }
 }
 ```
 
-This solution is bad. I've taken a problem with a single input array and somehow made it take $O(n{^2})$ time and $O(n)$ space. (If I'd just looped through `nums` itself twice looking for complements rather than store previously seen numbers in the `list` array, I could've at least gotten space complexity of $O(1)$.) I can only assume I didn't know about hashmaps when I wrote this.
+### Best Solution
 
-The next attempt I found was much better.
+We can reduce the time complexity to $O(n)$ by increasing the space complexity to $O(n)$ in the form of a hashmap. Here I use a JavaScript object to keep track of numbers I've seen and their indices.
 
 ```javascript
 const twoSum = (nums, target) => {
@@ -82,9 +82,7 @@ const twoSum = (nums, target) => {
 };
 ```
 
-Here I use a JavaScript object to keep track of numbers I've seen and their indices. This gets runtime back down to $O(n)$ with space complexity of $O(n)$.
-
-My most recent solution is basically the same, except that it uses the newer built-in `Map` in JavaScript.
+You could also use the newer built-in `Map` in JavaScript.
 
 ```javascript
 const twoSum = (nums, target) => {
