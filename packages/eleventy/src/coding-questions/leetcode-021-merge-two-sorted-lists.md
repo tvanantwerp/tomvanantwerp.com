@@ -50,7 +50,7 @@ Output: [0]
 
 ### The Cheating Solution
 
-This is a problem about linked lists, so you should solve it in a way that shows you understand linked lists. For the first example, let's ignore that and cheat. Instead of merging the lists by comparing values and putting together a new list, we'll instead turn the lists into arrays, merge those, then convert the arrays back into linked lists.
+This is a problem about linked lists, so you should solve it in a way that shows you understand linked lists. For the first example, let's throw that sensible approach out of the window. Instead of merging the lists by comparing values and putting together a new list, we'll instead turn the lists into arrays, merge those, then convert the arrays back into linked lists.
 
 This is perfectly functional, but it probably won't go over well in interviews.
 
@@ -72,8 +72,10 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 
 	// We create a new array by spreading the results of a new
 	// function that converts ours list nodes into an array of
-	// numbers. Then, we sort that array. Finally, the array is
-	// parse by another function to turn it back into a list.
+	// numbers. Then, we sort that array. Make sure to use that
+	// comparison function, because default sort is alphabetical
+	// and will give errors with negative numbers! Finally,
+	// the array is stitched back together into a new list.
 	return arrayToList(
 		[
 			...listToArray(list1),
@@ -98,7 +100,7 @@ function arrayToList(values: number[]) {
 	for (let i = values.length - 2; i >= 0; i--) {
 		list = new ListNode(values[i], list);
 	}
-	return list ;
+	return list;
 }
 ```
 
