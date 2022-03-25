@@ -77,7 +77,6 @@ const divide = (dividend, divisor) => {
     }
     if (positiveDividend !== positiveDivisor) {
         const subAmt = result + result;
-        console.log
         result -= subAmt;
     }
 
