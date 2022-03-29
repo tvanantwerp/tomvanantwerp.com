@@ -1,6 +1,6 @@
 ---
 title: 300. Longest Increasing Subsequence
-description: 
+description: Given an integer array, return the length of the longest strictly increasing subsequence.
 ---
 
 ## The Problem
@@ -11,7 +11,7 @@ Given an integer array `nums`, return the length of the longest strictly increas
 
 A **subsequence** is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, `[3,6,2,7]` is a subsequence of the array `[0,3,1,6,2,2,7]`.
 
-**Follow up**: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
+**Follow up**: Can you come up with an algorithm that runs in $O(n \log n)$ time complexity?
 
 <details>
 <summary>Examples</summary>
@@ -98,9 +98,9 @@ So imagine a sequence of cards: `2, 9, 8, 4, J, 5, A`. We would arrange them int
 	4
 ```
 
-Once organized, the number of piles is equal to the length of our longest increasing subsequence!
+Once organized, the number of piles is equal to the length of our longest increasing subsequence![^1]
 
-Now that we have this very simple, efficient algorithm, we just need to code it up. To make this simpler, I'm borrowing the answer to [35. Search Insert Position](/coding-questions/leetcode-035-search-insert-position/), in which we wrote a binary search algorithm that returns not just the location of a target in an array, but also the location _it would have had_ if it had been in the array. This will help us place our new values into the correct pile efficiently, since the array of nums could be quite long and an $O(n)$ search through our piles with each iteration could get expensive.[^1]
+Now that we have this very simple, efficient algorithm, we just need to code it up. To make this simpler, I'm borrowing the answer to [35. Search Insert Position](/coding-questions/leetcode-035-search-insert-position/), in which we wrote a binary search algorithm that returns not just the location of a target in an array, but also the location _it would have had_ if it had been in the array. This will help us place our new values into the correct pile efficiently, since the array of nums could be quite long and an $O(n)$ search through our piles with each iteration could get expensive.[^2]
 
 ```typescript
 function lengthOfLIS(nums: number[]): number {
@@ -156,4 +156,5 @@ function searchInsert(nums: number[], target: number): number {
 
 This solution has a time complexity of $O(n \log n)$: one $n$ for iterating through the array, and $\log n$ for the binary search.
 
-[^1]: I like JavaScript, but the standard library could definitely include a few more nice things like a binary search implementation.
+[^1]: Note that this implementation does _not_ care that there could be multiple increasing subsequences with the same length. `2, 9, J, A` or `2, 8, J, A` or `2, 4, 5, A` or `2, 4, J, A` are all valid maximally-long increasing subsequences.
+[^2]: I like JavaScript, but the standard library could definitely include a few more nice things like a binary search implementation.
