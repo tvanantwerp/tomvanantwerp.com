@@ -53,4 +53,31 @@ function mySqrt(x: number): number {
 
 ### Binary Search
 
+One approach to finding the square root (rounded down to an integer) is with a binary seach. We'll start with `x / 2` as our `mid`-point, and update our bounds based on how it compares to `x / mid`. Either we eventually hit on a perfect square where `mid === x / mid`, or we end up returning the upper-bound.
+
+```typescript
+function mySqrt(x: number): number {
+	// return 0 if x is 0
+	if (x === 0) return 0;
+
+	// else, we do a binary search for the nearest int sqrt
+	let low = 0, high = x;;
+
+	while (low <= high) {
+		const mid = Math.floor(low + (high - low) / 2);
+
+		if (mid === x / mid) return mid;
+
+		if (mid < x / mid) {
+			low = mid + 1;
+		} else {
+			high = mid - 1;
+		}
+	}
+
+	return high;
+};
+```
+
 ### Newton's Iterative Method
+
