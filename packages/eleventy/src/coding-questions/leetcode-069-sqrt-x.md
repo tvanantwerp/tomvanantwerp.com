@@ -40,4 +40,17 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 ## My Solution
 
+### The Cheating Answer
 
+You are explicitly told in the problem not to do it this way. That said...
+
+```typescript
+function mySqrt(x: number): number {
+	// Cheater!
+	return Math.floor(x ** 0.5);
+};
+```
+
+### Binary Search
+
+### Newton's Iterative Method
