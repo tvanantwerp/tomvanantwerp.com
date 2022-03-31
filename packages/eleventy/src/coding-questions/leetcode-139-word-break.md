@@ -88,7 +88,11 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 		// our slice's endpoint, and will decrement back as
 		// far as 0 or the length of the longest word from
 		// the end of the slice.
-		for (let start = end - 1; start >= 0; start--) {
+		for (
+			let start = end - 1;
+			start >= Math.max(0, end - longestWordLength);
+			start--
+		) {
 			// We check if a slice of s with our current start and end
 			// matches any dictionary word, and if we've previously
 			// established that we can safely reach this start point
