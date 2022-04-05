@@ -52,4 +52,41 @@ Output: 0
 
 ## My Solution
 
+### Dynamic Programming - Bottom-up
 
+```typescript
+function combinationSum4(nums: number[], target: number): number {
+	let dp = Array.from({length: target + 1}, () => 0);
+	dp[0] = 1;
+
+	for (let i = 0; i < target; i++) {
+		if (!dp[i]) continue;
+		for (let num of nums) {
+			if (num + i <= target) {
+				dp[i + num] += dp[i];
+			}
+		}
+	}
+
+	return dp[target];
+};
+```
+
+### Dynamic Programming - Top-down
+
+```typescript
+function combinationSum4(nums: number[], target: number): number {
+	let dp = Array.from({length: target + 1}, () => 0);
+	dp[0] = 1;
+
+	for (let i = 1; i <= target; i++) {
+		for (let num of nums) {
+			if (num <= i) {
+				dp[i] += dp[i - num];
+			}
+		}
+	}
+
+	return dp[target];
+};
+```
