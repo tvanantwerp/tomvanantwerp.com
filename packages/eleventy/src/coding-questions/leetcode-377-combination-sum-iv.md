@@ -54,6 +54,14 @@ Output: 0
 
 ### Dynamic Programming - Bottom-up
 
+Here we've got another problem solved with dynamic programming. We can break apart this problem into smaller sub-problems to get our solution.
+
+In this first variation, we use the bottom-up approach. First, create our cache `dp` as an array with length of `target + 1`. We'll initialize `dp[0] = 1`, as there's exactly one combination to reach a target of zero (i.e., use no numbers). Next we loop over the range `0` to `target - 1`. If we have no value for `dp[i]`, we continue to the next number in the range. Since we initialized `dp[0]` to `1`, we'll at least run the rest of the loop that first time if `target > 0`.
+
+Then for each number `i` in the range, we'll loop over each `num` in the `nums` array. If `num + i <= target`, then we've found a possibly valid path toward the target. So we'll set `dp[num + i]` equal to itself plus `dp[i]`. That is to say, we take the number of combinations we know gets us to `dp[i]` and add them to any other already known number of combinations that get us to `num + i`.
+
+Once we've finished all our loops, the total number of valid combinations will be at index `target` in `dp`, so we return `dp[target]`. This is true even if the `target` is `0`, since we initialized `dp[0] = 1`.
+
 ```typescript
 function combinationSum4(nums: number[], target: number): number {
 	let dp = Array.from({length: target + 1}, () => 0);
