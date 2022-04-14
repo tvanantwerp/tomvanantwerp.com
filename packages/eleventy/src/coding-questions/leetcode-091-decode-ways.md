@@ -133,22 +133,39 @@ function numDecodings(s: string): number {
 	// Initialize dp as an array with length equal to 1 plus the
 	// length of the string, all values set to zero.
 	const dp: number[] = Array.from({length: s.length + 1}, () => 0);
+
+	// We initialize our dp cache's first two values. dp[0] is 1,
+	// and this is what we'll add to dp[2] if our first double-
+	// digit check is valid. dp[1] is either 0 or 1, depending on
+	// the first character of s. Since leading zeroes aren't
+	// valid, then we only initialize dp[1] = 1 if there is no
+	// leading zero. This is the value that will be added to dp[2]
+	// if the first single-digit decoding validates.
 	dp[0] = 1;
-	dp[1] = s.charAt(0) !== '0' ? 1 : 0;
+	if (s.charAt(0) !== '0') dp[1] = 1;
 
 	for (let i = 2; i <= s.length; i++) {
+		// For deciding dp[i], we look back at the previous 1 and 2
+		// characters of s to see if they are valid encodings for
+		// a letter.
 		const singleDigit = +s.slice(i - 1, i);
 		const doubleDigit = +s.slice(i - 2, i);
 
+		// If the single-digit encoding is valid, dp[i] should have
+		// the value of dp[i - 1] added to it.
 		if (1 <= singleDigit && 9 >= singleDigit) {
 			dp[i] += dp[i - 1];
 		}
 
+		// Now we also add dp[i - 2] to dp[i] if the double-digit
+		// encoding is valid.
 		if (10 <= doubleDigit && 26 >= doubleDigit) {
 			dp[i] += dp[i - 2];
 		}
 	}
 
+	// Finally, the last value of dp has the total number of valid
+	// encodings.
 	return dp[s.length];
 };
 ```
