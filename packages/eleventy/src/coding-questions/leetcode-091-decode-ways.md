@@ -65,4 +65,90 @@ Explanation: "06" cannot be mapped to "F" because of the leading zero ("6" is di
 
 ## My Solution
 
+This is a dynamic programming problem. It needs to be solved by breaking the problem down into sub-problems. We can do it either recursively or iteratively.
 
+### Recursion with Memoization
+
+To solve this recursively, we will call the function again and again with smaller sub-sections of the original string until we trigger a base case. Here, we'll assume that an empty string means we've found a correct decoding and to return `1`. If at any point the string starts with `"0"`, we know it can't be properly mapped and return `0`. These smaller sub-strings will be memoized in out `memo` variable, so that we don't waste resources recomputing things we've seen before.
+
+```typescript
+// We modify the function to accept a Map named memo. We'll
+// use this to cache previously seen strings that we've
+// decoded. It's initialized to an empty Map.
+function numDecodings(s: string, memo: Map<string, number> = new Map()): number {
+	// Base case: if the string is empty, we've found 1 way.
+	if (s === '') return 1;
+	// If the string has a leading zero, it cannot have any
+	// successful mapping, so return 0.
+	if (s.slice(0, 1) === '0') return 0;
+
+	// Don't recompute if we've seen this string before. Just
+	// return what's in our map.
+	if (memo.has(s)) return memo.get(s);
+
+	// We'll initialize variables to analyze the pieces of the
+	// string that would be either a single digit to letter
+	// decoding, or a two digit number to letter decoding.
+	let singleDigit = 0, doubleDigit = 0;
+
+	// For single digit decodings, we need to know that the number
+	// is between 1 and 9 inclusive. If so, we recursively call
+	// the function on the rest of the string after this single
+	// digit. If there was only one letter in the string left,
+	// we'd be calling with an empty string and get our base case
+	// returned.
+	if (1 <= +s.slice(0, 1) && 9 >= +s.slice(0, 1)) {
+		singleDigit = numDecodings(s.slice(1), memo);
+	}
+
+	// For double digit decodings, our two letters of the string
+	// must parse as an int between 10 and 26 inclusive. If it
+	// does, we call the function again with the rest of
+	// the string after those two letters.
+	if (10 <= +s.slice(0, 2) && 26 >= +s.slice(0, 2)) {
+		doubleDigit = numDecodings(s.slice(2), memo);
+	}
+
+	// To prevent needless recalculation of repeating sequences in
+	// the string, save the evaluations to our Map.
+	memo.set(s, singleDigit + doubleDigit);
+
+	// Finally, return the memoized value of the string.
+	return memo.get(s);
+};
+```
+
+### Solving Iteratively with Dynamic Programming
+
+The iterative solution is, in my opinion, easier to understand. We create an array `dp` to hold a running count of valid decodings. We will iterate through the string `s`, examining the integer values of the previous character and the pair of previous two characters. (We initialized `dp[0]` and `dp[1]` to make sure we don't go out of range when we do this.)
+
+If the currently examined sub-string matches the conditions for either the single- or double-digit decoding, we add to `dp[i]` the previous value of `dp` for either single- or double-digits. So if we're looking at single-digits, and `+s.slice(i - 1, i)` meets the criteria, then `dp[i]` will have the value of `dp[i - 1]` added to it. It's important that we're adding to an existing value, not setting it equal to the value, because we're going to be modifying any given `dp[i]` multiple times as we check for both valid single- and double-digit decodings.
+
+As we go through the string, values of `dp[i]` ought to increase as `i` increased and we find ever more valid decodings. Finally, `dp[s.length]` will have the total number of valid decodings for the string `s`.
+
+```typescript
+function numDecodings(s: string): number {
+	if (s === '') return 0;
+
+	// Initialize dp as an array with length equal to 1 plus the
+	// length of the string, all values set to zero.
+	const dp: number[] = Array.from({length: s.length + 1}, () => 0);
+	dp[0] = 1;
+	dp[1] = s.charAt(0) !== '0' ? 1 : 0;
+
+	for (let i = 2; i <= s.length; i++) {
+		const singleDigit = +s.slice(i - 1, i);
+		const doubleDigit = +s.slice(i - 2, i);
+
+		if (1 <= singleDigit && 9 >= singleDigit) {
+			dp[i] += dp[i - 1];
+		}
+
+		if (10 <= doubleDigit && 26 >= doubleDigit) {
+			dp[i] += dp[i - 2];
+		}
+	}
+
+	return dp[s.length];
+};
+```
