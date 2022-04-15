@@ -42,3 +42,39 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 </details>
 
 ## My Solution
+
+This is a dynamic programming problem, and can be solved either recursively or iteratively.
+
+### Recusion with Memoization
+
+Our recursive solution is top-down; we try to count starting from `m` and `n` back to `[0, 0]`. For whatever coordinate we are at, we will recursively call this function on the pair of coordinates one above and one to the left. The sum of those recursive calls gives us the number of unique paths from that point. The base case is when either `m` or `n` equals `1`, because then there's only one straight path back to `[0, 0]`.
+
+```typescript
+// To make the recusive function performant, we add a memo
+// argument that defaults to an empty Map.
+function uniquePaths(m: number, n: number, memo: Map<string, number> = new Map()): number {
+	// When the coordinates have you at either [1, n] or [m, 1],
+	// there is only one straight path back to [0, 0]. So
+	// return 1.
+	if (m === 1 || n === 1) return 1;
+	// To avoid duplicate calculations for the same coordinate
+	// pairs, we check to see if this pair was already
+	// computed and added to the cache—return it if so.
+	if (memo.has(`m${m}n${n}`)) return memo.get(`m${m}n${n}`);
+
+	// To discover the number of unique paths from the current
+	// coordinates, we recursively call the function with both
+	// m and n decremented by 1. The sum of these two calls
+	// equals the unique number from our current point on the
+	// grid. If one of the pair is zero, don't call the function
+	// but use the value 0—otherwise we'll calculate endlessly
+	// into negative coordinates.
+	const mPath = m > 0 ? uniquePaths(m - 1, n, memo) : 0;
+	const nPath = n > 0 ? uniquePaths(m, n - 1, memo) : 0;
+
+	// Cache the calculated coordinate pair in memo.
+	memo.set(`m${m}n${n}`, mPath + nPath);
+	// Finally, return the sum of paths.
+	return mPath + nPath;
+};
+```
