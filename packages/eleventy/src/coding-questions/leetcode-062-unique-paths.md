@@ -47,7 +47,7 @@ This is a dynamic programming problem, and can be solved either recursively or i
 
 ### Recusion with Memoization
 
-Our recursive solution is top-down; we try to count starting from `m` and `n` back to `[0, 0]`. For whatever coordinate we are at, we will recursively call this function on the pair of coordinates one above and one to the left. The sum of those recursive calls gives us the number of unique paths from that point. The base case is when either `m` or `n` equals `1`, because then there's only one straight path back to `[0, 0]`.
+Our recursive solution is top-down; we try to count starting from `m` and `n` back to `[0, 0]`. For whatever coordinate we are at, we will recursively call this function on the pair of coordinates one above and one to the left. The sum of those recursive calls gives us the number of unique paths from that point. The base case is when either `m` or `n` equals `1`, because then there's only one straight path back to `[0, 0]`. Time and space complexity is $O(m \times n)$.
 
 ```typescript
 // To make the recusive function performant, we add a memo
@@ -76,5 +76,32 @@ function uniquePaths(m: number, n: number, memo: Map<string, number> = new Map()
 	memo.set(`m${m}n${n}`, mPath + nPath);
 	// Finally, return the sum of paths.
 	return mPath + nPath;
+};
+```
+
+### Iterative Dynamic Programming
+
+In the iterative approach, we create a 2D array to serve as our grid. Inside each cell of the 2D array, we'll store the sum of unique paths to that cell. We start at the cell one space down and one space right of the upper-left cell. From here, looping across and down the 2D array, we fill each cell with the sum of the cells immediately left and up from it to get the sum of unique paths to that cell. Once we've filled the entire 2D array, the last cell will contain the number of unique paths. Once again, time and space complexity is $O(m \times n)$.
+
+```typescript
+function uniquePaths(m: number, n: number, memo: Map<string, number> = new Map()): number {
+	// We create out 2D array of m x n cells, and initialize it
+	// all to 1.
+	const dp: number[][] = Array.from(
+		{ length: m }, () => Array.from(
+			{ length: n }, () => 1
+		)
+	);
+
+	for (let i = 1; i < m; i++) {
+		for (let j = 1; j < n; j++) {
+			// The number of paths to dp[i][j] is equal to the sum
+			// of paths to the space immediately above and left of it.
+			dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+		}
+	}
+
+	// Return the value of the last space on the 2D grid.
+	return dp[m - 1][n - 1];
 };
 ```
