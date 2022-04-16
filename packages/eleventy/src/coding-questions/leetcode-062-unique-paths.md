@@ -105,3 +105,19 @@ function uniquePaths(m: number, n: number, memo: Map<string, number> = new Map()
 	return dp[m - 1][n - 1];
 };
 ```
+
+We can actually improve on this! With each inner-loop iteration, we reference the row of `dp` immediately above it. We don't _really_ need to save every previously-computed row as a row in a 2D array. It's enough to use only a 1D array, and adding to each value in that array with every iteration of the inner loop. So, instead of `dp[i][j] = dp[i - 1][j] + dp[i][j - 1]`, we can have something like `row[j] += row[j - 1]`. We fold every inner loop's set of computations into the previously computed row! Our time complexity is still $O(m \times n)$, but our space complexity is down to just $O(n)$.
+
+```typescript
+function uniquePaths(m: number, n: number, memo: Map<string, number> = new Map()): number {
+	const row = Array.from({length: n}, () => 1);
+
+	for (let i = 1; i < m; i++) {
+		for (let j = 1; j < n; j++) {
+			row[j] += row[j - 1];
+		}
+	}
+
+	return row[n - 1];
+};
+```
