@@ -21,10 +21,10 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
+		"eslint": "^8.14.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"eslint": "^8.14.0",
 		"husky": "^7.0.4",
 		"lint-staged": "^12.4.1",
 		"lodash": "^4.17.21",
@@ -43,5 +43,10 @@
 	"lint-staged": {
 		"*.{js,ts,jsx,tsx}": "eslint --cache --fix --ignore-path .gitignore",
 		"*.+(js|ts|jsx|tsx|json)": "prettier --write --ignore-path .gitignore"
+	},
+	"dependencies": {
+		"-": "^0.0.1",
+		"@typescript-eslint/eslint-plugin": "^5.22.0",
+		"@typescript-eslint/parser": "^5.22.0"
 	}
 }
