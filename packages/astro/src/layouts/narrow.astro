@@ -1,0 +1,11 @@
+---
+import Base from './base.astro';
+
+const {content} = Astro.props
+---
+<Base content={content}>
+	<div class="page-container--narrow">
+		<h1>{ content.title }</h1>
+		<slot />
+	</div>
+</Base>

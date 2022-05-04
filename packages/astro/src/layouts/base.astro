@@ -1,0 +1,45 @@
+---
+	import Head from '../components/head';
+	import Navigation from '../components/navigation';
+	import Footer from '../components/footer'
+	const defaultMetadata = {
+		title: "Tom VanAntwerp",
+		description: "TVA's Digital Garden",
+		url: "https://tomvanantwerp.com",
+		author: "Tom VanAntwerp",
+		twitter: "tvanantwerp",
+		github: "tvanantwerp",
+		image: "/img/tom_poly-cropped.png",
+	}
+	const defaultNavigation = [
+		{slug: 'about', title: 'About'},
+		{slug: 'projects', title: 'Projects'},
+		{slug: 'writing', title: 'Writing'},
+	];
+	const {content} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<Head
+		title={content?.title || defaultMetadata.title}
+		description={content?.description || defaultMetadata.description}
+		url={content?.url || defaultMetadata.url}
+		author={content?.author || defaultMetadata.author}
+		twitter={content?.twitter || defaultMetadata.twitter}
+		image={content?.image || defaultMetadata.image}
+		ignore={content?.ignore === false ? false : true}
+		canonical={content?.canonical === false ? false : true}
+	/>
+	<body class="layout">
+		<Navigation title={defaultMetadata.title} links={defaultNavigation} />
+		<main class="content">
+			<slot />
+		</main>
+		<Footer
+			title={defaultMetadata.author}
+			year={new Date().getFullYear()}
+			twitter={defaultMetadata.twitter}
+			github={defaultMetadata.github}
+		/>
+	</body>
+</html>
