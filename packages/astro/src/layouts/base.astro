@@ -28,7 +28,7 @@
 		twitter={content?.twitter || defaultMetadata.twitter}
 		image={content?.image || defaultMetadata.image}
 		ignore={content?.ignore === false ? false : true}
-		canonical={content?.canonical === false ? false : true}
+		canonical={content?.canonical}
 	/>
 	<body class="layout">
 		<Navigation title={defaultMetadata.title} links={defaultNavigation} />

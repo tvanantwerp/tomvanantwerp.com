@@ -4,7 +4,7 @@ interface Props {
 	description: string;
 	author: string;
 	url: string;
-	canonical: boolean;
+	canonical?: string;
 	twitter: string;
 	image: string;
 }
@@ -15,13 +15,13 @@ export const Head = ({
 	description,
 	author,
 	url,
-	canonical = true,
+	canonical,
 	twitter,
 	image,
 }: Props) => {
 	return (
 		<head>
-			<meta charset="utf-8" />
+			<meta charSet="utf-8" />
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
