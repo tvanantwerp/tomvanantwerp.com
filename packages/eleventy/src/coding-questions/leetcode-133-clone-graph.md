@@ -74,6 +74,19 @@ Explanation: This an empty graph, it does not have any nodes.
 
 ## My Solution
 
+For all of the below solutions, this is the definition of `Node` that we'll use:
+
+```typescript
+class Node {
+	val: number
+	neighbors: Node[]
+	constructor(val?: number, neighbors?: Node[]) {
+		this.val = (val===undefined ? 0 : val)
+		this.neighbors = (neighbors===undefined ? [] : neighbors)
+	}
+}
+```
+
 ### Depth-First Search
 
 ```typescript
