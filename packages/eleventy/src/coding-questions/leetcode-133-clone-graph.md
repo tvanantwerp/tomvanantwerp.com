@@ -89,6 +89,14 @@ class Node {
 
 ### Depth-First Search
 
+Our depth-first search creates a `Map` to store the unique `Node` values and a reference to the relevant cloned `Node`. This will allow us to create new `Node`s and access them without getting stuck in a loop of recreating the same `Node`s again and again.
+
+We define a function `clone` that takes a `Node` and checks the `Map` to see if we've made a clone of it yet. If so, we just return the clone that's in our `Map`. Otherwise, we need to create that clone `Node`. First we set a new key-value pair in the `Map`, using the `Node`'s value as the key and creating a new `Node` from that original `Node`'s value.
+
+We immediately retrieve that key-value pair, and then set the cloned `Node`'s `neighbors` property to be equal to a new array of the original `Node`'s `neighbors` passed recursively to the `clone` function. Because we're using our `Map` to keep track of cloned `Node`s, no `Node` will get cloned more than once. If a `Node` has already been cloned, we just return that `Node` from the `Map`. We do this step separately from adding the newly-cloned `Node` to the `Map` because we otherwise get stuck in a loop—the new `Node` would not be added to the `Map` until it was done recursing over the array of `neighbors`, but the recusion cannot terminate if it never finds cloned `Node`s in the `Map`.
+
+Finally, we can call `clone(node)` to kick off our recursive depth-first search to recreate the graph.
+
 ```typescript
 function cloneGraph(node: Node | null): Node | null {
 	if (node === null) return null;
