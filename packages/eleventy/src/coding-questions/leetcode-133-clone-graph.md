@@ -97,20 +97,51 @@ We immediately retrieve that key-value pair, and then set the cloned `Node`'s `n
 
 Finally, we can call `clone(node)` to kick off our recursive depth-first search to recreate the graph.
 
+You could achieve the same result without creating the `clone` function if, instead, you modified the function arguments to accept an optional `Map`. Then you would pass the `Map` we initially create directly into the recursive calls, instead of having it live in the lexical scope of the `clone` function.
+
 ```typescript
 function cloneGraph(node: Node | null): Node | null {
 	if (node === null) return null;
 
-	const map = new Map();
+	const graph = new Map<Node, Node>();
 
 	const clone = root => {
-		if (!map.has(root.val)) {
-			map.set(root.val, new Node(root.val));
-			map.get(root.val).neighbors = root.neighbors.map(clone);
+		if (!graph.has(root)) {
+			graph.set(root, new Node(root.val));
+			graph.get(root).neighbors = root.neighbors.map(clone);
 		}
-		return map.get(root.val);
+		return graph.get(root);
 	}
 
 	return clone(node);
+};
+```
+
+### Breadth-First Search
+
+Unlike our depth-first search, the breadth-first search is iterative rather than recursive. Again we create a `Map` to keep track of nodes we've visited. But now we also create a `queue` to keep track of `Node`s for which we need to add their neighbors to the cloned graph.
+
+As long as there are `Node`s in the `queue`, we will `shift` the first item out of the `queue` to process it. For each neighbor in that `Node`, we'll see if the neighbor already exists in the `Map`. If not, we add the neighbor `Node` to the `Map` and to the `queue` to process _its_ neighbors. Finally, we add each of the cloned neighbor nodes to the `neighbors` property of the `Node` we pulled from our `queue`.
+
+Once the `queue` is empty, we've traversed the graph and cloned every `Node`. We just need to return the first cloned `Node` from our `Map` to return the new graph.
+
+```typescript
+function cloneGraph(node: Node | null): Node | null {
+	if (node === null) return null;
+
+	const graph = new Map<Node, Node>();
+	graph.set(node, new Node(node.val));
+	const queue: Node[] = [node];
+	while (queue.length) {
+		const currentNode = queue.shift();
+		currentNode.neighbors.forEach(neighbor => {
+			if (!graph.has(neighbor)) {
+				graph.set(neighbor, new Node(neighbor.val));
+				queue.push(neighbor);
+			}
+			graph.get(currentNode).neighbors.push(graph.get(neighbor));
+		})
+	}
+	return graph.get(node);
 };
 ```
