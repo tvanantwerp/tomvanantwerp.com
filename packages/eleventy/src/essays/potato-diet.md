@@ -66,7 +66,7 @@ Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K
 <details>
 <summary>Click here to see full micronutrient daily averages.</summary>
 
-These tables contain the full micronutrient breakdown from my week eating potatoes (plus some supplements), the week previous (a Standard American Diet™), and a randomly chosen week from eating keto in the middle of March 2020. Data comes from weighing food and logging it in the [Cronometer](https://cronometer.com/) app.
+These tables contain the daily average micronutrient consumption (i.e., vitamins and minerals) from my week eating potatoes (plus some supplements), from the week previous (a Standard American Diet™), and from a randomly chosen week from eating keto in the middle of March 2020. Data comes from weighing food and logging it in the [Cronometer](https://cronometer.com/) app.
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
 <table style="flex: 0 1 auto; width: min-content">
