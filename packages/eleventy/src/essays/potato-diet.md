@@ -57,13 +57,418 @@ By the end of the experiment, I had lost 1.8 pounds. That's a decent bit of weig
 
 {% image './img/2022-07-17-potato-weight.png', 'Weight and net calories for the past two weeks. For the prior week, net calories are around 0 and weight is stable. During the diet, net calories drops by about 1,000 per day and weight starts going down erratically.' %}
 
+#### Nutrition
+
+I didn't realize how high in potassium potatoes are. During the experiment, I averaged over 5g of potassium per day! That's about double what I averaged the week before, when I wasn't trying any diet in particular. I was also surprised to see that my omega-3 needs were well met by potatoes, though I'm sure that was ALA and not DHA or EPA.
+
+Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K, iodine, and selenium.[^1] I would have been very low on B vitamins too if not for supplements. And protein was unbelievably low, averaging 25g per day versus 140g per day in the prior week. I'm amazed how much energy I still had, given how little protein was in my diet and how much that's affected my energy levels in the past.
+
+<div style="display: flex; gap: 1rem;">
+<table>
+    <tr>
+        <td>Nutrient</td>
+        <td>Amount</td>
+        <td>% RDA</td>
+    </tr>
+    <tr>
+        <td>B1 (Thiamine)</td>
+        <td>2.6mg</td>
+        <td>220%</td>
+    </tr>
+    <tr>
+        <td>B2 (Riboflavin)</td>
+        <td>1.9mg</td>
+        <td>143%</td>
+    </tr>
+    <tr>
+        <td>B3 (Niacin)</td>
+        <td>26.3mg</td>
+        <td>164%</td>
+    </tr>
+    <tr>
+        <td>B5 (Pantothenic Acid)</td>
+        <td>9.8mg</td>
+        <td>197%</td>
+    </tr>
+    <tr>
+        <td>B6 (Pyridoxine)</td>
+        <td>4.1mg</td>
+        <td>316%</td>
+    </tr>
+    <tr>
+        <td>B12 (Cobalamin)</td>
+        <td>6.5µg</td>
+        <td>269%</td>
+    </tr>
+    <tr>
+        <td>Choline</td>
+        <td>219.6mg</td>
+        <td>40%</td>
+    </tr>
+    <tr>
+        <td>Folate</td>
+        <td>368.8µg</td>
+        <td>92%</td>
+    </tr>
+    <tr>
+        <td>Vitamin A</td>
+        <td>1676.9µg</td>
+        <td>186%</td>
+    </tr>
+    <tr>
+        <td>Vitamin C</td>
+        <td>130.7mg</td>
+        <td>65%</td>
+    </tr>
+    <tr>
+        <td>Vitamin D</td>
+        <td>171.7IU</td>
+        <td>29%</td>
+    </tr>
+    <tr>
+        <td>Vitamin E</td>
+        <td>9.8mg</td>
+        <td>65%</td>
+    </tr>
+    <tr>
+        <td>Vitamin K</td>
+        <td>53.7µg</td>
+        <td>45%</td>
+    </tr>
+    <tr>
+        <td>Calcium</td>
+        <td>244.3mg</td>
+        <td>24%</td>
+    </tr>
+    <tr>
+        <td>Chromium</td>
+        <td>25.7µg</td>
+        <td>73%</td>
+    </tr>
+    <tr>
+        <td>Copper</td>
+        <td>1.6mg</td>
+        <td>182%</td>
+    </tr>
+    <tr>
+        <td>Iodine</td>
+        <td>34.4µg</td>
+        <td>23%</td>
+    </tr>
+    <tr>
+        <td>Iron</td>
+        <td>9.6mg</td>
+        <td>120%</td>
+    </tr>
+    <tr>
+        <td>Magnesium</td>
+        <td>308.2mg</td>
+        <td>73%</td>
+    </tr>
+    <tr>
+        <td>Manganese</td>
+        <td>3.1mg</td>
+        <td>135%</td>
+    </tr>
+    <tr>
+        <td>Phosphorus</td>
+        <td>803.7mg</td>
+        <td>115%</td>
+    </tr>
+    <tr>
+        <td>Potassium</td>
+        <td>5278.3mg</td>
+        <td>155%</td>
+    </tr>
+    <tr>
+        <td>Selenium</td>
+        <td>20.6µg</td>
+        <td>37%</td>
+    </tr>
+    <tr>
+        <td>Sodium</td>
+        <td>2697.7mg</td>
+        <td>180%</td>
+    </tr>
+    <tr>
+        <td>Zinc</td>
+        <td>11.1mg</td>
+        <td>101%</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Nutrient</td>
+        <td>Amount</td>
+        <td>% RDA</td>
+    </tr>
+    <tr>
+        <td>B1 (Thiamine)</td>
+        <td>1.4mg</td>
+        <td>114%</td>
+    </tr>
+    <tr>
+        <td>B2 (Riboflavin)</td>
+        <td>1.5mg</td>
+        <td>116%</td>
+    </tr>
+    <tr>
+        <td>B3 (Niacin)</td>
+        <td>20.1mg</td>
+        <td>126%</td>
+    </tr>
+    <tr>
+        <td>B5 (Pantothenic Acid)</td>
+        <td>3.4mg</td>
+        <td>69%</td>
+    </tr>
+    <tr>
+        <td>B6 (Pyridoxine)</td>
+        <td>1.5mg</td>
+        <td>114%</td>
+    </tr>
+    <tr>
+        <td>B12 (Cobalamin)</td>
+        <td>6.2µg</td>
+        <td>260%</td>
+    </tr>
+    <tr>
+        <td>Choline</td>
+        <td>352.3mg</td>
+        <td>64%</td>
+    </tr>
+    <tr>
+        <td>Folate</td>
+        <td>147.2µg</td>
+        <td>37%</td>
+    </tr>
+    <tr>
+        <td>Vitamin A</td>
+        <td>436.9µg</td>
+        <td>49%</td>
+    </tr>
+    <tr>
+        <td>Vitamin C</td>
+        <td>14.5mg</td>
+        <td>7%</td>
+    </tr>
+    <tr>
+        <td>Vitamin D</td>
+        <td>366.5IU</td>
+        <td>61%</td>
+    </tr>
+    <tr>
+        <td>Vitamin E</td>
+        <td>3.5mg</td>
+        <td>23%</td>
+    </tr>
+    <tr>
+        <td>Vitamin K</td>
+        <td>135.2µg</td>
+        <td>113%</td>
+    </tr>
+    <tr>
+        <td>Calcium</td>
+        <td>976.3mg</td>
+        <td>98%</td>
+    </tr>
+    <tr>
+        <td>Chromium</td>
+        <td>0.0µg</td>
+        <td>0%</td>
+    </tr>
+    <tr>
+        <td>Copper</td>
+        <td>0.5mg</td>
+        <td>53%</td>
+    </tr>
+    <tr>
+        <td>Iodine</td>
+        <td>64.6µg</td>
+        <td>43%</td>
+    </tr>
+    <tr>
+        <td>Iron</td>
+        <td>14.0mg</td>
+        <td>175%</td>
+    </tr>
+    <tr>
+        <td>Magnesium</td>
+        <td>189.2mg</td>
+        <td>45%</td>
+    </tr>
+    <tr>
+        <td>Manganese</td>
+        <td>0.8mg</td>
+        <td>35%</td>
+    </tr>
+    <tr>
+        <td>Phosphorus</td>
+        <td>1096.1mg</td>
+        <td>157%</td>
+    </tr>
+    <tr>
+        <td>Potassium</td>
+        <td>2642.4mg</td>
+        <td>78%</td>
+    </tr>
+    <tr>
+        <td>Selenium</td>
+        <td>121.3µg</td>
+        <td>221%</td>
+    </tr>
+    <tr>
+        <td>Sodium</td>
+        <td>2501.5mg</td>
+        <td>167%</td>
+    </tr>
+    <tr>
+        <td>Zinc</td>
+        <td>15.2mg</td>
+        <td>138%</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Nutrient</td>
+        <td>Amount</td>
+        <td>% RDA</td>
+    </tr>
+    <tr>
+        <td>B1 (Thiamine)</td>
+        <td>1.4mg</td>
+        <td>118%</td>
+    </tr>
+    <tr>
+        <td>B2 (Riboflavin)</td>
+        <td>2.1mg</td>
+        <td>164%</td>
+    </tr>
+    <tr>
+        <td>B3 (Niacin)</td>
+        <td>20.8mg</td>
+        <td>130%</td>
+    </tr>
+    <tr>
+        <td>B5 (Pantothenic Acid)</td>
+        <td>6.2mg</td>
+        <td>124%</td>
+    </tr>
+    <tr>
+        <td>B6 (Pyridoxine)</td>
+        <td>4.5mg</td>
+        <td>348%</td>
+    </tr>
+    <tr>
+        <td>B12 (Cobalamin)</td>
+        <td>12.5µg</td>
+        <td>522%</td>
+    </tr>
+    <tr>
+        <td>Choline</td>
+        <td>487.8mg</td>
+        <td>89%</td>
+    </tr>
+    <tr>
+        <td>Folate</td>
+        <td>346.6µg</td>
+        <td>87%</td>
+    </tr>
+    <tr>
+        <td>Vitamin A</td>
+        <td>614.3µg</td>
+        <td>68%</td>
+    </tr>
+    <tr>
+        <td>Vitamin C</td>
+        <td>379.9mg</td>
+        <td>190%</td>
+    </tr>
+    <tr>
+        <td>Vitamin D</td>
+        <td>2303.8IU</td>
+        <td>384%</td>
+    </tr>
+    <tr>
+        <td>Vitamin E</td>
+        <td>19.2mg</td>
+        <td>128%</td>
+    </tr>
+    <tr>
+        <td>Vitamin K</td>
+        <td>213.1µg</td>
+        <td>178%</td>
+    </tr>
+    <tr>
+        <td>Calcium</td>
+        <td>1026.9mg</td>
+        <td>103%</td>
+    </tr>
+    <tr>
+        <td>Chromium</td>
+        <td>45.8µg</td>
+        <td>131%</td>
+    </tr>
+    <tr>
+        <td>Copper</td>
+        <td>1.5mg</td>
+        <td>166%</td>
+    </tr>
+    <tr>
+        <td>Iodine</td>
+        <td>129.1µg</td>
+        <td>86%</td>
+    </tr>
+    <tr>
+        <td>Iron</td>
+        <td>11.8mg</td>
+        <td>148%</td>
+    </tr>
+    <tr>
+        <td>Magnesium</td>
+        <td>478.0mg</td>
+        <td>114%</td>
+    </tr>
+    <tr>
+        <td>Manganese</td>
+        <td>3.1mg</td>
+        <td>135%</td>
+    </tr>
+    <tr>
+        <td>Phosphorus</td>
+        <td>1213.5mg</td>
+        <td>173%</td>
+    </tr>
+    <tr>
+        <td>Potassium</td>
+        <td>3276.3mg</td>
+        <td>96%</td>
+    </tr>
+    <tr>
+        <td>Selenium</td>
+        <td>109.5µg</td>
+        <td>199%</td>
+    </tr>
+    <tr>
+        <td>Sodium</td>
+        <td>2171.1mg</td>
+        <td>145%</td>
+    </tr>
+    <tr>
+        <td>Zinc</td>
+        <td>22.4mg</td>
+        <td>204%</td>
+    </tr>
+</table>
+</div>
+
 #### How It Feels to Only Eat Potato
 
-The frozen potato foods were really quite filling. I largely didn't think about other foods during this period. A big plate of fries or tots left me sated. My net calorie intake went down by about 1,000 per day without me feeling like I was depriving myself.[^1] I rarely felt hungry or experienced cravings.
+The frozen potato foods were really quite filling. I largely didn't think about other foods during this period. A big plate of fries or tots left me sated. My net calorie intake went down by about 1,000 per day without me feeling like I was depriving myself.[^2] I rarely felt hungry or experienced cravings.
 
 I don't think my tastes were "reset" by the blandness of potato. When I was eating the blandest mashed potatoes, I craved other foods the most. When I switched to tastier fries and tots, cravings went away.
 
-But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off.
+But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off. I'm not used to a general level of digestive discomfort, either on keto or the Standard American Diet™️.
 
 <details>
 <summary>
@@ -79,8 +484,9 @@ I'm sure you glad you clicked to read that!
 
 ## What Next?
 
-I've still got some potatoes, and I think I'll keep going until I use them all up. Maybe a few more days might give me an idea whether or not my weight loss is a real trend or just random fluctuation.
+I guess this experiment is a success? I did lose weight, after all. But the digestive distress I've experienced doesn't seem worth it. My body just isn't a fan of only eating potatoes.
 
-Eventually, though, I expect to switch back to my proven keto and time-restricted feeding strategy. That diet may take longer to lose the weight I want to lose, but it's a lot more fun and never made my insides hurt.
+I went one extra day beyond my commitment; but as I write this on what would be day 9, I think I'm done. I just don't feel good. I'm glad I tried this, but I think I'll go back to the slow, steady, and frankly much tastier keto diet.
 
-[^1]: First few days of bland mashed potatoes excluded.
+[^1]: And that's _after_ taking a multivitamin most days!
+[^2]: First few days of bland mashed potatoes excluded.
