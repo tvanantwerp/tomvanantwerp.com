@@ -65,400 +65,412 @@ Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K
 
 <div style="display: flex; gap: 1rem;">
 <table>
+<thead>
     <tr>
-        <td>Nutrient</td>
-        <td>Amount</td>
-        <td>% RDA</td>
+        <th>Nutrient</th>
+        <th>Amount</th>
+        <th>% RDA</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td>B1 (Thiamine)</td>
-        <td>2.6mg</td>
-        <td>220%</td>
+        <td class="numeric">2.6mg</td>
+        <td class="numeric">220%</td>
     </tr>
     <tr>
         <td>B2 (Riboflavin)</td>
-        <td>1.9mg</td>
-        <td>143%</td>
+        <td class="numeric">1.9mg</td>
+        <td class="numeric">143%</td>
     </tr>
     <tr>
         <td>B3 (Niacin)</td>
-        <td>26.3mg</td>
-        <td>164%</td>
+        <td class="numeric">26.3mg</td>
+        <td class="numeric">164%</td>
     </tr>
     <tr>
         <td>B5 (Pantothenic Acid)</td>
-        <td>9.8mg</td>
-        <td>197%</td>
+        <td class="numeric">9.8mg</td>
+        <td class="numeric">197%</td>
     </tr>
     <tr>
         <td>B6 (Pyridoxine)</td>
-        <td>4.1mg</td>
-        <td>316%</td>
+        <td class="numeric">4.1mg</td>
+        <td class="numeric">316%</td>
     </tr>
     <tr>
         <td>B12 (Cobalamin)</td>
-        <td>6.5µg</td>
-        <td>269%</td>
+        <td class="numeric">6.5µg</td>
+        <td class="numeric">269%</td>
     </tr>
     <tr>
         <td>Choline</td>
-        <td>219.6mg</td>
-        <td>40%</td>
+        <td class="numeric">219.6mg</td>
+        <td class="numeric">40%</td>
     </tr>
     <tr>
         <td>Folate</td>
-        <td>368.8µg</td>
-        <td>92%</td>
+        <td class="numeric">368.8µg</td>
+        <td class="numeric">92%</td>
     </tr>
     <tr>
         <td>Vitamin A</td>
-        <td>1676.9µg</td>
-        <td>186%</td>
+        <td class="numeric">1676.9µg</td>
+        <td class="numeric">186%</td>
     </tr>
     <tr>
         <td>Vitamin C</td>
-        <td>130.7mg</td>
-        <td>65%</td>
+        <td class="numeric">130.7mg</td>
+        <td class="numeric">65%</td>
     </tr>
     <tr>
         <td>Vitamin D</td>
-        <td>171.7IU</td>
-        <td>29%</td>
+        <td class="numeric">171.7IU</td>
+        <td class="numeric">29%</td>
     </tr>
     <tr>
         <td>Vitamin E</td>
-        <td>9.8mg</td>
-        <td>65%</td>
+        <td class="numeric">9.8mg</td>
+        <td class="numeric">65%</td>
     </tr>
     <tr>
         <td>Vitamin K</td>
-        <td>53.7µg</td>
-        <td>45%</td>
+        <td class="numeric">53.7µg</td>
+        <td class="numeric">45%</td>
     </tr>
     <tr>
         <td>Calcium</td>
-        <td>244.3mg</td>
-        <td>24%</td>
+        <td class="numeric">244.3mg</td>
+        <td class="numeric">24%</td>
     </tr>
     <tr>
         <td>Chromium</td>
-        <td>25.7µg</td>
-        <td>73%</td>
+        <td class="numeric">25.7µg</td>
+        <td class="numeric">73%</td>
     </tr>
     <tr>
         <td>Copper</td>
-        <td>1.6mg</td>
-        <td>182%</td>
+        <td class="numeric">1.6mg</td>
+        <td class="numeric">182%</td>
     </tr>
     <tr>
         <td>Iodine</td>
-        <td>34.4µg</td>
-        <td>23%</td>
+        <td class="numeric">34.4µg</td>
+        <td class="numeric">23%</td>
     </tr>
     <tr>
         <td>Iron</td>
-        <td>9.6mg</td>
-        <td>120%</td>
+        <td class="numeric">9.6mg</td>
+        <td class="numeric">120%</td>
     </tr>
     <tr>
         <td>Magnesium</td>
-        <td>308.2mg</td>
-        <td>73%</td>
+        <td class="numeric">308.2mg</td>
+        <td class="numeric">73%</td>
     </tr>
     <tr>
         <td>Manganese</td>
-        <td>3.1mg</td>
-        <td>135%</td>
+        <td class="numeric">3.1mg</td>
+        <td class="numeric">135%</td>
     </tr>
     <tr>
         <td>Phosphorus</td>
-        <td>803.7mg</td>
-        <td>115%</td>
+        <td class="numeric">803.7mg</td>
+        <td class="numeric">115%</td>
     </tr>
     <tr>
         <td>Potassium</td>
-        <td>5278.3mg</td>
-        <td>155%</td>
+        <td class="numeric">5278.3mg</td>
+        <td class="numeric">155%</td>
     </tr>
     <tr>
         <td>Selenium</td>
-        <td>20.6µg</td>
-        <td>37%</td>
+        <td class="numeric">20.6µg</td>
+        <td class="numeric">37%</td>
     </tr>
     <tr>
         <td>Sodium</td>
-        <td>2697.7mg</td>
-        <td>180%</td>
+        <td class="numeric">2697.7mg</td>
+        <td class="numeric">180%</td>
     </tr>
     <tr>
         <td>Zinc</td>
-        <td>11.1mg</td>
-        <td>101%</td>
+        <td class="numeric">11.1mg</td>
+        <td class="numeric">101%</td>
     </tr>
+</tbody>
 </table>
 <table>
+<thead>
     <tr>
-        <td>Nutrient</td>
-        <td>Amount</td>
-        <td>% RDA</td>
+        <th>Nutrient</th>
+        <th>Amount</th>
+        <th>% RDA</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td>B1 (Thiamine)</td>
-        <td>1.4mg</td>
-        <td>114%</td>
+        <td class="numeric">1.4mg</td>
+        <td class="numeric">114%</td>
     </tr>
     <tr>
         <td>B2 (Riboflavin)</td>
-        <td>1.5mg</td>
-        <td>116%</td>
+        <td class="numeric">1.5mg</td>
+        <td class="numeric">116%</td>
     </tr>
     <tr>
         <td>B3 (Niacin)</td>
-        <td>20.1mg</td>
-        <td>126%</td>
+        <td class="numeric">20.1mg</td>
+        <td class="numeric">126%</td>
     </tr>
     <tr>
         <td>B5 (Pantothenic Acid)</td>
-        <td>3.4mg</td>
-        <td>69%</td>
+        <td class="numeric">3.4mg</td>
+        <td class="numeric">69%</td>
     </tr>
     <tr>
         <td>B6 (Pyridoxine)</td>
-        <td>1.5mg</td>
-        <td>114%</td>
+        <td class="numeric">1.5mg</td>
+        <td class="numeric">114%</td>
     </tr>
     <tr>
         <td>B12 (Cobalamin)</td>
-        <td>6.2µg</td>
-        <td>260%</td>
+        <td class="numeric">6.2µg</td>
+        <td class="numeric">260%</td>
     </tr>
     <tr>
         <td>Choline</td>
-        <td>352.3mg</td>
-        <td>64%</td>
+        <td class="numeric">352.3mg</td>
+        <td class="numeric">64%</td>
     </tr>
     <tr>
         <td>Folate</td>
-        <td>147.2µg</td>
-        <td>37%</td>
+        <td class="numeric">147.2µg</td>
+        <td class="numeric">37%</td>
     </tr>
     <tr>
         <td>Vitamin A</td>
-        <td>436.9µg</td>
-        <td>49%</td>
+        <td class="numeric">436.9µg</td>
+        <td class="numeric">49%</td>
     </tr>
     <tr>
         <td>Vitamin C</td>
-        <td>14.5mg</td>
-        <td>7%</td>
+        <td class="numeric">14.5mg</td>
+        <td class="numeric">7%</td>
     </tr>
     <tr>
         <td>Vitamin D</td>
-        <td>366.5IU</td>
-        <td>61%</td>
+        <td class="numeric">366.5IU</td>
+        <td class="numeric">61%</td>
     </tr>
     <tr>
         <td>Vitamin E</td>
-        <td>3.5mg</td>
-        <td>23%</td>
+        <td class="numeric">3.5mg</td>
+        <td class="numeric">23%</td>
     </tr>
     <tr>
         <td>Vitamin K</td>
-        <td>135.2µg</td>
-        <td>113%</td>
+        <td class="numeric">135.2µg</td>
+        <td class="numeric">113%</td>
     </tr>
     <tr>
         <td>Calcium</td>
-        <td>976.3mg</td>
-        <td>98%</td>
+        <td class="numeric">976.3mg</td>
+        <td class="numeric">98%</td>
     </tr>
     <tr>
         <td>Chromium</td>
-        <td>0.0µg</td>
-        <td>0%</td>
+        <td class="numeric">0.0µg</td>
+        <td class="numeric">0%</td>
     </tr>
     <tr>
         <td>Copper</td>
-        <td>0.5mg</td>
-        <td>53%</td>
+        <td class="numeric">0.5mg</td>
+        <td class="numeric">53%</td>
     </tr>
     <tr>
         <td>Iodine</td>
-        <td>64.6µg</td>
-        <td>43%</td>
+        <td class="numeric">64.6µg</td>
+        <td class="numeric">43%</td>
     </tr>
     <tr>
         <td>Iron</td>
-        <td>14.0mg</td>
-        <td>175%</td>
+        <td class="numeric">14.0mg</td>
+        <td class="numeric">175%</td>
     </tr>
     <tr>
         <td>Magnesium</td>
-        <td>189.2mg</td>
-        <td>45%</td>
+        <td class="numeric">189.2mg</td>
+        <td class="numeric">45%</td>
     </tr>
     <tr>
         <td>Manganese</td>
-        <td>0.8mg</td>
-        <td>35%</td>
+        <td class="numeric">0.8mg</td>
+        <td class="numeric">35%</td>
     </tr>
     <tr>
         <td>Phosphorus</td>
-        <td>1096.1mg</td>
-        <td>157%</td>
+        <td class="numeric">1096.1mg</td>
+        <td class="numeric">157%</td>
     </tr>
     <tr>
         <td>Potassium</td>
-        <td>2642.4mg</td>
-        <td>78%</td>
+        <td class="numeric">2642.4mg</td>
+        <td class="numeric">78%</td>
     </tr>
     <tr>
         <td>Selenium</td>
-        <td>121.3µg</td>
-        <td>221%</td>
+        <td class="numeric">121.3µg</td>
+        <td class="numeric">221%</td>
     </tr>
     <tr>
         <td>Sodium</td>
-        <td>2501.5mg</td>
-        <td>167%</td>
+        <td class="numeric">2501.5mg</td>
+        <td class="numeric">167%</td>
     </tr>
     <tr>
         <td>Zinc</td>
-        <td>15.2mg</td>
-        <td>138%</td>
+        <td class="numeric">15.2mg</td>
+        <td class="numeric">138%</td>
     </tr>
+  </tbody>
 </table>
 <table>
+<thead>
     <tr>
-        <td>Nutrient</td>
-        <td>Amount</td>
-        <td>% RDA</td>
+        <th>Nutrient</th>
+        <th>Amount</th>
+        <th>% RDA</th>
     </tr>
+</thead>
+<tbody>
     <tr>
         <td>B1 (Thiamine)</td>
-        <td>1.4mg</td>
-        <td>118%</td>
+        <td class="numeric">1.4mg</td>
+        <td class="numeric">118%</td>
     </tr>
     <tr>
         <td>B2 (Riboflavin)</td>
-        <td>2.1mg</td>
-        <td>164%</td>
+        <td class="numeric">2.1mg</td>
+        <td class="numeric">164%</td>
     </tr>
     <tr>
         <td>B3 (Niacin)</td>
-        <td>20.8mg</td>
-        <td>130%</td>
+        <td class="numeric">20.8mg</td>
+        <td class="numeric">130%</td>
     </tr>
     <tr>
         <td>B5 (Pantothenic Acid)</td>
-        <td>6.2mg</td>
-        <td>124%</td>
+        <td class="numeric">6.2mg</td>
+        <td class="numeric">124%</td>
     </tr>
     <tr>
         <td>B6 (Pyridoxine)</td>
-        <td>4.5mg</td>
-        <td>348%</td>
+        <td class="numeric">4.5mg</td>
+        <td class="numeric">348%</td>
     </tr>
     <tr>
         <td>B12 (Cobalamin)</td>
-        <td>12.5µg</td>
-        <td>522%</td>
+        <td class="numeric">12.5µg</td>
+        <td class="numeric">522%</td>
     </tr>
     <tr>
         <td>Choline</td>
-        <td>487.8mg</td>
-        <td>89%</td>
+        <td class="numeric">487.8mg</td>
+        <td class="numeric">89%</td>
     </tr>
     <tr>
         <td>Folate</td>
-        <td>346.6µg</td>
-        <td>87%</td>
+        <td class="numeric">346.6µg</td>
+        <td class="numeric">87%</td>
     </tr>
     <tr>
         <td>Vitamin A</td>
-        <td>614.3µg</td>
-        <td>68%</td>
+        <td class="numeric">614.3µg</td>
+        <td class="numeric">68%</td>
     </tr>
     <tr>
         <td>Vitamin C</td>
-        <td>379.9mg</td>
-        <td>190%</td>
+        <td class="numeric">379.9mg</td>
+        <td class="numeric">190%</td>
     </tr>
     <tr>
         <td>Vitamin D</td>
-        <td>2303.8IU</td>
-        <td>384%</td>
+        <td class="numeric">2303.8IU</td>
+        <td class="numeric">384%</td>
     </tr>
     <tr>
         <td>Vitamin E</td>
-        <td>19.2mg</td>
-        <td>128%</td>
+        <td class="numeric">19.2mg</td>
+        <td class="numeric">128%</td>
     </tr>
     <tr>
         <td>Vitamin K</td>
-        <td>213.1µg</td>
-        <td>178%</td>
+        <td class="numeric">213.1µg</td>
+        <td class="numeric">178%</td>
     </tr>
     <tr>
         <td>Calcium</td>
-        <td>1026.9mg</td>
-        <td>103%</td>
+        <td class="numeric">1026.9mg</td>
+        <td class="numeric">103%</td>
     </tr>
     <tr>
         <td>Chromium</td>
-        <td>45.8µg</td>
-        <td>131%</td>
+        <td class="numeric">45.8µg</td>
+        <td class="numeric">131%</td>
     </tr>
     <tr>
         <td>Copper</td>
-        <td>1.5mg</td>
-        <td>166%</td>
+        <td class="numeric">1.5mg</td>
+        <td class="numeric">166%</td>
     </tr>
     <tr>
         <td>Iodine</td>
-        <td>129.1µg</td>
-        <td>86%</td>
+        <td class="numeric">129.1µg</td>
+        <td class="numeric">86%</td>
     </tr>
     <tr>
         <td>Iron</td>
-        <td>11.8mg</td>
-        <td>148%</td>
+        <td class="numeric">11.8mg</td>
+        <td class="numeric">148%</td>
     </tr>
     <tr>
         <td>Magnesium</td>
-        <td>478.0mg</td>
-        <td>114%</td>
+        <td class="numeric">478.0mg</td>
+        <td class="numeric">114%</td>
     </tr>
     <tr>
         <td>Manganese</td>
-        <td>3.1mg</td>
-        <td>135%</td>
+        <td class="numeric">3.1mg</td>
+        <td class="numeric">135%</td>
     </tr>
     <tr>
         <td>Phosphorus</td>
-        <td>1213.5mg</td>
-        <td>173%</td>
+        <td class="numeric">1213.5mg</td>
+        <td class="numeric">173%</td>
     </tr>
     <tr>
         <td>Potassium</td>
-        <td>3276.3mg</td>
-        <td>96%</td>
+        <td class="numeric">3276.3mg</td>
+        <td class="numeric">96%</td>
     </tr>
     <tr>
         <td>Selenium</td>
-        <td>109.5µg</td>
-        <td>199%</td>
+        <td class="numeric">109.5µg</td>
+        <td class="numeric">199%</td>
     </tr>
     <tr>
         <td>Sodium</td>
-        <td>2171.1mg</td>
-        <td>145%</td>
+        <td class="numeric">2171.1mg</td>
+        <td class="numeric">145%</td>
     </tr>
     <tr>
         <td>Zinc</td>
-        <td>22.4mg</td>
-        <td>204%</td>
+        <td class="numeric">22.4mg</td>
+        <td class="numeric">204%</td>
     </tr>
+  </tbody>
 </table>
 </div>
 
