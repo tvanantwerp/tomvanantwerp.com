@@ -63,13 +63,19 @@ I didn't realize how high in potassium potatoes are. During the experiment, I av
 
 Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K, iodine, and selenium.[^1] I would have been very low on B vitamins too if not for supplements. And protein was unbelievably low, averaging 25g per day versus 140g per day in the prior week. I'm amazed how much energy I still had, given how little protein was in my diet and how much that's affected my energy levels in the past.
 
-<div style="display: flex; gap: 1rem;">
-<table>
+<details>
+<summary>Click here to see full micronutrient daily averages.</summary>
+
+These tables contain the full micronutrient breakdown from my week eating potatoes (plus some supplements), the week previous (a Standard American Diet™), and a randomly chosen week from eating keto in the middle of March 2020. Data comes from weighing food and logging it in the [Cronometer](https://cronometer.com/) app.
+
+<div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+<table style="flex: 0 1 auto; width: min-content">
+<caption>Potato Diet<br />Daily Average</caption>
 <thead>
     <tr>
         <th>Nutrient</th>
         <th>Amount</th>
-        <th>% RDA</th>
+        <th>% of Target</th>
     </tr>
 </thead>
 <tbody>
@@ -200,12 +206,13 @@ Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K
     </tr>
 </tbody>
 </table>
-<table>
+<table style="flex: 0 1 auto; width: min-content">
+<caption>Previous Week No Diet<br />Daily Average</caption>
 <thead>
     <tr>
         <th>Nutrient</th>
         <th>Amount</th>
-        <th>% RDA</th>
+        <th>% of Target</th>
     </tr>
 </thead>
 <tbody>
@@ -336,12 +343,13 @@ Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K
     </tr>
   </tbody>
 </table>
-<table>
+<table style="flex: 0 1 auto; width: min-content">
+<caption>Random Keto Diet Week<br />Daily Average</caption>
 <thead>
     <tr>
         <th>Nutrient</th>
         <th>Amount</th>
-        <th>% RDA</th>
+        <th>% of Target</th>
     </tr>
 </thead>
 <tbody>
@@ -473,6 +481,7 @@ Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K
   </tbody>
 </table>
 </div>
+</details>
 
 #### How It Feels to Only Eat Potato
 
@@ -480,7 +489,7 @@ The frozen potato foods were really quite filling. I largely didn't think about 
 
 I don't think my tastes were "reset" by the blandness of potato. When I was eating the blandest mashed potatoes, I craved other foods the most. When I switched to tastier fries and tots, cravings went away.
 
-But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off. I'm not used to a general level of digestive discomfort, either on keto or the Standard American Diet™️.
+But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off. I'm not used to a general level of digestive discomfort, either on keto or the Standard American Diet™.
 
 <details>
 <summary>
