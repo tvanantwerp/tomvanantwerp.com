@@ -8,7 +8,7 @@ tags:
   - Health
   - Diet
 layout: layouts/writing.liquid
-image: img/2022-01-17-potato-smiley.jpg
+image: img/2022-07-17-potato-smiley.jpg
 ---
 
 I [previously](https://tomvanantwerp.com/essays/losing-50lbs/) lost quite a lot of weight on a ketogenic diet, combined with time-restricted feeding. But over the past year, the disruption to my routine that came from changing jobs led me down a path of getting lazy with food. I began eating all kinds of junk at all hours again. And before I knew it, I'd regained nearly everything I lost. I've been disappointed in myself, and I was ready to get serious about my diet again.
@@ -65,7 +65,17 @@ The frozen potato foods were really quite filling. I largely didn't think about 
 
 I don't think my tastes were "reset" by the blandness of potato. When I was eating the blandest mashed potatoes, I craved other foods the most. When I switched to tastier fries and tots, cravings went away.
 
-But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off. I think potato has trouble moving through my bowels. I get cramps, like my body is trying very hard to shuttle this mush out the back door. I never had these problems on a keto diet.
+But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off. I think potato has trouble moving through my bowels. I get cramps, like my body is trying very hard to move things along. I never had these problems on a keto diet.
+
+<details>
+<summary>
+Click here to read about potato poops. 🥔💩
+</summary>
+
+Everything came out OK. The experience of pooping was fairly normal. The poop itself was strange, though. It just seemed to start dissolving into the toilet water almost immediately. So I would have the physical sensation of a normal poop, only to turn around and see what looked more like diarrhea.
+
+I'm sure you glad you clicked to read that!
+</details>
 
 ## What Next?
 
@@ -73,4 +83,4 @@ I've still got some potatoes, and I think I'll keep going until I use them all u
 
 Eventually, though, I expect to switch back to my proven keto and time-restricted feeding strategy. That diet may take longer to lose the weight I want to lose, but it's a lot more fun and never made my insides hurt.
 
-[^1]:  (First few days of bland mashed potatoes excluded.)
+[^1]: First few days of bland mashed potatoes excluded.
