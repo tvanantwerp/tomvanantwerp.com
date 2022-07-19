@@ -507,7 +507,11 @@ I'm sure you glad you clicked to read that!
 
 I guess this experiment is a success? I did lose weight, after all. But the digestive distress I've experienced doesn't seem worth it. My body just isn't a fan of only eating potatoes.
 
-I went one extra day beyond my commitment; but as I write this on what would be day 9, I think I'm done. I just don't feel good. I'm glad I tried this, but I think I'll go back to the slow, steady, and frankly much tastier keto diet.
+I went one extra day, but decided it was time to end it. I just didn't feel right. Low grade nausea and feelings of bloating. Thinking I would go back to keto, I made myself some cheeseburgers (with keto buns) and enjoyed them.
+
+However, by that evening, I started feeling a highly localized intermittent pain in the upper-right quadrant of my abdomen. I tried to sleep it off, but it woke me up during the night. The pain has subsided, but I still feel nauseous. This is hardly the first time I've dealt with mysterious abdominal pain—I've had different ones on and off for years without resolution or even diagnosis. But this one seemed different. Very specific in location and presentation behind the ribcage.
+
+I'm concerned that what I felt was a minor gallstone attack—something I've not had problems with before. I don't think one week of potatoes could give me gallstones, but perhaps it revealed a problem that's been silently brewing for a while? I've been increasingly experiencing reflux and gastritis symptoms for a while, and maybe giving my gallbladder a week-long break from having to churn out lots of bile gave it time for small stones or sludge to form. I'll be getting a blood test soon for liver and gallbladder enzymes to see if they are elevated. I'll update this post as I learn more.
 
 [^1]: And that's _after_ taking a multivitamin most days!
 [^2]: First few days of bland mashed potatoes excluded.
