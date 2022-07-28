@@ -66,421 +66,171 @@ Other nutrients were quite low, including calcium, choline, vitamin D, vitamin K
 <details>
 <summary>Click here to see full micronutrient daily averages.</summary>
 
-These tables contain the daily average micronutrient consumption (i.e., vitamins and minerals) from my week eating potatoes (plus some supplements), from the week previous (a Standard American Diet™), and from a randomly chosen week from eating keto in the middle of March 2020. Data comes from weighing food and logging it in the [Cronometer](https://cronometer.com/) app.
+These tables contain the daily average micronutrient consumption (i.e., vitamins and minerals) from my week eating potatoes (plus some supplements), from the week previous (a Standard American Diet™), and from the following week eating a keto. Data comes from weighing food and logging it in the [Cronometer](https://cronometer.com/) app. How useful this data is aside from the potato numbers is questionable, since there are so many ways to eat SAD or keto and mine are unique to my time and place. And whether or not I take supplements (sporadically done during potato diet, not at all on the others) also greatly affects these values.
 
-<div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-<table style="flex: 0 1 auto; width: min-content">
-<caption>Potato Diet<br />Daily Average</caption>
-<thead>
-    <tr>
-        <th>Nutrient</th>
-        <th>Amount</th>
-        <th>% of Target</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>B1 (Thiamine)</td>
-        <td class="numeric">2.6mg</td>
-        <td class="numeric">220%</td>
-    </tr>
-    <tr>
-        <td>B2 (Riboflavin)</td>
-        <td class="numeric">1.9mg</td>
-        <td class="numeric">143%</td>
-    </tr>
-    <tr>
-        <td>B3 (Niacin)</td>
-        <td class="numeric">26.3mg</td>
-        <td class="numeric">164%</td>
-    </tr>
-    <tr>
-        <td>B5 (Pantothenic Acid)</td>
-        <td class="numeric">9.8mg</td>
-        <td class="numeric">197%</td>
-    </tr>
-    <tr>
-        <td>B6 (Pyridoxine)</td>
-        <td class="numeric">4.1mg</td>
-        <td class="numeric">316%</td>
-    </tr>
-    <tr>
-        <td>B12 (Cobalamin)</td>
-        <td class="numeric">6.5µg</td>
-        <td class="numeric">269%</td>
-    </tr>
-    <tr>
-        <td>Choline</td>
-        <td class="numeric">219.6mg</td>
-        <td class="numeric">40%</td>
-    </tr>
-    <tr>
-        <td>Folate</td>
-        <td class="numeric">368.8µg</td>
-        <td class="numeric">92%</td>
-    </tr>
-    <tr>
-        <td>Vitamin A</td>
-        <td class="numeric">1676.9µg</td>
-        <td class="numeric">186%</td>
-    </tr>
-    <tr>
-        <td>Vitamin C</td>
-        <td class="numeric">130.7mg</td>
-        <td class="numeric">65%</td>
-    </tr>
-    <tr>
-        <td>Vitamin D</td>
-        <td class="numeric">171.7IU</td>
-        <td class="numeric">29%</td>
-    </tr>
-    <tr>
-        <td>Vitamin E</td>
-        <td class="numeric">9.8mg</td>
-        <td class="numeric">65%</td>
-    </tr>
-    <tr>
-        <td>Vitamin K</td>
-        <td class="numeric">53.7µg</td>
-        <td class="numeric">45%</td>
-    </tr>
-    <tr>
-        <td>Calcium</td>
-        <td class="numeric">244.3mg</td>
-        <td class="numeric">24%</td>
-    </tr>
-    <tr>
-        <td>Chromium</td>
-        <td class="numeric">25.7µg</td>
-        <td class="numeric">73%</td>
-    </tr>
-    <tr>
-        <td>Copper</td>
-        <td class="numeric">1.6mg</td>
-        <td class="numeric">182%</td>
-    </tr>
-    <tr>
-        <td>Iodine</td>
-        <td class="numeric">34.4µg</td>
-        <td class="numeric">23%</td>
-    </tr>
-    <tr>
-        <td>Iron</td>
-        <td class="numeric">9.6mg</td>
-        <td class="numeric">120%</td>
-    </tr>
-    <tr>
-        <td>Magnesium</td>
-        <td class="numeric">308.2mg</td>
-        <td class="numeric">73%</td>
-    </tr>
-    <tr>
-        <td>Manganese</td>
-        <td class="numeric">3.1mg</td>
-        <td class="numeric">135%</td>
-    </tr>
-    <tr>
-        <td>Phosphorus</td>
-        <td class="numeric">803.7mg</td>
-        <td class="numeric">115%</td>
-    </tr>
-    <tr>
-        <td>Potassium</td>
-        <td class="numeric">5278.3mg</td>
-        <td class="numeric">155%</td>
-    </tr>
-    <tr>
-        <td>Selenium</td>
-        <td class="numeric">20.6µg</td>
-        <td class="numeric">37%</td>
-    </tr>
-    <tr>
-        <td>Sodium</td>
-        <td class="numeric">2697.7mg</td>
-        <td class="numeric">180%</td>
-    </tr>
-    <tr>
-        <td>Zinc</td>
-        <td class="numeric">11.1mg</td>
-        <td class="numeric">101%</td>
-    </tr>
-</tbody>
+<table>
+	<caption>Daily Average Nutrients on Different Diets</caption>
+	<thead>
+		<tr>
+			<th>Nutrient</th>
+			<th>Potato Diet</th>
+			<th>Standard American Diet (Previous Week)</th>
+			<th>Keto Diet (Following Week)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>B1 (Thiamine)</td>
+			<td class="numeric">2.6mg (220%)</td>
+			<td class="numeric">1.4mg (114%)</td>
+			<td class="numeric">0.6mg (52%)</td>
+		</tr>
+		<tr>
+			<td>B2 (Riboflavin)</td>
+			<td class="numeric">1.9mg (143%)</td>
+			<td class="numeric">1.5mg (116%)</td>
+			<td class="numeric">1.1mg (88%)</td>
+		</tr>
+		<tr>
+			<td>B3 (Niacin)</td>
+			<td class="numeric">26.3mg (164%)</td>
+			<td class="numeric">20.1mg (126%)</td>
+			<td class="numeric">15.2mg (95%)</td>
+		</tr>
+		<tr>
+			<td>B5 (Pantothenic Acid)</td>
+			<td class="numeric">9.8mg (197%)</td>
+			<td class="numeric">3.4mg (69%)</td>
+			<td class="numeric">3.6mg (73%)</td>
+		</tr>
+		<tr>
+			<td>B6 (Pyridoxine)</td>
+			<td class="numeric">4.1mg (316%)</td>
+			<td class="numeric">1.5mg (114%)</td>
+			<td class="numeric">1.2mg (94%)</td>
+		</tr>
+		<tr>
+			<td>B12 (Cobalamin)</td>
+			<td class="numeric">6.5µg (269%)</td>
+			<td class="numeric">6.2µg (260%)</td>
+			<td class="numeric">4.7µg (194%)</td>
+		</tr>
+		<tr>
+			<td>Choline</td>
+			<td class="numeric">219.6mg (40%)</td>
+			<td class="numeric">352.3mg (64%)</td>
+			<td class="numeric">351.3mg (64%)</td>
+		</tr>
+		<tr>
+			<td>Folate</td>
+			<td class="numeric">368.8µg (92%)</td>
+			<td class="numeric">147.2µg (37%)</td>
+			<td class="numeric">109.9µg (27%)</td>
+		</tr>
+		<tr>
+			<td>Vitamin A</td>
+			<td class="numeric">1676.9µg (186%)</td>
+			<td class="numeric">436.9µg (49%)</td>
+			<td class="numeric">350.9µg (39%)</td>
+		</tr>
+		<tr>
+			<td>Vitamin C</td>
+			<td class="numeric">130.7mg (65%)</td>
+			<td class="numeric">14.5mg (7%)</td>
+			<td class="numeric">27.2mg (14%)</td>
+		</tr>
+		<tr>
+			<td>Vitamin D</td>
+			<td class="numeric">171.7IU (29%)</td>
+			<td class="numeric">366.5IU (61%)</td>
+			<td class="numeric">417.3IU (70%)</td>
+		</tr>
+		<tr>
+			<td>Vitamin E</td>
+			<td class="numeric">9.8mg (65%)</td>
+			<td class="numeric">3.5mg (23%)</td>
+			<td class="numeric">6.1mg (41%)</td>
+		</tr>
+		<tr>
+			<td>Vitamin K</td>
+			<td class="numeric">53.7µg (45%)</td>
+			<td class="numeric">135.2µg (113%)</td>
+			<td class="numeric">88.0µg (73%)</td>
+		</tr>
+		<tr>
+			<td>Calcium</td>
+			<td class="numeric">244.3mg (24%)</td>
+			<td class="numeric">976.3mg (98%)</td>
+			<td class="numeric">839.8mg (84%)</td>
+		</tr>
+		<tr>
+			<td>Chromium</td>
+			<td class="numeric">25.7µg (73%)</td>
+			<td class="numeric">0.0µg (0%)</td>
+			<td class="numeric">10.5µg (30%)</td>
+		</tr>
+		<tr>
+			<td>Copper</td>
+			<td class="numeric">1.6mg (182%)</td>
+			<td class="numeric">0.5mg (53%)</td>
+			<td class="numeric">0.7mg (80%)</td>
+		</tr>
+		<tr>
+			<td>Iodine</td>
+			<td class="numeric">34.4µg (23%)</td>
+			<td class="numeric">64.6µg (43%)</td>
+			<td class="numeric">76.2µg (51%)</td>
+		</tr>
+		<tr>
+			<td>Iron</td>
+			<td class="numeric">9.6mg (120%)</td>
+			<td class="numeric">14.0mg (175%)</td>
+			<td class="numeric">8.3mg (104%)</td>
+		</tr>
+		<tr>
+			<td>Magnesium</td>
+			<td class="numeric">308.2mg (73%)</td>
+			<td class="numeric">189.2mg (45%)</td>
+			<td class="numeric">238.8mg (57%)</td>
+		</tr>
+		<tr>
+			<td>Manganese</td>
+			<td class="numeric">3.1mg (135%)</td>
+			<td class="numeric">0.8mg (35%)</td>
+			<td class="numeric">1.0mg (41%)</td>
+		</tr>
+		<tr>
+			<td>Phosphorus</td>
+			<td class="numeric">803.7mg (115%)</td>
+			<td class="numeric">1096.1mg (157%)</td>
+			<td class="numeric">1024.4mg (146%)</td>
+		</tr>
+		<tr>
+			<td>Potassium</td>
+			<td class="numeric">5278.3mg (155%)</td>
+			<td class="numeric">2642.4mg (78%)</td>
+			<td class="numeric">1800.3mg (53%)</td>
+		</tr>
+		<tr>
+			<td>Selenium</td>
+			<td class="numeric">20.6µg (37%)</td>
+			<td class="numeric">121.3µg (221%)</td>
+			<td class="numeric">81.3µg (148%)</td>
+		</tr>
+		<tr>
+			<td>Sodium</td>
+			<td class="numeric">2697.7mg (180%)</td>
+			<td class="numeric">2501.5mg (167%)</td>
+			<td class="numeric">1920.7mg (128%)</td>
+		</tr>
+		<tr>
+			<td>Zinc</td>
+			<td class="numeric">11.1mg (101%)</td>
+			<td class="numeric">15.2mg (138%)</td>
+			<td class="numeric">10.7mg (97%)</td>
+		</tr>
+	</tbody>
 </table>
-<table style="flex: 0 1 auto; width: min-content">
-<caption>Previous Week No Diet<br />Daily Average</caption>
-<thead>
-    <tr>
-        <th>Nutrient</th>
-        <th>Amount</th>
-        <th>% of Target</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>B1 (Thiamine)</td>
-        <td class="numeric">1.4mg</td>
-        <td class="numeric">114%</td>
-    </tr>
-    <tr>
-        <td>B2 (Riboflavin)</td>
-        <td class="numeric">1.5mg</td>
-        <td class="numeric">116%</td>
-    </tr>
-    <tr>
-        <td>B3 (Niacin)</td>
-        <td class="numeric">20.1mg</td>
-        <td class="numeric">126%</td>
-    </tr>
-    <tr>
-        <td>B5 (Pantothenic Acid)</td>
-        <td class="numeric">3.4mg</td>
-        <td class="numeric">69%</td>
-    </tr>
-    <tr>
-        <td>B6 (Pyridoxine)</td>
-        <td class="numeric">1.5mg</td>
-        <td class="numeric">114%</td>
-    </tr>
-    <tr>
-        <td>B12 (Cobalamin)</td>
-        <td class="numeric">6.2µg</td>
-        <td class="numeric">260%</td>
-    </tr>
-    <tr>
-        <td>Choline</td>
-        <td class="numeric">352.3mg</td>
-        <td class="numeric">64%</td>
-    </tr>
-    <tr>
-        <td>Folate</td>
-        <td class="numeric">147.2µg</td>
-        <td class="numeric">37%</td>
-    </tr>
-    <tr>
-        <td>Vitamin A</td>
-        <td class="numeric">436.9µg</td>
-        <td class="numeric">49%</td>
-    </tr>
-    <tr>
-        <td>Vitamin C</td>
-        <td class="numeric">14.5mg</td>
-        <td class="numeric">7%</td>
-    </tr>
-    <tr>
-        <td>Vitamin D</td>
-        <td class="numeric">366.5IU</td>
-        <td class="numeric">61%</td>
-    </tr>
-    <tr>
-        <td>Vitamin E</td>
-        <td class="numeric">3.5mg</td>
-        <td class="numeric">23%</td>
-    </tr>
-    <tr>
-        <td>Vitamin K</td>
-        <td class="numeric">135.2µg</td>
-        <td class="numeric">113%</td>
-    </tr>
-    <tr>
-        <td>Calcium</td>
-        <td class="numeric">976.3mg</td>
-        <td class="numeric">98%</td>
-    </tr>
-    <tr>
-        <td>Chromium</td>
-        <td class="numeric">0.0µg</td>
-        <td class="numeric">0%</td>
-    </tr>
-    <tr>
-        <td>Copper</td>
-        <td class="numeric">0.5mg</td>
-        <td class="numeric">53%</td>
-    </tr>
-    <tr>
-        <td>Iodine</td>
-        <td class="numeric">64.6µg</td>
-        <td class="numeric">43%</td>
-    </tr>
-    <tr>
-        <td>Iron</td>
-        <td class="numeric">14.0mg</td>
-        <td class="numeric">175%</td>
-    </tr>
-    <tr>
-        <td>Magnesium</td>
-        <td class="numeric">189.2mg</td>
-        <td class="numeric">45%</td>
-    </tr>
-    <tr>
-        <td>Manganese</td>
-        <td class="numeric">0.8mg</td>
-        <td class="numeric">35%</td>
-    </tr>
-    <tr>
-        <td>Phosphorus</td>
-        <td class="numeric">1096.1mg</td>
-        <td class="numeric">157%</td>
-    </tr>
-    <tr>
-        <td>Potassium</td>
-        <td class="numeric">2642.4mg</td>
-        <td class="numeric">78%</td>
-    </tr>
-    <tr>
-        <td>Selenium</td>
-        <td class="numeric">121.3µg</td>
-        <td class="numeric">221%</td>
-    </tr>
-    <tr>
-        <td>Sodium</td>
-        <td class="numeric">2501.5mg</td>
-        <td class="numeric">167%</td>
-    </tr>
-    <tr>
-        <td>Zinc</td>
-        <td class="numeric">15.2mg</td>
-        <td class="numeric">138%</td>
-    </tr>
-  </tbody>
-</table>
-<table style="flex: 0 1 auto; width: min-content">
-<caption>Random Keto Diet Week<br />Daily Average</caption>
-<thead>
-    <tr>
-        <th>Nutrient</th>
-        <th>Amount</th>
-        <th>% of Target</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>B1 (Thiamine)</td>
-        <td class="numeric">1.4mg</td>
-        <td class="numeric">118%</td>
-    </tr>
-    <tr>
-        <td>B2 (Riboflavin)</td>
-        <td class="numeric">2.1mg</td>
-        <td class="numeric">164%</td>
-    </tr>
-    <tr>
-        <td>B3 (Niacin)</td>
-        <td class="numeric">20.8mg</td>
-        <td class="numeric">130%</td>
-    </tr>
-    <tr>
-        <td>B5 (Pantothenic Acid)</td>
-        <td class="numeric">6.2mg</td>
-        <td class="numeric">124%</td>
-    </tr>
-    <tr>
-        <td>B6 (Pyridoxine)</td>
-        <td class="numeric">4.5mg</td>
-        <td class="numeric">348%</td>
-    </tr>
-    <tr>
-        <td>B12 (Cobalamin)</td>
-        <td class="numeric">12.5µg</td>
-        <td class="numeric">522%</td>
-    </tr>
-    <tr>
-        <td>Choline</td>
-        <td class="numeric">487.8mg</td>
-        <td class="numeric">89%</td>
-    </tr>
-    <tr>
-        <td>Folate</td>
-        <td class="numeric">346.6µg</td>
-        <td class="numeric">87%</td>
-    </tr>
-    <tr>
-        <td>Vitamin A</td>
-        <td class="numeric">614.3µg</td>
-        <td class="numeric">68%</td>
-    </tr>
-    <tr>
-        <td>Vitamin C</td>
-        <td class="numeric">379.9mg</td>
-        <td class="numeric">190%</td>
-    </tr>
-    <tr>
-        <td>Vitamin D</td>
-        <td class="numeric">2303.8IU</td>
-        <td class="numeric">384%</td>
-    </tr>
-    <tr>
-        <td>Vitamin E</td>
-        <td class="numeric">19.2mg</td>
-        <td class="numeric">128%</td>
-    </tr>
-    <tr>
-        <td>Vitamin K</td>
-        <td class="numeric">213.1µg</td>
-        <td class="numeric">178%</td>
-    </tr>
-    <tr>
-        <td>Calcium</td>
-        <td class="numeric">1026.9mg</td>
-        <td class="numeric">103%</td>
-    </tr>
-    <tr>
-        <td>Chromium</td>
-        <td class="numeric">45.8µg</td>
-        <td class="numeric">131%</td>
-    </tr>
-    <tr>
-        <td>Copper</td>
-        <td class="numeric">1.5mg</td>
-        <td class="numeric">166%</td>
-    </tr>
-    <tr>
-        <td>Iodine</td>
-        <td class="numeric">129.1µg</td>
-        <td class="numeric">86%</td>
-    </tr>
-    <tr>
-        <td>Iron</td>
-        <td class="numeric">11.8mg</td>
-        <td class="numeric">148%</td>
-    </tr>
-    <tr>
-        <td>Magnesium</td>
-        <td class="numeric">478.0mg</td>
-        <td class="numeric">114%</td>
-    </tr>
-    <tr>
-        <td>Manganese</td>
-        <td class="numeric">3.1mg</td>
-        <td class="numeric">135%</td>
-    </tr>
-    <tr>
-        <td>Phosphorus</td>
-        <td class="numeric">1213.5mg</td>
-        <td class="numeric">173%</td>
-    </tr>
-    <tr>
-        <td>Potassium</td>
-        <td class="numeric">3276.3mg</td>
-        <td class="numeric">96%</td>
-    </tr>
-    <tr>
-        <td>Selenium</td>
-        <td class="numeric">109.5µg</td>
-        <td class="numeric">199%</td>
-    </tr>
-    <tr>
-        <td>Sodium</td>
-        <td class="numeric">2171.1mg</td>
-        <td class="numeric">145%</td>
-    </tr>
-    <tr>
-        <td>Zinc</td>
-        <td class="numeric">22.4mg</td>
-        <td class="numeric">204%</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 </details>
 
 #### How It Feels to Only Eat Potato
@@ -503,15 +253,17 @@ Everything came out OK. The experience of pooping was fairly normal. The poop it
 I'm sure you glad you clicked to read that!
 </details>
 
-## What Next?
+## Ending the Potato Diet
 
 I guess this experiment is a success? I did lose weight, after all. But the digestive distress I've experienced doesn't seem worth it. My body just isn't a fan of only eating potatoes.
 
 I went one extra day, but decided it was time to end it. I just didn't feel right. Low grade nausea and feelings of bloating. Thinking I would go back to keto, I made myself some cheeseburgers (with keto buns) and enjoyed them.
 
-However, by that evening, I started feeling a highly localized intermittent pain in the upper-right quadrant of my abdomen. I tried to sleep it off, but it woke me up during the night. The pain has subsided, but I still feel nauseous. This is hardly the first time I've dealt with mysterious abdominal pain—I've had different ones on and off for years without resolution or even diagnosis. But this one seemed different. Very specific in location and presentation behind the ribcage.
+However, by that evening, I started feeling a highly localized intermittent pain in the upper-right quadrant of my abdomen. I tried to sleep it off, but it woke me up during the night. Very specific in location and presentation behind the ribcage.
 
-I'm concerned that what I felt was a minor gallstone attack—something I've not had problems with before. I don't think one week of potatoes could give me gallstones, but perhaps it revealed a problem that's been silently brewing for a while? I've been increasingly experiencing reflux and gastritis symptoms for a while, and maybe giving my gallbladder a week-long break from having to churn out lots of bile gave it time for small stones or sludge to form. I'll be getting a blood test soon for liver and gallbladder enzymes to see if they are elevated. I'll update this post as I learn more.
+This is hardly the first time I've dealt with mysterious abdominal pain—I've had different ones on and off for years without resolution or even diagnosis. Regardless, it seemed prudent to consult a doctor. They ran some blood tests to look for signs of elevated liver or gallbladder enzymes, but everything came back normal. I'm still experiencing the pain on-and-off, though not as often. Just like in years past, I have no explanation. I also don't know how/if the pain's emergence is related to the potato diet and my sudden reversal, going from high-carb low-fat to low-carb high-fat. I don't have data to suggest anything either way.
+
+Since stopping my potato diet, I've gone back to a stricter keto diet than what I was eating previously and weight loss has continued. While I miss the simplicity of "buy frozen tots, throw in air fryer", I generally feel better this way.
 
 [^1]: And that's _after_ taking a multivitamin most days!
 [^2]: First few days of bland mashed potatoes excluded.
