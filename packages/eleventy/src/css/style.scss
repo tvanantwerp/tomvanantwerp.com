@@ -76,6 +76,12 @@ body {
 	width: 100%;
 }
 
+@media screen and (min-width: 520px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
 @import './_typography';
 @import './_code';
 @import './components/_buttons';
