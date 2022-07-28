@@ -265,5 +265,9 @@ This is hardly the first time I've dealt with mysterious abdominal pain—I've h
 
 Since stopping my potato diet, I've gone back to a stricter keto diet than what I was eating previously and weight loss has continued. While I miss the simplicity of "buy frozen tots, throw in air fryer", I generally feel better this way.
 
+{% image './img/2022-07-27-calories.png', 'You can see the make up of calories in this chart from the potato diet, which was very high carb, and the switch to keto afterward, which is much higher fat and protein with little carbohydrate.' %}
+
+{% image './img/2022-07-27-weight-loss.png', 'Weight has continued to trend down with no observable difference between the potato diet and keto diet.' %}
+
 [^1]: And that's _after_ taking a multivitamin most days!
 [^2]: First few days of bland mashed potatoes excluded.
