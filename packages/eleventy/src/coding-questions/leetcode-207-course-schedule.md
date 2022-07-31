@@ -115,3 +115,94 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
 	return !numCourses;
 };
 ```
+
+### Depth First Search with Recursion
+
+With a depth first search, we're going to define a function to call recursively on the neighbors of each node we find ourselves at during traversal. We'll detect potential cycles (in context, impossible to satisfy prerequisite requirements) by keeping track of which nodes we've visited within the current depth first search, and returning false if we end up back at a previous node. If all nodes in the search check out, we use a different visited mark to indicate that the node and all neighbors were verified as part of a directed acyclic graph, and go ahead and skip it.
+
+```typescript
+function canFinish(numCourses: number, prerequisites: number[][]): boolean {
+	// First we initialize our graph and an array to track nodes
+	// we've visited already.
+	const graph: number[][] = Array.from({length: numCourses}, () => []);
+	const visited: number[] = Array(numCourses).fill(0);
+
+	// Next populate our graph with the prerequisites
+	// of each course.
+	for (const [course, prereq] of prerequisites) {
+		graph[course].push(prereq);
+	}
+
+	// Now use the depth first search function we defined below
+	// to make sure every node in the graph is traversed.
+	for (let i = 0; i < numCourses; i++) {
+		if (!dfs(i, graph, visited)) return false;
+	}
+
+	// No cycles found, so we should be able to take all courses.
+	// Return true and get your diploma!
+	return true;
+};
+
+// We define the function dfs to handle our search.
+// This function will keep track of what nodes we have
+// visited by updating values in the visited array.
+// If visited[i] === -1, we visited it already and we've
+// got a cycle in the graph, so return false. If it's
+// equal to 1, we've not only visited this node, but all
+// of its neighbors too, and not encountered problems.
+// You could also define this function within canFinish if
+// you don't want to have to pass graph and visited.
+function dfs(i: number, graph: number[][], visited: number[]) {
+	// A visited node (-1) means we found a cycle. Return false.
+	if (visited[i] === -1) return false;
+	// A fully traversed node (1) is fine, return true.
+	if (visited[i] === 1) return true;
+
+	// Temporarily set this node to having been visited.
+	visited[i] = -1;
+	// Recursively call dfs on all of the neighboring nodes,
+	// the prerequisites.
+	for (const prereq of graph[i]) {
+		// If the recursive call returns false,
+		// so should this level.
+		if (!dfs(prereq, graph, visited)) return false;
+	}
+
+	// If we visited the node and all of its neighbors
+	// through recursive calls to dfs, and no cycle was
+	// found, then change visited[i] to 1 to symbolize
+	// that this node and its neighbors checked out fine.
+	visited[i] = 1;
+
+	return true;
+}
+```
+
+## Some JavaScript Trivia
+
+You may notice that the graph was created with `Array.from({length: numCourses}, () => [])` while the `indegrees` variable used the shorter `Array(numCourses).fill(0)`. Why couldn't we use the short version for the graph, too? Wouldn't `Array(numCourses).fill([])` be more elegant?
+
+Well, yes, but it would also not work.
+
+`Array.fill` fills an array with the _exact_ thing you give to it. So in the case of a number, it will use the literal value of that number. But for an object (and an empty array counts as an object), it fills with the _reference_ to that object. So instead of filling with _n_ unique empty arrays, you would get _n_ references to the exact same empty array! So any time you tried `graph[prereq].push(course)`, every single array in the larger array would receive that value.
+
+So, instead of...
+
+```typescript
+const graph = Array.from({length: 3}, () => []);
+// graph === [[], [], []]
+graph[1].push(5)
+// graph === [[], [5], []]
+```
+
+...you would end up with...
+
+```typescript
+const graph = Array(3).fill([]);
+// graph === [[], [], []]
+graph[1].push(5)
+// graph === [[5], [5], [5]]
+```
+
+...which is not what we want at all!
