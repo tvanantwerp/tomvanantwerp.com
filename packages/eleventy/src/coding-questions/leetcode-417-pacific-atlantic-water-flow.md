@@ -116,6 +116,109 @@ Output: [[0,0],[0,1],[1,0],[1,1]]
 
 This problem is, in my opinion, poorly phrased. Let's translate:
 
-You've got a rectangular island between the Pacific and Atlantic Oceans. The island can be mapped as a `m x n` grid, and each grid square's height can be represented as an integer. When rain falls on one of the island's grid squares, it flows north, south, east, and west _if_ those adjacent grids have equal or lesser height. Our task is to determine which grid squares have a path for the rain to _both_ the Pacific and Atlantic Oceans.
+You've got a rectangular island between the Pacific and Atlantic Oceans. The island can be mapped as a `m x n` grid (`m` is rows, `n` is columns), and each grid square's height can be represented as an integer. When rain falls on one of the island's grid squares, it flows north, south, east, and west _if_ those adjacent grids have equal or lesser height. Our task is to determine which grid squares have a path for the rain to _both_ the Pacific and Atlantic Oceans.
 
+### Approach to Problem
 
+There are some key insights that will help us solve this problem. Our intuition—being intimately familiar with the effects of gravity on rainfall—is to look for high peaks and see where things flow from there. But that's not necessary! Because this is a graph problem, and we're really just looking for the intersection of cells that have a less-than-or-equal-to path to the top and left as well as the bottom and right. This means we can "reverse" gravity, and trace a path from our oceans up to the peaks!
+
+Another insight is to consider that the answer is just the intersection of grid cells that flow into the Atlantic and the cells that flow into the Pacific. So we can follow a cell at a specific Ocean's shore to a peak, and then stop once that peak's neighbors no long increase in height. Doing this for all of the cells adjacent to that ocean gives us an array of cells flowing into just that ocean. We then do the same for the other ocean, and check for overlap.
+
+### Depth First Search
+
+Our depth first search will start at the shorelines of each ocean and proceed inward until the neighbors of the current cell are no longer increasing in height. Whether or not we've already visited a specific cell is kept track of in `atlantic` and `pacific`—if we have traversed a cell, we return from `dfs` immediately to skip it. As we traverse, we check to see if the current cell shows up in bth `atlantic` and `pacific`, and add it to the `answer` if so. Doing this within `dfs` and not as a separate step after we are done with `dfs` saves us the trouble of iterating through a loop of `heights.length * heights[0].length` again at the end.
+
+```typescript
+function pacificAtlantic(heights: number[][]): number[][] {
+  // Go ahead and return [] early if the island doesn't exist.
+	if (!heights.length) return heights;
+
+	// Initialize a ton of variables. We'll keep track of the
+	// island dimensions (rows and columns), which cells
+	// ultimately drain to each ocean, and an answer array
+	// to consolidate the union of the atlantic and pacific
+	// arrays of cells. The atlantic and pacific arrays of arrays
+	// are initialized to false for each cell.
+	const rows = heights.length,
+		columns = heights[0].length,
+		atlantic: boolean[][] = Array.from({ length: rows }, () =>
+			Array(columns).fill(false),
+		),
+		pacific: boolean[][] = Array.from({ length: rows }, () =>
+			Array(columns).fill(false),
+		),
+		answer: number[][] = [];
+
+	// For each row, we'll call our dfs function on the zeroth
+	// column for the pacific and the last column of the atlantic.
+	// This will initiate depth first search on the left-most
+	// cells bordering the Pacific Ocean and the right-most cells
+	// bordering the Atlantic Ocean.
+	for (let i = 0; i < rows; i++) {
+		dfs(pacific, i, 0);
+		dfs(atlantic, i, columns - 1);
+	}
+	// Now call dfs on every column in the top row (abuts the
+	// Pacific Ocean) for pacific and every column in the bottom
+	// row (abuts the Atlantic Ocean) for atlantic.
+	for (let i = 0; i < columns; i++) {
+		dfs(pacific, 0, i);
+		dfs(atlantic, rows - 1, i);
+	}
+
+	// Having called dfs on every cell neighboring an ocean,
+	// the dfs function will have finished updating our
+	// answer array with the intersection of pacific and
+	// atlantic. We may now return it.
+	return answer;
+
+	// Our depth first search (dfs) function will visit every
+	// cell that it can, starting from a given ocean's shore
+	// and working up to the peaks. Once faced with a neighbor
+	// that isn't equal or increasing in height, it will not
+	// iterate over that neighbor. The eventual result of the
+	// dfs call is an array of arrays naming every cell that
+	// does indeed drain to the initial ocean passed to it.
+	// To save the trouble of iterating through [rows, columns]
+	// again after our dfs calls, we go ahead and check for
+	// intersections of the two ocean arrays here and update our
+	// answer array accordingly.
+	function dfs(visited: boolean[][], row: number, column: number) {
+		// Base case. We checked this cell, so skip it.
+		if (visited[row][column]) return;
+
+		// Set this cell to visited in the ocean we passed in.
+		visited[row][column] = true;
+
+		// Check to see if this cell has been visited in both
+		// oceans' arrays. If so, we know it drains into both,
+		// and we can add this cell to our answer.
+		if (atlantic[row][column] && pacific[row][column])
+			answer.push([row, column]);
+
+		// Call dfs on all of the cell's neighbors on two
+		// conditions: the neighbor must exist, and the
+		// neighbor must be of equal or greater height.
+		if (row + 1 < rows && heights[row + 1][column] >= heights[row][column]) {
+			dfs(visited, row + 1, column);
+		}
+		if (row - 1 >= 0 && heights[row - 1][column] >= heights[row][column]) {
+			dfs(visited, row - 1, column);
+		}
+		if (
+			column + 1 < columns &&
+			heights[row][column + 1] >= heights[row][column]
+		) {
+			dfs(visited, row, column + 1);
+		}
+		if (column - 1 >= 0 && heights[row][column - 1] >= heights[row][column]) {
+			dfs(visited, row, column - 1);
+		}
+	}
+}
+```
+
+### Breadth First Search
+
+```typescript
+```
