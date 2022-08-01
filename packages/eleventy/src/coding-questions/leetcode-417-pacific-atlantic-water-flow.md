@@ -117,13 +117,15 @@ Output: [[0,0],[0,1],[1,0],[1,1]]
 
 This problem is, in my opinion, poorly phrased. Let's translate:
 
-You've got a rectangular island between the Pacific and Atlantic Oceans. The island can be mapped as a `m x n` grid (`m` is rows, `n` is columns), and each grid square's height can be represented as an integer. When rain falls on one of the island's grid squares, it flows north, south, east, and west _if_ those adjacent grids have equal or lesser height. Our task is to determine which grid squares have a path for the rain to _both_ the Pacific and Atlantic Oceans.
+You've got a rectangular island between the Pacific and Atlantic Oceans. The island can be mapped as a `m x n` grid (`m` is rows, `n` is columns), and each grid square's height can be represented as an integer. When rain falls on one of the island's grid squares, it flows north, south, east, and west _if_ those adjacent grids have equal or lesser height. Our task is to determine which grid squares have a path for the rain to flow into _both_ the Pacific and Atlantic Oceans.
 
 ### Approach to Problem
 
-There are some key insights that will help us solve this problem. Our intuition—being intimately familiar with the effects of gravity on rainfall—is to look for high peaks and see where things flow from there. But that's not necessary! Because this is a graph problem, and we're really just looking for the intersection of cells that have a less-than-or-equal-to path to the top and left as well as the bottom and right. This means we can "reverse" gravity, and trace a path from our oceans up to the peaks!
+There are some key insights that will help us solve this problem. Our intuition—being intimately familiar with the effects of gravity on rainfall—is to look for high peaks and see where things flow from there. But that's not necessary!
 
-Another insight is to consider that the answer is just the intersection of grid cells that flow into the Atlantic and the cells that flow into the Pacific. So we can follow a cell at a specific Ocean's shore to a peak, and then stop once that peak's neighbors no long increase in height. Doing this for all of the cells adjacent to that ocean gives us an array of cells flowing into just that ocean. We then do the same for the other ocean, and check for overlap.
+What we really want to know is, "Is there a path between this cell and the ocean where each cell between this one and the ocean has a height of equal or lesser value?". Rephrased, we could also ask, "How far from the ocean's shore can I get by only going to neighbor cells with height equal to or greater than my current cell?" This means we can "reverse" gravity, and trace a path from our oceans up to the peaks! This gives us an easier to use starting point, since we know where the shorelines are without needed to traverse anything.
+
+Starting from one ocean's shore, we can create a list of all cells that ultimately drain into that ocean. If we do the same for both oceans, then all we need to do to find our answer is to return the overlap of those two lists!
 
 ### Depth First Search
 
