@@ -21,69 +21,70 @@ Return _a **2D list** of grid coordinates_ `result` _where_ <code>result[i] = [r
 Example 1:
 
 <style>
-  .result-island {
-    background-color: var(--color);
-    color: var(--background-color);
-  }
+	.result-island {
+		background-color: var(--color);
+		color: var(--background-color);
+	}
 
-  .ocean {
-    border: none;
-  }
+	.ocean {
+		border: none;
+		text-align: center;
+	}
 
-  .atlantic {
-    background-color: var(--green-highlight);
-    color: var(--light-color);
-  }
+	.atlantic {
+		background-color: var(--green-highlight);
+		color: var(--light-color);
+	}
 
-  .pacific {
-    background-color: var(--blue-highlight);
-    color: var(--dark-color);
-  }
+	.pacific {
+		background-color: var(--blue-highlight);
+		color: var(--dark-color);
+	}
 </style>
 <table>
-    <tr>
-        <td class="ocean pacific" rowspan="6">&nbsp;</td>
-        <td class="ocean pacific" colspan="7">Pacific Ocean</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>2</td>
-        <td>3</td>
-        <td class="result-island">5</td>
-        <td class="ocean atlantic" rowspan="6">&nbsp;</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>2</td>
-        <td>3</td>
-        <td class="result-island">4</td>
-        <td class="result-island">4</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>4</td>
-        <td class="result-island">5</td>
-        <td>3</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td class="result-island">6</td>
-        <td class="result-island">7</td>
-        <td>1</td>
-        <td>4</td>
-        <td>5</td>
-    </tr>
-    <tr>
-        <td class="result-island">5</td>
-        <td>1</td>
-        <td>1</td>
-        <td>2</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td class="ocean atlantic" colspan="7">Atlantic Ocean</td>
-    </tr>
+	<tr>
+		<td class="ocean pacific" colspan="7">Pacific Ocean</td>
+	</tr>
+	<tr>
+		<td class="ocean pacific" rowspan="5">&nbsp;</td>
+		<td>1</td>
+		<td>2</td>
+		<td>2</td>
+		<td>3</td>
+		<td class="result-island">5</td>
+		<td class="ocean atlantic" rowspan="5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>2</td>
+		<td>3</td>
+		<td class="result-island">4</td>
+		<td class="result-island">4</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>4</td>
+		<td class="result-island">5</td>
+		<td>3</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td class="result-island">6</td>
+		<td class="result-island">7</td>
+		<td>1</td>
+		<td>4</td>
+		<td>5</td>
+	</tr>
+	<tr>
+		<td class="result-island">5</td>
+		<td>1</td>
+		<td>1</td>
+		<td>2</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td class="ocean atlantic" colspan="7">Atlantic Ocean</td>
+	</tr>
 </table>
 
 ```
@@ -220,5 +221,90 @@ function pacificAtlantic(heights: number[][]): number[][] {
 
 ### Breadth First Search
 
+Our breadth first search implementation is very similar to the depth first search. We set everything up the same way (plus initialize a `queue`), and just swap `dfs` for a new `bfs` function. This new function adds the coordinates passed to it to the `queue`, and then loops over the `queue`. If a cell is newly visited, we check for neighbors that 1) exist and 2) are over greater height, and add them to the `queue`.
+
 ```typescript
+function pacificAtlantic(heights: number[][]): number[][] {
+  // Go ahead and return [] early if the island doesn't exist.
+	if (!heights.length) return heights;
+
+	// Initialize a ton of variables. We'll keep track of the
+	// island dimensions (rows and columns), which cells
+	// ultimately drain to each ocean, and an answer array
+	// to consolidate the union of the atlantic and pacific
+	// arrays of cells. The atlantic and pacific arrays of arrays
+	// are initialized to false for each cell. Unlike the dfs
+	// solution, we also initialize an empty queue.
+	const rows = heights.length, columns = heights[0].length,
+		  atlantic: boolean[][] = Array.from({length: rows}, () => {
+			  return Array(columns).fill(false);
+		  }),
+		  pacific: boolean[][] = Array.from({length: rows}, () => {
+			  return Array(columns).fill(false);
+		  }),
+		  queue: number[][] = [],
+		  answer: number[][] = [];
+
+	// For each row, we'll call our bfs function on the zeroth
+	// column for the pacific and the last column of the atlantic.
+	// This will initiate depth first search on the left-most
+	// cells bordering the Pacific Ocean and the right-most cells
+	// bordering the Atlantic Ocean.
+	for (let i = 0; i < rows; i++) {
+		bfs(pacific, i, 0);
+		bfs(atlantic, i, columns - 1);
+	}
+	// Now call bfs on every column in the top row (abuts the
+	// Pacific Ocean) for pacific and every column in the bottom
+	// row (abuts the Atlantic Ocean) for atlantic.
+	for (let i = 0; i < columns; i++) {
+		bfs(pacific, 0, i);
+		bfs(atlantic, rows - 1, i);
+	}
+
+	// Having called bfs on every cell neighboring an ocean,
+	// the bfs function will have finished updating our
+	// answer array with the intersection of pacific and
+	// atlantic. We may now return it.
+	return answer;
+
+	function bfs(visited: boolean[][], row: number, column: number) {
+		// First, whatever row and column gets passed to bfs,
+		// we add it to the queue.
+		queue.push([row, column]);
+
+		// Now that we're sure our queue has some cells in it,
+		// we can start iterating.
+		while (queue.length) {
+			// Pull the first item from the front of the queue.
+			const [r, c] = queue.shift();
+
+			// Unlike in dfs, here we continue rather than return
+			// if we've visited this node. Using return would
+			// prematurely terminate the function, whereas continue
+			// just goes to the next loop iteration. If we haven't
+			// visited this cell, we can now mark it as visited.
+			if (visited[r][c]) continue;
+			visited[r][c] = true;
+
+			// We perform the same checks as we did for dfs, but
+			// instead of recursively calling our function as we
+			// did there, we just push new coordinates to check
+			// into our queue.
+			if (atlantic[r][c] && pacific[r][c]) answer.push([r, c]) ;
+			if (r + 1 < rows && heights[r + 1][c] >= heights[r][c]) {
+				queue.push([r + 1, c]);
+			}
+			if (r - 1 >= 0 && heights[r - 1][c] >= heights[r][c]) {
+				queue.push([r - 1, c]);
+			}
+			if (c + 1 < columns && heights[r][c + 1] >= heights[r][c]) {
+				queue.push([r, c + 1]);
+			}
+			if (c - 1 >= 0 && heights[r][c - 1] >= heights[r][c]) {
+				queue.push([r, c - 1]);
+			}
+		}
+	}
+};
 ```
