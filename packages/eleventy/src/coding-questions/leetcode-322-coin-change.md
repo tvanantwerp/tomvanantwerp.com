@@ -73,7 +73,7 @@ We'll need a more sophisticated algorithm.
 
 One approach is to use a recusive depth-first search with memoization. The memoization is important, because we're sure to repeat a lot of calculations otherwise. (E.g., if one of the coins is `1`, then we're sure to reach many possible solutions where we're calculating a remaining amount of `1` minus a coin of value `1`. No reason doing that more than once!)
 
-Time complexity is $O(n * amount)$, where $n$ is the length of `coins`. Space complexity is $O(amount)$.
+Time complexity is $O(n \times amount)$, where $n$ is the length of `coins`. Space complexity is $O(amount)$.
 
 ```typescript
 const coinChange = (coins: number[], amount: number, memo = new Map()): number => {

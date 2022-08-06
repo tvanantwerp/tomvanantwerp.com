@@ -86,7 +86,7 @@ The time complexity is $O(n * m)$, where $n$ is the `target` and $m$ is the leng
 
 The top-down approach is nearly identical to the bottom-up approach. Here we loop not from `0` through `target - 1`, but instead from `1` through `target`. We don't need to check if `dp[i]` exists here before running the inner loop, because we'll be setting values to `dp[i]` instead of `dp[num + i]`. Next we loop again over `num` of `nums`. If `num <= i` (i.e., there is some value less than `i` and greater than or equal to `0` that, added to `num`, gets us to target of `i`), we'll set `dp[i]` to itself plus the combinations we've observed at `dp[i - num]`. And again, we return `dp[target]`.
 
-Just like with bottom-up, time complexity is $O(n * m)$, where $n$ is the `target` and $m$ is the length of `nums`. Space complexity is $O(n)$.
+Just like with bottom-up, time complexity is $O(n \times m)$, where $n$ is the `target` and $m$ is the length of `nums`. Space complexity is $O(n)$.
 
 ```typescript
 function combinationSum4(nums: number[], target: number): number {
