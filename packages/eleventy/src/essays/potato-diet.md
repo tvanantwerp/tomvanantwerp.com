@@ -250,7 +250,7 @@ I think potato has trouble moving through my bowels. I got cramps, like my body 
 
 Everything came out OK. The experience of pooping was fairly normal. The poop itself was strange, though. It just seemed to start dissolving into the toilet water almost immediately. So I would have the physical sensation of a normal poop, only to turn around and see what looked more like diarrhea.
 
-I'm sure you glad you clicked to read that!
+I'm sure you're glad you clicked to read that!
 </details>
 
 ## Ending the Potato Diet

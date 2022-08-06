@@ -16,7 +16,7 @@ layout: layouts/base.liquid
             {% endif %}
             {% if page.date %}
                 <div class="writing__byline writing__byline--with-splash">
-                    By Tom VanAntwerp on 
+                    By Tom VanAntwerp on
                     <time
                         datetime="{{ page.date | htmlDateString }}"
                         class="writing__date--with-splash"
@@ -34,7 +34,7 @@ layout: layouts/base.liquid
             </div>
         {% endif %}
         {% if page.date %}
-            <div class="writing__byline">By Tom VanAntwerp on 
+            <div class="writing__byline">By Tom VanAntwerp on
                 <time
                     datetime="{{ page.date | htmlDateString }}"
                     class="writing__date"
@@ -47,4 +47,3 @@ layout: layouts/base.liquid
     {{ content }}
 </article>
 
-{% include components/inline-newsletter.liquid %}
