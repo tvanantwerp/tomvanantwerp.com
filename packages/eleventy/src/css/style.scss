@@ -32,17 +32,39 @@
 	--line-height: 1.75;
 	--nav-height: 74px;
 
-	--code-background: #263238;
-	--code-color-01: #546e7a;
-	--code-color-02: #80cbc4;
-	--code-color-03: #89ddff;
-	--code-color-04: #c3cee3;
-	--code-color-05: #c3e88d;
-	--code-color-06: #c792ea;
-	--code-color-07: #f07178;
-	--code-color-08: #f2ff00;
-	--code-color-09: #fd9170;
-	--code-color-10: #f2ff00;
+	--light-code-background: rgb(239, 240, 235);
+	--light-code-color-01: #4a7083;
+	--light-code-color-02: #42a3e0;
+	--light-code-color-03: var(--blue-highlight);
+	--light-code-color-04: #263238;
+	--light-code-color-05: #54d007;
+	--light-code-color-06: #9433d5;
+	--light-code-color-07: #cb2a7b;
+	--light-code-color-08: #14b155;
+	--light-code-color-09: #d53017;
+	--light-code-color-10: #ff7700;
+	--dark-code-background: rgb(33, 30, 28);
+	--dark-code-color-01: #546e7a;
+	--dark-code-color-02: #80cbc4;
+	--dark-code-color-03: #89ddff;
+	--dark-code-color-04: #c3cee3;
+	--dark-code-color-05: #c3e88d;
+	--dark-code-color-06: #c792ea;
+	--dark-code-color-07: #f07178;
+	--dark-code-color-08: #f2ff00;
+	--dark-code-color-09: #fd9170;
+	--dark-code-color-10: #ffcb6b;
+	--code-background: var(--light-code-background);
+	--code-color-01: var(--light-code-color-01);
+	--code-color-02: var(--light-code-color-02);
+	--code-color-03: var(--light-code-color-03);
+	--code-color-04: var(--light-code-color-04);
+	--code-color-05: var(--light-code-color-05);
+	--code-color-06: var(--light-code-color-06);
+	--code-color-07: var(--light-code-color-07);
+	--code-color-08: var(--light-code-color-08);
+	--code-color-09: var(--light-code-color-09);
+	--code-color-10: var(--light-code-color-10);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,6 +74,18 @@
 		--color: var(--dark-color);
 		--color-transparent: var(--dark-color-transparent);
 		--color-highlight: var(--red-highlight);
+
+		--code-background: var(--dark-code-background);
+		--code-color-01: var(--dark-code-color-01);
+		--code-color-02: var(--dark-code-color-02);
+		--code-color-03: var(--dark-code-color-03);
+		--code-color-04: var(--dark-code-color-04);
+		--code-color-05: var(--dark-code-color-05);
+		--code-color-06: var(--dark-code-color-06);
+		--code-color-07: var(--dark-code-color-07);
+		--code-color-08: var(--dark-code-color-08);
+		--code-color-09: var(--dark-code-color-09);
+		--code-color-10: var(--dark-code-color-10);
 	}
 }
 
