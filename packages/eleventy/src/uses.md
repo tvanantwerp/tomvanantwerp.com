@@ -16,7 +16,7 @@ layout: narrow
 - [Keychron K1](https://amzn.to/2NZVLaR) mechanical keyboard, it has rainbow lights and goes clickity-clack!
 - [Logitech MX Vertical Wireless Mouse](https://amzn.to/31rwmdi), a "shark fin" style mouse for when regular mice have worn your wrist out
 - Google Pixel first generation phone
-- [Bose QuietComfort 35](https://amzn.to/3tZ5IEB) noise-cancelling headphones used mainly at my desk
+- [Bose QuietComfort 35](https://amzn.to/3tZ5IEB) noise-cancelling headphones used mainly at my desk, with [Wicked Cushions Purple Speed Racer](https://amzn.to/3SHOMja) ear pads
 - [Sony WF-1000XM3](https://amzn.to/3cv16QO) noise-cancelling earbuds used mainly on the go, with [Comply TrueGrip Pro Memory Foam Tips](https://amzn.to/39n6F1H) to not fall out of my apparently massive earholes
 - [APC BX850M Battery Backup and Surge Protector](https://amzn.to/3cRPB5L) (which uses [RBC17 replacement batteries](https://amzn.to/3q7A1IQ)) to keep my equipment running during power outages
 - [Sakura Pigma 005 pens](https://amzn.to/3tZaaDt), which are great for tiny writers like me who hate to see their letters bleed together
