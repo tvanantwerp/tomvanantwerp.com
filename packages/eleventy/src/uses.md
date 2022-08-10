@@ -47,15 +47,15 @@ layout: narrow
 
 ## Cooking
 
-- Almost anything is easy to cook with minimal mess using a combination of an [air fryer](http://www.tidylife.cc/products/air-fryer-1855a/?tax=af1855a), [pressure cooker](https://amzn.to/31okg4H), and [sous vide](https://amzn.to/3sykTV5) and [12 quart container](https://amzn.to/3sykUID).
+- Almost anything is easy to cook with minimal mess using a combination of an [air fryer](https://amzn.to/3QxKLMn), [pressure cooker](https://amzn.to/31okg4H), and [sous vide](https://amzn.to/3sykTV5) and [12 quart container](https://amzn.to/3sykUID).
 - For an easy way to cook veggies, pour a bag of your preferred frozen veggies into a hot oiled [wok](https://amzn.to/3cyfyrv) for around ten minutes. I add salt, pepper, red pepper flakes, and soy sauce for extra flavor.
 - [Müeller Vacuum Sealer](https://amzn.to/37odgaL) for preparing food for sous vide, or for storage.
-- Some good general accessories: [OXO Tongs](https://amzn.to/3rx1gbm), [Kuhn Rikon soft edge slotted spatula](https://amzn.to/3ddnUnl)
+- Some good general accessories: [OXO Tongs](https://amzn.to/3p6wNFN), [Kuhn Rikon soft edge slotted spatula](https://amzn.to/3JIXGJ8)
 - I'm a weirdo who tracks literally everything I eat to the gram. The [OXO food scale](https://amzn.to/3w189Zr) makes that a lot easier.
 - My current coffee stack:
   - [Swing's Silent Cal decaf](https://amzn.to/3dbPbXp), which is both an excellent decaf and easy to procure as I live close to them.
   - [Capresso electric grinder](https://amzn.to/3flkKR9), because my wife kept complaining what a pain it is to manually grind beans with my [Hario coffee mill](https://amzn.to/3tYFTVm).
-  - [Electric kettle](https://amzn.to/3lZN7W8)
+  - [Electric kettle](https://amzn.to/3BVCfTf)
   - [AeroPress](https://amzn.to/3tZNymf)
   - [Diner-style mug](https://amzn.to/3dc5zXF)
   - In the past I've also used a [Chemex](https://amzn.to/3d9kS3s), but I broke it and haven't replaced it yet.
