@@ -41,4 +41,35 @@ Output: 9
 
 ## My Solution
 
+### Depth First Search
 
+```typescript
+function longestConsecutive(nums: number[]): number {
+	if (nums.length === 0) return 0;
+	const map: Map<number, number> = new Map();
+	nums.forEach(num => map.set(num, 0));
+
+	function dfs(digit: number) {
+		let result = 0;
+		if (map.has(digit + 1) && map.get(digit + 1) === 0) {
+			map.set(digit + 1, 1);
+			result += 1 + dfs(digit + 1);
+		}
+		if (map.has(digit - 1) && map.get(digit - 1) === 0) {
+			map.set(digit - 1, 1);
+			result += 1 + dfs(digit - 1);
+		}
+		return result;
+	}
+
+	let result = 1;
+
+	nums.forEach(num => {
+		if (map.get(num) === 0) {
+			result = Math.max(result, dfs(num));
+		}
+	})
+
+	return result;
+};
+```
