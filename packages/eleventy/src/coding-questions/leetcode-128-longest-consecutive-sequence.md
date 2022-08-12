@@ -43,6 +43,8 @@ Output: 9
 
 ### Depth First Search
 
+An efficient way to solve this problem without iterating over the array `nums` any more times than necessary is to use a depth first search. We will create a `Map` of each digit in `nums`, and use that `Map` to keep track of whether we've evaluated a given digit or not as part of a consecutive sequence. Inside our depth first search, we'll increment a result every time we find a consecutive digit in the `nums` array, as well as add the result of depth first search of that consecutive digit. We'll iterate over each number in `nums` and set a final `result` variable equal to the maximum of itself or the result of a depth first search of itself. This will ultimately give us the longest consecutive sequence.
+
 ```typescript
 function longestConsecutive(nums: number[]): number {
 	// Return early if there are no numbers
@@ -96,3 +98,5 @@ function longestConsecutive(nums: number[]): number {
 	return result;
 };
 ```
+
+This solution has to traverse the array `nums` twice: once to create the `Map`, and once to run the `dfs` function on each number. This gives us time complexity of $O(2n)$, which reduces to just $O(n)$. Space complexity due to our `Map` is $O(n)$.
