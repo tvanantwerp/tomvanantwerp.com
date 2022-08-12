@@ -45,31 +45,54 @@ Output: 9
 
 ```typescript
 function longestConsecutive(nums: number[]): number {
+	// Return early if there are no numbers
 	if (nums.length === 0) return 0;
+
+	// First, we create a Map for each number in nums.
+	// The number will be the key, and the value 0.
 	const map: Map<number, number> = new Map();
 	nums.forEach(num => map.set(num, 0));
 
+	// Here we define our depth first search function.
 	function dfs(digit: number) {
 		let result = 0;
+		// First, check if the next highest number exists
+		// in the map and if it hasn't been traversed yet.
+		// If so, mark it traversed and increment the result
+		// by 1 plus the eventual result of all possible
+		// next consecutive digits.
 		if (map.has(digit + 1) && map.get(digit + 1) === 0) {
 			map.set(digit + 1, 1);
 			result += 1 + dfs(digit + 1);
 		}
+		// Same as above, but going the other way.
 		if (map.has(digit - 1) && map.get(digit - 1) === 0) {
 			map.set(digit - 1, 1);
 			result += 1 + dfs(digit - 1);
 		}
+
+		// By now, result equals the full length of all
+		// consecutive numbers in the chain where the digit
+		// is a member of that chain. All numbers in that
+		// chain are marked as visited, so we won't need
+		// to check them again later.
 		return result;
 	}
 
+	// Initialize our result to 1, since we already
+	// bailed if there are no numbers in nums.
 	let result = 1;
 
+	// For each number in nums, set the result to the
+	// maximum of itself or the result of our depth
+	// first search for that number.
 	nums.forEach(num => {
 		if (map.get(num) === 0) {
 			result = Math.max(result, dfs(num));
 		}
 	})
 
+	// Finally, return our result!
 	return result;
 };
 ```
