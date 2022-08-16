@@ -51,8 +51,9 @@ function longestConsecutive(nums: number[]): number {
 	if (nums.length === 0) return 0;
 
 	// First, we create a Map for each number in nums.
-	// The number will be the key, and the value 0.
-	const map: Map<number, number> = new Map();
+	// The number will be the key, and the value false.
+	// False implies "no, we haven't checked this node".
+	const map: Map<number, boolean> = new Map();
 	nums.forEach(num => map.set(num, 0));
 
 	// Here we define our depth first search function.
@@ -63,13 +64,13 @@ function longestConsecutive(nums: number[]): number {
 		// If so, mark it traversed and increment the result
 		// by 1 plus the eventual result of all possible
 		// next consecutive digits.
-		if (map.has(digit + 1) && map.get(digit + 1) === 0) {
-			map.set(digit + 1, 1);
+		if (map.has(digit + 1) && map.get(digit + 1) === false) {
+			map.set(digit + 1, true);
 			result += 1 + dfs(digit + 1);
 		}
 		// Same as above, but going the other way.
-		if (map.has(digit - 1) && map.get(digit - 1) === 0) {
-			map.set(digit - 1, 1);
+		if (map.has(digit - 1) && map.get(digit - 1) === false) {
+			map.set(digit - 1, true);
 			result += 1 + dfs(digit - 1);
 		}
 
@@ -89,7 +90,7 @@ function longestConsecutive(nums: number[]): number {
 	// maximum of itself or the result of our depth
 	// first search for that number.
 	nums.forEach(num => {
-		if (map.get(num) === 0) {
+		if (map.get(num) === false) {
 			result = Math.max(result, dfs(num));
 		}
 	})
