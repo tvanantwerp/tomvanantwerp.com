@@ -47,9 +47,138 @@ Explanation: The order is invalid, so return "".
 - You may assume all letters are in lowercase.
 - You may assume that if `a` is a prefix of `b`, then `a` must appear before `b` in the given dictionary.
 - If the order is invalid, return an empty string.
-- There may be multiple valid order of letters, return any one of them is fine.
+- There may be multiple valid order of letters, returning any one of them is fine.
 </details>
 
 ## My Solution
 
+To solve this problem, we'll use a topological sort.[^1] A [topological sort](https://en.wikipedia.org/wiki/Topological_sorting) is when we take a directed acyclic graph[^2] and we list out nodes in a valid traversal order.
 
+As stated in the problem conditions:
+
+> There may be multiple valid order of letters, returning any one of them is fine.
+
+This is a clue to us that topological sort is the appropriate approach. Depending on whether we use breadth first or depth first search, and on the initial ordering of inputs, we might get slightly different results—but as long as it is still a _valid_ way to traverse the graph we've got, it won't matter.
+
+### Breadth First Search
+
+First, a breadth first search approach. With BFS, we'll initialize an adjacency list (i.e., a map of characters and the other characters that could come after them) and a count of indegrees. The indegrees of a node are the number of incoming directed edges. So a character that is potentially the first character in our sorted order should have 0 indegrees. If we detect any invalid sorting in the input at this stage, we return early with an empty string.
+
+We initialize a queue with all letters that have 0 indegrees. As we go through our queue, we remove each letter, add it to a result variable, and then decrement the indegrees of its neighboring characters. When a character's indegrees becomes 0, it's now a canditate for being the next in order, and gets added to the queue.
+
+Finally, if our result includes each letter we know about from `words`, then our result is valid and we return it.
+
+```typescript
+function alienDictionary(words: string[]) {
+	const adjacencyList = new Map();
+	// I know there are 26 possible letters, so go ahead
+	// and create 26 spaces in the indegrees array and
+	// initialize them all with 0.
+	const indegrees = Array(26).fill(0);
+
+	// Initialize our adjacency list with empty sets
+	// for each letter we know about.
+	words.forEach(word => {
+		word.split('').forEach(char => {
+			if (!adjacencyList.get(char)) {
+				adjacencyList.set(char, new Set());
+			}
+		})
+	});
+
+	// Fill out our adjacency list and indegrees array
+	// by iterating through pairs of words in the array.
+	for (let i = 0; i < words.length - 1; i++) {
+		// First, set variables for the first and second
+		// word in the array the we'll compare.
+		const word1 = words[i], word2 = words[i + 1];
+		// We set a variable length to the length of the
+		// shorted of the two words, because we can't
+		// compare the nth + 1 letter of the second word
+		// to the nth + 1 letter of the first if the first
+		// is only n characters long.
+		const length = Math.min(word1.length, word2.length);
+
+		// If our first word is longer than the second,
+		// and their characters match for the shared
+		// length, then we've got an invalid input.
+		// Return early with an empty string.
+		if (word1.length > word2.length && word1.slice(0, length) === word2.slice(0, length)) {
+			return '';
+		}
+
+		// Compare letters over the shared length of the two
+		// words we're comparing.
+		for (let j = 0; j < length; j++) {
+			// If the letters are different, we will check if
+			// the adjacency list already knows that the first
+			// letter leads to the second. If not, we add it
+			// and increase that second letter's indegrees.
+			if (word1[j] !== word2[j]) {
+				if (!adjacencyList.get(word1[j]).has(word2[j])) {
+					adjacencyList.get(word1[j]).add(word2[j]);
+					indegrees[indegreesPos(word2[j])] += 1;
+					// Now we break out of the loop, or we risk
+					// adding incorrect information to our data.
+					break;
+				}
+			}
+		}
+	}
+
+	// Initialize a result and a queue
+	let result = '';
+	const queue = [];
+
+	// Add to the queue any character in the adjacency
+	// list which has indegrees of zero, which is to
+	// say, any letter which doesn't have another letter
+	// pointing to it.
+	for (const [char, ] of adjacencyList) {
+		if (indegrees[indegreesPos(char)] === 0) {
+			queue.push(char);
+		}
+	}
+
+	// We now go through the queue...
+	while (queue.length) {
+		// Grab the first character from the front of the
+		// queue and add it to the result.
+		const char = queue.shift();
+		result += char;
+
+		// Iterate through the character's neighbors
+		for (const neighbor of adjacencyList.get(char)) {
+			// Since we've traversed this character, we
+			// decrement the inedegrees of its neighbors.
+			indegrees[indegreesPos(neighbor)] -= 1;
+			// If the neighbor now has indegrees of 0, it
+			// becomes a candidate for being the next
+			// character and gets added to the queue.
+			if (indegrees[indegreesPos(neighbor)] === 0) {
+				queue.push(neighbor);
+			}
+		}
+	}
+
+	// Finally, if our result is the same length as the
+	// adjacency list (i.e., we ordered all of the
+	// characters), then we return it. Otherwise, this
+	// traversal couldn't be done and we return an
+	// empty string.
+	return result.length === adjacencyList.size ? result : '';
+}
+
+// This is a helper function for accessing the correct
+// index in our indegrees array.
+function indegreesPos(char: string) {
+	return char.charCodeAt(0) - 'a'.charCodeAt(0);
+}
+```
+
+### Depth First Search
+
+
+
+[^1]: See [course schedule](/coding-questions/leetcode-207-course-schedule) for another example of topological sort.
+[^2]: A directed acyclic graph has two properties: edges between nodes have a direction, and there is no cycle in the graph allowing you to revisit previously traversed nodes. In this example, consider the regular English alphabet where letters equal nodes. You can go from A to B, B to C, etc. The connections between letters have a _direction_. But also, you _cannot_ go from A to B and back to A. That would by a cycle, which is not allowed in acyclic graphs.
