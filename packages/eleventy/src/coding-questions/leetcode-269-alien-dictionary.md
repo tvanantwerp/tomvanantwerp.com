@@ -83,7 +83,7 @@ function alienDictionary(words: string[]) {
 			if (!adjacencyList.get(char)) {
 				adjacencyList.set(char, new Set());
 			}
-		})
+		});
 	});
 
 	// Fill out our adjacency list and indegrees array
@@ -91,7 +91,8 @@ function alienDictionary(words: string[]) {
 	for (let i = 0; i < words.length - 1; i++) {
 		// First, set variables for the first and second
 		// word in the array the we'll compare.
-		const word1 = words[i], word2 = words[i + 1];
+		const word1 = words[i],
+			word2 = words[i + 1];
 		// We set a variable length to the length of the
 		// shorted of the two words, because we can't
 		// compare the nth + 1 letter of the second word
@@ -103,7 +104,10 @@ function alienDictionary(words: string[]) {
 		// and their characters match for the shared
 		// length, then we've got an invalid input.
 		// Return early with an empty string.
-		if (word1.length > word2.length && word1.slice(0, length) === word2.slice(0, length)) {
+		if (
+			word1.length > word2.length &&
+			word1.slice(0, length) === word2.slice(0, length)
+		) {
 			return '';
 		}
 
@@ -134,7 +138,7 @@ function alienDictionary(words: string[]) {
 	// list which has indegrees of zero, which is to
 	// say, any letter which doesn't have another letter
 	// pointing to it.
-	for (const [char, ] of adjacencyList) {
+	for (const [char] of adjacencyList) {
 		if (indegrees[indegreesPos(char)] === 0) {
 			queue.push(char);
 		}
@@ -184,23 +188,24 @@ So instead, we do our DFS from end to beginning! We could've also just kept the 
 
 ```typescript
 function alienDictionary(words: string[]) {
-  const adjacencyList = new Map<string, Set<string>>();
-  // Initialize our adjacency list with empty sets
+	const adjacencyList = new Map<string, Set<string>>();
+	// Initialize our adjacency list with empty sets
 	// for each letter we know about.
 	words.forEach(word => {
 		word.split('').forEach(char => {
 			if (!adjacencyList.get(char)) {
 				adjacencyList.set(char, new Set());
 			}
-		})
+		});
 	});
 
-	// Fill out our adjacency list and indegrees array
-	// by iterating through pairs of words in the array.
+	// Fill out our adjacency list by iterating through pairs of
+	// words in the array.
 	for (let i = 0; i < words.length - 1; i++) {
 		// First, set variables for the first and second
 		// word in the array the we'll compare.
-		const word1 = words[i], word2 = words[i + 1];
+		const word1 = words[i],
+			word2 = words[i + 1];
 		// We set a variable length to the length of the
 		// shorted of the two words, because we can't
 		// compare the nth + 1 letter of the second word
@@ -212,7 +217,10 @@ function alienDictionary(words: string[]) {
 		// and their characters match for the shared
 		// length, then we've got an invalid input.
 		// Return early with an empty string.
-		if (word1.length > word2.length && word1.slice(0, length) === word2.slice(0, length)) {
+		if (
+			word1.length > word2.length &&
+			word1.slice(0, length) === word2.slice(0, length)
+		) {
 			return '';
 		}
 
@@ -221,9 +229,9 @@ function alienDictionary(words: string[]) {
 		for (let j = 0; j < length; j++) {
 			// If the letters are different, we will check if
 			// the adjacency list already knows that the second
-      // letter has the first as a precedent. If not, we
-      // add the first letter to the lists of letters
-      // leading into the second.
+			// letter has the first as a precedent. If not, we
+			// add the first letter to the lists of letters
+			// leading into the second.
 			if (word1[j] !== word2[j]) {
 				if (!adjacencyList.get(word2[j]).has(word1[j])) {
 					adjacencyList.get(word2[j]).add(word1[j]);
@@ -272,7 +280,7 @@ function alienDictionary(words: string[]) {
 	// Call dfs on every character in the adjacency list. If
 	// dfs returns true at any point, then words is invalid and
 	// we must return an empty string.
-	for (const [char, ] of adjacencyList) {
+	for (const [char] of adjacencyList) {
 		if (dfs(char)) return '';
 	}
 
