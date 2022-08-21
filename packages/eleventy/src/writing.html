@@ -44,7 +44,7 @@ layout: layouts/base.liquid
 	</ul>
 </div>
 <div>
-	<h2 id="ds-and-a" tabindex="-1" class="writing__collection__title">
+	<h2 id="ds-and-a" tabindex="-1">
 		<a class="header-anchor" href="#ds-and-a"
 			><span>Data Structures and Algorithms</span></a
 		>
@@ -55,13 +55,9 @@ layout: layouts/base.liquid
 		a list of problems I've gone through, including an explanation of how I
 		solved each one.
 	</p>
-	<ul class="writing__collection__list writing__collection__list--columns">
-		{% assign posts = collections['Coding Questions'] | sortByTitle %} {% for
-		post in posts %}
-		<li>
-			{% if post.data.emoji %}{{post.data.emoji}}{% endif %}
-			<a href="{{post.url | url }}">{{post.data.title}}</a>
-		</li>
-		{% endfor %}
-	</ul>
+	<p>
+		<a href="/ds-and-a">
+			Go to data structures and algorithms problems and solutions
+		</a>
+	</p>
 </div>
