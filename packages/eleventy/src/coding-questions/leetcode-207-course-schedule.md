@@ -51,7 +51,7 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 ### Breadth First Search Topological Sort
 
-A [topological sort](https://en.wikipedia.org/wiki/Topological_sorting) is to take the nodes of a directed graph and list the out in a valid traversal order. In the context of our problem, that means ordering the classes to be taken in a valid order, such that prerequisites must come before the classes that require them.
+A [topological sort](https://en.wikipedia.org/wiki/Topological_sorting) is to take the nodes of a directed graph and list them out in a valid traversal order. In the context of our problem, that means ordering the classes to be taken in a valid order, such that prerequisites must come before the classes that require them.
 
 To do this, we'll use a breadth first search. To do this, we'll create a graph of all prerequisites and the classes that they enable. Then we'll queue up all courses that have no prerequisites, and start iterating over each of them to see what new courses are enabled by taking them. Any time a new course is enabled by taking all of its prerequisites, it's effectively a zero prerequisite course and can be added to the queue. This is a breadth first search because we're just adding new nodes to the queue to be traverse after other already identified nodes, rather than trying to traverse them immediately for as far as we can.
 
