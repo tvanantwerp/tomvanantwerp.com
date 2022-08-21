@@ -1,5 +1,5 @@
 ---
-title: 35. Search Insert Position
+title: LeetCode 35. Search Insert Position
 description: 
 ---
 

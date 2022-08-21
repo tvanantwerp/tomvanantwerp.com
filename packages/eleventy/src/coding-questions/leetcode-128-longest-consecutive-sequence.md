@@ -1,5 +1,5 @@
 ---
-title: 128. Longest Consecutive Sequence
+title: LeetCode 128. Longest Consecutive Sequence
 description: Given an unsorted array of integers, return the length of the longest consecutive elements sequence in O(n) time.
 ---
 

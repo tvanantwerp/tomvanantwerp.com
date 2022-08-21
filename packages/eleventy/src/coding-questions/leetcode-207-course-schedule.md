@@ -1,5 +1,5 @@
 ---
-title: 207. Course Schedule
+title: LeetCode 207. Course Schedule
 description: Given a number of courses to take and a list of prerequisites, determine if it's possible to take all the courses you need.
 ---
 

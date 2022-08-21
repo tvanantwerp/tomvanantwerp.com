@@ -1,5 +1,5 @@
 ---
-title: 102. Binary Tree Level Order Traversal
+title: LeetCode 102. Binary Tree Level Order Traversal
 description: Given the root of a binary tree, return the level order traversal of its nodes' values.
 ---
 

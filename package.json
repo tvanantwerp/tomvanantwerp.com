@@ -17,7 +17,7 @@
 		"debug": "yarn workspace @tomvanantwerp-com/eleventy debug",
 		"lint": "eslint --fix .",
 		"format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-		"new": "plop"
+		"leetcode": "plop leetcode"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.12.1",

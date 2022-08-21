@@ -1,5 +1,5 @@
 ---
-title: 1143. Longest Common Subsequence
+title: LeetCode 1143. Longest Common Subsequence
 description: Given two strings, return the length of their longest common subsequence.
 ---
 

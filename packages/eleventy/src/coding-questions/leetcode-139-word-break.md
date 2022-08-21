@@ -1,5 +1,5 @@
 ---
-title: 139. Word Break
+title: LeetCode 139. Word Break
 description: Given a string and a dictionary of strings, return true if the string can be segmented into a space-separated sequence of one or more dictionary words.
 ---
 

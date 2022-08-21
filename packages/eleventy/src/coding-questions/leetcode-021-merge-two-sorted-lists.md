@@ -1,5 +1,5 @@
 ---
-title: 21. Merge Two Sorted Lists
+title: LeetCode 21. Merge Two Sorted Lists
 description: You are given the heads of two sorted linked lists. Merge the two lists in a one sorted list.
 ---
 

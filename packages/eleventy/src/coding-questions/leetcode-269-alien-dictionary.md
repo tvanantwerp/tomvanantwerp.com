@@ -1,5 +1,5 @@
 ---
-title: 269. Alien Dictionary
+title: LeetCode 269. Alien Dictionary
 description: You are given a list of words from an alien language's dictionary, and you must return a string of unique letters in the alien language sorted lexicographically.
 ---
 

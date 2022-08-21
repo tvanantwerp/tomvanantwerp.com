@@ -1,5 +1,5 @@
 ---
-title: 8. String to Interger (atoi)
+title: LeetCode 8. String to Interger (atoi)
 description: Implement `atoi` which converts a string to an integer.
 ---
 

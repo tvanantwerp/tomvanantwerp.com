@@ -1,5 +1,5 @@
 ---
-title: 206. Reverse Linked List
+title: LeetCode 206. Reverse Linked List
 description: Reverse a singly linked list.
 ---
 
