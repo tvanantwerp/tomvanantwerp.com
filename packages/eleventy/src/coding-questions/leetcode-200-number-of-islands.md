@@ -1,5 +1,5 @@
 ---
-title: 200. Number of Islands
+title: LeetCode 200. Number of Islands
 description: Given a 2D binary grid which represents a map of land and water, return the number of islands.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 213. House Robber II
+title: LeetCode 213. House Robber II
 description: Given an integer array representing the amount of money of each house, return the maximum amount of money you can rob tonight from a circle of houses without alerting the police by robbing adjacent houses.
 ---
 

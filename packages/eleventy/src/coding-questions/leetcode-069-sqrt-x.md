@@ -1,5 +1,5 @@
 ---
-title: 69. Sqrt(x)
+title: LeetCode 69. Sqrt(x)
 description: Given a non-negative integer, compute and return the square root.
 ---
 

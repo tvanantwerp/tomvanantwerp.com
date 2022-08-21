@@ -1,5 +1,5 @@
 ---
-title: 322. Coin Change
+title: LeetCode 322. Coin Change
 description: You are given coins of different denominations and a total amount of money. Return the fewest number of coins that you need to make up that amount.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 217. Contains Duplicate
+title: LeetCode 217. Contains Duplicate
 description: Given an integer array, return true if any value appears at least twice in the array, and return false if every element is distinct.
 ---
 

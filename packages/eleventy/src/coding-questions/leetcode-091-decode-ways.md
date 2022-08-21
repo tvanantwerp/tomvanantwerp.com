@@ -1,5 +1,5 @@
 ---
-title: 91. Decode Ways
+title: LeetCode 91. Decode Ways
 description: Given a string containing only digits, return the number of ways to decode it to letters of the alphabet where 1 = A, 2 = B, etc.
 ---
 
