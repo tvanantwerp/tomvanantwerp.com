@@ -5,7 +5,7 @@ description: Given an integer, return an array of the number of 1 bits in each d
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/counting-bits/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/counting-bits/)
 
 Given an integer `n`, return _an array `ans` of length `n + 1` such that for each `i` (`0 <= i <= n`), `ans[i]` is **the number of `1`'s** in the binary representation of `i`_.
 

@@ -5,7 +5,7 @@ description: Given a number of courses to take and a list of prerequisites, dete
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/course-schedule/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/course-schedule/)
 
 There are a total of `numCourses` courses you have to take, labeled from `0` to `numCourses - 1`. You are given an array `prerequisites` where <code>prerequisites[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that you must take course <code>b<sub>i</sub></code> first if you want to take course <code>a<sub>i</sub></code>.
 

@@ -5,7 +5,7 @@ description: Given two integers a and b, return the sum of the two integers with
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/sum-of-two-integers/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/sum-of-two-integers/)
 
 Given two integers `a` and `b`, return _the sum of the two integers without using the operators_ `+` _and_ `-`.
 

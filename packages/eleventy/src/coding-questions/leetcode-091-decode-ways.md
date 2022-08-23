@@ -5,7 +5,7 @@ description: Given a string containing only digits, return the number of ways to
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/decode-ways/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/decode-ways/)
 
 A message containing letters from `A-Z` can be **encoded** into numbers using the following mapping:
 

@@ -5,7 +5,7 @@ description: You are given the heads of two sorted linked lists. Merge the two l
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/merge-two-sorted-lists/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 You are given the heads of two sorted linked lists `list1` and `list2`.
 

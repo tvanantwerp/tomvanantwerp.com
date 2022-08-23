@@ -5,7 +5,7 @@ description: You are climbing a staircase with a certain number of steps. With e
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/climbing-stairs/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/climbing-stairs/)
 
 You are climbing a staircase. It takes `n` steps to reach the top.
 

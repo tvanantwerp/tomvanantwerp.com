@@ -5,7 +5,7 @@ description: Write a function that takes an unsigned integer and returns the num
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/number-of-1-bits/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/number-of-1-bits/)
 
 Write a function that takes an unsigned integer and returns the number of `1` bits it has (also known as the [Hamming weight](http://en.wikipedia.org/wiki/Hamming_weight)).
 

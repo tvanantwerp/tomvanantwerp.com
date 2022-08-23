@@ -5,7 +5,7 @@ description: Given an array of integers and a target sum, return indices of two 
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/two-sum/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/two-sum/)
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
 

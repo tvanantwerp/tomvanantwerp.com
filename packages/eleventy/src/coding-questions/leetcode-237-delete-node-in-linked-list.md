@@ -5,7 +5,7 @@ description: Write a function to delete a node in a singly-linked list. You will
 
 ## The Problem
 
-[Link to original problem on Leetcode](https://leetcode.com/problems/delete-node-in-a-linked-list/)
+[Link to original problem on LeetCode](https://leetcode.com/problems/delete-node-in-a-linked-list/)
 
 Write a function to delete a node in a singly-linked list. You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
 

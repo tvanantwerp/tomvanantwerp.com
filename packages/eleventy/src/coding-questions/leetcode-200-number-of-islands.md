@@ -5,7 +5,7 @@ description: Given a 2D binary grid which represents a map of land and water, re
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/number-of-islands/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/number-of-islands/)
 
 Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return _the number of islands_.
 

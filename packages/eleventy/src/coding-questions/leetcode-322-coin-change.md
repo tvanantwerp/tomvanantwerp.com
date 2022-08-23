@@ -5,7 +5,7 @@ description: You are given coins of different denominations and a total amount o
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/coin-change/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/coin-change/)
 
 You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a total amount of money.
 

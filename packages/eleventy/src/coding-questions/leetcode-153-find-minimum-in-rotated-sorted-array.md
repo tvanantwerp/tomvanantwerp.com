@@ -5,7 +5,7 @@ description: Given a sorted rotated array of unique elements, return the minimum
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 Suppose an array of length `n` sorted in ascending order is **rotated** between `1` and `n` times. For example, the array `nums = [0,1,2,4,5,6,7] `might become:
 
@@ -58,7 +58,7 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 ## My Solution
 
-The naïve solution would be `return Math.min(...nums)`. This is $O(n)$ time, because it has to check every value in the `nums` array. We can instead use a modified binary search to get down to $O(\log n)$ time. Leetcode has [a more detailed explanation](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/) with the problem on their site.
+The naïve solution would be `return Math.min(...nums)`. This is $O(n)$ time, because it has to check every value in the `nums` array. We can instead use a modified binary search to get down to $O(\log n)$ time. LeetCode has [a more detailed explanation](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/) with the problem on their site.
 
 This first example uses recursion.
 

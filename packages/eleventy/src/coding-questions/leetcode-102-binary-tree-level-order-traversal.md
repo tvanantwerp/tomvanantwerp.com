@@ -5,7 +5,7 @@ description: Given the root of a binary tree, return the level order traversal o
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
 Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
 

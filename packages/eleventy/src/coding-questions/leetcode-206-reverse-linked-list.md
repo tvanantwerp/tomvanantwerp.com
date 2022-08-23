@@ -5,7 +5,7 @@ description: Reverse a singly linked list.
 
 ## The Problem
 
-[Link to original problem on Leetcode](https://leetcode.com/problems/reverse-linked-list/)
+[Link to original problem on LeetCode](https://leetcode.com/problems/reverse-linked-list/)
 
 Reverse a singly linked list.
 

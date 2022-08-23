@@ -1,6 +1,7 @@
 .nav {
 	&__header {
 		background-color: var(--background-color-transparent);
+		grid-area: 'nav';
 		padding: 1rem 0;
 	}
 

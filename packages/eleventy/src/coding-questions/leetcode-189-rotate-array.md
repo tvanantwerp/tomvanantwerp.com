@@ -5,7 +5,7 @@ description: Given an array, rotate the array to the right by k steps, where k i
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/rotate-array/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/rotate-array/)
 
 Given an array, rotate the array to the right by `k` steps, where `k` is non-negative.
 
@@ -80,9 +80,9 @@ const rotate = (nums, k) => {
 
 JavaScript's `splice` function can be a little weird, but useful once you know how it works. Here we greatly speed up the array shifting by lopping off from the end of the `nums` array and inserting it to the front.
 
-I think it would've been cleaner to `splice` off the end, then `push` the remaining `nums` to the end of that splice—but, despite `console.log(nums)` reading correctly after doing this, Leetcode's solution checker didn't like that.
+I think it would've been cleaner to `splice` off the end, then `push` the remaining `nums` to the end of that splice—but, despite `console.log(nums)` reading correctly after doing this, LeetCode's solution checker didn't like that.
 
-I'm sure the fact that I didn't write some elaborate algorithm to do this is a violation of the spirit of Leetcode. Time complexity should be $O(n)$.
+I'm sure the fact that I didn't write some elaborate algorithm to do this is a violation of the spirit of LeetCode. Time complexity should be $O(n)$.
 
 ```javascript
 const rotate = (nums, k) => {

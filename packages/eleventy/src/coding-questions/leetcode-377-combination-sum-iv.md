@@ -5,7 +5,7 @@ description: Given an array of distinct integers and a target integer, return th
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/combination-sum-iv/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/combination-sum-iv/)
 
 Given an array of **distinct** integers `nums` and a target integer `target`, return the _number of possible combinations that add up to_ `target`.
 

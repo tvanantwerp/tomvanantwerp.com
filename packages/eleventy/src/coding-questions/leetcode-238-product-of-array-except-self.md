@@ -5,7 +5,7 @@ description: Given an integer array nums, return an array answer such that answe
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/product-of-array-except-self/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/product-of-array-except-self/)
 
 Given an integer array `nums`, return an _array_ `answer` such that `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
 
@@ -61,7 +61,7 @@ const productExceptSelf = (nums) => {
 const product = nums => nums.reduce((prev, curr) => prev * curr, 1)
 ```
 
-This is correct, but it is much too slow—it has $O(n{^2})$ time complexity. Leetcode will time out if you try this.
+This is correct, but it is much too slow—it has $O(n{^2})$ time complexity. LeetCode will time out if you try this.
 
 ### Better Solution
 

@@ -5,7 +5,7 @@ description: You are given an integer array. You are initially positioned at the
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/jump-game/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/jump-game/)
 
 You are given an integer array `nums`. You are initially positioned at the array's **first index**, and each element in the array represents your maximum jump length at that position.
 

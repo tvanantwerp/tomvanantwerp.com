@@ -5,7 +5,7 @@ description: Design a stack-like data structure to push elements to the stack an
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/maximum-frequency-stack/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/maximum-frequency-stack/)
 
 Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 

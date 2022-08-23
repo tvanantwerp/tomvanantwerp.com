@@ -7,7 +7,7 @@ tags:
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/maximum-product-subarray/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/maximum-product-subarray/)
 
 Given an integer array `nums`, find a contiguous non-empty subarray within the array that has the largest product, and return _the product_.
 
