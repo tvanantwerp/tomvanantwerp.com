@@ -33,6 +33,10 @@ Output: false.
 
 ### Depth First Search
 
+In our depth first search solution, we'll start by creating an adjacency list of each node's neighbors. Then we'll recursively traverse the graph, keeping track of nodes we've visited before. If we re-encounter a node, we've got a cycle and it's not a valid tree. Otherwise, if no cycles are detected, we compare the length of the set of visited nodes to the total number of nodes to make sure there aren't any unconnected nodes—that would also make an invalid tree. If we managed to traverse each node just once, then it's a valid tree!
+
+Time and space complexity are $O(V + E)$, where $V$ is the count of nodes (vertices), and $E$ is the count of edges.
+
 ```typescript
 function validTree(n: number, edges: [number, number][]) {
   // If there are no nodes, go ahead and return true.
