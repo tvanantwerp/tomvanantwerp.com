@@ -11,8 +11,6 @@ You have a graph of `n` nodes labeled from `0` to `n - 1`. You are given an inte
 
 Return `true` _if the edges of the given graph make up a valid tree, and_ `false` _otherwise_.
 
-**Note**: You can assume that no duplicate edges will appear in `edges`. Since all edges are undirected, `[0, 1]` is the same as `[1, 0]` and thus will not appear together in `edges`.
-
 <details>
 <summary>Examples</summary>
 
@@ -31,6 +29,17 @@ Output: false.
 ```
 </details>
 
+<details>
+<summary>Constraints</summary>
+
+- `1 <= 2000 <= n`
+- `0 <= edges.length <= 5000`
+- `edges[i].length == 2`
+- <code>0 <= a<sub>i</sub>, b<sub>i</sub> < n</code>
+- <code>a<sub>i</sub> != b<sub>i</sub></code>
+- There are no self-loops or repeated edges.
+</details>
+
 ## My Solution
 
 ### Depth First Search
@@ -41,56 +50,60 @@ Time and space complexity are $O(V + E)$, where $V$ is the count of nodes (verti
 
 ```typescript
 function validTree(n: number, edges: [number, number][]) {
-  // If there are no nodes, go ahead and return true.
-  // A tree with 0 nodes is technically a valid tree.
-  if (n === 0) return true;
+	// If there are no nodes, go ahead and return true.
+	// A tree with 0 nodes is technically a valid tree.
+	if (n === 0) return true;
 
-  // First, create an adjacency list of each node's neighbors.
-  // Let's initialize it with an empty set for each node.
-  const adjacencyList = new Map<number, Set<number>>(
-    Array.from({ length: n }, (v, i) => [i, new Set<number>()]),
-  );
-  // Because this graph is undirected, you need to add the
-  // neighbors to both sides of the edge.
-  edges.forEach(([v1, v2]) => {
-    adjacencyList.get(v1)!.add(v2);
-    adjacencyList.get(v2)!.add(v1);
-  });
+	// A valid tree will always have n nodes and n - 1 edges.
+	// If that's not true, return false.
+	if (n - 1 !== edges.length) return false;
 
-  // Now we'll implement our depth first search.
-  // First, initialize a set to track nodes we've visited.
-  const visited = new Set<number>();
+	// First, create an adjacency list of each node's neighbors.
+	// Let's initialize it with an empty set for each node.
+	const adjacencyList = new Map<number, Set<number>>(
+		Array.from({ length: n }, (v, i) => [i, new Set<number>()]),
+	);
+	// Because this graph is undirected, you need to add the
+	// neighbors to both sides of the edge.
+	edges.forEach(([v1, v2]) => {
+		adjacencyList.get(v1)!.add(v2);
+		adjacencyList.get(v2)!.add(v1);
+	});
 
-  // Now we create our depth first search function.
-  // We'll set the previous arg to default to -1,
-  // since the lowest numbered node we will receive
-  // is zero.
-  function dfs(node: number, previous = -1) {
-    // If we've seen this node before, we're in a loop!
-    if (visited.has(node)) return false;
+	// Now we'll implement our depth first search.
+	// First, initialize a set to track nodes we've visited.
+	const visited = new Set<number>();
 
-    // Otherwise, mark this node visited.
-    visited.add(node);
-    // Now, recursively call dfs on this node's neighbors.
-    for (const neighbor of adjacencyList.get(node)!) {
-      // Important! The last node we just came from is
-      // still a neighbor of this node, because the graph
-      // is undirected. So we continue if the neighbor is
-      // the same as the previous now.
-      if (neighbor === previous) continue;
-      // Otherwise, if our recursive call returned false,
-      // we should return false from this call too.
-      if (!dfs(neighbor, node)) return false;
-    }
+	// Now we create our depth first search function.
+	// We'll set the previous arg to default to -1,
+	// since the lowest numbered node we will receive
+	// is zero.
+	function dfs(node: number, previous = -1) {
+		// If we've seen this node before, we're in a loop!
+		if (visited.has(node)) return false;
 
-    // If nothing went wrong, return true.
-    return true;
-  }
+		// Otherwise, mark this node visited.
+		visited.add(node);
+		// Now, recursively call dfs on this node's neighbors.
+		for (const neighbor of adjacencyList.get(node)!) {
+			// Important! The last node we just came from is
+			// still a neighbor of this node, because the graph
+			// is undirected. So we continue if the neighbor is
+			// the same as the previous now.
+			if (neighbor === previous) continue;
+			// Otherwise, if our recursive call returned false,
+			// we should return false from this call too.
+			if (!dfs(neighbor, node)) return false;
+		}
 
-  // Finally, return a call to the starting node of our
-  // graph and a check to make sure we visited all of
-  // the nodes—an unconnected node would be an invalid
-  // tree.
-  return dfs(0) && visited.size === n;
+		// If nothing went wrong, return true.
+		return true;
+	}
+
+	// Finally, return a call to the starting node of our
+	// graph and a check to make sure we visited all of
+	// the nodes—an unconnected node would be an invalid
+	// tree.
+	return dfs(0) && visited.size === n;
 }
 ```
