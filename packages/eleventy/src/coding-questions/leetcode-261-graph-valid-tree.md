@@ -7,7 +7,9 @@ description: Write a function to check whether a list of node edges make up a va
 
 [Link to original problem on LeetCode.](https://leetcode.com/problems/graph-valid-tree/)
 
-Given `n` nodes labeled from `0` to `n - 1` and a list of undirected `edges` (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+You have a graph of `n` nodes labeled from `0` to `n - 1`. You are given an integer `n` and a list of `edges` where <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is an undirected edge between nodes <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> in the graph.
+
+Return `true` _if the edges of the given graph make up a valid tree, and_ `false` _otherwise_.
 
 **Note**: You can assume that no duplicate edges will appear in `edges`. Since all edges are undirected, `[0, 1]` is the same as `[1, 0]` and thus will not appear together in `edges`.
 
