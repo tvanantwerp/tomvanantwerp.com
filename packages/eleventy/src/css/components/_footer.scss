@@ -2,7 +2,8 @@
 	background-color: var(--background-color);
 	color: var(--gray);
 	font-size: 0.75rem;
-	
+	grid-area: 'footer';
+
 	&__content {
 		display: grid;
 		grid-template: auto / 1fr auto;
