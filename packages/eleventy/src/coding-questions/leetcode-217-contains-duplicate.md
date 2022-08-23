@@ -5,7 +5,7 @@ description: Given an integer array, return true if any value appears at least t
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/contains-duplicate/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/contains-duplicate/)
 
 Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.
 

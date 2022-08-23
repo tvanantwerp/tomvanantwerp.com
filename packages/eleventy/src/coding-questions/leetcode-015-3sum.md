@@ -5,7 +5,7 @@ description: Given an integer array, return all the triplets [nums[i], nums[j], 
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/3sum/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/3sum/)
 
 Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.
 

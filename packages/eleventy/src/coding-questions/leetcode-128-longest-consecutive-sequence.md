@@ -5,7 +5,7 @@ description: Given an unsorted array of integers, return the length of the longe
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/longest-consecutive-sequence/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 Given an unsorted array of integers `nums`, return _the length of the longest consecutive elements sequence_.
 

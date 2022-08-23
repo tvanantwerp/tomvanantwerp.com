@@ -5,7 +5,7 @@ description: Given a binary tree, find its maximum depth. The maximum depth is t
 
 ## The Problem
 
-[Link to original problem on Leetcode](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+[Link to original problem on LeetCode](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
 Given a binary tree, find its maximum depth.
 

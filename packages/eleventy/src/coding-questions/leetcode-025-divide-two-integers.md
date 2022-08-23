@@ -5,7 +5,7 @@ description: Given two integers dividend and divisor, divide two integers withou
 
 ## The Problem
 
-[Link to original problem on Leetcode](https://leetcode.com/problems/divide-two-integers/)
+[Link to original problem on LeetCode](https://leetcode.com/problems/divide-two-integers/)
 
 Given two integers `dividend` and `divisor`, divide two integers without using multiplication, division, and mod operator.
 

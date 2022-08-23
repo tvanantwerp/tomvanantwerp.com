@@ -5,7 +5,7 @@ description: Given an array, return the first character to occur twice. Else, re
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://repl.it/@aneagoie/firstRecurringCharacter-exercise)
+[Link to original problem on LeetCode.](https://repl.it/@aneagoie/firstRecurringCharacter-exercise)
 
 Given an array, return the first character to occur twice. Else, return undefined.
 

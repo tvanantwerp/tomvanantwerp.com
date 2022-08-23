@@ -7,7 +7,7 @@ tags:
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/maximum-subarray/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/maximum-subarray/)
 
 Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return *its sum*.
 
@@ -92,7 +92,7 @@ const maxSubArray = (nums) => {
 };
 ```
 
-This code passed Leetcode's example test cases, but times out when submitted. No surprises there!
+This code passed LeetCode's example test cases, but times out when submitted. No surprises there!
 
 It can be improved to $O(n{^2})$ time by noticing that we don't need to compute each piece of each subarry. For example, with an array `[2, 5, -3, 4]`, I would start with `2`, `2+5`, then `2+5-3`, then `2+5-3+4` for the first loop of `i`. See how I recompute every value every time? Instead, I could do it as `2`, `2+5`, `7-3`, `4+4`. Here's what that would look like:
 

@@ -5,7 +5,7 @@ description: Given a non-negative integer, compute and return the square root.
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/sqrtx/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/sqrtx/)
 
 Given a non-negative integer `x`, compute and return the square root of `x`.
 

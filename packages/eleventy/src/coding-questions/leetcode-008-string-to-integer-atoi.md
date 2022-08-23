@@ -5,7 +5,7 @@ description: Implement `atoi` which converts a string to an integer.
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/string-to-integer-atoi/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/string-to-integer-atoi/)
 
 Implement `atoi` which converts a string to an integer.
 

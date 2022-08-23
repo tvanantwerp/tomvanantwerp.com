@@ -5,7 +5,7 @@ description: Given a reference of a node in a connected undirected graph, return
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/clone-graph/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/clone-graph/)
 
 Given a reference of a node in a **connected** undirected graph.
 

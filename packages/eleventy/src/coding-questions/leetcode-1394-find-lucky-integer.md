@@ -5,7 +5,7 @@ description: Given an array of integers arr, a lucky integer is an integer which
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/find-lucky-integer-in-an-array/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/find-lucky-integer-in-an-array/)
 
 Given an array of integers `arr`, a lucky integer is an integer which has a frequency in the array equal to its value.
 

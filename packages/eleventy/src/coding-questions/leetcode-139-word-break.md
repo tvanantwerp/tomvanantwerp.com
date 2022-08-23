@@ -5,7 +5,7 @@ description: Given a string and a dictionary of strings, return true if the stri
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/word-break/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/word-break/)
 
 Given a string `s` and a dictionary of strings `wordDict`, return `true` if s can be segmented into a space-separated sequence of one or more dictionary words.
 

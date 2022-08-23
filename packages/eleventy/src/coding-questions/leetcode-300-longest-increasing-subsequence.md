@@ -5,7 +5,7 @@ description: Given an integer array, return the length of the longest strictly i
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/longest-increasing-subsequence/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 Given an integer array `nums`, return the length of the longest strictly increasing subsequence.
 

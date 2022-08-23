@@ -5,7 +5,7 @@ description: Given a non-empty array of integers, every element appears twice ex
 
 ## The Problem
 
-[Link to original problem on Leetcode](https://leetcode.com/problems/single-number/)
+[Link to original problem on LeetCode](https://leetcode.com/problems/single-number/)
 
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 

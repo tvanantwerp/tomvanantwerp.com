@@ -5,7 +5,7 @@ description: Given two strings, return the length of their longest common subseq
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/longest-common-subsequence/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/longest-common-subsequence/)
 
 Given two strings `text1` and `text2`, return _the length of their longest **common subsequence**_. If there is no common subsequence, return 0.
 

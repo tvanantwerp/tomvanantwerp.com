@@ -5,7 +5,7 @@ description:
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/container-with-most-water/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/container-with-most-water/)
 
 You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `i`<sup>th</sup> line are `(i, 0)` and `(i, height[i])`.
 

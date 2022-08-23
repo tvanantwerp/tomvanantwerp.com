@@ -5,7 +5,7 @@ description: You are given a list of words from an alien language's dictionary, 
 
 ## The Problem
 
-[Link to original problem on Leetcode.](https://leetcode.com/problems/alien-dictionary/)
+[Link to original problem on LeetCode.](https://leetcode.com/problems/alien-dictionary/)
 
 There is a new alien language that uses the English alphabet. However, the order among the letters is unknown to you.
 
