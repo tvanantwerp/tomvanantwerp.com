@@ -112,13 +112,18 @@ function validTree(n: number, edges: [number, number][]) {
 
 Another approach to solving this problem is to use union and find operations. This approach will use our list of edges to attempt to create a unified tree from all of our individual nodes. To do this, it finds the ultimate root nodes for a given edge's vertices. In a valid tree, each edge we pass to the union function should result in joining to separate graphs. If they already share a root, then we know we're in a cycle and the tree is invalid. We do this for each edge—if we get all the way through without detecting a cycle, then we still need to make sure we've created one single graph. If so, we can return true.
 
-The advantage of the union-find approach is that we can amortize time complexity. We use a technique called path compression to set the immediate parent of each node equal to the ultimate parent. This means that the first time we look up the ultimate parent of a node, it takes $O(n)$ time; but on subsequent look-ups, it only costs $O(1)$. Using path compression gets us time complexity of $O(n lg* n)$, which is better than $O(n log n)$. Space complexity is only $O(n)$ for the number of nodes.
+The advantage of the union-find approach is that we can amortize time complexity. We use a technique called path compression to set the immediate parent of each node equal to the ultimate parent. This means that the first time we look up the ultimate parent of a node, it takes $O(n)$ time; but on subsequent look-ups, it only costs $O(1)$. Using path compression gets us time complexity of $O(n\:lg\text{*}\:n)$, which is better than $O(n \log n)$. Space complexity is only $O(n)$ for the number of nodes.
 
 ```typescript
 function validTree(n: number, edges: [number, number][]) {
 	// If there are no nodes, go ahead and return true.
 	// A tree with 0 nodes is technically a valid tree.
 	if (n === 0) return true;
+	// A tree is a graph with n nodes and n - 1 edges.
+	// If this doesn't hold true, we know already that
+	// this isn't a valid tree and we can return false.
+	// This saves us the trouble of keeping a count of
+	// separate components, too.
 	if (n - 1 !== edges.length) return false;
 
 	// We initialize a parents and size array to use with
@@ -127,11 +132,8 @@ function validTree(n: number, edges: [number, number][]) {
 	// The size array is used to decide how to unify two trees,
 	// such that we minimize the number of modifications needed
 	// to compress the paths.
-	// We also initialize a variable to keep track of how many
-	// separate trees we've got so far.
 	const parents = Array.from({ length: n }, (_, i) => i);
 	const size = Array(n).fill(1);
-	let numberOfSets = n;
 
 	// The find function will help us find a node's ultimate
 	// parent. We return parents[node] only if it equals the
@@ -164,8 +166,7 @@ function validTree(n: number, edges: [number, number][]) {
 
 		// If these roots differ, we'll unify the trees.
 		// The root of the smaller tree will now point
-		// to the larger tree. Decrement the number of
-		// different sets of trees.
+		// to the larger tree.
 		if (root1 !== root2) {
 			if (size[root1] > size[root2]) {
 				parents[root2] = root1;
@@ -174,7 +175,6 @@ function validTree(n: number, edges: [number, number][]) {
 				parents[root1] = root2;
 				size[root2] += size[root1];
 			}
-			numberOfSets--;
 			return true;
 		}
 
@@ -190,6 +190,6 @@ function validTree(n: number, edges: [number, number][]) {
 		if (!union(edge1, edge2)) return false;
 	}
 
-	// If we're down to a single tree, then we know it's valid.
-	return numberOfSets === 1;
+	// If we found no cycles, then we know it's valid.
+	return true;
 ```
