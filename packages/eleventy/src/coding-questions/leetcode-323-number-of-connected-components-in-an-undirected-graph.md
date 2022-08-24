@@ -46,7 +46,7 @@ Output: 1
 
 A very efficient way to count the connected components is using a union find approach. Our `union` function is called on each of our list of edges to join the nodes together into connected components. This function works by first finding the root of each of the two vertices in the edge, and then setting one of those roots to be a child of the other. Each time we do this, we decrement a count of components that we initialize to equal the number of nodes `n`. Once we've joined all nodes we can with `union`, we return the final `numberOfComponents`
 
-Our `find` function figures out what the ultimate root of a node is, and then compresses the path by setting the ultimate root to be the direct parent of the node in question. This amortizes time complexity, from $O(n)$ on the first lookup to $O(1)$ on subsequent look-ups. Final time complexity is $O(n lg* n)$ and space complexity is `O(n)`.
+Our `find` function figures out what the ultimate root of a node is, and then compresses the path by setting the ultimate root to be the direct parent of the node in question. This amortizes time complexity, from $O(n)$ on the first lookup to $O(1)$ on subsequent look-ups. Final time complexity is $O(n\:lg\text{*}\:n)$ and space complexity is `O(n)`.
 
 ```typescript
 function countComponents(n: number, edges: [number, number][]) {

@@ -112,7 +112,7 @@ function validTree(n: number, edges: [number, number][]) {
 
 Another approach to solving this problem is to use union and find operations. This approach will use our list of edges to attempt to create a unified tree from all of our individual nodes. To do this, it finds the ultimate root nodes for a given edge's vertices. In a valid tree, each edge we pass to the union function should result in joining to separate graphs. If they already share a root, then we know we're in a cycle and the tree is invalid. We do this for each edge—if we get all the way through without detecting a cycle, then we still need to make sure we've created one single graph. If so, we can return true.
 
-The advantage of the union-find approach is that we can amortize time complexity. We use a technique called path compression to set the immediate parent of each node equal to the ultimate parent. This means that the first time we look up the ultimate parent of a node, it takes $O(n)$ time; but on subsequent look-ups, it only costs $O(1)$. Using path compression gets us time complexity of $O(n lg* n)$, which is better than $O(n log n)$. Space complexity is only $O(n)$ for the number of nodes.
+The advantage of the union-find approach is that we can amortize time complexity. We use a technique called path compression to set the immediate parent of each node equal to the ultimate parent. This means that the first time we look up the ultimate parent of a node, it takes $O(n)$ time; but on subsequent look-ups, it only costs $O(1)$. Using path compression gets us time complexity of $O(n\:lg\text{*}\:n)$, which is better than $O(n \log n)$. Space complexity is only $O(n)$ for the number of nodes.
 
 ```typescript
 function validTree(n: number, edges: [number, number][]) {
