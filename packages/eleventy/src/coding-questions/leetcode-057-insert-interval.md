@@ -30,11 +30,11 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 Output: [[1,2],[3,10],[12,16]]
 Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - <code>0 <= intervals.length <= 10<sup>4</sup></code>
 - `intervals[i].length == 2`
@@ -59,36 +59,36 @@ Time and space complexity are both $O(n)$.
 
 ```typescript
 function insert(
-  intervals: [number, number][],
-  newInterval: [number, number],
+	intervals: [number, number][],
+	newInterval: [number, number],
 ): [number, number][] {
-  // Initialize a merged interval using the newInterval.
-  const mergedInterval: [number, number] = newInterval;
-  const result: [number, number][] = [];
+	// Initialize a merged interval using the newInterval.
+	const mergedInterval: [number, number] = newInterval;
+	const result: [number, number][] = [];
 
-  for (let i = 0; i < intervals.length; i++) {
-    if (intervals[i][1] < mergedInterval[0]) {
-      // If the current interval ends before the new interval,
-      // we can safely add it to the result.
-      result.push(intervals[i]);
-    } else if (mergedInterval[1] < intervals[i][0]) {
-      // If the new/merged interval ended before this one
-      // begins, we can safely return the combination of the
-      // result so far, mergedInterval, and the remainder of
-      // the intervals.
-      result.push(mergedInterval, ...intervals.slice(i));
-      return result;
-    } else {
-      // Otherwise, time to merge. Update in place the start
-      // and end times of the mergedInterval variable to be the
-      // minimum and maximum of what they currently are versus
-      // this interval respectively.
-      mergedInterval[0] = Math.min(intervals[i][0], mergedInterval[0]);
-      mergedInterval[1] = Math.max(intervals[i][1], mergedInterval[1]);
-    }
-  }
-  result.push(mergedInterval);
+	for (let i = 0; i < intervals.length; i++) {
+		if (intervals[i][1] < mergedInterval[0]) {
+			// If the current interval ends before the new interval,
+			// we can safely add it to the result.
+			result.push(intervals[i]);
+		} else if (mergedInterval[1] < intervals[i][0]) {
+			// If the new/merged interval ended before this one
+			// begins, we can safely return the combination of the
+			// result so far, mergedInterval, and the remainder of
+			// the intervals.
+			result.push(mergedInterval, ...intervals.slice(i));
+			return result;
+		} else {
+			// Otherwise, time to merge. Update in place the start
+			// and end times of the mergedInterval variable to be the
+			// minimum and maximum of what they currently are versus
+			// this interval respectively.
+			mergedInterval[0] = Math.min(intervals[i][0], mergedInterval[0]);
+			mergedInterval[1] = Math.max(intervals[i][1], mergedInterval[1]);
+		}
+	}
+	result.push(mergedInterval);
 
-  return result;
+	return result;
 }
 ```
