@@ -41,7 +41,7 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 ## My Solution
 
-Note that we are not told that intervals will be sorted by start time. Having them sorted makes it much easier to merge overlapping intervals, as we don't need to search the array for adjacent intervals. First we sort, which has a time complexity of $O(n \log n)$. After sorting, we iterate through `intervals` and check whether each overlaps with the previous interval in our `result` array (which is initialized with the first interval in the sorted `intervals` array). If there is overlap, we simply update the end time of the last interval in `result`. Finally, return `result.
+Note that we are not told that intervals will be sorted by start time. Having them sorted makes it much easier to merge overlapping intervals, as we don't need to search the array for adjacent intervals. First we sort, which has a time complexity of $O(n \log n)$. After sorting, we iterate through `intervals` and check whether each overlaps with the previous interval in our `result` array (which is initialized with the first interval in the sorted `intervals` array). If there is overlap, we simply update the end time of the last interval in `result`. Finally, return `result`.
 
 Total time complexity is $O(n \log n)$. Space complexity is $O(n)$.
 
