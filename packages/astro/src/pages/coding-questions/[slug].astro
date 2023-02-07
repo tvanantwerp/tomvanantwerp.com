@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const codingQuestions = await getCollection('ds-and-a');
+	return codingQuestions.map(entry => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<article class="writing">
+	<h1 class="writing__title">{entry.data.title}</h1>
+	<Content />
+</article>
