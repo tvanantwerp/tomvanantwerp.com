@@ -9,14 +9,14 @@
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/react": "^1.0.0",
-		"@astrojs/sitemap": "^1.0.0",
-		"@astrojs/turbolinks": "^0.1.4",
-		"astro": "^1.0.3",
-		"eslint-plugin-react": "^7.30.1",
+		"@astrojs/react": "^2.0.2",
+		"@astrojs/sitemap": "^1.0.1",
+		"@astrojs/turbolinks": "^0.1.5",
+		"astro": "^2.0.6",
+		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"sass": "^1.54.4"
+		"sass": "^1.58.0"
 	}
 }
