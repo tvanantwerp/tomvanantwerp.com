@@ -1,3 +1,5 @@
+import '../../css/style.scss';
+
 interface Props {
 	title: string;
 	ignore: boolean;
