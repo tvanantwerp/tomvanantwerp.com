@@ -23,7 +23,7 @@ export const Head = ({
 }: Props) => {
 	return (
 		<head>
-			<meta charset="utf-8" />
+			<meta charSet="utf-8" />
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
