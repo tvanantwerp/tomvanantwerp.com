@@ -50,7 +50,6 @@ export const Head = ({
 			<meta name="msapplication-TileColor" content="#21252b" />
 			<meta name="theme-color" content="#21252b" />
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-			<link rel="stylesheet" href="/css/style.css" />
 			<link
 				rel="preload"
 				as="style"
