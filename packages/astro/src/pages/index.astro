@@ -1,81 +1,18 @@
 ---
-import Base from '../layouts/base.astro'
+import Base from '../layouts/base.astro';
 ---
+
 <Base>
 	<div class="home__main">
 		<div class="home__splash">
-			<img src="/img/tom.png" alt="Illustration of Tom VanAntwerp"/>
+			<img src="/img/tom.png" alt="Illustration of Tom VanAntwerp" />
 			<div class="home__text">
 				<p class="home__splash__intro">Hi there! I'm Tom VanAntwerp.</p>
-				<p class="home__splash__text">I write code to make life easier. Apps, data visualizations, task automation—I do it all and then some.</p>
+				<p class="home__splash__text">
+					I write code to make life easier. Apps, data visualizations, task
+					automation—I do it all and then some.
+				</p>
 			</div>
 		</div>
 	</div>
 </Base>
-
-<style lang="scss">
-.home {
-	&__main {
-		align-items: center;
-		display: grid;
-		grid-auto-flow: row;
-		height: 100%;
-	}
-
-	&__splash {
-		align-items: center;
-		display: grid;
-		font-size: 1.4rem;
-		font-weight: 300;
-		grid-gap: 1rem;
-		grid-template: repeat(2, auto) / 1fr;
-		grid-template-areas:
-			'image'
-			'text';
-
-		@media screen and (min-width: 560px) {
-			grid-template: auto / 2fr 1fr;
-			grid-template-areas: 'text image';
-		}
-
-		img {
-			grid-area: image;
-			max-width: 100%;
-		}
-
-		&__intro {
-			font-family: var(--serif);
-			font-size: 1.4rem;
-			font-size: #{'max(6vw, 1rem)'};
-			font-style: normal;
-			font-weight: 700;
-			margin-bottom: 1rem;
-			text-align: center;
-
-			@media screen and (min-width: 400px) and (max-width: 560px) {
-				font-size: #{'max(6.5vw, 1rem)'};
-			}
-
-			@media screen and (min-width: 560px) {
-				font-size: 1.2rem;
-				font-weight: 300;
-				text-align: left;
-			}
-		}
-
-		&__text {
-			display: block;
-			font-size: 1rem;
-			font-weight: 300;
-			grid-area: text;
-			line-height: 1.2;
-
-			@media screen and (min-width: 560px) {
-				font-size: calc(1rem + 1vw);
-				font-weight: 700;
-			}
-		}
-	}
-}
-
-</style>
