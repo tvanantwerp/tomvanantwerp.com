@@ -1,20 +1,12 @@
 ---
 import Base from './base.astro';
 
-const {content} = Astro.props
+const { content } = Astro.props;
 ---
+
 <Base content={content}>
 	<div class="page-container--narrow">
-		<h1>{ content.title }</h1>
+		<h1>{content.title}</h1>
 		<slot />
 	</div>
 </Base>
-
-<style lang="scss">
-	.page-container {
-			&--narrow {
-					margin: 0 auto;
-					max-width: 740px;
-			}
-	}
-</style>

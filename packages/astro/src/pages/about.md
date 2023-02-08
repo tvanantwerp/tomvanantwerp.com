@@ -1,6 +1,6 @@
 ---
-layout: ../layouts/narrow.astro
 title: Who is this Tom VanAntwerp guy anyway?
+layout: ../layouts/narrow.astro
 ---
 
 Tom is a technologist living and working around Washington, DC. Since 2004, he's been designing and coding websites, creating interactive data visualizations, and building out IT infrastructure.
