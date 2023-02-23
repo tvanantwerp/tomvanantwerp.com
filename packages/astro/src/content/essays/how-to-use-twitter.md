@@ -6,7 +6,6 @@ emoji: 🐦
 tags:
   - Essays
   - Twitter
-layout: layouts/writing.liquid
 image: img/2022-11-03-twitter-bird.jpg
 ---
 

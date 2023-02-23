@@ -1,13 +1,12 @@
 ---
-title: "I Ate Nothing but Potatoes for a Week"
-description: "After reading about people losing weight on an all-potato—the exact opposite of the keto diet I knew and loved—I wanted to try it myself."
+title: 'I Ate Nothing but Potatoes for a Week'
+description: 'After reading about people losing weight on an all-potato—the exact opposite of the keto diet I knew and loved—I wanted to try it myself.'
 date: 2022-07-17
 emoji: 🥔
 tags:
   - Essays
   - Health
   - Diet
-layout: layouts/writing.liquid
 image: img/2022-07-17-potato-smiley.jpg
 ---
 
@@ -251,6 +250,7 @@ I think potato has trouble moving through my bowels. I got cramps, like my body 
 Everything came out OK. The experience of pooping was fairly normal. The poop itself was strange, though. It just seemed to start dissolving into the toilet water almost immediately. So I would have the physical sensation of a normal poop, only to turn around and see what looked more like diarrhea.
 
 I'm sure you're glad you clicked to read that!
+
 </details>
 
 ## Ending the Potato Diet

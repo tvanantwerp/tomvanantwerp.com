@@ -1,13 +1,12 @@
 ---
-title: "What I Learned Getting Tested for ADHD"
-description: "After years of suspecting that I might have ADHD Inattentive Type, I finally got psychological testing. The results surprised me!"
+title: 'What I Learned Getting Tested for ADHD'
+description: 'After years of suspecting that I might have ADHD Inattentive Type, I finally got psychological testing. The results surprised me!'
 date: 2021-08-03
 emoji: 😵‍💫
 tags:
   - Essays
   - Health
   - ADHD
-layout: layouts/writing.liquid
 image: img/2022-11-28-adhd.jpg
 ---
 
@@ -44,5 +43,4 @@ I told all of this—my test results and the doctor's interpretation—to a frie
 In any case, I'll keep writing todos and [checklists](https://amzn.to/3ysvu74).
 
 [^1]: But only after putting it off for several years...
-
 [^2]: Neither my test nor my friend's were cheap, costing $525 and $1,400 respectively. So I'm hesitant to give it another go.

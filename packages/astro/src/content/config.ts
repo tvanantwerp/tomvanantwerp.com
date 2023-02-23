@@ -11,11 +11,14 @@ const essays = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
-		date: z.string().transform(str => new Date(str)),
+		date: z
+			.string()
+			.or(z.date())
+			.transform(val => new Date(val)),
 		updated: z
 			.string()
-			.transform(str => new Date(str))
-			.optional(),
+			.optional()
+			.transform(str => (str ? new Date(str) : undefined)),
 		emoji: z.string().optional(),
 		tags: z.array(z.string()).optional(),
 		layout: z.string().optional(),
@@ -23,6 +26,7 @@ const essays = defineCollection({
 			.string()
 			.regex(/^img\/.*\.(?:jpg|jpeg|png|webp|gif|avif)/)
 			.optional(),
+		splash: z.boolean().optional(),
 	}),
 });
 

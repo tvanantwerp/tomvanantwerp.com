@@ -1,6 +1,6 @@
 ---
-title: "Overcoming a Lifetime of Weight: How I Lost 50 Pounds"
-description: "I combined activity/diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and fasting to get into the best shape of my life."
+title: 'Overcoming a Lifetime of Weight: How I Lost 50 Pounds'
+description: 'I combined activity/diet tracking, high-intensity interval training, resistance training, the ketogenic diet, and fasting to get into the best shape of my life.'
 date: 2021-05-02
 emoji: 💪
 tags:
@@ -12,7 +12,6 @@ tags:
   - Resistance Training
   - Sleep
   - High-Intensity Interval Training
-layout: layouts/writing.liquid
 image: img/2021-05-02-before-after-weight-loss.jpg
 ---
 
@@ -24,7 +23,7 @@ I don't remember the exact figure—it was not a time in my life where I tracked
 
 I struggled with my weight, gaining and losing and gaining again, for years. I managed to lose weight mostly by accident of circumstance in late high school and college, but it crept back during my early career due to bad eating habits and too much time at a desk. In early 2019, I was done letting my health be a non-priority. I'd read enough by then to know what I needed to do, and I set about making permanent changes to my lifestyle that persist to this day. Where I was once over 200 pounds, I now average 155.
 
-**Disclaimer**: This article shares everything I did—right and wrong—to get my weight where I want it and replace flab with muscle. I'm not a dietician, a personal trainer, nor a medical professional of any kind. What works for me may not work for you. This is only a *personal* account, which I hope will inspire people who are in a situation similar to my own.
+**Disclaimer**: This article shares everything I did—right and wrong—to get my weight where I want it and replace flab with muscle. I'm not a dietician, a personal trainer, nor a medical professional of any kind. What works for me may not work for you. This is only a _personal_ account, which I hope will inspire people who are in a situation similar to my own.
 
 {% include components/button-style-link, url: #too-long-didnt-read, text: "I don't want to read all this. Skip to the summary!" %}
 
@@ -64,7 +63,7 @@ A major obstacle to weight loss is high insulin. One of insulin's functions is t
 
 This is one of the reasons a lot of dieters end up tired, hungry, and cold all the time: they are consuming fewer calories, but not lowering insulin. With the body still stuck in storage mode, they can't use stored fat. To compensate, the body lowers metabolic rate.[^6]
 
-This is why I hate it when people talk about CICO: the advice doesn't work if you reduce calories but not insulin. Dieters following this advice are "doing everything right" but can't lose weight and physically feel terrible. It's demoralizing. You need fewer calories *and* lower insulin to get positive, sustainable results.
+This is why I hate it when people talk about CICO: the advice doesn't work if you reduce calories but not insulin. Dieters following this advice are "doing everything right" but can't lose weight and physically feel terrible. It's demoralizing. You need fewer calories _and_ lower insulin to get positive, sustainable results.
 
 So how do you get around the insulin problem? There are two good ways that can be used independently or in combination: a ketogenic diet and fasting.
 
@@ -98,17 +97,17 @@ The day-to-day weight isn't so important. It can fluctuate for any number of rea
 
 More important than tracking my weight, however, was tracking my diet. I used to use MyFitnessPal, but I felt it was oversimplified and lacked good data on what I ate. The only way to do this fitness journey was by staying true to my nerdy self, and that meant I needed the best data I could get—not just for macronutrients like total carbs, protein, and fat, but for net carbs and all my vitamins and minerals too. I found the perfect diet tracker in [Cronometer](https://cronometer.com/), which shows much more data, is easily configured to work with a keto diet, and is actually cheaper than MyFitnessPal.
 
-MyFitnessPal focused on having precisely what you ate in the database, but with low data amount and quality. Cronometer's food database may not have a different entry for every conceivable permutation of a fast food hamburger, but it's got several very close entries from government databases which will include 77 nutrients. It took a while to get past my perfectionism over logging *exactly* the thing I ate by name and being OK with logging generic versions, but the data I have is on the whole better for it.
+MyFitnessPal focused on having precisely what you ate in the database, but with low data amount and quality. Cronometer's food database may not have a different entry for every conceivable permutation of a fast food hamburger, but it's got several very close entries from government databases which will include 77 nutrients. It took a while to get past my perfectionism over logging _exactly_ the thing I ate by name and being OK with logging generic versions, but the data I have is on the whole better for it.
 
 For those times when I am eating some specific food all the time, I try to recreate my own version in Cronometer as a custom recipe. With branded and packaged food, I use the available nutrition facts and ingredients list to create a close-enough copy. The benefit of doing this is that, while I might lose a few calories of accuracy, I gain data on dozens of micronutrients that never makes it onto packaging. For foods I make myself, I can just weigh the ingredients as I make it and create a custom recipe that greatly increases data accuracy and decreases data entry time.
 
-Where Cronometer often fails me is with logging Chinese food. I don't mean that sugary Americanized crap like General Tso's; I mean _real_ Chinese food, which I often eat with my Chinese wife. These delicious meals don't have an English name, much less an entry in a nutrition database from the US or Europe. This is a case where I usually find the nearest Western equivalent and log that. (E.g., 叉燒, or *char siu*, gets logged as generic pork shoulder.) Or if it's something I eat often and there's no close equivalent, I'll get my wife to help me research the ingredients and create a custom recipe.
+Where Cronometer often fails me is with logging Chinese food. I don't mean that sugary Americanized crap like General Tso's; I mean _real_ Chinese food, which I often eat with my Chinese wife. These delicious meals don't have an English name, much less an entry in a nutrition database from the US or Europe. This is a case where I usually find the nearest Western equivalent and log that. (E.g., 叉燒, or _char siu_, gets logged as generic pork shoulder.) Or if it's something I eat often and there's no close equivalent, I'll get my wife to help me research the ingredients and create a custom recipe.
 
 When I log my food in Cronometer, I usually weigh it first to accurately record how much I'm eating. Just logging a "serving" of a dish often undercounts what you're eating. Whenever I'm eating something not pre-packaged (and thus pre-weighed) I use an [OXO Good Grips Food Scale](https://amzn.to/32DYhXU)[^8] to weigh it in grams[^9].
 
 Before logging my food, I had a poor idea of what I ate. But after doing it for years, I acquired good intuition about my food. How much is on the plate, what's the macronutrient breakdown, and how many calories will it be? The answers were once mysteries; but now I make an accurate guess at a glance. Having this knowledge in the back of my mind lets me make good diet choices in the moment, even without Cronometer and my food scale.
 
-Secondary to food logging is activity tracking. I used to wear a [Fitbit](https://amzn.to/3vrhVCO), and I'm currently wearing an [Oura Ring](https://ouraring.com/). The data is cool and a bit useful, but not nearly as important to weight loss as food logging. It's more of a useful notifier if you're not active enough or doing something to disrupt your sleep. Interestingly, these activity trackers showed me that burning extra calories did *not* give me extra room for eating more in a day. If I burned an extra 500 calories and then ate an extra 500 calories, the effect of the food was greater than the effect of the calorie burn. This may just be my own body's response, but it was useful data to reinforce my plan to lose weight before focusing on workouts.
+Secondary to food logging is activity tracking. I used to wear a [Fitbit](https://amzn.to/3vrhVCO), and I'm currently wearing an [Oura Ring](https://ouraring.com/). The data is cool and a bit useful, but not nearly as important to weight loss as food logging. It's more of a useful notifier if you're not active enough or doing something to disrupt your sleep. Interestingly, these activity trackers showed me that burning extra calories did _not_ give me extra room for eating more in a day. If I burned an extra 500 calories and then ate an extra 500 calories, the effect of the food was greater than the effect of the calorie burn. This may just be my own body's response, but it was useful data to reinforce my plan to lose weight before focusing on workouts.
 
 When weighing myself and logging it, I can see long term trends and adjust behavior. But by weighing food and logging it, I can adjust within the space of a day if I'm going in a bad direction.
 
@@ -120,7 +119,7 @@ I started working out on a regular basis in 2019, and got more serious about it 
 
 While I used to enjoy HIIT with DDR, it's hard to fit into a busy schedule. HIIT is exhausting, and leaves me a sweaty mess. And outside of DDR, I just don't enjoy cardio. I always finish feeling like I got my butt kicked.
 
-Not so with weights, which—no matter how sore I get—leave me with the sensation that *I* did the butt-kicking. Weights are also easier to do at random intervals throughout the day. I don't need to change into gym clothes to do a quick set of bicep curls. I frequently do a couple sets while waiting for water to boil for my morning coffee. It just fits into my life better.
+Not so with weights, which—no matter how sore I get—leave me with the sensation that _I_ did the butt-kicking. Weights are also easier to do at random intervals throughout the day. I don't need to change into gym clothes to do a quick set of bicep curls. I frequently do a couple sets while waiting for water to boil for my morning coffee. It just fits into my life better.
 
 Weight loss with keto and fasting was relatively easy and fast. Hypertrophy (muscle growth) is not. Muscles are metabolically expensive, and the body doesn't want to build them bigger if it can avoid it. It's taken a long time to start to see positive changes in my musculature. But it's very satisfying. I feel fitter than I have in years, maybe ever. For the first time in my life, I can look in the mirror and be proud.
 
@@ -140,50 +139,39 @@ But for those of you who aren't making sleep a priority, definitely do that. Fai
 
 Understanding the process of weight loss was obviously necessary to achieve my results. But most important was correcting my thinking about fitness. Without realizing it, I had internalized that I was just an unfit nerdy guy and that I would never have a good body. That sort of thing just wasn't for guys like me, and I shouldn't waste time contemplating it. This hidden belief was toxic and held me back for so many years. I'm still working to eradicate it from my mind and undo the damage it did to me.
 
-Aside from finding and untangling your limiting beliefs, you'll also need to find ways to deal with the mental stress of dieting, fasting, and exercising. For diet, I find that I've got almost no ability to resist free carbs when put in front of me. But I have a very good ability to resist *purchasing* carbs, so I simply don't buy them.[^12] Also, your self talk is important. Don't say, "I'm trying to eat less carbs." Instead, tell yourself, "I don't eat carbs." It's a subtle difference, but one that can give you a greater emotional edge to resist temptation.
+Aside from finding and untangling your limiting beliefs, you'll also need to find ways to deal with the mental stress of dieting, fasting, and exercising. For diet, I find that I've got almost no ability to resist free carbs when put in front of me. But I have a very good ability to resist _purchasing_ carbs, so I simply don't buy them.[^12] Also, your self talk is important. Don't say, "I'm trying to eat less carbs." Instead, tell yourself, "I don't eat carbs." It's a subtle difference, but one that can give you a greater emotional edge to resist temptation.
 
 Fasting is, in my experience, primarily a mental challenge. I rarely experience hunger while fasting, but the thought of eating is constant. Look for ways to keep busy and distract yourself from these thoughts.
 
-Exercise is even harder mentally than diet and fasting. Weight loss with the latter involves *removal* of something. You're actually doing less when you don't eat something! But exercise means the *addition* of a behavior, which is more challenging. You should do everything you can to make it easy. You don't need to buy great exercise gear, get a gym membership, wake up early to go before work, and so on. Look up good form for some quick and simple body weight exercises, like pushups or squats. You can do those anywhere in near any condition. Start small, make it easy to win, and you can build slowly from there.
+Exercise is even harder mentally than diet and fasting. Weight loss with the latter involves _removal_ of something. You're actually doing less when you don't eat something! But exercise means the _addition_ of a behavior, which is more challenging. You should do everything you can to make it easy. You don't need to buy great exercise gear, get a gym membership, wake up early to go before work, and so on. Look up good form for some quick and simple body weight exercises, like pushups or squats. You can do those anywhere in near any condition. Start small, make it easy to win, and you can build slowly from there.
 
 ## Too Long; Didn't Read
 
 So that was a lot of text, and I don't blame you for wanting to skip it and go straight to a bulleted list of what I did to get fit. Ok, here you go:
 
-* Identify limiting beliefs you have around fitness and confront them. I was a "nerdy guy", so of course I wasn't fit. But that's nonsense, and I shouldn't let that stereotype hold me back from being the best version of myself.
-* Identify your mistaken diet beliefs, which you probably picked up in childhood and haven't thought about critically since. Did you know "breakfast is the most important meal of the day" is literally a [marketing slogan](https://www.theatlantic.com/business/archive/2016/06/how-marketers-invented-the-modern-version-of-breakfast/487130/)?
-* Find ways to make it easy to stick with the plan. If you have a weakness for potato chips, don't buy potato chips. If you're averse to the gym, keep weights at home. (See [Atomic Habits](https://amzn.to/2R9Zsfe) and/or [Tiny Habits](https://amzn.to/2QA97Ml) for help with this.)
-* Track your food intake with [Cronometer](https://cronometer.com/) and a [food scale](https://amzn.to/32DYhXU). Weigh yourself with a [smart scale](https://amzn.to/3tRuw20) to track trends. What gets measured, gets managed.
-* Focus on losing fat before building muscle. It's less to do, less to think about, and easier to track one thing at a time.
-* Eat a ketogenic diet. Keep net carbs (total carbs minus fiber) below 20g per day.
-* Use time restricted feeding. Only eat within a 6 hour window or less.
-* Use extended fasting (1-2 days or more) for breaking through weight loss plateaus.
-* Look up simple exercises—preferably from physical therapists so you know it's safe—that you can do to start working out.
-* Move on to lifting heavier and heavier weights. Proper form is key to avoid injury.
-* Sleep enough (7-8 hours sleeping, time in bed awake doesn't count) every night, and make sure it's high quality. Use a sleep tracker to see what might be impacting your sleep if this is difficult for you.
+- Identify limiting beliefs you have around fitness and confront them. I was a "nerdy guy", so of course I wasn't fit. But that's nonsense, and I shouldn't let that stereotype hold me back from being the best version of myself.
+- Identify your mistaken diet beliefs, which you probably picked up in childhood and haven't thought about critically since. Did you know "breakfast is the most important meal of the day" is literally a [marketing slogan](https://www.theatlantic.com/business/archive/2016/06/how-marketers-invented-the-modern-version-of-breakfast/487130/)?
+- Find ways to make it easy to stick with the plan. If you have a weakness for potato chips, don't buy potato chips. If you're averse to the gym, keep weights at home. (See [Atomic Habits](https://amzn.to/2R9Zsfe) and/or [Tiny Habits](https://amzn.to/2QA97Ml) for help with this.)
+- Track your food intake with [Cronometer](https://cronometer.com/) and a [food scale](https://amzn.to/32DYhXU). Weigh yourself with a [smart scale](https://amzn.to/3tRuw20) to track trends. What gets measured, gets managed.
+- Focus on losing fat before building muscle. It's less to do, less to think about, and easier to track one thing at a time.
+- Eat a ketogenic diet. Keep net carbs (total carbs minus fiber) below 20g per day.
+- Use time restricted feeding. Only eat within a 6 hour window or less.
+- Use extended fasting (1-2 days or more) for breaking through weight loss plateaus.
+- Look up simple exercises—preferably from physical therapists so you know it's safe—that you can do to start working out.
+- Move on to lifting heavier and heavier weights. Proper form is key to avoid injury.
+- Sleep enough (7-8 hours sleeping, time in bed awake doesn't count) every night, and make sure it's high quality. Use a sleep tracker to see what might be impacting your sleep if this is difficult for you.
 
 I don't think much of this is revelatory. But that doesn't mean it was easy to internalize these ideas and habits well enough to get fit. It's still a day-to-day struggle, and probably always will be. But I want you to know that it's 100% worthwhile.
 
 [^1]: A few years ago, when my maternal grandmother died, I attended her funeral and saw much of my extended family for the first time in a long time. I was 164 pounds (little of it muscle) at the time, and so comparably thin next to my cousins that people thought I was sick or had cancer. Note that I was in no way skinny—I still had a gut sticking out—I was just _so much skinnier_ than the others there.
-
 [^2]: Unlike [Bobby Hill](https://www.youtube.com/watch?v=02ndthPNTVM), by the time I first set foot in Japan, DDR was retro and nowhere to be found. I remain very disappointed that I never got to hustle any Japanese people at DDR, pretending to be a big clumsy gaijin before busting a move.
-
 [^3]: I've tried virtual reality, and it doesn't compare to DDR in terms of intensity. [Thrill of the Fight](https://sealostinteractive.com/) is the only VR game I've played that gets my heart rate high, but it's mostly an arm workout and a bit dangerous if you accidentally punch a wall. [Pistol Whip](https://cloudheadgames.com/pistol-whip/) is an alright squat workout, but does almost nothing to my heart rate. I'm hopefully more and better fitness games come along with time, but it will be hard to replicate the effects of DDR.
-
 [^4]: Most people call this intermittent fasting, but [I agree with Dr. Peter Attia](https://peterattiamd.com/intermittent-fasting/) that only eating in a narrow range of hours each day isn't much of a fast. No eating for 24 hours or more? That's a fast. Skipping breakfast every day? Mere time-restriction.
-
 [^5]: While he acknowledge the benefits of ketogenic diets (he credits it with helping him recover from long-term symptoms of Lyme disease), Tim Ferriss says he prefers his slow-carb diet to keto because he gets bored of what he's able to eat on keto. Personally, I find keto easier than slow-carb because I can't think of any foods more boring than lentils and beans.
-
 [^6]: Some of the worst dieting advice is "eat many small meals throughout the day." It's bad advice because it keeps your insulin elevated at all times, making it very difficult for your body to access stored fat.
-
 [^7]: The world record is [382 days](https://en.wikipedia.org/wiki/Angus_Barbieri%27s_fast) without food.
-
 [^8]: The nice thing about the OXO scales is that the display can pull out, so you can still read it when weighing something that's very wide like an oversized plate.
-
 [^9]: I prefer grams for the precision, and because it makes me feel both scientific and international.
-
 [^10]: If you're very heavy, starting exercise too soon can also be bad for your joints. Want to destroy your knees? Try becoming a runner while obese. Better to address the fat first and take it easy on your body.
-
 [^11]: My physical therapist deserves a lot of credit for helping me become a fitter person. I landed at her clinic after years of desk work had left many of my muscles either too weak or too tight. I was in near-constant pain. She helped me to see that this wasn't my fate. There were known and effective things I could do to fix my body, and she helped me to see that. I'm not sure I'd be exercising at all if not for her help and inspiration.
-
 [^12]: How many times do I have to ask my wife to please stop buying carby snacks at the grocery store?! How many times?!?!

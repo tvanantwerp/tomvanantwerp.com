@@ -1,19 +1,18 @@
 ---
-title: "Spend Money to Solve Problems"
-description: "Sweep the Floor With a Broom? What Are We, Farmers?"
+title: 'Spend Money to Solve Problems'
+description: 'Sweep the Floor With a Broom? What Are We, Farmers?'
 date: 2021-07-12
 emoji: 💸
 tags:
   - Essays
   - Finance
   - Robots
-layout: layouts/writing.liquid
 image: img/2021-07-12-eufy.jpg
 ---
 
 > A version of this essay was originally published in [Tom's newsletter](https://tva.wtf/newsletter).
 
-Despite being a cisgendered heterosexual white male from America, I did not grow up with infinite privilege. My family was lower-middle class at best, with mom teaching public school and dad doing all kinds of not-highly-paid blue collar jobs. We weren't *destitute*—we did have a house and cars and television—but everything we had was modest, and we had little disposable income.
+Despite being a cisgendered heterosexual white male from America, I did not grow up with infinite privilege. My family was lower-middle class at best, with mom teaching public school and dad doing all kinds of not-highly-paid blue collar jobs. We weren't _destitute_—we did have a house and cars and television—but everything we had was modest, and we had little disposable income.
 
 Growing up kinda poor, I picked up some habits that don't make sense when you've become a gainfully employed programmer. My wife, having grown up in a rural Chinese village, has many of the same habits.
 
