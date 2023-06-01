@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+
+import Base from '../layouts/base.astro';
+
+const codingQuestions = await getCollection('ds-and-a');
+---
+
+<Base>
+	<h1 class="writing__title">Data Structures and Algorithms</h1>
+	<p>
+		I don't know if anybody enjoys doing technical interviews. But I
+		<em>do</em> enjoy solving code puzzles in my own time, just for fun! Here is
+		a list of problems I've gone through, including an explanation of how I solved
+		each one.
+	</p>
+	<ul class="writing__collection__list writing__collection__list--columns">
+		{
+			codingQuestions
+				.sort((a, b) =>
+					a.data.title.localeCompare(b.data.title, 'en', {
+						sensitivity: 'base',
+						numeric: true,
+					}),
+				)
+				.map(post => (
+					<li>
+						<a href={post.slug}>{post.data.title}</a>
+					</li>
+				))
+		}
+	</ul>
+</Base>
