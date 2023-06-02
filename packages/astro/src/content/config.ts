@@ -18,7 +18,7 @@ const standardWritingSchema = {
 			layout: z.string().optional(),
 			image: z
 				.string()
-				.regex(/^img\/.*\.(?:jpg|jpeg|png|webp|gif|avif)/)
+				.regex(/^\/img\/.*\.(?:jpg|jpeg|png|webp|gif|avif)/)
 				.optional(),
 			image_alt: z.string().optional(),
 			splash_image: z

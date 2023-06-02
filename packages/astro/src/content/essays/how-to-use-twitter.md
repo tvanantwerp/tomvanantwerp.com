@@ -6,7 +6,7 @@ emoji: 🐦
 tags:
   - Essays
   - Twitter
-image: img/2022-11-03-twitter-bird.jpg
+image: /img/2022-11-03-twitter-bird.jpg
 image_alt: A blue bird inside a cooking pot.
 ---
 

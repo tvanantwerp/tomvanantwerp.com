@@ -7,7 +7,7 @@ tags:
   - Essays
   - Health
   - ADHD
-image: img/2022-11-28-adhd.jpg
+image: /img/2022-11-28-adhd.jpg
 image_alt: Abstract art of a person's head exploding outward colorfully.
 ---
 
@@ -17,23 +17,24 @@ Given these perceived deficits and the behaviors I adopted around them, I decide
 
 The data suggest that I **do not** have ADHD.
 
-{% image './img/2021-08-03-adhd-gauge.png', 'An overall result of 8, where any number between 0 and 10 indicates low likelihood of ADHD.' %}
+![An overall result of 8, where any number between 0 and 10 indicates low likelihood of ADHD.](/img/2021-08-03-adhd-gauge.png)
 
 The test itself involved watching a series of colored shapes pop up briefly on a screen. I had to hit the spacebar if the same color and shape showed up twice in a row. My webcam was monitoring eye movement during the test as well, looking for signs of distraction. Despite being excruciatingly dull after only a few seconds, I somehow managed to stay focused on the task.
 
-{% figure './img/2021-08-03-adhd-test-deviations.png', 'Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time.', "Statistics for my performance. I was much higher on impulsivity measures than I would've guessed going into it, but my reaction speeds are good. Makes me wonder if a lifetime of trying to time button presses in video games contributed to this score." %}
+<figure>
+  <img src="/img/2021-08-03-adhd-test-deviations.png" alt="Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time." />
+  <figcaption>Statistics for my performance. I was much higher on impulsivity measures than I would've guessed going into it, but my reaction speeds are good. Makes me wonder if a lifetime of trying to time button presses in video games contributed to this score.</figcaption>
+</figure>
 
 I was a bit more impulsive (hitting the spacebar when I shouldn't have) than average, but also quicker than average. I'm not sure how a lifetime of playing video games would affect my performance—supposedly not at all, but I'm not fully convinced.
 
 The overall distribution of correct answers and errors was very much in line with the given sample case.
 
-{% include components/images-two-side-by-side,
-  image1: './img/2021-08-03-adhd-test-sample.png',
-  image1alt: 'Sample results.',
-  image2: './img/2021-08-03-adhd-test-result.png',
-  image2alt: 'Actual results.',
-  caption: 'The differences between the sample results (left) and my actual results (right) are minimal.'
-%}
+<figure class="images__two-side-by-side">
+  <img src="/img/2021-08-03-adhd-test-sample.png" alt="Sample results." />
+  <img src="/img/2021-08-03-adhd-test-result.png" alt="Actual results." />
+  <figcaption>The differences between the sample results (left) and my actual results (right) are minimal.</figcaption>
+</figure>
 
 The psychologist, upon reviewing my test results with me, put it this way: "I think you're just a smart guy who gets impatient with the slow pace of things. And you're probably too hard on yourself about what you expect to get done."
 

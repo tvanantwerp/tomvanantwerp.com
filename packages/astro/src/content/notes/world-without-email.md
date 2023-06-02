@@ -11,8 +11,8 @@ tags:
   - Agile Software Development
   - Scrum
   - Borders
-image: img/2021-03-08-hide-the-pain-harold.jpg
-splash_image: img/2021-03-08-open-office.jpg
+image: /img/2021-03-08-hide-the-pain-harold.jpg
+splash_image: /img/2021-03-08-open-office.jpg
 ---
 
 I've been a fan of [Cal Newport](https://www.calnewport.com/)'s previous writing about [building career capital](https://amzn.to/3tbuq4v) and [doing deep work](https://amzn.to/3rzJ9px). Since implementing his [time-block planning system](https://youtu.be/eff9h1WYxSo), my personal productivity has increased 2-3x at least. So I was very excited to read his 2021 book _[A World Without Email](https://amzn.to/3ryZPNS)_. Where much of Newport's previous work focused on individual productivity, this new book examines the entire knowledge work enterprise and how it can be improved.

@@ -12,7 +12,7 @@ tags:
   - Resistance Training
   - Sleep
   - High-Intensity Interval Training
-image: img/2021-05-02-before-after-weight-loss.jpg
+image: /img/2021-05-02-before-after-weight-loss.jpg
 image_alt: Before (2003, quite fat) and after (2021, slim with some muscle).
 ---
 

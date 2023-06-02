@@ -14,7 +14,7 @@ const {
 <Base>
 	<article class="writing">
 		{
-			data.splash ? (
+			data.splash_image ? (
 				<>
 					<div class="writing__splash__background">
 						<p>PUT SPLASH IMAGE HERE</p>
@@ -52,6 +52,11 @@ const {
 							<time datetime={data.date.toDateString()} class="writing__date">
 								{readableDate(data.date)}
 							</time>
+						</div>
+					)}
+					{data.image && (
+						<div class="writing__image">
+							<img src={data.image} alt={data.image_alt} />
 						</div>
 					)}
 				</>
