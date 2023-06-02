@@ -8,6 +8,7 @@ tags:
   - Health
   - ADHD
 image: img/2022-11-28-adhd.jpg
+image_alt: Abstract art of a person's head exploding outward colorfully.
 ---
 
 For a couple of years now, I suspected that I may have [ADHD Predominately Inattentive](https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder_predominantly_inattentive) (ADHD-PI). I've never been hyper, or energetic in general, so I never gave ADHD much thought in the past. But I first suspected it while reading a Hacker News thread of programmers with ADHD, describing their various non-pharmaceutical interventions that they use to manage their work and lives. It struck me that many of their coping strategies were things I did too. I'm forgetful, so I write todo lists, checklists, and other reminders. I'm distractable, so I wear noise-cancelling headphones and block out external stimuli whenever I can. I forget about things without environmental triggers, so I leave dumbbells lying around so I remember to exercise. My mind wanders in conversation, so I prefer instructions in writing. Nearly every response I read made me think, "Huh, that sounds like me." Did I have ADHD and not know it? Had I learned to do all of these things as a coping mechanism without realizing what I was trying to fix?

@@ -8,6 +8,7 @@ tags:
   - Health
   - Diet
 image: img/2022-07-17-potato-smiley.jpg
+image_alt: A potato that appears as if it is smiling.
 ---
 
 I [previously](https://tomvanantwerp.com/essays/losing-50lbs/) lost quite a lot of weight on a ketogenic diet, combined with time-restricted feeding. But over the past year, the disruption to my routine that came from changing jobs led me down a path of getting lazy with food. I began eating all kinds of junk at all hours again. And before I knew it, I'd regained nearly everything I lost. I've been disappointed in myself, and I was ready to get serious about my diet again.

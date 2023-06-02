@@ -8,6 +8,7 @@ tags:
   - Finance
   - Robots
 image: img/2021-07-12-eufy.jpg
+image_alt: A robot vacuum cleaner.
 ---
 
 > A version of this essay was originally published in [Tom's newsletter](https://tva.wtf/newsletter).

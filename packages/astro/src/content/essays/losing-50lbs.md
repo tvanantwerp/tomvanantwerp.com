@@ -13,9 +13,8 @@ tags:
   - Sleep
   - High-Intensity Interval Training
 image: img/2021-05-02-before-after-weight-loss.jpg
+image_alt: Before (2003, quite fat) and after (2021, slim with some muscle).
 ---
-
-{% figure './img/2021-05-02-before-after-weight-loss.jpg', 'Before (2003, quite fat) and after (2021, slim with some muscle).', 'Me at my heaviest (2003) and me today (2021).' %}
 
 At my heaviest in high school years ago—over 15 years ago—I weighed between 200 and 210 pounds.
 
