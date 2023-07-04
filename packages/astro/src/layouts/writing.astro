@@ -1,9 +1,15 @@
 ---
+import type { CollectionEntry } from 'astro:content';
+
 import Base from './base.astro';
 import { readableDate } from '../utils/dates';
-import type { CollectionEntry } from 'astro:content';
+
 interface Props {
-	content: CollectionEntry<'essays'>;
+	content:
+		| CollectionEntry<'essays'>
+		| CollectionEntry<'notes'>
+		| CollectionEntry<'projects'>
+		| CollectionEntry<'technical-writing'>;
 }
 
 const {

@@ -5,7 +5,6 @@ date: 2017-02-01
 tags:
   - projects
   - programmingProjects
-layout: writing
 image: /img/taxfoundation-splash.jpg
 image_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.
 splash: /img/taxfoundation-splash.jpg

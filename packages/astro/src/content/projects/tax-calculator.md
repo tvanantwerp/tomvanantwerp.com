@@ -5,7 +5,6 @@ date: 2018-02-18
 tags:
   - projects
   - programmingProjects
-layout: writing
 image: /img/2018-02-18-tax-calculator.png
 image_alt: The tax plan calculator as viewed on taxfoundation.org.
 splash: /img/2018-02-18-tax-calculator.png
