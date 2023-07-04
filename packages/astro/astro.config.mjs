@@ -1,19 +1,19 @@
 import { defineConfig } from 'astro/config';
 
-import react from '@astrojs/react';
-import turbolinks from '@astrojs/turbolinks';
-import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import turbolinks from '@astrojs/turbolinks';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		image({ serviceEntryPoint: '@astrojs/image/sharp' }),
+		mdx(),
 		react(),
-		turbolinks(),
 		sitemap(),
-		image({
-			serviceEntryPoint: '@astrojs/image/sharp',
-		}),
+		turbolinks(),
 	],
 	markdown: {
 		syntaxHighlight: 'prism',
