@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import FeaturedCollection from '../components/featured-collection';
+
+import Base from '../layouts/base.astro';
+
+const essays = { name: 'Essays', posts: await getCollection('essays') };
+const notes = { name: 'Notes', posts: await getCollection('notes') };
+const technicalWriting = {
+	name: 'Technical Writing',
+	posts: await getCollection('technical-writing'),
+};
+---
+
+<Base>
+	<h1 class="writing__title">Writing</h1>
+	<div class="writing__collections">
+		{
+			[essays, notes].map(collection => {
+				return (
+					<FeaturedCollection posts={collection.posts} name={collection.name} />
+				);
+			})
+		}
+	</div>
+	<div>
+		<FeaturedCollection
+			name={technicalWriting.name}
+			posts={technicalWriting.posts}
+		/>
+	</div>
+	<div>
+		<h2 id="ds-and-a" tabindex="-1">
+			<a class="header-anchor" href="#ds-and-a"
+				><span>Data Structures and Algorithms</span></a
+			>
+		</h2>
+		<p>
+			I don't know if anybody enjoys doing technical interviews. But I
+			<em>do</em> enjoy solving code puzzles in my own time, just for fun! Here is
+			a list of problems I've gone through, including an explanation of how I solved
+			each one.
+		</p>
+		<p>
+			<a href="/ds-and-a">
+				Go to data structures and algorithms problems and solutions
+			</a>
+		</p>
+	</div>
+</Base>
