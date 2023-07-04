@@ -157,6 +157,30 @@ hr {
 	vertical-align: baseline;
 }
 
-summary {
-	font-weight: 700;
+table {
+	border-collapse: collapse;
+	font-family: var(--sans-serif);
+	font-size: 0.8rem;
+	line-height: 1.4;
+	margin: 0 auto 1rem;
+
+	caption {
+		font-family: var(--serif);
+		font-size: 1rem;
+	}
+}
+
+td {
+	border: 1px solid var(--color);
+	font-family: var(--mono);
+	padding: 0.5rem;
+}
+
+.numeric {
+	font-variant-numeric: tabular-nums;
+	text-align: right;
+}
+
+.katex {
+	font-size: 1em;
 }
