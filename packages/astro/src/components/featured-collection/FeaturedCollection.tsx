@@ -3,6 +3,7 @@ import type { StandardWritingSchema } from '../../content/config';
 interface Props {
 	name: string;
 	posts: { slug: string; data: StandardWritingSchema }[];
+	columns?: boolean;
 }
 
 function slugify(str: string) {
@@ -12,7 +13,11 @@ function slugify(str: string) {
 		.replace(/[^\w-]+/g, '');
 }
 
-export function FeaturedCollection({ name: collection, posts }: Props) {
+export function FeaturedCollection({
+	name: collection,
+	posts,
+	columns = false,
+}: Props) {
 	return (
 		<div className="writing__collection">
 			<h2
@@ -24,7 +29,11 @@ export function FeaturedCollection({ name: collection, posts }: Props) {
 					<span>{collection}</span>
 				</a>
 			</h2>
-			<ul className="writing__collection__list">
+			<ul
+				className={`writing__collection__list${
+					columns ? ' writing__collection__list--columns' : ''
+				}`}
+			>
 				{posts
 					.sort((a, b) =>
 						a.data.title.localeCompare(b.data.title, 'en', {
