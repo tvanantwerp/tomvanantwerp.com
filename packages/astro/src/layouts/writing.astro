@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Picture } from '@astrojs/image/components';
 
 import Base from './base.astro';
 import { readableDate } from '../utils/dates';
@@ -23,7 +24,14 @@ const {
 			data.splash_image ? (
 				<>
 					<div class="writing__splash__background">
-						<p>PUT SPLASH IMAGE HERE</p>
+						<Picture
+							src={data.splash_image}
+							alt=""
+							formats={['avif', 'webp', 'jpeg']}
+							widths={[400, 800, 1200]}
+							aspectRatio={16 / 9}
+							fit="cover"
+						/>
 					</div>
 					<div class="writing__splash">
 						<h1 class="writing__title writing__title--with-splash">

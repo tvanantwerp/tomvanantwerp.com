@@ -7,7 +7,8 @@ tags:
   - programmingProjects
 image: /img/taxfoundation-splash.jpg
 image_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.
-splash: /img/taxfoundation-splash.jpg
+splash_image: /img/taxfoundation-splash.jpg
+slug: taxfoundation.org
 ---
 
 The [Tax Foundation](https://taxfoundation.org) is one of America's oldest think tanks. Founded in 1937, they research and publish on how to create tax policy that funds government without unduly harming economic growth. Strategy has changed, of course, since 1937; now [taxfoundation.org](https://taxfoundation.org) is their primary publishing platform to reach policymakers and taxpayers alike.

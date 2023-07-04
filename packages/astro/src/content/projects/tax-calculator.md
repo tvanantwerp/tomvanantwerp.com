@@ -7,7 +7,7 @@ tags:
   - programmingProjects
 image: /img/2018-02-18-tax-calculator.png
 image_alt: The tax plan calculator as viewed on taxfoundation.org.
-splash: /img/2018-02-18-tax-calculator.png
+splash_image: /img/2018-02-18-tax-calculator.png
 ---
 
 Nobody enjoys doing their taxes, and for an obvious reason: it's complicated. The forms are long, boring, and easily misunderstood. So my challenge was to help people get a sense of their tax burden without actually recreating the experience of tax filing—otherwise, who would bother using the tool!

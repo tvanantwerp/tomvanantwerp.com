@@ -14,7 +14,7 @@ const projects = await getCollection('projects');
 			projects.map(project => (
 				<Card
 					title={project.data.title}
-					url={project.slug}
+					url={`/projects/${project.slug}`}
 					image={project.data.image}
 					imageAlt={project.data.image_alt}
 				/>
