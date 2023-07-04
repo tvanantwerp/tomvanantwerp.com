@@ -25,7 +25,7 @@ const codingQuestions = await getCollection('ds-and-a');
 				)
 				.map(post => (
 					<li>
-						<a href={post.slug}>{post.data.title}</a>
+						<a href={`/coding-questions/${post.slug}`}>{post.data.title}</a>
 					</li>
 				))
 		}

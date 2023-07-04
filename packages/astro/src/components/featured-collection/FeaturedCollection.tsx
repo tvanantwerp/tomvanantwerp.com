@@ -13,11 +13,7 @@ function slugify(str: string) {
 		.replace(/[^\w-]+/g, '');
 }
 
-export function FeaturedCollection({
-	name: collection,
-	posts,
-	columns = false,
-}: Props) {
+export function FeaturedCollection({ name, posts, columns = false }: Props) {
 	return (
 		<div className="writing__collection">
 			<h2
@@ -25,8 +21,8 @@ export function FeaturedCollection({
 				tabIndex="-1"
 				className="writing__collection__title"
 			>
-				<a className="header-anchor" href={`#${slugify(collection)}`}>
-					<span>{collection}</span>
+				<a className="header-anchor" href={`#${slugify(name)}`}>
+					<span>{name}</span>
 				</a>
 			</h2>
 			<ul
@@ -44,7 +40,7 @@ export function FeaturedCollection({
 					.map(post => (
 						<li key={post.slug}>
 							{post.data.emoji ? post.data.emoji + ' ' : ''}
-							<a href={post.slug}>{post.data.title}</a>
+							<a href={`${slugify(name)}/${post.slug}`}>{post.data.title}</a>
 						</li>
 					))}
 			</ul>
