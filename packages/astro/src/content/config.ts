@@ -55,10 +55,12 @@ const dataStructuresAndAlgorithms = defineCollection({
 const essays = defineCollection({ schema: standardWritingSchema });
 const technicalWriting = defineCollection({ schema: standardWritingSchema });
 const notes = defineCollection({ schema: standardWritingSchema });
+const projects = defineCollection({ schema: standardWritingSchema });
 
 export const collections = {
 	'ds-and-a': dataStructuresAndAlgorithms,
 	essays,
 	'technical-writing': technicalWriting,
 	notes,
+	projects,
 };
