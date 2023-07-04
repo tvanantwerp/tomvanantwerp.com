@@ -11,15 +11,15 @@ export const Footer = ({ title, year, twitter, github }: Props) => {
 			<div className="footer__content">
 				<div>{`© ${title} ${year}`}</div>
 				<div>
-					Find me at
+					Find me at{' '}
 					<a
 						href={`https://twitter.com/${twitter}`}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						Twitter
-					</a>
-					and
+					</a>{' '}
+					and{' '}
 					<a
 						href={`https://github.com/${github}/`}
 						target="_blank"
