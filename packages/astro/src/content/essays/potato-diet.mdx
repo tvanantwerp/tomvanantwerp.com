@@ -11,6 +11,8 @@ image: /img/2022-07-17-potato-smiley.jpg
 image_alt: A potato that appears as if it is smiling.
 ---
 
+import { Picture } from '@astrojs/image/components';
+
 I [previously](https://tomvanantwerp.com/essays/losing-50lbs/) lost quite a lot of weight on a ketogenic diet, combined with time-restricted feeding. But over the past year, the disruption to my routine that came from changing jobs led me down a path of getting lazy with food. I began eating all kinds of junk at all hours again. And before I knew it, I'd regained nearly everything I lost. I've been disappointed in myself, and I was ready to get serious about my diet again.
 
 Then, I read [this](https://slimemoldtimemold.com/2022/04/29/potato-diet-community-trial-sign-up-now-lol/).
@@ -47,7 +49,16 @@ The fries and tots were much tastier, thanks to some (admittedly crappy seed-bas
 
 So from day 3 onward, I mostly ate frozen fries and tots. Sometimes I made sweet potato fries from scratch, but never more than once a day.
 
-{% image './img/2022-07-17-potato-calories.png', 'Breakdown of calories consumed during my week of potatoes. Very low to begin with, but goes up as I introduced frozen potato foods with oils in them.' %}
+<Picture
+	src="/img/2022-07-17-potato-calories.png"
+	alt="Breakdown of calories consumed during my week of potatoes. Very low to begin with, but goes up as I introduced frozen potato foods with oils in them."
+	title="Breakdown of calories consumed during my week of potatoes. Very low to begin with, but goes up as I introduced frozen potato foods with oils in them."
+	width={1094}
+	aspectRatio={1094 / 542}
+	widths={[400, 800, 1200]}
+	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
+	formats={['png']}
+/>
 
 ### Results
 
@@ -55,7 +66,16 @@ So from day 3 onward, I mostly ate frozen fries and tots. Sometimes I made sweet
 
 By the end of the experiment, I had lost 1.8 pounds. That's a decent bit of weight loss in a single week. _But_, I also regularly see swings of that size day-to-day. My weight during the experiment didn't trend monotonically downward, and I can't rule out that my weight loss was coincidental. I don't think one week is enough time to evaluate if a potato diet would help me lose weight.
 
-{% image './img/2022-07-17-potato-weight.png', 'Weight and net calories for the past two weeks. For the prior week, net calories are around 0 and weight is stable. During the diet, net calories drops by about 1,000 per day and weight starts going down erratically.' %}
+<Picture
+	src="/img/2022-07-17-potato-weight.png"
+	alt="Weight and net calories for the past two weeks. For the prior week, net calories are around 0 and weight is stable. During the diet, net calories drops by about 1,000 per day and weight starts going down erratically."
+	title="Weight and net calories for the past two weeks. For the prior week, net calories are around 0 and weight is stable. During the diet, net calories drops by about 1,000 per day and weight starts going down erratically."
+	width={2156}
+	aspectRatio={2156 / 1018}
+	widths={[400, 800, 1200]}
+	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
+	formats={['png']}
+/>
 
 #### Nutrition
 
@@ -242,9 +262,7 @@ I don't think my tastes were "reset" by the blandness of potato. When I was eati
 But the feeling of eating only potatoes is not perfect. I don't think my guts are big fans of potato in general. Despite my earlier gastric distress going away after removing skins from the diet, I still feel a bit off. I'm not used to a general level of digestive discomfort, either on keto or the Standard American Diet™.
 
 <details>
-<summary>
-Click here to read about potato poops. 🥔💩
-</summary>
+<summary>Click here to read about potato poops. 🥔💩</summary>
 
 I think potato has trouble moving through my bowels. I got cramps, like my body is trying very hard to move things along. I never had these problems on a keto diet.
 
@@ -266,9 +284,27 @@ This is hardly the first time I've dealt with mysterious abdominal pain—I've h
 
 Since stopping my potato diet, I've gone back to a stricter keto diet than what I was eating previously and weight loss has continued. While I miss the simplicity of "buy frozen tots, throw in air fryer", I generally feel better this way.
 
-{% image './img/2022-07-27-calories.png', 'You can see the make up of calories in this chart from the potato diet, which was very high carb, and the switch to keto afterward, which is much higher fat and protein with little carbohydrate.' %}
+<Picture
+	src="/img/2022-07-27-calories.png"
+	alt="You can see the make up of calories in this chart from the potato diet, which was very high carb, and the switch to keto afterward, which is much higher fat and protein with little carbohydrate."
+	title="You can see the make up of calories in this chart from the potato diet, which was very high carb, and the switch to keto afterward, which is much higher fat and protein with little carbohydrate."
+	width={1200}
+	aspectRatio={1200 / 546}
+	widths={[400, 800, 1200]}
+	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
+	formats={['png']}
+/>
 
-{% image './img/2022-07-27-weight-loss.png', 'Weight has continued to trend down with no observable difference between the potato diet and keto diet.' %}
+<Picture
+	src="/img/2022-07-27-weight-loss.png"
+	alt="Weight has continued to trend down with no observable difference between the potato diet and keto diet."
+	title="Weight has continued to trend down with no observable difference between the potato diet and keto diet."
+	width={1200}
+	aspectRatio={1200 / 544}
+	widths={[400, 800, 1200]}
+	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
+	formats={['png']}
+/>
 
 [^1]: And that's _after_ taking a multivitamin most days!
 [^2]: First few days of bland mashed potatoes excluded.

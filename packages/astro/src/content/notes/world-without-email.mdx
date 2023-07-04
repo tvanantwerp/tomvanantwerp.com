@@ -17,6 +17,8 @@ image_alt: 'Hide the Pain Harold meme'
 splash_image: /img/2021-03-08-open-office.jpg
 ---
 
+import { Picture } from '@astrojs/image/components';
+
 I've been a fan of [Cal Newport](https://www.calnewport.com/)'s previous writing about [building career capital](https://amzn.to/3tbuq4v) and [doing deep work](https://amzn.to/3rzJ9px). Since implementing his [time-block planning system](https://youtu.be/eff9h1WYxSo), my personal productivity has increased 2-3x at least. So I was very excited to read his 2021 book _[A World Without Email](https://amzn.to/3ryZPNS)_. Where much of Newport's previous work focused on individual productivity, this new book examines the entire knowledge work enterprise and how it can be improved.
 
 ## The Hyperactive Hive Mind
@@ -62,7 +64,27 @@ Structured workflows help to safeguard the time needed to work on tasks requirin
 
 #### Task Boards
 
-{% figure './img/2021-03-08-jared-scrum.jpg', 'The character Jared from the show Silicon Valley explains a Scrum task board to Pied Piper employees.', 'Source: <a href="https://amzn.to/3wuwJSL" target="_blank" rel="noopener noreferrer">Silicon Valley</a>' %}
+{
+
+  <figure>
+    <Picture
+      src="/img/2021-03-08-jared-scrum.jpg"
+      alt="The character Jared from the show Silicon Valley explains a Scrum task board to Pied Piper employees."
+      title="The character Jared from the show Silicon Valley explains a Scrum task board to Pied Piper employees."
+      aspectRatio={957 / 534}
+      widths={[400, 800, 1200]}
+      sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
+      formats={['avif', 'webp']}
+    />
+  <figcaption>
+    Source:{' '}
+    <a href="https://amzn.to/3wuwJSL" target="_blank" rel="noopener noreferrer">
+      Silicon Valley
+    </a>
+  </figcaption>
+
+  </figure>
+}
 
 Task boards are a simple way to visually keep track of work to be done in a project. You have a board divided into columns—at its simplest, 1) To Do, 2) Doing, and 3) Done—and cards in those columns representing tasks. As work is picked up and completed, the card representing it moves from column to column. This makes it easy to know what needs to be done, what's happening now, and what is complete.
 
