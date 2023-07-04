@@ -2,6 +2,7 @@
 title: 'A World Without Email'
 description: A summary of Cal Newport's vision of a workplace divorced from the frantic back-and-forth of email and instant messaging.
 emoji: 📚
+date: 2023-03-13
 tags:
   - Notes
   - Cal Newport
@@ -12,6 +13,7 @@ tags:
   - Scrum
   - Borders
 image: /img/2021-03-08-hide-the-pain-harold.jpg
+image_alt: 'Hide the Pain Harold meme'
 splash_image: /img/2021-03-08-open-office.jpg
 ---
 

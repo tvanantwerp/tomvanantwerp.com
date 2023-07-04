@@ -6,7 +6,7 @@ tags:
   - Technical Writing
   - Security
   - Operations
-image: img/2021-03-30-keyboard-unlock.jpg
+image: /img/2021-03-30-keyboard-unlock.jpg
 image_alt: A Japanese laptop keyboard with a padlock sitting on top of it.
 splash_image: /img/2021-03-30-keyboard-unlock.jpg
 ---
