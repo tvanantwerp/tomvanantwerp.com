@@ -29,7 +29,7 @@ const twitter =
 	content?.twitter ?? content?.data?.twitter ?? defaultMetadata.twitter;
 const image = new URL(
 	content?.image ?? content?.data?.image ?? defaultMetadata.image,
-	Astro.site,
+	Astro.url,
 ).toString();
 const ignore = content?.ignore ?? content?.data?.ignore ?? false;
 const canonical =
