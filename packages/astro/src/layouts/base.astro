@@ -17,19 +17,24 @@ const defaultNavigation = [
 	{ slug: 'projects', title: 'Projects' },
 ];
 const { content } = Astro.props;
+const { data } = content;
+
+if (data?.image && !data.image.match(/^\/img/)) {
+	throw new Error('Images used for social sharing must be in /img');
+}
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<Head
-		title={content?.title || defaultMetadata.title}
-		description={content?.description || defaultMetadata.description}
-		url={content?.url || defaultMetadata.url}
-		author={content?.author || defaultMetadata.author}
-		twitter={content?.twitter || defaultMetadata.twitter}
-		image={content?.image || defaultMetadata.image}
-		ignore={content?.ignore === false ? false : true}
-		canonical={content?.canonical}
+		title={data?.title || defaultMetadata.title}
+		description={data?.description || defaultMetadata.description}
+		url={data?.url || defaultMetadata.url}
+		author={data?.author || defaultMetadata.author}
+		twitter={data?.twitter || defaultMetadata.twitter}
+		image={`${defaultMetadata.url}${data?.image || defaultMetadata.image}`}
+		ignore={data?.ignore === false ? false : true}
+		canonical={data?.canonical}
 	/>
 	<body class="layout">
 		<Navigation title={defaultMetadata.title} links={defaultNavigation} />

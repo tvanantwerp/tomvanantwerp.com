@@ -13,12 +13,11 @@ interface Props {
 		| CollectionEntry<'technical-writing'>;
 }
 
-const {
-	content: { data },
-} = Astro.props;
+const { content } = Astro.props;
+const { data } = content;
 ---
 
-<Base>
+<Base content={content}>
 	<article class="writing">
 		{
 			data.splash_image ? (
