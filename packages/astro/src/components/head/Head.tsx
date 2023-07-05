@@ -53,8 +53,8 @@ export const Head = ({
 			<link
 				rel="preload"
 				as="style"
-				href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css"
-				integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG"
+				href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+				integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
 				crossOrigin="anonymous"
 				onLoad="this.rel='stylesheet'"
 			/>
