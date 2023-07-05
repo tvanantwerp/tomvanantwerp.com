@@ -63,20 +63,20 @@ Maybe most annoying was writing a declaration file for Styled Components (`style
 import 'styled-components';
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    backgroundColor: string;
-    containerBackgroundColor: string;
-    ...
-  }
+	export interface DefaultTheme {
+		backgroundColor: string;
+		containerBackgroundColor: string;
+		// ...
+	}
 }
 
 // Theme.ts
 import { DefaultTheme } from 'styled-components';
 
 export const Theme: DefaultTheme = {
-  backgroundColor: 'rgba(238, 231, 185, 1)',
-  containerBackgroundColor: 'rgba(255, 249, 227, 1)',
-  ...
+	backgroundColor: 'rgba(238, 231, 185, 1)',
+	containerBackgroundColor: 'rgba(255, 249, 227, 1)',
+	// ...
 };
 ```
 
