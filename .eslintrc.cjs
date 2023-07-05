@@ -1,4 +1,4 @@
-export default {
+module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 2020, // Use the latest ecmascript standard

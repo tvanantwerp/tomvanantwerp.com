@@ -11,15 +11,21 @@ splash_image: /img/2020-05-23-ac-catches.jpg
 slug: ac-catches.com
 ---
 
+import ButtonLink from '@components/button-link';
+
 ## Catching Fish and Bugs in _Animal Crossing: New Horizons_
 
 Like many people during the COVID-19 pandemic, I've spent longer than I should have playing the new Animal Crossing: New Horizons for Nintendo Switch. Being a completionist and perfectionist, I've been trying to catch every fish and every bug in the game. But I was disappointed with most online lists of the fish and bugs and their available times: there was no easy way to sort and filter the lists by various criteria. On the last day of the month, I really need to know what's available today but not tomorrow. Or maybe I'm just out to make some bells today, and I want to know where to fish to get the most bang for my buck.
 
 Dissatisfied with existing static tables, I set out to build my own tool in React which I've made available at [ac-catches.com](https://ac-catches.com/).
 
-{% include components/button-style-link, url: https://ac-catches.com/, text: 'Go to AC-Catches.com' %}
+<ButtonLink url="https://ac-catches.com/" text="Go to AC-Catches.com" />
 
-<iframe src="https://ac-catches.com/" width="100%" height="600px" title="ac-catches.com"></iframe>
+<iframe
+	src="https://ac-catches.com/"
+	width="100%"
+	height="600px"
+	title="ac-catches.com"></iframe>
 
 ## Collecting Data
 
@@ -31,13 +37,13 @@ I had to decide how I wanted to represent time data to make it useful. Using a h
 
 In the end, I created two CSV files (`fish.csv` and `bugs.csv`) that looked like this:
 
-<!-- ```
+```csv
 name,location,size,price,hours,months
 Bitterling,River,Smallest,900,yyyyyyyyyyyyyyyyyyyyyyyy,yyynnnnnnnyy
 Pale Chub,River,Smallest,160,nnnnnnnnnyyyyyyynnnnnnnn,yyyyyyyyyyyy
 Crucian Carp,River,Small,160,yyyyyyyyyyyyyyyyyyyyyyyy,yyyyyyyyyyyy
-...
-``` -->
+and,so,on,and,so,forth...
+```
 
 With this data simply encoded, I can create easy-to-read graphics showing exactly when catches were available. No more reading through text of the times and months!
 
