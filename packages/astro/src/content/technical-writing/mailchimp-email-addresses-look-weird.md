@@ -49,5 +49,3 @@ You may already have a TXT record that begins `v=spf1`, in which case you just n
 ##The Explanation
 
 When Outlook shows the garbled From address in the first place, it’s because it doesn’t know if it should trust the MailChimp server as a legitimate sender for your domain. [DKIM](https://support.google.com/a/answer/174124?hl=en) and [SPF](https://support.google.com/a/answer/33786?hl=en) records are designed to help email servers know who can or cannot legitimately send mail on behalf of a domain. With these records in place, emails will correctly display as `Sender <person@example.com>` because Outlook has a way to verify that MailChimp is authorized to send mail for the `example.com` domain.
-
-{% include components/button-style-link, url: https://medium.com/@tvanantwerp/mailchimp-email-addresses-look-weird-in-outlook-heres-how-to-fix-it-bcafd99f8497, text: 'Originially published on Medium on September 22, 2016.' %}
