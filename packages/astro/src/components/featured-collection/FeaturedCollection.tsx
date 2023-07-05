@@ -31,12 +31,7 @@ export function FeaturedCollection({ name, posts, columns = false }: Props) {
 				}`}
 			>
 				{posts
-					.sort((a, b) =>
-						a.data.title.localeCompare(b.data.title, 'en', {
-							sensitivity: 'base',
-							numeric: true,
-						}),
-					)
+					.sort((a, b) => +b.data.date - +a.data.date)
 					.map(post => (
 						<li key={post.slug}>
 							{post.data.emoji ? post.data.emoji + ' ' : ''}
