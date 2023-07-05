@@ -7,7 +7,7 @@ import { Card } from '../components/card/Card';
 const projects = await getCollection('projects');
 ---
 
-<Base>
+<Base content={{ data: { title: 'Projects' } }}>
 	<h1 class="writing__title">Projects</h1>
 	<ul class="cards" style="list-style: none;">
 		{

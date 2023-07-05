@@ -19,22 +19,34 @@ const defaultNavigation = [
 const { content } = Astro.props;
 const { data } = content;
 
-if (data?.image && !data.image.match(/^\/img/)) {
-	throw new Error('Images used for social sharing must be in /img');
-}
+const title = content.title ?? data?.title ?? defaultMetadata.title;
+const description =
+	content.description ?? data?.description ?? defaultMetadata.description;
+const url = new URL(
+	content.url ?? data?.url ?? undefined,
+	defaultMetadata.url,
+).toString();
+const author = content.author ?? data?.author ?? defaultMetadata.author;
+const twitter = content.twitter ?? data?.twitter ?? defaultMetadata.twitter;
+const image = new URL(
+	content.image ?? data?.image ?? defaultMetadata.image,
+	defaultMetadata.url,
+).toString();
+const ignore = content.ignore ?? data?.ignore ?? false;
+const canonical = content.canonical ?? data?.canonical ?? undefined;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<Head
-		title={data?.title || defaultMetadata.title}
-		description={data?.description || defaultMetadata.description}
-		url={data?.url || defaultMetadata.url}
-		author={data?.author || defaultMetadata.author}
-		twitter={data?.twitter || defaultMetadata.twitter}
-		image={`${defaultMetadata.url}${data?.image || defaultMetadata.image}`}
-		ignore={data?.ignore === false ? false : true}
-		canonical={data?.canonical}
+		title={title}
+		description={description}
+		url={url}
+		author={author}
+		twitter={twitter}
+		image={image}
+		ignore={ignore}
+		canonical={canonical}
 	/>
 	<body class="layout">
 		<Navigation title={defaultMetadata.title} links={defaultNavigation} />
