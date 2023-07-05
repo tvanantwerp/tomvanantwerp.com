@@ -1,14 +1,11 @@
 interface Props {
 	title: string;
 	url: string;
-	image?: string;
-	imageAlt?: string;
+	image: string;
+	imageAlt: string;
 }
 
 export function Card({ title, url, image, imageAlt }: Props) {
-	if (image && !imageAlt) {
-		throw new Error('Image alt text is required if an image is provided');
-	}
 	return (
 		<li className="card">
 			<a href={url} className="card__link"></a>
