@@ -3,7 +3,6 @@ module.exports = {
 		'../../.eslintrc.js',
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
-		'plugin:mdx/recommended',
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -12,9 +11,14 @@ module.exports = {
 	},
 	rules: {
 		'react/react-in-jsx-scope': 'off',
-		'react/jsx-closing-bracket-location': [1, 'line-aligned'],
 	},
-	settings: {
-		'mdx/code-blocks': true,
-	},
+	overrides: [
+		{
+			files: ['*.mdx'],
+			extends: ['plugin:mdx/recommended'],
+			settings: {
+				'mdx/code-blocks': true,
+			},
+		},
+	],
 };
