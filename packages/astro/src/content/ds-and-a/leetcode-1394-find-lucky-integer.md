@@ -9,7 +9,7 @@ description: Given an array of integers arr, a lucky integer is an integer which
 
 Given an array of integers `arr`, a lucky integer is an integer which has a frequency in the array equal to its value.
 
-Return a *lucky integer* in the array. If there are multiple lucky integers return the **largest** of them. If there is no lucky integer return `-1`.
+Return a _lucky integer_ in the array. If there are multiple lucky integers return the **largest** of them. If there is no lucky integer return `-1`.
 
 <details>
 <summary>Examples</summary>
@@ -51,6 +51,7 @@ Example 5:
 Input: arr = [7,7,7,7,7,7,7]
 Output: 7
 ```
+
 </details>
 
 <details>
@@ -62,27 +63,27 @@ Output: 7
 
 ## My Solution
 
-This solution creates a Map of the integer values in `arr` along with their count. It then iterates over the Map, comparing keys and values for equality. An initial `result` of `-1` is then replaced if a lucky integer is found, and any larger lucky integer will in turn replace a smaller one. This takes $$O(n)$$ time.
+This solution creates a Map of the integer values in `arr` along with their count. It then iterates over the Map, comparing keys and values for equality. An initial `result` of `-1` is then replaced if a lucky integer is found, and any larger lucky integer will in turn replace a smaller one. This takes $O(n)$ time.
 
 ```javascript
-const findLucky = (arr) => {
-    const integers = new Map();
-    let result = -1;
+const findLucky = arr => {
+	const integers = new Map();
+	let result = -1;
 
-    arr.forEach(i => {
-        if (!integers.has(i)) {
-            integers.set(i, 1);
-        } else {
-            integers.set(i, 1 + integers.get(i));
-        }
-    });
+	arr.forEach(i => {
+		if (!integers.has(i)) {
+			integers.set(i, 1);
+		} else {
+			integers.set(i, 1 + integers.get(i));
+		}
+	});
 
-    for ([key, value] of integers) {
-        if (key === value && key > result) {
-            result = key;
-        }
-    }
+	for ([key, value] of integers) {
+		if (key === value && key > result) {
+			result = key;
+		}
+	}
 
-    return result;
+	return result;
 };
 ```

@@ -16,6 +16,8 @@ export default defineConfig({
 		turbolinks(),
 	],
 	markdown: {
+		remarkPlugins: ['remark-math'],
+		rehypePlugins: ['rehype-katex'],
 		syntaxHighlight: 'prism',
 	},
 });
