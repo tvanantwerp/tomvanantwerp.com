@@ -5,7 +5,6 @@ import Footer from '../components/footer';
 const defaultMetadata = {
 	title: 'Tom VanAntwerp',
 	description: "TVA's Digital Garden",
-	url: 'https://tomvanantwerp.com',
 	author: 'Tom VanAntwerp',
 	twitter: 'tvanantwerp',
 	github: 'tvanantwerp',
@@ -16,24 +15,27 @@ const defaultNavigation = [
 	{ slug: 'writing', title: 'Writing' },
 	{ slug: 'projects', title: 'Projects' },
 ];
-const { content } = Astro.props;
-const { data } = content;
 
-const title = content.title ?? data?.title ?? defaultMetadata.title;
+const { content } = Astro.props;
+
+const title = content?.title ?? content?.data?.title ?? defaultMetadata.title;
 const description =
-	content.description ?? data?.description ?? defaultMetadata.description;
-const url = new URL(
-	content.url ?? data?.url ?? undefined,
-	defaultMetadata.url,
-).toString();
-const author = content.author ?? data?.author ?? defaultMetadata.author;
-const twitter = content.twitter ?? data?.twitter ?? defaultMetadata.twitter;
+	content?.description ??
+	content?.data?.description ??
+	defaultMetadata.description;
+const author =
+	content?.author ?? content?.data?.author ?? defaultMetadata.author;
+const twitter =
+	content?.twitter ?? content?.data?.twitter ?? defaultMetadata.twitter;
 const image = new URL(
-	content.image ?? data?.image ?? defaultMetadata.image,
-	defaultMetadata.url,
+	content?.image ?? content?.data?.image ?? defaultMetadata.image,
+	Astro.site,
 ).toString();
-const ignore = content.ignore ?? data?.ignore ?? false;
-const canonical = content.canonical ?? data?.canonical ?? undefined;
+const ignore = content?.ignore ?? content?.data?.ignore ?? false;
+const canonical =
+	content?.canonical ??
+	content?.data?.canonical ??
+	new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
 <!DOCTYPE html>
@@ -41,7 +43,7 @@ const canonical = content.canonical ?? data?.canonical ?? undefined;
 	<Head
 		title={title}
 		description={description}
-		url={url}
+		url={new URL(Astro.url.href).toString()}
 		author={author}
 		twitter={twitter}
 		image={image}
