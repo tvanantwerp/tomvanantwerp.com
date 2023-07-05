@@ -1,6 +1,6 @@
 module.exports = {
 	extends: [
-		'../../.eslintrc.cjs',
+		'../../.eslintrc.js',
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
 		'plugin:mdx/recommended',
