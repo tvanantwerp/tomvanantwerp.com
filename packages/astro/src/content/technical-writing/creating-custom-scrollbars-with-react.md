@@ -144,7 +144,8 @@ const Scrollbar = ({
 						ref={scrollThumbRef}
 						style={{
 							height: `${thumbHeight}px`,
-						}}></div>
+						}}
+					></div>
 				</div>
 				<button className="custom-scrollbars__button">⇓</button>
 			</div>

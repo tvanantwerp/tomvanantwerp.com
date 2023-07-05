@@ -116,7 +116,7 @@ function rob(nums: number[]): number {
 	if (nums.length === 0) return 0;
 
 	let oneHouseBack = 0, twoHousesBack = 0, temp = oneHouseBack;
-	for (let thisHouse of nums) {
+	for (const thisHouse of nums) {
 		// We're about to reassign the value of oneHouseBack,
 		// so we want to store the current value somewhere.
 		// We put it in this temp variable, because we're going

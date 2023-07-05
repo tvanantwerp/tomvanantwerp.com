@@ -70,7 +70,7 @@ function robLinear(nums: number[]): number {
 	if (nums.length === 0) return 0;
 
 	let oneHouseBack = 0, twoHousesBack = 0, temp = oneHouseBack;
-	for (let thisHouse of nums) {
+	for (const thisHouse of nums) {
 		temp = oneHouseBack;
 		oneHouseBack = Math.max(twoHousesBack + thisHouse, oneHouseBack)
 		twoHousesBack = temp;

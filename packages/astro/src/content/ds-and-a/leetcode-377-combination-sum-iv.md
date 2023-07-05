@@ -64,12 +64,12 @@ Once we've finished all our loops, the total number of valid combinations will b
 
 ```typescript
 function combinationSum4(nums: number[], target: number): number {
-	let dp = Array.from({length: target + 1}, () => 0);
+	const dp = Array.from({length: target + 1}, () => 0);
 	dp[0] = 1;
 
 	for (let i = 0; i < target; i++) {
 		if (!dp[i]) continue;
-		for (let num of nums) {
+		for (const num of nums) {
 			if (num + i <= target) {
 				dp[i + num] += dp[i];
 			}
@@ -90,11 +90,11 @@ Just like with bottom-up, time complexity is $O(n * m)$, where $n$ is the `targe
 
 ```typescript
 function combinationSum4(nums: number[], target: number): number {
-	let dp = Array.from({length: target + 1}, () => 0);
+	const dp = Array.from({length: target + 1}, () => 0);
 	dp[0] = 1;
 
 	for (let i = 1; i <= target; i++) {
-		for (let num of nums) {
+		for (const num of nums) {
 			if (num <= i) {
 				dp[i] += dp[i - num];
 			}
