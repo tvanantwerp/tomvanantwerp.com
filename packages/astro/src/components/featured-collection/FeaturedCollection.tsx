@@ -40,7 +40,7 @@ export function FeaturedCollection({ name, posts, columns = false }: Props) {
 					.map(post => (
 						<li key={post.slug}>
 							{post.data.emoji ? post.data.emoji + ' ' : ''}
-							<a href={`${slugify(name)}/${post.slug}`}>{post.data.title}</a>
+							<a href={`/${slugify(name)}/${post.slug}`}>{post.data.title}</a>
 						</li>
 					))}
 			</ul>
