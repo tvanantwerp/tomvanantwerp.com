@@ -17,36 +17,38 @@
 		"debug": "yarn workspace @tomvanantwerp-com/eleventy debug",
 		"lint": "eslint --fix .",
 		"format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-		"leetcode": "plop leetcode"
+		"leetcode": "plop leetcode",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^0.12.1",
-		"@11ty/eleventy-img": "^1.0.0",
-		"@11ty/eleventy-navigation": "^0.3.2",
-		"@11ty/eleventy-plugin-rss": "^1.1.2",
-		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
-		"@iktakahiro/markdown-it-katex": "^4.0.1",
-		"autoprefixer": "^10.4.0",
-		"cssnano": "^5.0.10",
-		"eleventy-plugin-seo": "^0.5.2",
-		"eslint": "^8.2.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.61.0",
+		"@typescript-eslint/parser": "^5.61.0",
+		"astro": "^2.7.3",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-simple-import-sort": "^10.0.0",
+		"eslint": "^8.44.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.3",
 		"lodash": "^4.17.21",
 		"luxon": "^2.5.2",
-		"markdown-it": "^12.3.2",
 		"markdown-it-anchor": "^8.4.1",
 		"markdown-it-footnote": "^3.0.3",
 		"markdown-it-link-attributes": "^3.0.0",
+		"markdown-it": "^12.3.2",
 		"npm-run-all": "^4.1.5",
-		"plop": "^3.0.5",
-		"postcss": "^8.3.11",
-		"postcss-cli": "^9.0.2",
-		"prettier": "^2.4.1",
-		"sass": "^1.43.4"
+		"plop": "^3.1.1",
+		"prettier": "^2.8.8"
 	},
 	"browserslist": [
 		"last 2 versions"
-	]
+	],
+	"lint-staged": {
+		"*.{js,ts,jsx,tsx}": "eslint --cache --fix --ignore-path .gitignore",
+		"*.+(js|ts|jsx|tsx|json)": "prettier --write --ignore-path .gitignore"
+	},
+	"dependencies": {
+		"-": "^0.0.1"
+	}
 }

@@ -1,0 +1,18 @@
+.button {
+	background-color: var(--background-color);
+	border: 1px solid var(--color-highlight);
+	color: var(--color-highlight);
+	display: block;
+	margin-bottom: 1rem;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out,
+		font-weight 0.15s ease-in-out;
+
+	&:hover {
+		background-color: var(--color-highlight);
+		color: var(--background-color);
+		font-weight: 700;
+	}
+}

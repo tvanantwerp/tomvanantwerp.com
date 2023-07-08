@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+
+import Base from '../layouts/base.astro';
+import { Card } from '../components/card/Card';
+
+const projects = await getCollection('projects');
+---
+
+<Base content={{ data: { title: 'Projects' } }}>
+	<h1 class="writing__title">Projects</h1>
+	<ul class="cards" style="list-style: none;">
+		{
+			projects.map(project => (
+				<Card
+					title={project.data.title}
+					url={`/projects/${project.slug}`}
+					image={project.data.image}
+					imageAlt={project.data.image_alt}
+				/>
+			))
+		}
+	</ul>
+</Base>

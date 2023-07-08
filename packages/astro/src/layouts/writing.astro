@@ -1,0 +1,76 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Picture } from '@astrojs/image/components';
+
+import Base from './base.astro';
+import { readableDate } from '../utils/dates';
+
+interface Props {
+	content:
+		| CollectionEntry<'essays'>
+		| CollectionEntry<'notes'>
+		| CollectionEntry<'projects'>
+		| CollectionEntry<'technical-writing'>;
+}
+
+const { content } = Astro.props;
+const { data } = content;
+---
+
+<Base content={content}>
+	<article class="writing">
+		{
+			data.splash_image ? (
+				<>
+					<div class="writing__splash__background">
+						<Picture
+							src={data.splash_image}
+							alt=""
+							formats={['avif', 'webp']}
+							widths={[400, 800, 1200]}
+							aspectRatio={16 / 9}
+							fit="cover"
+							sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
+						/>
+					</div>
+					<div class="writing__splash">
+						<h1 class="writing__title writing__title--with-splash">
+							{data.title}
+						</h1>
+						{data.description && (
+							<div class="writing__excerpt writing__excerpt--with-splash">
+								{data.description}
+							</div>
+						)}
+						{data.date && (
+							<div class="writing__byline writing__byline--with-splash">
+								By Tom VanAntwerp on
+								<time
+									datetime={data.date.toDateString()}
+									class="writing__date--with-splash">
+									{readableDate(data.date)}
+								</time>
+							</div>
+						)}
+					</div>
+				</>
+			) : (
+				<>
+					<h1 class="writing__title">{data.title}</h1>
+					{data.description && (
+						<div class="writing__excerpt">{data.description}</div>
+					)}
+					{data.date && (
+						<div class="writing__byline">
+							By Tom VanAntwerp on
+							<time datetime={data.date.toDateString()} class="writing__date">
+								{readableDate(data.date)}
+							</time>
+						</div>
+					)}
+				</>
+			)
+		}
+		<slot />
+	</article>
+</Base>
