@@ -82,6 +82,7 @@ export const Head = ({
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={image} />
+			<link rel="sitemap" href="/sitemap-index.xml" />
 		</head>
 	);
 };
