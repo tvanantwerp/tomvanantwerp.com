@@ -94,7 +94,7 @@ The times and months are represented in the table with `canvas` elements. I orig
 
 Each time string is split, and then a canvas rect is drawn and colored according to the value of that piece of the string and the current time. Here's the complete component code:
 
-```typescript
+```tsx
 import React, { useEffect, useRef } from 'react';
 
 interface ITimes {
@@ -102,7 +102,7 @@ interface ITimes {
 	currentTime: number;
 }
 
-const Times = ({ times, currentTime }: ITimes) => {
+export const Times = ({ times, currentTime }: ITimes) => {
 	const ref = useRef<HTMLCanvasElement>(null);
 	// The final dimensions will be 100x25,
 	// but here I scale them up so the width
