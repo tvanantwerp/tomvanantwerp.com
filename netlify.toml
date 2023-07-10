@@ -1,4 +1,4 @@
 [build]
-  publish = "packages/eleventy/_site"
+  publish = "packages/astro/dist"
   command = "yarn build"
-  environment = { NODE_VERSION = "16.13.2" }
+  environment = { NODE_VERSION = "18.16.0" }
