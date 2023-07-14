@@ -1,11 +1,20 @@
 ---
+import { Picture } from '@astrojs/image/components';
+
 import Base from '../layouts/base.astro';
 ---
 
 <Base>
 	<div class="home__main">
 		<div class="home__splash">
-			<img src="/img/tom.png" alt="Illustration of Tom VanAntwerp" />
+			<Picture
+				src="/img/tom.png"
+				alt="The avatar Tom uses on every platform since 2013. Illustrated it himself!"
+				aspectRatio={681 / 692}
+				widths={[300, 450, 681]}
+				sizes="(min-width: 681px) 681px,(min-width: 450px) 450px,300px"
+				formats={['avif', 'webp']}
+			/>
 			<div class="home__text">
 				<p class="home__splash__intro">Hi there! I'm Tom VanAntwerp.</p>
 				<p class="home__splash__text">
