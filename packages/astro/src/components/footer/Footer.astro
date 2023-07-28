@@ -1,8 +1,9 @@
 ---
 import GitHub from '../icons/github.astro';
 import Twitter from '../icons/twitter.astro';
+import Bluesky from '../icons/bluesky.astro';
 
-const { title, year, twitter, github } = Astro.props;
+const { title, year, twitter, github, bluesky } = Astro.props;
 ---
 
 <footer class="footer">
@@ -22,6 +23,13 @@ const { title, year, twitter, github } = Astro.props;
 				rel="noopener noreferrer"
 			>
 				<GitHub />
+			</a>
+			<a
+				href={`https://bsky.app/profile/${bluesky}/`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Bluesky />
 			</a>
 		</div>
 	</div>
