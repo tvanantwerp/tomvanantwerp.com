@@ -2,8 +2,9 @@
 import GitHub from '../icons/github.astro';
 import Twitter from '../icons/twitter.astro';
 import Bluesky from '../icons/bluesky.astro';
+import Mastodon from '../icons/mastodon.astro';
 
-const { title, year, twitter, github, bluesky } = Astro.props;
+const { title, year, twitter, github, bluesky, mastodon } = Astro.props;
 ---
 
 <footer class="footer">
@@ -30,6 +31,13 @@ const { title, year, twitter, github, bluesky } = Astro.props;
 				rel="noopener noreferrer"
 			>
 				<Bluesky />
+			</a>
+			<a
+				href={`https://mastodon.social/@${mastodon}`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Mastodon />
 			</a>
 		</div>
 	</div>
