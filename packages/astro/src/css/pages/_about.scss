@@ -1,0 +1,11 @@
+.about {
+	&__social-link {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+
+		svg {
+			width: 1rem;
+		}
+	}
+}
