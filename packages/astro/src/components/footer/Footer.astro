@@ -1,0 +1,28 @@
+---
+import GitHub from '../icons/github.astro';
+import Twitter from '../icons/twitter.astro';
+
+const { title, year, twitter, github } = Astro.props;
+---
+
+<footer class="footer">
+	<div class="footer__content">
+		<div>{`© ${title} ${year}`}</div>
+		<div class="footer__social-links">
+			<a
+				href={`https://twitter.com/${twitter}`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Twitter />
+			</a>{' '}
+			<a
+				href={`https://github.com/${github}/`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<GitHub />
+			</a>
+		</div>
+	</div>
+</footer>
