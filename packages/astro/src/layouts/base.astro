@@ -2,14 +2,8 @@
 import Head from '../components/head';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer/Footer.astro';
-const defaultMetadata = {
-	title: 'Tom VanAntwerp',
-	description: "TVA's Digital Garden",
-	author: 'Tom VanAntwerp',
-	twitter: 'tvanantwerp',
-	github: 'tvanantwerp',
-	image: '/img/tom_poly-cropped.png',
-};
+import metadata from '../data/metadata';
+
 const defaultNavigation = [
 	{ slug: 'about', title: 'About' },
 	{ slug: 'writing', title: 'Writing' },
@@ -18,17 +12,13 @@ const defaultNavigation = [
 
 const { content } = Astro.props;
 
-const title = content?.title ?? content?.data?.title ?? defaultMetadata.title;
+const title = content?.title ?? content?.data?.title ?? metadata.title;
 const description =
-	content?.description ??
-	content?.data?.description ??
-	defaultMetadata.description;
-const author =
-	content?.author ?? content?.data?.author ?? defaultMetadata.author;
-const twitter =
-	content?.twitter ?? content?.data?.twitter ?? defaultMetadata.twitter;
+	content?.description ?? content?.data?.description ?? metadata.description;
+const author = content?.author ?? content?.data?.author ?? metadata.author;
+const twitter = content?.twitter ?? content?.data?.twitter ?? metadata.twitter;
 const image = new URL(
-	content?.image ?? content?.data?.image ?? defaultMetadata.image,
+	content?.image ?? content?.data?.image ?? metadata.image,
 	Astro.url,
 ).toString();
 const ignore = content?.ignore ?? content?.data?.ignore ?? false;
@@ -51,15 +41,14 @@ const canonical =
 		canonical={canonical}
 	/>
 	<body class="layout">
-		<Navigation title={defaultMetadata.title} links={defaultNavigation} />
+		<Navigation title={metadata.title} links={defaultNavigation} />
 		<main class="content">
 			<slot />
 		</main>
 		<Footer
-			title={defaultMetadata.author}
+			title={metadata.author}
 			year={new Date().getFullYear()}
-			twitter={defaultMetadata.twitter}
-			github={defaultMetadata.github}
+			socialUsernames={metadata.socialUsernames}
 		/>
 	</body>
 </html>
