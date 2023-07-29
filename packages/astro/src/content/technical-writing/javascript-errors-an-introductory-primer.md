@@ -30,7 +30,7 @@ Using `console.log` won't stop your program from continuing to execute. An Error
 
 Here's an example of throwing an error:
 
-```
+```js
 throw new Error('Informative message about your error goes here');
 ```
 
@@ -38,16 +38,16 @@ When an `Error` is thrown, nothing after that `throw` in your scope will be exec
 
 Since you probably don't want your programs to crash, it's important to set up `Error` handling. This is where something like `try` / `catch` comes in. Any code you write inside the `try` will attempt to execute. If an `Error` is thrown by anything inside the `try`, then the following `catch` block is where you can decide how to handle that `Error`.
 
-```
+```js
 try {
-  if (someBadThingHappened) {
-	  throw new Error('That bad thing happened!');
-  }
+	if (someBadThingHappened) {
+		throw new Error('That bad thing happened!');
+	}
 } catch (error) {
-  // Using console.error here is just an example of what
-  // you might do. But you're free to write any error
-  // handling logic you want!
-  console.error(error); // logs "Error: That bad thing happened"
+	// Using console.error here is just an example of what
+	// you might do. But you're free to write any error
+	// handling logic you want!
+	console.error(error); // logs "Error: That bad thing happened"
 }
 ```
 
@@ -57,12 +57,10 @@ In the catch block, you receive an error object (by convention, this is usually 
 
 There are two ways to write asynchronous JavaScript, and they each have their own way of writing `Error` handling. If you're using `async` / `await`, you can use the `try` / `catch` block as in the previous example. However, if you're using `Promise`s, you'll want to chain a `catch` to the `Promise` like so:
 
-```
-somePromise
-	.then(handleResolvedPromiseFn)
-	.catch(error => {
-		// handle the error here
-	})
+```js
+somePromise.then(handleResolvedPromiseFn).catch(error => {
+	// handle the error here
+});
 ```
 
 ## Understanding the Error Object
@@ -76,7 +74,7 @@ The `Error` object is a built-in object that JavaScript provides to handle runti
 
 Creating an Error object is quite straightforward:
 
-```
+```js
 // Here, we create a new Error with the new constructor
 // and pass a string to it as the message.
 const myError = new Error('Something went wrong');
@@ -103,7 +101,7 @@ It's sometimes useful to extend the `Error` object yourself! This lets you add p
 
 To extend `Error`, use a `class`.
 
-```
+```js
 class CustomError extends Error {
 	constructor(message) {
 		super(message);
@@ -141,11 +139,11 @@ It's especially helpful to think about catching errors when you're executing cod
 
 You might want to make a request to an API, and then handle an error if the request fails.
 
-```
+```js
 // ❌ This won't handle all of the things that might go wrong
 const data = fetch('/some/api/endpoint')
 	.then(res => res.json())
-	.catch(error => console.error(error))
+	.catch(error => console.error(error));
 ```
 
 Maybe you made a bad request and got back a `400`. Maybe you're not properly authenticated and got a `401` or `403`. Maybe the endpoint is invalid and you get a `404`. Or maybe the server is having a bad day and you get a `500`.
@@ -156,16 +154,16 @@ From JavaScript's point of view, your request worked. You sent some data to a pl
 
 To fix the previous example:
 
-```
+```js
 // ✅ This will throw an error on a bad request
 const data = fetch('/some/api/endpoint')
 	.then(res => {
 		if (!res.ok) {
 			throw new Error(`Data fetch failed: ${res.statusText}`, { cause: res });
 		}
-		return res.json()
+		return res.json();
 	})
-	.catch(error => console.error(error))
+	.catch(error => console.error(error));
 ```
 
 ### You Can Throw Anything
@@ -174,7 +172,7 @@ You should `throw new Error`s. But you could `throw 'literally anything'`. There
 
 This problem becomes especially clear in TypeScript, when the default type of an error in a `catch` block is not `Error`, but `unknown`. TypeScript has no way to know if an error passed into the `catch` is going to actually be an `Error` or not, which can make it more frustrating to write error handling code. For this reason, it's often a good idea to check what exactly you've received before trying to handle it.
 
-```
+```ts
 try {
 	// ...
 } catch (error: unknown) {
@@ -183,7 +181,7 @@ try {
 	} else {
 		// Do something else that doesn't assum you know
 		// what type the error is.
-		console.error(error)
+		console.error(error);
 	}
 }
 ```

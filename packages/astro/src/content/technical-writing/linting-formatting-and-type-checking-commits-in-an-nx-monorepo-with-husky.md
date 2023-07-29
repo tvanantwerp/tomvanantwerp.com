@@ -24,16 +24,16 @@ This guide will show you how to set up pre-commit hooks to run linting, formatti
 
 Nx comes with a command, nx format:write for applying formatting to affected files which we can give directly to lint-staged. This command uses [Prettier](https://prettier.io/) under the hood, so it will abide by whatever rules you have in your root-level .prettierrc file. Just install Prettier, and add your preferred configuration.
 
-```
+```sh
 npm install --save-dev prettier
 ```
 
 Then add a .prettierrc file to the root of your project with your preferred configuration. For example, if you want to use single quotes and trailing commas, you can add the following:
 
-```
+```json
 {
-    "singleQuote": true,
-    "trailingComma": "all"
+	"singleQuote": true,
+	"trailingComma": "all"
 }
 ```
 
@@ -41,47 +41,47 @@ Then add a .prettierrc file to the root of your project with your preferred conf
 
 Nx has its own plugin that uses ESLint to [lint projects in your monorepo](https://nx.dev/packages/linter). It also has a plugin with [sensible ESLint defaults](https://nx.dev/packages/eslint-plugin-nx) for your linter commands to use, including ones specific to Nx. To install them, run the following command:
 
-```
+```sh
 npm i --save-dev @nrwl/linter @nrwl/eslint-plugin-nx
 ```
 
 Then, we can create a default .eslintrc.json file in the root of our project:
 
-```
+```json
 {
-  "root": true,
-  "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@nrwl/nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
-      "rules": {}
-    }
-  ]
+	"root": true,
+	"ignorePatterns": ["**/*"],
+	"plugins": ["@nrwl/nx"],
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+			"rules": {
+				"@nrwl/nx/enforce-module-boundaries": [
+					"error",
+					{
+						"enforceBuildableLibDependency": true,
+						"allow": [],
+						"depConstraints": [
+							{
+								"sourceTag": "*",
+								"onlyDependOnLibsWithTags": ["*"]
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"files": ["*.ts", "*.tsx"],
+			"extends": ["plugin:@nrwl/nx/typescript"],
+			"rules": {}
+		},
+		{
+			"files": ["*.js", "*.jsx"],
+			"extends": ["plugin:@nrwl/nx/javascript"],
+			"rules": {}
+		}
+	]
 }
 ```
 
@@ -89,12 +89,12 @@ The above ESLint configuration will, by default, apply [Nx's module boundary rul
 
 You can also have ESLint configurations specific to your apps and libraries. For example, if you have a React app, you can add a .eslintrc.json file to the root of your app directory with the following contents:
 
-```
+```json
 {
-    "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
-    "rules": {
-        "no-console": ["error", { "allow": ["warn", "error"] }]
-      }
+	"extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
+	"rules": {
+		"no-console": ["error", { "allow": ["warn", "error"] }]
+	}
 }
 ```
 
@@ -108,20 +108,20 @@ We do want to use the specific tsconfig.json files, and we also only want to run
 
 Within each app or library you want type checked, open the project.json file, and add a new run command like this one:
 
-```
+```json
 {
-    // ...
-    "targets": {
-        // ...
-        "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["tsc -p tsconfig.app.json --noEmit"],
-        "cwd": "apps/directory-of-your-app-goes-here",
-        "forwardAllArgs": false
-      }
-    },
-    }
+	// ...
+	"targets": {
+		// ...
+		"typecheck": {
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": ["tsc -p tsconfig.app.json --noEmit"],
+				"cwd": "apps/directory-of-your-app-goes-here",
+				"forwardAllArgs": false
+			}
+		}
+	}
 }
 ```
 
@@ -133,35 +133,35 @@ Now if we ran nx affected --target=typecheck from the command line, we would be 
 
 Finally, we'll install and configure Husky and lint-staged. These are the two packages that will allow us to run commands on staged files before a commit is made.
 
-```
+```sh
 npm install --save-dev husky lint-staged
 ```
 
 In your package.json file, add the prepare script to run Husky's install command:
 
-```
+```json
 {
-    "scripts": {
-        "prepare": "husky install"
-    }
+	"scripts": {
+		"prepare": "husky install"
+	}
 }
 ```
 
 Then, run your prepare script to set up git hooks in your repository. This will create a .husky directory in your project root with the necessary file system permissions.
 
-```
+```sh
 npm run prepare
 ```
 
 The next step is to create our pre-commit hook. We can do this from the command line:
 
-```
+```sh
 npx husky add .husky/pre-commit "npx lint-staged --concurrent false --relative"
 ```
 
 It's important to use Husky's CLI to create our hooks, because it handles file system permissions for us. Creating files manually could cause problems when we actually want to use the git hooks. After running the command, we will now have a file at .husky/pre-commit that looks like this:
 
-```
+```sh
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
@@ -178,16 +178,16 @@ In a simpler repository, it would be easy to add some lint-staged configuration 
 
 Here is what our configuration file will look like:
 
-```
+```js
 module.exports = {
-  '{apps,libs,tools}/**/*.{ts,tsx}': files => {
-    return `nx affected --target=typecheck --files=${files.join(',')}`;
-  },
-  '{apps,libs,tools}/**/*.{js,ts,jsx,tsx,json}': [
-    files => `nx affected:lint --files=${files.join(',')}`,
-    files => `nx format:write --files=${files.join(',')}`,
-  ],
-  };
+	'{apps,libs,tools}/**/*.{ts,tsx}': files => {
+		return `nx affected --target=typecheck --files=${files.join(',')}`;
+	},
+	'{apps,libs,tools}/**/*.{js,ts,jsx,tsx,json}': [
+		files => `nx affected:lint --files=${files.join(',')}`,
+		files => `nx format:write --files=${files.join(',')}`,
+	],
+};
 ```
 
 Within our module.exports object, we've defined two globs: one that will match any TypeScript files in our apps, libraries, and tools directories, and another that also matches JavaScript and JSON files in those directories. We only need to run type checking for the TypeScript files, which is why that one is broken out and narrowed down to only those files.

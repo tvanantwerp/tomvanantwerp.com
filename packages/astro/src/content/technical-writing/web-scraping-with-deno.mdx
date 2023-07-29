@@ -11,6 +11,8 @@ tags:
   - web scraping
 ---
 
+import { Picture } from '@astrojs/image/components';
+
 _This article was originally published on the [This Dot blog](https://labs.thisdot.co/blog/web-scraping-with-deno/)._
 
 Maybe you've had this problem before: you need data from a website, but there isn't a good way to download a CSV or hit an API to get it. In these situations, you may be forced to write a web scraper. A web scraper is a script that downloads the HTML from a website as though it were a normal user, and then it parses that HTML to extract information from it. JavaScript is a natural choice for writing your web scraper, as it's the language of the web and natively understands the DOM. And with TypeScript, it is even better, as the type system helps you navigate the trickiness of [HTMLCollections](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection) and [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) types.
@@ -142,7 +144,14 @@ Now that we're able to grab the contents of the first three pages of Deno module
 
 Passing the text of the page to the `DOMParser` from `deno_dom`, you can extract information using the same APIs you'd use in the browser like `querySelector` and `getElementsByTagName`. To figure out what to select for, you can use your browser's developer tools to inspect the page, and find selectors for elements you want to select. For example, in Chrome DevTools, you can right-click on an element and select "Copy > Copy selector" to get the selector for that element.
 
-![DevTools Copy Selector](//images.ctfassets.net/zojzzdop0fzx/1z2v5I5bqzmARiyoSkhUbA/6e2cd49b2f937fafabf87456fb1d3e5a/copy-selector.png)
+<Picture
+	src="/img/2023-03-24-copy-selector.png"
+	alt="DevTools Copy Selector."
+	aspectRatio={924 / 808}
+	widths={[400, 700, 924]}
+	sizes="(min-width: 924px) 924px, (min-width: 700px) 700px,400px"
+	formats={['avif', 'webp']}
+/>
 
 ```ts
 if (document) {
