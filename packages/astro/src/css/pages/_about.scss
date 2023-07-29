@@ -11,6 +11,7 @@
 
 		li {
 			font-family: var(--mono);
+			font-size: 0.8rem;
 			margin: 0;
 		}
 	}
@@ -26,7 +27,7 @@
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
 		svg {
-			width: 1rem;
+			width: 0.8rem;
 		}
 
 		&:hover {
