@@ -18,7 +18,7 @@ export function FeaturedCollection({ name, posts, columns = false }: Props) {
 		<div className="writing__collection">
 			<h2
 				id="{{ collection | slugify }}"
-				tabIndex="-1"
+				tabIndex={-1}
 				className="writing__collection__title"
 			>
 				<a className="header-anchor" href={`#${slugify(name)}`}>
@@ -35,7 +35,15 @@ export function FeaturedCollection({ name, posts, columns = false }: Props) {
 					.map(post => (
 						<li key={post.slug}>
 							{post.data.emoji ? post.data.emoji + ' ' : ''}
-							<a href={`/${slugify(name)}/${post.slug}`}>{post.data.title}</a>
+							<a
+								href={
+									post.data.use_canonical_url
+										? post.data.canonical
+										: `/${slugify(name)}/${post.slug}`
+								}
+							>
+								{post.data.title}
+							</a>
 						</li>
 					))}
 			</ul>
