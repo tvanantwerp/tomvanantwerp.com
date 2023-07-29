@@ -2,7 +2,7 @@
 title: Creating Custom Scrollbars with React
 date: 2022-01-13
 description: CSS gives little control over scrollbars. For a completely custom scrollbar design, you have to build your own out of DOM elements.
-canonical: https://labs.thisdot.co/blog/using-lottie-animations-for-ui-components-in-react
+canonical: https://labs.thisdot.co/blog/creating-custom-scrollbars-with-react
 use_canonical_url: true
 tags:
   - Technical Writing
@@ -11,6 +11,8 @@ tags:
   - React
   - Scrollbars
 ---
+
+_This article was originally published on the [This Dot blog](https://labs.thisdot.co/blog/creating-custom-scrollbars-with-react)._
 
 Styling scrollbars is no simple task. [The CSS](https://css-tricks.com/almanac/properties/s/scrollbar/) available to style them is different across browsers, and not very featureful. If you want to make something extremely customized, you can't rely on the native scrollbars—you have to build your own out of DOM elements. This blog post shows you how to do just that using React and TypeScript. If you want to skip straight to the final functional demo, [go here](https://stackblitz.com/edit/react-ts-frji5h?file=components/scrollbar/index.tsx).
 
