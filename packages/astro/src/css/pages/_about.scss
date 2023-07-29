@@ -1,11 +1,37 @@
 .about {
-	&__social-link {
+	&__social-list {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 1rem;
+		list-style: none;
+		margin: 2rem auto 0;
+		max-width: 560px;
+
+		li {
+			font-family: var(--mono);
+			margin: 0;
+		}
+	}
+
+	&__social-link {
+		border: 1px solid var(--color);
+		display: flex;
+		color: var(--color);
+		flex-direction: row;
+		gap: 1rem;
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
 		svg {
 			width: 1rem;
+		}
+
+		&:hover {
+			border-color: var(--color-highlight);
+			color: var(--color-highlight);
 		}
 	}
 }
