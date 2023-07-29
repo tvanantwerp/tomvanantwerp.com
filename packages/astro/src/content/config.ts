@@ -33,11 +33,19 @@ const standardWritingSchema = sharedSchema
 				/^\/img\/[\w\-\_\:\/\?\#\[\]\@\!\$\&\'\(\)\*\+\,\;\=]*\.(?:jpg|jpeg|png|webp|gif|avif)$/,
 			)
 			.optional(),
+		canonical: z.string().url().optional(),
 		use_canonical_url: z.boolean().optional(),
 	})
 	.refine(
 		data => {
 			if (data.image && !data.image_alt) {
+				return false;
+			}
+			if (
+				data.canonical &&
+				(data.use_canonical_url === undefined ||
+					data.use_canonical_url === null)
+			) {
 				return false;
 			}
 			return true;
