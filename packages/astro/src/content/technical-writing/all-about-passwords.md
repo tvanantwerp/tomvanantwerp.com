@@ -1,6 +1,7 @@
 ---
 title: All About Passwords
 date: 2021-03-29
+updated: 2023-08-01
 description: How to create and manage your logins while maximizing security and ease.
 tags:
   - Technical Writing
