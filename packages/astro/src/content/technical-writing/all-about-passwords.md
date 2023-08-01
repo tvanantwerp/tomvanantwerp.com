@@ -1,6 +1,7 @@
 ---
 title: All About Passwords
 date: 2021-03-29
+updated: 2023-08-01
 description: How to create and manage your logins while maximizing security and ease.
 tags:
   - Technical Writing
@@ -29,7 +30,7 @@ Perhaps you ease the burden by using the same password everywhere. But if you're
 
 With a password manager, every password you have can be random and unique. Each one can look something like `#q$5742!mpX*8a6HR` or `NFAVL^CJ#vDLi1m` or `Vpo8$r0d$3HzkCm` or `v!Vua3GZX0pnPdnVD` because the manager remembers it for you. A data breach on one site doesn't make your other logins vulnerable.
 
-As for what password manager to use, you've got several options. [KeePass](https://keepass.info/) is a good choice if you want to keep your encrypted vault as a local file. If you're comfortable with a hosted service, you've got lots of options: [1Password](https://1password.com/), [LastPass](https://www.lastpass.com/), [Dashlane](https://www.dashlane.com/), and probably others I don't know about yet. I also hear rave reviews of [BitWarden](https://bitwarden.com/) from the folks at [r/sysadmin](https://bitwarden.com/help/article/forgot-master-password/).
+As for what password manager to use, you've got several options. [KeePass](https://keepass.info/) is a good choice if you want to keep your encrypted vault as a local file. If you're comfortable with a hosted service, you've got lots of options: [BitWarden](https://bitwarden.com/), [1Password](https://1password.com/), [Dashlane](https://www.dashlane.com/), and probably others I don't know about yet. They each have pros and cons, but they're mostly the same and all better than nothing.[^1]
 
 ## Strong Passwords
 
@@ -43,7 +44,7 @@ I wrote a very simple tool a few years back to [generate random word passwords](
 
 ## Knowledge-Based Authentication
 
-You've probably "secured" an account by answering a question like "What street did you grow up on?" or "What is your dog's name?"[^1] These questions are often easily answered by people who aren't you. I can check your Instagram and see the pictures of you and the dog outside your childhood home with the street sign in view—now I've got all the answers I need.
+You've probably "secured" an account by answering a question like "What street did you grow up on?" or "What is your dog's name?"[^2] These questions are often easily answered by people who aren't you. I can check your Instagram and see the pictures of you and the dog outside your childhood home with the street sign in view—now I've got all the answers I need.
 
 When answering these questions, answer with gibberish. Then store that gibberish in your password manager. Use the exact same `correcthorsebatterystaple` technique from before. I don't recommend a random password like `yLiaNEX34$NnSR051S2i` because sometimes you have to read these to customer support over the phone. It's not fun.
 
@@ -55,6 +56,7 @@ I have some bad news: you're just going to have to deal with this one. It's not 
 
 Getting a text message to confirm your logins is better than no secondary authentication. Using a dedicated app is better still, as it's not vulnerable to a SIM swapping attack.
 
-But if you really don't want to deal with these MFA codes, you can use a device like a [YubiKey](https://www.yubico.com/) instead. It's a device that can plug in to USB as a form of authentication. In the way that a code sent to your phone authenticates you because it's assumed only you have your phone, a YubiKey authenticates you because it's assumed only you would possess this USB key. Personally, I'm more afraid of losing this than I am of losing my phone, but it's an option and definitely more secure than texting or apps.
+But if you really don't want to deal with these MFA codes, you can use a device like a [YubiKey](https://www.yubico.com/) instead. It's a device that can plug in to USB or be triggered with NFC as a form of authentication. In the way that a code sent to your phone authenticates you because it's assumed only you have your phone, a YubiKey authenticates you because it's assumed only you would possess this USB key. I'm afraid of losing a device like a Yubikey, so I bought four of them and keep them in various locations where I might need it.
 
-[^1]: We've already established that it's Rover, and that he's a good boy.
+[^1]: I've updated my list of password managers since I originally wrote this article. I previously used LastPass, both personally and in a corporate environment. However, they suffered a serious data breach and haven't been very forthcoming with information about it. I migrated off LastPass and rotated my passwords stored in it. I'm now using Bitwarden, and I'm very happy with it. I'm not sure about Bitwarden in the business—the UX for sharing logins with the family plan has been very confusing—but it's perfectly fine for an individual. I've changed jobs since I first wrote this, and at work we've got 1Password. It's also a fine product, and has good CLI features for integrating with developer workflows, e.g., generating `.env` files from secrets stored in 1Password.
+[^2]: We've already established that it's Rover, and that he's a good boy.

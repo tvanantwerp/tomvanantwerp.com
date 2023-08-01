@@ -15,8 +15,9 @@ const standardWritingSchema = sharedSchema
 			.transform(val => new Date(val)),
 		updated: z
 			.string()
-			.optional()
-			.transform(str => (str ? new Date(str) : undefined)),
+			.or(z.date())
+			.transform(val => new Date(val))
+			.optional(),
 		emoji: z.string().optional(),
 		tags: z.array(z.string()).optional(),
 		layout: z.string().optional(),

@@ -42,16 +42,30 @@ const { data } = content;
 								{data.description}
 							</div>
 						)}
-						{data.date && (
-							<div class="writing__byline writing__byline--with-splash">
-								By Tom VanAntwerp on
-								<time
-									datetime={data.date.toDateString()}
-									class="writing__date--with-splash">
-									{readableDate(data.date)}
-								</time>
-							</div>
-						)}
+						<div class="writing__byline writing__byline--with-splash">
+							{data.date && (
+								<div>
+									by Tom VanAntwerp on
+									<time
+										datetime={data.date.toDateString()}
+										class="writing__date--with-splash"
+									>
+										{readableDate(data.date)}
+									</time>
+								</div>
+							)}
+							{data.date && data.updated && (
+								<div>
+									last updated on
+									<time
+										datetime={data.updated.toDateString()}
+										class="writing__date--with-splash"
+									>
+										{readableDate(data.updated)}
+									</time>
+								</div>
+							)}
+						</div>
 					</div>
 				</>
 			) : (
