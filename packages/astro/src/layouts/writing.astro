@@ -74,14 +74,27 @@ const { data } = content;
 					{data.description && (
 						<div class="writing__excerpt">{data.description}</div>
 					)}
-					{data.date && (
-						<div class="writing__byline">
-							By Tom VanAntwerp on
-							<time datetime={data.date.toDateString()} class="writing__date">
-								{readableDate(data.date)}
-							</time>
-						</div>
-					)}
+					<div class="writing__byline">
+						{data.date && (
+							<div>
+								by Tom VanAntwerp on
+								<time datetime={data.date.toDateString()} class="writing__date">
+									{readableDate(data.date)}
+								</time>
+							</div>
+						)}
+						{data.date && data.updated && (
+							<div>
+								last updated on
+								<time
+									datetime={data.updated.toDateString()}
+									class="writing__date--with-splash"
+								>
+									{readableDate(data.updated)}
+								</time>
+							</div>
+						)}
+					</div>
 				</>
 			)
 		}
