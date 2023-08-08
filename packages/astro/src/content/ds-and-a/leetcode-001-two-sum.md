@@ -1,5 +1,5 @@
 ---
-title: 1. Two Sum
+title: LeetCode 1. Two Sum
 description: Given an array of integers and a target sum, return indices of two numbers in array that add to the target sum.
 ---
 
@@ -9,7 +9,7 @@ description: Given an array of integers and a target sum, return indices of two 
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
 
-You may assume that each input would have ***exactly* one solution**, and you may not use the same element twice.
+You may assume that each input would have **_exactly_ one solution**, and you may not use the same element twice.
 
 You can return the answer in any order.
 
@@ -37,6 +37,7 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 ```
+
 </details>
 
 <details>
@@ -56,14 +57,14 @@ The simplest approach is nested for loops, solving in $O(n{^2})$ time and $O(1)$
 
 ```javascript
 const twoSum = (nums, target) => {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = 0; j < nums.length; j++) {
-            if (i !== j && nums[i] + nums[j] === target) {
-                return [i, j];
-            }
-        }
-    }
-}
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = 0; j < nums.length; j++) {
+			if (i !== j && nums[i] + nums[j] === target) {
+				return [i, j];
+			}
+		}
+	}
+};
 ```
 
 ### Best Solution
@@ -72,13 +73,13 @@ We can reduce the time complexity to $O(n)$ by increasing the space complexity t
 
 ```javascript
 const twoSum = (nums, target) => {
-  let reference = {};
-    for (let i = 0, j = nums.length; i<j; i++) {
-        if (target - nums[i] in reference) {
-            return [reference[target - nums[i]], i];
-        }
-        reference[nums[i]] = i;
-    }
+	let reference = {};
+	for (let i = 0, j = nums.length; i < j; i++) {
+		if (target - nums[i] in reference) {
+			return [reference[target - nums[i]], i];
+		}
+		reference[nums[i]] = i;
+	}
 };
 ```
 
@@ -86,12 +87,12 @@ You could also use the newer built-in `Map` in JavaScript.
 
 ```javascript
 const twoSum = (nums, target) => {
-    let complements = new Map();
-    for (let i = 0; i < nums.length; i++) {
-        if (complements.has(target - nums[i])) {
-            return [complements.get(target - nums[i]), i];
-        }
-        complements.set(nums[i], i);
-    }
+	let complements = new Map();
+	for (let i = 0; i < nums.length; i++) {
+		if (complements.has(target - nums[i])) {
+			return [complements.get(target - nums[i]), i];
+		}
+		complements.set(nums[i], i);
+	}
 };
 ```

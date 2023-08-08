@@ -1,5 +1,5 @@
 ---
-title: 91. Decode Ways
+title: LeetCode 91. Decode Ways
 description: Given a string containing only digits, return the number of ways to decode it to letters of the alphabet where 1 = A, 2 = B, etc.
 ---
 
@@ -53,11 +53,11 @@ Input: s = "06"
 Output: 0
 Explanation: "06" cannot be mapped to "F" because of the leading zero ("6" is different from "06").
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - `1 <= s.length <= 100`
 - `s` contains only digits and may contain leading zero(s).
@@ -75,7 +75,10 @@ To solve this recursively, we will call the function again and again with smalle
 // We modify the function to accept a Map named memo. We'll
 // use this to cache previously seen strings that we've
 // decoded. It's initialized to an empty Map.
-function numDecodings(s: string, memo: Map<string, number> = new Map()): number {
+function numDecodings(
+	s: string,
+	memo: Map<string, number> = new Map(),
+): number {
 	// Base case: if the string is empty, we've found 1 way.
 	if (s === '') return 1;
 	// If the string has a leading zero, it cannot have any
@@ -89,7 +92,8 @@ function numDecodings(s: string, memo: Map<string, number> = new Map()): number 
 	// We'll initialize variables to analyze the pieces of the
 	// string that would be either a single digit to letter
 	// decoding, or a two digit number to letter decoding.
-	let singleDigit = 0, doubleDigit = 0;
+	let singleDigit = 0,
+		doubleDigit = 0;
 
 	// For single digit decodings, we need to know that the number
 	// is between 1 and 9 inclusive. If so, we recursively call
@@ -115,7 +119,7 @@ function numDecodings(s: string, memo: Map<string, number> = new Map()): number 
 
 	// Finally, return the memoized value of the string.
 	return memo.get(s);
-};
+}
 ```
 
 ### Solving Iteratively with Dynamic Programming
@@ -132,7 +136,7 @@ function numDecodings(s: string): number {
 
 	// Initialize dp as an array with length equal to 1 plus the
 	// length of the string, all values set to zero.
-	const dp: number[] = Array.from({length: s.length + 1}, () => 0);
+	const dp: number[] = Array.from({ length: s.length + 1 }, () => 0);
 
 	// We initialize our dp cache's first two values. dp[0] is 1,
 	// and this is what we'll add to dp[2] if our first double-
@@ -167,5 +171,5 @@ function numDecodings(s: string): number {
 	// Finally, the last value of dp has the total number of valid
 	// encodings.
 	return dp[s.length];
-};
+}
 ```

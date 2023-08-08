@@ -1,5 +1,5 @@
 ---
-title: 139. Word Break
+title: LeetCode 139. Word Break
 description: Given a string and a dictionary of strings, return true if the string can be segmented into a space-separated sequence of one or more dictionary words.
 ---
 
@@ -37,6 +37,7 @@ Example 3:
 Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
 Output: false
 ```
+
 </details>
 
 <details>
@@ -65,16 +66,15 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 
 	// Initialize an array of s.length + 1 with all false
 	// values, except for the very first one.
-	const dp = Array.from(
-		{ length: s.length + 1} ,
-		(v, i) => i === 0 ? true : false
+	const dp = Array.from({ length: s.length + 1 }, (v, i) =>
+		i === 0 ? true : false,
 	);
 	// To improve performance, we'll find the longest word
 	// in the dictionary and store its length. We'll use it
 	// to limit how many characters in a slice we use.
 	const longestWordLength = wordDict.reduce(
-		(acc, curr) => curr.length > acc ? curr.length : acc,
-		0
+		(acc, curr) => (curr.length > acc ? curr.length : acc),
+		0,
 	);
 	// Our constraints promise no duplicate words,
 	// but just in case...
@@ -110,5 +110,5 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 	// if the s can be built from words in wordDict, and false
 	// if we couldn't find a way to do it.
 	return dp[s.length];
-};
+}
 ```

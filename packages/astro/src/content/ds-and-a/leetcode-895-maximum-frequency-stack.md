@@ -1,5 +1,5 @@
 ---
-title: 895. Maximum Frequency Stack
+title: LeetCode 895. Maximum Frequency Stack
 description: Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 ---
 
@@ -15,7 +15,6 @@ Implement the `FreqStack` class:
 - `void push(int val)` pushes an integer `val` onto the top of the stack.
 - `int pop()` removes and returns the most frequent element in the stack.
   - If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
-
 
 <details>
 <summary>Examples</summary>
@@ -42,13 +41,14 @@ freqStack.pop();   // return 7, as 5 and 7 is the most frequent, but 7 is closes
 freqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,4].
 freqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 - 0 ≤ val ≤ 10<sup>9</sup>
-- At most 2 * 10<sup>4</sup> calls will be made to `push` and `pop`.
+- At most 2 \* 10<sup>4</sup> calls will be made to `push` and `pop`.
 - It is guaranteed that there will be at least one element in the stack before calling `pop`.
 </details>
 
@@ -64,39 +64,40 @@ When we pop, we first find the highest frequency numbers by looking at the last 
 
 ```typescript
 class FreqStack {
-    frequencies: Map<number, number>;
-    stacks: number[][]
-    constructor() {
-        this.frequencies = new Map();
-        this.stack = [];
-    }
+	frequencies: Map<number, number>;
+	stacks: number[][];
+	constructor() {
+		this.frequencies = new Map();
+		this.stack = [];
+	}
 
-    push(val: number): void {
-        // Including this invocation, what is the current
-        // frequency of the pushed value? Update it!
-        const frequency = (this.frequencies.get(val) || 0) + 1;
-        this.frequencies.set(val, frequency);
-        // If this frequency exists in our stacks, push this
-        // value to the end of the stack at that frequency
-        // index. Otherwise, create a stack at that index.
-        this.stacks[frequency]
-            ? this.stacks[frequency].push(val)
-            : this.stacks[frequency] = [val];
-    }
+	push(val: number): void {
+		// Including this invocation, what is the current
+		// frequency of the pushed value? Update it!
+		const frequency = (this.frequencies.get(val) || 0) + 1;
+		this.frequencies.set(val, frequency);
+		// If this frequency exists in our stacks, push this
+		// value to the end of the stack at that frequency
+		// index. Otherwise, create a stack at that index.
+		this.stacks[frequency]
+			? this.stacks[frequency].push(val)
+			: (this.stacks[frequency] = [val]);
+	}
 
-    pop(): number {
-        // Find the stack of most frequent values, and then
-        // pop from that stack to get the most recently value.
-        const top = this.stacks.at(-1), value = top.pop();
-        // If you've emptied the stack at this frequency, remove
-        // it from the array of stacks.
-        if (!top.length) this.stacks.pop();
-        // Update the frequency of the value to return in our
-        // frequencies map.
-        this.frequencies.set(value, this.frequencies.get(value) - 1);
+	pop(): number {
+		// Find the stack of most frequent values, and then
+		// pop from that stack to get the most recently value.
+		const top = this.stacks.at(-1),
+			value = top.pop();
+		// If you've emptied the stack at this frequency, remove
+		// it from the array of stacks.
+		if (!top.length) this.stacks.pop();
+		// Update the frequency of the value to return in our
+		// frequencies map.
+		this.frequencies.set(value, this.frequencies.get(value) - 1);
 
-        return value;
-    }
+		return value;
+	}
 }
 ```
 

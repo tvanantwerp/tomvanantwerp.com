@@ -1,5 +1,5 @@
 ---
-title: 21. Merge Two Sorted Lists
+title: LeetCode 21. Merge Two Sorted Lists
 description: You are given the heads of two sorted linked lists. Merge the two lists in a one sorted list.
 ---
 
@@ -36,6 +36,7 @@ Example 3:
 Input: list1 = [], list2 = [0]
 Output: [0]
 ```
+
 </details>
 
 <details>
@@ -59,12 +60,15 @@ class ListNode {
 	val: number;
 	next: ListNode | null;
 	constructor(val?: number, next?: ListNode | null) {
-		this.val = (val===undefined ? 0 : val);
-		this.next = (next===undefined ? null : next);
+		this.val = val === undefined ? 0 : val;
+		this.next = next === undefined ? null : next;
 	}
 }
 
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+function mergeTwoLists(
+	list1: ListNode | null,
+	list2: ListNode | null,
+): ListNode | null {
 	// First, check if either list is null.
 	// If so, return the other list or null if both
 	// lists are null.
@@ -77,12 +81,9 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 	// and will give errors with negative numbers! Finally,
 	// the array is stitched back together into a new list.
 	return arrayToList(
-		[
-			...listToArray(list1),
-			...listToArray(list2)
-		].sort((a, b) => a - b)
+		[...listToArray(list1), ...listToArray(list2)].sort((a, b) => a - b),
 	);
-};
+}
 
 function listToArray(list: ListNode) {
 	// Recursively traverse the list. Return values in an array.
@@ -113,12 +114,15 @@ class ListNode {
 	val: number;
 	next: ListNode | null;
 	constructor(val?: number, next?: ListNode | null) {
-		this.val = (val===undefined ? 0 : val);
-		this.next = (next===undefined ? null : next);
+		this.val = val === undefined ? 0 : val;
+		this.next = next === undefined ? null : next;
 	}
 }
 
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+function mergeTwoLists(
+	list1: ListNode | null,
+	list2: ListNode | null,
+): ListNode | null {
 	// First, check if either list is null.
 	// If so, return the other list or null if both
 	// lists are null.
@@ -131,7 +135,7 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 	// whichever of list1 or list2 has the smallest value.
 	if (list1.val < list2.val) {
 		result = list1;
-		list1 = list1.next
+		list1 = list1.next;
 	} else {
 		result = list2;
 		list2 = list2.next;
@@ -173,5 +177,5 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 	pointer.next = list1 || list2;
 
 	return result;
-};
+}
 ```

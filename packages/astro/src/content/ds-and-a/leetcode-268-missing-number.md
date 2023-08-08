@@ -1,5 +1,5 @@
 ---
-title: 268. Missing Number
+title: LeetCode 268. Missing Number
 description: Given an array containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 image: img/2022-01-23-missingno.png
 ---
@@ -22,6 +22,7 @@ Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0
 ```
 
 Example 2:
+
 ```
 Input: nums = [0,1]
 Output: 2
@@ -29,11 +30,13 @@ Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0
 ```
 
 Example 3:
+
 ```
 Input: nums = [9,6,4,2,3,5,7,0,1]
 Output: 8
 Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
 ```
+
 </details>
 
 <details>
@@ -49,6 +52,7 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 <summary>Follow up</summary>
 
 Could you implement a solution using only $O(1)$ extra space complexity and $O(n)$ runtime complexity?
+
 </details>
 
 ## My Solution
@@ -82,7 +86,7 @@ Putting these insights together, we now know an interesting new property: any nu
 With this information, we can now find the missing number with XOR. First, we'll create a variable to hold our result and initialize it to the length of the array. We can take the array of numbers and loop over it, setting the result to itself XOR'ed by the index and the value of nums at that index. For every number that is _supposed_ to occur, we'll inevitably XOR it against an index of equal value. But for whatever number is missing, the index which equals it will never be XORed against itself. Once the loop is over, only that index equal to the missing digit will remain.
 
 ```javascript
-const missingNumber = (nums) => {
+const missingNumber = nums => {
 	// Initialize result to the length of nums,
 	// since the value of i in the loop won't ever
 	// reach this value but a value of nums[i] might.

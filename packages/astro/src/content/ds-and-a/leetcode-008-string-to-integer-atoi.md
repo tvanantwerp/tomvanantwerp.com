@@ -1,5 +1,5 @@
 ---
-title: 8. String to Interger (atoi)
+title: LeetCode 8. String to Interger (atoi)
 description: Implement `atoi` which converts a string to an integer.
 ---
 
@@ -19,19 +19,21 @@ If no valid conversion could be performed, a zero value is returned.
 
 **Note**
 
-*  Only the space character `' '` is considered a whitespace character.
-*  Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [-2<sup>31</sup>,&nbsp;2<sup>31</sup>&nbsp;−&nbsp;1]. If the numerical value is out of the range of representable values, 2<sup>31</sup>&nbsp;−&nbsp;1 or −2<sup>31</sup> is returned.
+- Only the space character `' '` is considered a whitespace character.
+- Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [-2<sup>31</sup>,&nbsp;2<sup>31</sup>&nbsp;−&nbsp;1]. If the numerical value is out of the range of representable values, 2<sup>31</sup>&nbsp;−&nbsp;1 or −2<sup>31</sup> is returned.
 
 <details>
 <summary>Examples</summary>
 
 Example 1:
+
 ```
 Input: str = "42"
 Output: 42
 ```
 
 Example 2:
+
 ```
 Input: str = "   -42"
 Output: -42
@@ -39,6 +41,7 @@ Explanation: The first non-whitespace character is '-', which is the minus sign.
 ```
 
 Example 3:
+
 ```
 Input: str = "4193 with words"
 Output: 4193
@@ -46,6 +49,7 @@ Explanation: Conversion stops at digit '3' as the next character is not a numeri
 ```
 
 Example 4:
+
 ```
 Input: str = "words and 987"
 Output: 0
@@ -53,11 +57,13 @@ Explanation: The first non-whitespace character is 'w', which is not a numerical
 ```
 
 Example 5:
+
 ```
 Input: str = "-91283472332"
 Output: -2147483648
 Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer. Thefore INT_MIN (−231) is returned.
 ```
+
 </details>
 
 ## My Solution
@@ -65,22 +71,22 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 I created a regular expression to match strings that start with an optional sign and then a number. I used JavaScript's `trimLeft` string method to get rid of any leading white space, then matched the input against my regex. If there's a match, then I run my match through a switch statement to enforce the 32-bit integer bounds for the return value.
 
 ```javascript
-const myAtoi = (str) => {
-    const pattern = /^([\+\-]?[0-9]+)/;
-    const result = str.trimLeft().match(pattern);
+const myAtoi = str => {
+	const pattern = /^([\+\-]?[0-9]+)/;
+	const result = str.trimLeft().match(pattern);
 
-    if (result) {
-        switch(true) {
-            case +result[1] < -1 * 2**31:
-                return -1 * 2**31;
-            case +result[1] > 2**31-1:
-                return 2**31-1;
-            default:
-                return +result[1];
-        }
-    } else {
-        return 0;
-    }
+	if (result) {
+		switch (true) {
+			case +result[1] < -1 * 2 ** 31:
+				return -1 * 2 ** 31;
+			case +result[1] > 2 ** 31 - 1:
+				return 2 ** 31 - 1;
+			default:
+				return +result[1];
+		}
+	} else {
+		return 0;
+	}
 };
 ```
 

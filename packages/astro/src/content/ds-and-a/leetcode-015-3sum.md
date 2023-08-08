@@ -1,5 +1,5 @@
 ---
-title: 15. 3Sum
+title: LeetCode 15. 3Sum
 description: Given an integer array, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 ---
 
@@ -34,13 +34,14 @@ Example 3:
 Input: nums = [0]
 Output: []
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 - 0 <= `nums.length` <= 3000
--  -10<sup>5</sup> <= `nums[i]` <= 10<sup>5</sup>
+- -10<sup>5</sup> <= `nums[i]` <= 10<sup>5</sup>
 </details>
 
 ## My Solution

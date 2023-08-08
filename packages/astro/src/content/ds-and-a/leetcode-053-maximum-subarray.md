@@ -1,5 +1,5 @@
 ---
-title: 53. Maximum Subarry
+title: LeetCode 53. Maximum Subarry
 description: Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 tags:
   - Dynamic Programming
@@ -9,7 +9,7 @@ tags:
 
 [Link to original problem on Leetcode.](https://leetcode.com/problems/maximum-subarray/)
 
-Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return *its sum*.
+Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return _its sum_.
 
 <details>
 <summary>Examples</summary>
@@ -49,18 +49,17 @@ Example 5:
 Input: nums = [-100000]
 Output: -100000
 ```
-</details>
 
+</details>
 
 <details>
 <summary>Constraints</summary>
 
-- 1 <= `nums.length` <= 3 * 10<sup>4</sup>
+- 1 <= `nums.length` <= 3 \* 10<sup>4</sup>
 - -10<sup>5</sup> <= `nums[i]` <= 10<sup>5</sup>
 </details>
 
 Follow up: If you have figured out the $O(n)$ solution, try coding another solution using the divide and conquer approach, which is more subtle.
-
 
 ## My Solution
 
@@ -70,25 +69,23 @@ The worst thing I can think of would be to compute the sum of every conceivable 
 
 ```javascript
 // Bad, don't do this
-const maxSubArray = (nums) => {
-    let sum = nums[0];
+const maxSubArray = nums => {
+	let sum = nums[0];
 
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i; j < nums.length; j++) {
-            // I'm using slice and reduce to get the subarray
-            // sum instead of writing a third for loop,
-            // because why not?
-            const newSum = nums
-                .slice(i, j + 1)
-                .reduce((acc, curr) => {
-                    return acc + curr;
-                }, 0);
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = i; j < nums.length; j++) {
+			// I'm using slice and reduce to get the subarray
+			// sum instead of writing a third for loop,
+			// because why not?
+			const newSum = nums.slice(i, j + 1).reduce((acc, curr) => {
+				return acc + curr;
+			}, 0);
 
-            sum = Math.max(sum, newSum);
-        }
-    }
+			sum = Math.max(sum, newSum);
+		}
+	}
 
-    return sum;
+	return sum;
 };
 ```
 
@@ -98,18 +95,18 @@ It can be improved to $O(n{^2})$ time by noticing that we don't need to compute 
 
 ```javascript
 // Better but still bad, don't do this either
-const maxSubArray = (nums) => {
-    let sum = nums[0];
+const maxSubArray = nums => {
+	let sum = nums[0];
 
-    for (let i = 0; i < nums.length; i++) {
-        let leftSideSum = 0;
-        for (let j = i; j < nums.length; j++) {
-            leftSideSum += nums[j];
-            sum = Math.max(sum, leftSideSum);
-        }
-    }
+	for (let i = 0; i < nums.length; i++) {
+		let leftSideSum = 0;
+		for (let j = i; j < nums.length; j++) {
+			leftSideSum += nums[j];
+			sum = Math.max(sum, leftSideSum);
+		}
+	}
 
-    return sum;
+	return sum;
 };
 ```
 
@@ -119,13 +116,13 @@ I did some research and found [Kadane's algorithm](https://en.wikipedia.org/wiki
 
 ```javascript
 // Much improved, could do this
-const maxSubArray = (nums) => {
-    let current = -Infinity, best = -Infinity;
-    for (let i = 0; i < nums.length; i++) {
-        current = Math.max(nums[i], current + nums[i]);
-        best = Math.max(best, current);
-    }
-    return best;
+const maxSubArray = nums => {
+	let current = -Infinity,
+		best = -Infinity;
+	for (let i = 0; i < nums.length; i++) {
+		current = Math.max(nums[i], current + nums[i]);
+		best = Math.max(best, current);
+	}
+	return best;
 };
 ```
-
