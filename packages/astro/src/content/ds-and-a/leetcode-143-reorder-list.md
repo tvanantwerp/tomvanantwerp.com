@@ -1,6 +1,6 @@
 ---
 title: LeetCode 143. Reorder List
-description: You are given the head of a singly linked-list 1 to N. Reorder the list to be on the following form: 1 → N → 2 → N-1 → 3 → N-2 → …
+description: 'You are given the head of a singly linked-list 1 to N. Reorder the list to be on the following form: 1 → N → 2 → N-1 → 3 → N-2 → …'
 ---
 
 ## The Problem
@@ -49,6 +49,18 @@ Output: [1,5,2,4,3]
 
 ## My Solution
 
+To solve this problem, we need to do three things:
+
+1. Divide the list into halves
+2. Reverse the second half
+3. Recombine the two halves in an alternative sequence
+
+There's a pretty easy way to solve step one. We use two pointers and initialize both to point at the head. Then we increment through the list—but while one pointer moves through one node at a time (`slow`), the other moves two nodes at a time (`fast`). This means, when there's nowhere left for the `fast` pointer to go (either it is `null`, or its `next` value is `null`), the `slow` pointer will be at one of two positions: the precise midpoint (if the list has an odd number of nodes), or the node just before the midpoint (if the list has an even number of nodes).
+
+Next, we'll [reverse the second half of the list](/coding-questions/leetcode-206-reverse-linked-list/). We'll create a `previous` pointer initialized to `null` (because we haven't had a previous node yet!) and a `current` pointer initialized to `slow.next`, which is the beginning of the second half of the original list.[^1] Then, for as long as `current` is not `null`, we'll shift things around. We create a scoped `next` node equal to `current.next`. We'll need that pointer at the end of this loop to initialize the next loop. Then we change `current`'s `next` to point to the `previous` node. (In the first iteration, `null`, marking the end of the new reversed list.) Then `current` becomes our `previous` for the next iteration, and the new `current` will be what was our `next`. By the end of our loop, we've got a list starting at `previous` that's sorted backwards from when we started at `slow.next`.
+
+Merging our two lists is similar to reversing one. We initialize 2 head nodes, `head1 = head` and `head2 = previous`. Then, while we've got a `head2`, we'll temporarily store a `next` pointer for `head1.next`. We then change `head1.next` to point at `head2` instead. And to set us up for the next loop, `head1` will now point at `head2` and `head2` will point at `next`. By the end of this loop, we'll have a list that's been merged in the alternating order we want.
+
 ```typescript
 // This ListNode is provided by LeetCode.
 class ListNode {
@@ -72,9 +84,14 @@ function reorderList(head: ListNode | null): void {
 	// be in the middle.
 	let slow = head,
 		fast = head;
-	while (fast.next && fast.next.next) {
+	while (fast && fast.next) {
 		slow = slow.next;
 		fast = fast.next.next;
+		// Just in case the list is circular, we check
+		// if slow and fast are pointing at the same node.
+		// In a circular list, fast will eventually come back
+		// around and catch up to slow.
+		if (slow === fast) throw new Error('List is circular');
 	}
 
 	// Next we reverse the second half of the list.
@@ -102,9 +119,9 @@ function reorderList(head: ListNode | null): void {
 		// can continue processing.
 		current = next;
 	}
+
 	// We need to set the slow pointer's next to null so that
-	// the list is properly terminated. Otherwise we get a
-	// circular list.
+	// the first half of the list is properly terminated.
 	slow.next = null;
 
 	// Finally we merge the two lists.
@@ -129,3 +146,5 @@ function reorderList(head: ListNode | null): void {
 	}
 }
 ```
+
+[^1]: We skip ahead one to `slow.next` in case we're in a list with an even number of nodes. This doesn't affect the answer if the list had an odd node count. Consider these simple examples: `[1, 2, 3] => [1, 3, 2]` and `[1, 2, 3, 4] => [1, 4, 2, 3]`. It's essential in the second sort that `3` be the start of the second half of the list, not `2`—but in the case of `[1, 2, 3]`, we could pivot on either `2` or `3` and get the same result.
