@@ -1,5 +1,5 @@
 ---
-title: 189. Rotate Array
+title: LeetCode 189. Rotate Array
 description: Given an array, rotate the array to the right by k steps, where k is non-negative.
 ---
 
@@ -39,12 +39,13 @@ Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
-- 1 <= `nums.length` <= 2 * 10<sup>4</sup>
+- 1 <= `nums.length` <= 2 \* 10<sup>4</sup>
 - -2<sup>31</sup> <= `nums[i]` <= 2<sup>31</sup> - 1
 - 0 <= k <= 10<sup>5</sup>
 </details>
@@ -58,21 +59,21 @@ Never hurts to start with a good brute-forcing. For each rotation `k`, loop thro
 ```javascript
 // Bad solution, don't use this
 const rotate = (nums, k) => {
-    // First, get k down to a manageable size to avoid
-    // needlessly rotating the whole array multiple times
-    // for large values of k
-    k = k % nums.length;
+	// First, get k down to a manageable size to avoid
+	// needlessly rotating the whole array multiple times
+	// for large values of k
+	k = k % nums.length;
 
-    for (let j = 0; j < k; j++) {
-        let previous = nums[nums.length - 1];
-        for (let i = 0; i < nums.length; i++) {
-            const newPrevious = nums[i];
-            nums[i] = previous;
-            previous = newPrevious;
-        }
-    }
+	for (let j = 0; j < k; j++) {
+		let previous = nums[nums.length - 1];
+		for (let i = 0; i < nums.length; i++) {
+			const newPrevious = nums[i];
+			nums[i] = previous;
+			previous = newPrevious;
+		}
+	}
 
-    // Instructions are to modify in place, so nothing returned.
+	// Instructions are to modify in place, so nothing returned.
 };
 ```
 
@@ -86,15 +87,15 @@ I'm sure the fact that I didn't write some elaborate algorithm to do this is a v
 
 ```javascript
 const rotate = (nums, k) => {
-    k = k % nums.length;
+	k = k % nums.length;
 
-    // Splice can delete and insert!
-    // The inner splice deletes from nums
-    // starting at the index of nums.length - k,
-    // and running to the end.
-    // The outer splice starts at index 0, deletes 0
-    // items, then inserts the spread out returned
-    // value of the inner splice.
-    nums.splice(0,0,...nums.splice(nums.length - k));
+	// Splice can delete and insert!
+	// The inner splice deletes from nums
+	// starting at the index of nums.length - k,
+	// and running to the end.
+	// The outer splice starts at index 0, deletes 0
+	// items, then inserts the spread out returned
+	// value of the inner splice.
+	nums.splice(0, 0, ...nums.splice(nums.length - k));
 };
 ```

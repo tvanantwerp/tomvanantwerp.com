@@ -1,5 +1,5 @@
 ---
-title: 198. House Robber
+title: LeetCode 198. House Robber
 description: You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
 ---
 
@@ -31,11 +31,11 @@ Output: 12
 Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
 Total amount you can rob = 2 + 9 + 1 = 12.
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - `1 <= nums.length <= 100`
 - `0 <= nums[i] <= 400`
@@ -65,12 +65,9 @@ function rob(nums: number[], index = nums.length - 1): number {
 		// maximum of this house plus the house two before, or
 		// the house one before. We recursively call the function
 		// to get the sum of other house's values.
-		return Math.max(
-			rob(nums, index - 2) + nums[index],
-			rob(nums, index - 1)
-		);
+		return Math.max(rob(nums, index - 2) + nums[index], rob(nums, index - 1));
 	}
-};
+}
 ```
 
 This function is correct, but it's not performant. Because we call the function again twice for each comparison, our time complexity is $O(2^{n})$! If you try running it in leetcode, it will time out. We need to improve it with memoization.
@@ -83,7 +80,11 @@ To improve on the previous solution, we add memoization to remember values we've
 // We've once again modified the function. Now it also takes
 // a JavaScript Map to use for our memoization, which we
 // initialize as a new empty Map.
-function rob(nums: number[], index = nums.length - 1, memo = new Map<number, number>()): number {
+function rob(
+	nums: number[],
+	index = nums.length - 1,
+	memo = new Map<number, number>(),
+): number {
 	if (index < 0) {
 		return 0;
 	} else if (memo.has(index)) {
@@ -94,7 +95,7 @@ function rob(nums: number[], index = nums.length - 1, memo = new Map<number, num
 	} else {
 		const result = Math.max(
 			rob(nums, index - 2, memo) + nums[index],
-			rob(nums, index - 1, memo)
+			rob(nums, index - 1, memo),
 		);
 		// Instead of returning the result of comparisons right
 		// away, we first add it to the memo Map so we can find
@@ -102,7 +103,7 @@ function rob(nums: number[], index = nums.length - 1, memo = new Map<number, num
 		memo.set(index, result);
 		return result;
 	}
-};
+}
 ```
 
 ### Iterative Solution
@@ -115,7 +116,9 @@ We could use an array to remember the optimal possible result for any given `ind
 function rob(nums: number[]): number {
 	if (nums.length === 0) return 0;
 
-	let oneHouseBack = 0, twoHousesBack = 0, temp = oneHouseBack;
+	let oneHouseBack = 0,
+		twoHousesBack = 0,
+		temp = oneHouseBack;
 	for (const thisHouse of nums) {
 		// We're about to reassign the value of oneHouseBack,
 		// so we want to store the current value somewhere.
@@ -124,12 +127,12 @@ function rob(nums: number[]): number {
 		// oneHouseBack, and oneHouseBack to the max of our
 		// comparison.
 		temp = oneHouseBack;
-		oneHouseBack = Math.max(twoHousesBack + thisHouse, oneHouseBack)
+		oneHouseBack = Math.max(twoHousesBack + thisHouse, oneHouseBack);
 		twoHousesBack = temp;
 	}
 
-	return oneHouseBack
-};
+	return oneHouseBack;
+}
 ```
 
 [^1]: If you like tough data structures and algorithms problems with a story, check out [Advent of Code](https://adventofcode.com/) for more and better puzzles.

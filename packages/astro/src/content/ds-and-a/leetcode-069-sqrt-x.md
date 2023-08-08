@@ -1,5 +1,5 @@
 ---
-title: 69. Sqrt(x)
+title: LeetCode 69. Sqrt(x)
 description: Given a non-negative integer, compute and return the square root.
 ---
 
@@ -30,12 +30,14 @@ Input: x = 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 0 ≤ `x` ≤ 2<sup>31</sup> - 1
+
 </details>
 
 ## My Solution
@@ -48,7 +50,7 @@ You are explicitly told in the problem not to do it this way. That said...
 function mySqrt(x: number): number {
 	// Cheater!
 	return Math.floor(x ** 0.5);
-};
+}
 ```
 
 ### Binary Search
@@ -61,7 +63,8 @@ function mySqrt(x: number): number {
 	if (x === 0) return 0;
 
 	// else, we do a binary search for the nearest int sqrt
-	let low = 0, high = x;;
+	let low = 0,
+		high = x;
 
 	while (low <= high) {
 		const mid = Math.floor(low + (high - low) / 2);
@@ -76,7 +79,7 @@ function mySqrt(x: number): number {
 	}
 
 	return high;
-};
+}
 ```
 
 ### Babylonian Method
@@ -101,8 +104,8 @@ function mySqrt(x: number): number {
 		// of x / r.
 		// The bitwise OR 0 is just a short way to drop remainders.
 		// We could've also done Math.floor((r + x / r) / 2).
-		r = (r + x / r) / 2 | 0;
+		r = ((r + x / r) / 2) | 0;
 	}
 	return r;
-};
+}
 ```

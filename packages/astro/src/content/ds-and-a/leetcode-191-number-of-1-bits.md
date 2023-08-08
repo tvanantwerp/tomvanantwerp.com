@@ -1,5 +1,5 @@
 ---
-title: 191. Number of 1 Bits
+title: LeetCode 191. Number of 1 Bits
 description: Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 ---
 
@@ -42,6 +42,7 @@ Input: n = 11111111111111111111111111111101
 Output: 31
 Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
 ```
+
 </details>
 
 <details>
@@ -85,7 +86,7 @@ count === 3
 In code:
 
 ```javascript
-const hammingWeight = (n) => {
+const hammingWeight = n => {
 	let count = 0;
 	while (n) {
 		count += n & 1;
@@ -128,7 +129,7 @@ Third loop
 Once `n` is zero, we've incremented our `count` variable once for each instance of a `1` in the binary representation of `n`. Each time we mutated `n`, we were setting it to it's previous binary value but with the smallest `1` bit set to `0` instead. (E.g., `1011` to `1010` to `1000` and finally to `0000`.) In code:
 
 ```javascript
-const hammingWeight = (n) => {
+const hammingWeight = n => {
 	let count = 0;
 	while (n) {
 		n = n & (n - 1);
@@ -141,9 +142,9 @@ const hammingWeight = (n) => {
 You can also write this recursively:
 
 ```javascript
-const hammingWeight = (n) => {
+const hammingWeight = n => {
 	return n ? hammingWeight(n & (n - 1)) : 0;
-}
+};
 ```
 
 [^1]: Ok, now I'm lying. If it were a string, I would've just written `n.split('').reduce((p, c) => c === '1' ? p + 1 : p, 0)` and called it a day.

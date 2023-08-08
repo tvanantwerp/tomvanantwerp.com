@@ -1,5 +1,5 @@
 ---
-title: 70. Climbing Stairs
+title: LeetCode 70. Climbing Stairs
 description: You are climbing a staircase with a certain number of steps. With each step, you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 ---
 
@@ -34,12 +34,14 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 1 ≤ `n` ≤ 45
+
 </details>
 
 ## My Solution
@@ -113,7 +115,13 @@ const climbStairs = n => {
 We can also solve this recursively (with memoization as an added bonus):
 
 ```javascript
-const climbStairs = (n, memo = new Map([[1, 1], [2, 2]])) => {
+const climbStairs = (
+	n,
+	memo = new Map([
+		[1, 1],
+		[2, 2],
+	]),
+) => {
 	if (memo.has(n)) return memo.get(n);
 	memo.set(n, climbStairs(n - 1, memo) + climbStairs(n - 2, memo));
 	return memo.get(n);

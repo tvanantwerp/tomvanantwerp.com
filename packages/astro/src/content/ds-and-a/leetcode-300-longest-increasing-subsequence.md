@@ -1,5 +1,5 @@
 ---
-title: 300. Longest Increasing Subsequence
+title: LeetCode 300. Longest Increasing Subsequence
 description: Given an integer array, return the length of the longest strictly increasing subsequence.
 ---
 
@@ -37,11 +37,11 @@ Example 3:
 Input: nums = [7,7,7,7,7,7,7]
 Output: 1
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - 1 ≤ `nums.length` ≤ 2500
 - -10<sup>4</sup> ≤ `nums[i]` ≤ 10<sup>4</sup>
@@ -58,23 +58,20 @@ First we can attempt to brute-force the solution. We can't just go across the ar
 // which we're initializing to 0. We also initialize a
 // previous argument to -Infinity for comparisons.
 const lengthOfLIS = (nums: number[], i = 0, previous = -Infinity): number => {
-    // If we're past the last element of nums, return 0
-    if (i === nums.length) return 0;
+	// If we're past the last element of nums, return 0
+	if (i === nums.length) return 0;
 
-    // We use recursion to compute the length of the subsequence
-    // if we did skip nums[i] and if we instead accepted it.
-    // The +1 in the accept variable represents the increase in
-    // subsequence length if we accept the digit.
-    const skip = lengthOfLIS(nums, i + 1, previous);
-    const accept = 1 + lengthOfLIS(nums, i + 1, nums[i]);
+	// We use recursion to compute the length of the subsequence
+	// if we did skip nums[i] and if we instead accepted it.
+	// The +1 in the accept variable represents the increase in
+	// subsequence length if we accept the digit.
+	const skip = lengthOfLIS(nums, i + 1, previous);
+	const accept = 1 + lengthOfLIS(nums, i + 1, nums[i]);
 
-    // Return the greater of the subsequences if we skipped
-    // nums[i] or accepted it. Of course, we would only accept
-    // if nums[i] is actually greater than the previous value.
-    return Math.max(
-        skip,
-        (nums[i] > previous) ? accept : 0
-    )
+	// Return the greater of the subsequences if we skipped
+	// nums[i] or accepted it. Of course, we would only accept
+	// if nums[i] is actually greater than the previous value.
+	return Math.max(skip, nums[i] > previous ? accept : 0);
 };
 ```
 
@@ -119,15 +116,16 @@ function lengthOfLIS(nums: number[]): number {
 			// search implementation from Problem 35.
 			piles[searchInsert(piles, num)] = num;
 		}
-	})
+	});
 	return piles.length;
-};
+}
 
 // Re-used from problem 35
 function searchInsert(nums: number[], target: number): number {
 	// First, we establish upper and lower bounds for our
 	// search space, starting with 0 and the final index.
-	let low = 0, high = nums.length - 1;
+	let low = 0,
+		high = nums.length - 1;
 
 	while (low <= high) {
 		// Find the mid-point, or the number just to the left of
@@ -151,7 +149,7 @@ function searchInsert(nums: number[], target: number): number {
 	// than high and we return low. It will be equal to where the
 	// target should have been.
 	return low;
-};
+}
 ```
 
 This solution has a time complexity of $O(n \log n)$: one $n$ for iterating through the array, and $\log n$ for the binary search.

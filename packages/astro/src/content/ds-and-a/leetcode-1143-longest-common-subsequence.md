@@ -1,5 +1,5 @@
 ---
-title: 1143. Longest Common Subsequence
+title: LeetCode 1143. Longest Common Subsequence
 description: Given two strings, return the length of their longest common subsequence.
 ---
 
@@ -41,6 +41,7 @@ Input: text1 = "abc", text2 = "def"
 Output: 0
 Explanation: There is no such common subsequence, so the result is 0.
 ```
+
 </details>
 
 <details>
@@ -78,7 +79,7 @@ const dp = [
 	[0, 0, 1, 1],
 	[0, 0, 1, 2],
 	[0, 0, 1, 2],
-]
+];
 ```
 
 We know that the very last value of this array, `dp[text.length][text2.length]` will be the length of the longest common subsequence.
@@ -90,12 +91,8 @@ function longestCommonSubsequence(text1: string, text2: string): number {
 	// It had an outer array of the length of text1 + 1, and each
 	// value of that array is another array of length equal to
 	// the length of text2 + 1. We intitialize with all zeroes.
-	const dp: number[][] = Array.from(
-		{length: text1.length + 1},
-		() => Array.from(
-			{length: text2.length + 1},
-			() => 0
-		)
+	const dp: number[][] = Array.from({ length: text1.length + 1 }, () =>
+		Array.from({ length: text2.length + 1 }, () => 0),
 	);
 
 	for (let i = 1; i <= text1.length; i++) {
@@ -117,5 +114,5 @@ function longestCommonSubsequence(text1: string, text2: string): number {
 	// The final values in dp should have the correct length of
 	// the longest common subsequence.
 	return dp[text1.length][text2.length];
-};
+}
 ```

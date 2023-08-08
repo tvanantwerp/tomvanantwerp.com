@@ -1,5 +1,5 @@
 ---
-title: 371. Sum of Two Integers
+title: LeetCode 371. Sum of Two Integers
 description: Given two integers a and b, return the sum of the two integers without using the operators + and -.
 ---
 
@@ -25,6 +25,7 @@ Example 2:
 Input: a = 2, b = 3
 Output: 5
 ```
+
 </details>
 
 <details>
@@ -38,6 +39,7 @@ Output: 5
 To add two numbers without `+` or `-`, we'll use binary. I mainly write JavaScript for web application, which means I use bitwise operations approximately never. But hey, that's leetcode!
 
 Anyway, bitwise operations include:
+
 - `&`, AND, which returns `1` if two compared bits are both `1`
 - `|`, OR, which returns `1` if either compared bit is `1`
 - `~`, NOT, which returns the opposite of a given bit
@@ -59,6 +61,7 @@ First, let's think of an example pair of integers: `7` and `4`. In binary, they 
 From this simple example, we can see that for each digit, a `0` and a `1` will have a `1` in the result. Two `0`'s result in a `0`, and two `1`'s result in a `0` and a carried `1` to the next place.
 
 This means two things:
+
 - We can find the value for a given digit with XOR
 - We need a way to carry over the `1` when there are two `1`'s being added
 
@@ -116,7 +119,7 @@ const getSum = (a, b) => {
 	// equal 0 and a will equal our answer.
 	while (b !== 0) {
 		// Store the digits we'll need to carry over.
-		carry = (a & b);
+		carry = a & b;
 		// Find the digits that will equal 1 in binary,
 		// then mutate a to equal the result.
 		a = a ^ b;
@@ -124,7 +127,7 @@ const getSum = (a, b) => {
 		// once to the left.
 		b = carry << 1;
 	}
-	return a
+	return a;
 };
 ```
 
@@ -135,4 +138,3 @@ const getSum = (a, b) => {
 	return b ? getSum(a ^ b, (a & b) << 1) : a;
 };
 ```
-
