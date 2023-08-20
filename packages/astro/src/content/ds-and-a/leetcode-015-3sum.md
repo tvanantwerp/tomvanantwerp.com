@@ -48,9 +48,9 @@ Output: []
 
 This problem is tricky. Trickier than [Two Sum](/coding-questions/leetcode-001-two-sum), to be sure.
 
-We can solve this problem in $O(n{^2} + n \log n)$ time, which reduces to just $O(n{^2})$. First we'll sort the input array, which costs us the $O(n \log n)$ time but greatly reduces the complexity of comparing values across the array.
+We can solve this problem in $$O(n{^2} + n \log n)$$ time, which reduces to just $$O(n{^2})$$. First we'll sort the input array, which costs us the $$O(n \log n)$$ time but greatly reduces the complexity of comparing values across the array.
 
-With our array sorted, we'll iterate through it. For each number `nums[i]`, we'll designate a new index `j` and `k` representing the indices immediately right of `i` and at `nums.length - 1` respectively. Then with a `while` loop, we increment `j` to see if any sum of `nums[i] + nums[j] + nums[k]` equals our target. If we find the correct sum, we can push to an array containing our results and then increment `j` and decrement `k` to search for new possible solutions. Once all the combinations of `nums[i] + nums[j] + nums[k]` have been exhausted, finally the `for` loop increments `i` and we start again. This process gives us $O(n{^2})$ time complexity.
+With our array sorted, we'll iterate through it. For each number `nums[i]`, we'll designate a new index `j` and `k` representing the indices immediately right of `i` and at `nums.length - 1` respectively. Then with a `while` loop, we increment `j` to see if any sum of `nums[i] + nums[j] + nums[k]` equals our target. If we find the correct sum, we can push to an array containing our results and then increment `j` and decrement `k` to search for new possible solutions. Once all the combinations of `nums[i] + nums[j] + nums[k]` have been exhausted, finally the `for` loop increments `i` and we start again. This process gives us $$O(n{^2})$$ time complexity.
 
 ```javascript
 const threeSum = (nums, target = 0) => {
@@ -107,13 +107,13 @@ const threeSum = (nums, target = 0) => {
 				// reposition j and k to begin a loop with fresh values.
 				j++;
 				k--;
-			// Otherwise increment j until the sum is too great,
-			// at which point we might as well stop incrementing
-			// j because there's no way to hit the target sum
-			// by continuing that loop.
+				// Otherwise increment j until the sum is too great,
+				// at which point we might as well stop incrementing
+				// j because there's no way to hit the target sum
+				// by continuing that loop.
 			} else if (sum < target) {
 				j++;
-			// Finally, decrement k if j is exhausted.
+				// Finally, decrement k if j is exhausted.
 			} else {
 				k--;
 			}

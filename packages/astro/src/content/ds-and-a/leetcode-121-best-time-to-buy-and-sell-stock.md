@@ -61,11 +61,11 @@ const maxProfit = prices => {
 };
 ```
 
-The solution goes through each price, and then compares it to the highest _future_ price (i.e., the maximum of the remainder of the `prices` array). The function returns a variable `max`, which is updated every time that the future price minus the current price is greater than the previous maximum profit. This solution is bad because it's got $O(n{^2})$ time complexity. The larger the prices array, the worse this performs. The Leetcode platform times out if you submit this answer. Lets do better.
+The solution goes through each price, and then compares it to the highest _future_ price (i.e., the maximum of the remainder of the `prices` array). The function returns a variable `max`, which is updated every time that the future price minus the current price is greater than the previous maximum profit. This solution is bad because it's got $$O(n{^2})$$ time complexity. The larger the prices array, the worse this performs. The Leetcode platform times out if you submit this answer. Lets do better.
 
 ### Better Attempt
 
-This solution does a single pass through the array, giving it an $O(n)$ time complexity.
+This solution does a single pass through the array, giving it an $$O(n)$$ time complexity.
 
 ```javascript
 const maxProfit = prices => {

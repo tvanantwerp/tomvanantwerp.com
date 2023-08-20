@@ -70,11 +70,11 @@ function rob(nums: number[], index = nums.length - 1): number {
 }
 ```
 
-This function is correct, but it's not performant. Because we call the function again twice for each comparison, our time complexity is $O(2^{n})$! If you try running it in leetcode, it will time out. We need to improve it with memoization.
+This function is correct, but it's not performant. Because we call the function again twice for each comparison, our time complexity is $$O(2^{n})$$! If you try running it in leetcode, it will time out. We need to improve it with memoization.
 
 ### Recursive Solution + Memoization
 
-To improve on the previous solution, we add memoization to remember values we've previously computed. This dramatically speeds up our solution and gives us a time complexity of $O(n)$. Here, we pass around a `Map` with the `index` as key and the result of our comparisons as the value.
+To improve on the previous solution, we add memoization to remember values we've previously computed. This dramatically speeds up our solution and gives us a time complexity of $$O(n)$$. Here, we pass around a `Map` with the `index` as key and the result of our comparisons as the value.
 
 ```typescript
 // We've once again modified the function. Now it also takes
@@ -110,7 +110,7 @@ function rob(
 
 Our recursive solution was top-down. That is to say, we started at the farthest house and worked backward. For our iterative solution, we'll instead go bottom-up. We'll calculate answers to sub-problems near the beginning in order to answer more sub-problems as we go along. The same sub-problem logic still holds: for each house we're at, we want to know if we're better off taking the sum of this house and all the houses previously robbed as of two house before, or just the sum of all house robbed previously as of one house before.
 
-We could use an array to remember the optimal possible result for any given `index` in `nums`, but we don't have to. All we really need are two variables to remember the sums for one house back and two houses back. With each iteration across `nums`, we can just update those two variables. So not only do we get time complexity of $O(n)$, but we also get space complexity of $O(1)$!.
+We could use an array to remember the optimal possible result for any given `index` in `nums`, but we don't have to. All we really need are two variables to remember the sums for one house back and two houses back. With each iteration across `nums`, we can just update those two variables. So not only do we get time complexity of $$O(n)$$, but we also get space complexity of $$O(1)$$!.
 
 ```typescript
 function rob(nums: number[]): number {

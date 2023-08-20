@@ -22,7 +22,7 @@ export default defineConfig({
 		turbolinks(),
 	],
 	markdown: {
-		remarkPlugins: [remarkMath],
+		remarkPlugins: [[remarkMath, { singleDollarTextMath: false }]],
 		rehypePlugins: [
 			rehypeSlug,
 			[rehypeAutolinkHeadings, { behavior: 'wrap' }],

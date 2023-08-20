@@ -16,7 +16,7 @@ Notice that **rotating** an array `[a[0], a[1], a[2], ..., a[n-1]]` 1 time resul
 
 Given the sorted rotated array `nums` of **unique** elements, return _the minimum element of this array_.
 
-You must write an algorithm that runs in $O(\log n)$ time.
+You must write an algorithm that runs in $$O(\log n)$$ time.
 
 <details>
 <summary>Examples</summary>
@@ -59,7 +59,7 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 ## My Solution
 
-The naïve solution would be `return Math.min(...nums)`. This is $O(n)$ time, because it has to check every value in the `nums` array. We can instead use a modified binary search to get down to $O(\log n)$ time. Leetcode has [a more detailed explanation](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/) with the problem on their site.
+The naïve solution would be `return Math.min(...nums)`. This is $$O(n)$$ time, because it has to check every value in the `nums` array. We can instead use a modified binary search to get down to $$O(\log n)$$ time. Leetcode has [a more detailed explanation](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/) with the problem on their site.
 
 This first example uses recursion.
 

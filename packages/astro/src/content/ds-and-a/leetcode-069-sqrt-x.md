@@ -86,7 +86,7 @@ function mySqrt(x: number): number {
 
 The [Babylonian Method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) is an ancient algorithm to find approximate square roots. There is a more modern and generalized version called [Newton's Method](https://en.wikipedia.org/wiki/Newton%27s_method), but Newton's Method is identical to the Babylonian Method when applied to a simple square root problem like this.
 
-This algorithm works by taking an initial guess, which we will call `r`. From this starting point, we'll need to continuously update our guess until we reach an arbitrary level of closeness to the true value of the square root. To find the next iteration of the guess, we add our guess `r` to `x / r`, then halve it all. The formula for the next guess is $r_{n + 1} = \frac{r_{n} + \frac{x}{r_{n}}}{2}$. In our case, we'll stop updating and return `r` once `r ** 2` is no longer greater than `x`
+This algorithm works by taking an initial guess, which we will call `r`. From this starting point, we'll need to continuously update our guess until we reach an arbitrary level of closeness to the true value of the square root. To find the next iteration of the guess, we add our guess `r` to `x / r`, then halve it all. The formula for the next guess is $$r_{n + 1} = \frac{r_{n} + \frac{x}{r_{n}}}{2}$$. In our case, we'll stop updating and return `r` once `r ** 2` is no longer greater than `x`
 
 ```typescript
 function mySqrt(x: number): number {

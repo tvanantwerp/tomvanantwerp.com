@@ -44,7 +44,7 @@ Output: true
 
 ## My Solution
 
-This solution is $O(n)$ time and space complexity. I iterate through `nums` and store each unique value in a `Map`. If I encounter a value is already in the `Map`, I return `true`. If I add every item to the `Map` without encountering a duplicate, I return `false`.
+This solution is $$O(n)$$ time and space complexity. I iterate through `nums` and store each unique value in a `Map`. If I encounter a value is already in the `Map`, I return `true`. If I add every item to the `Map` without encountering a duplicate, I return `false`.
 
 ```javascript
 const containsDuplicate = nums => {

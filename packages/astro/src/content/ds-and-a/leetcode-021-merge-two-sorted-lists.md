@@ -107,7 +107,7 @@ function arrayToList(values: number[]) {
 
 ### Linked List Iterative Solution
 
-Ok, let's do this the proper way. This problem can be solved recursively or iteratively. I'm going to use the iterative solution, because there's a risk that with sufficiently long lists, you could exceed the maximum recursion depth. This solution is $O(m + n)$ time complexity.
+Ok, let's do this the proper way. This problem can be solved recursively or iteratively. I'm going to use the iterative solution, because there's a risk that with sufficiently long lists, you could exceed the maximum recursion depth. This solution is $$O(m + n)$$ time complexity.
 
 ```typescript
 class ListNode {

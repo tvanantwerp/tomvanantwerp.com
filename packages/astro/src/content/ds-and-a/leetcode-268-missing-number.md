@@ -42,16 +42,16 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 <details>
 <summary>Constraints</summary>
 
-- `n` $=$ `nums.length`
-- 1 $\le$ `n` $\le$ 10<sup>4</sup>
-- 0 $\le$ `nums[i]` $\le$ `n`
+- `n` $$=$$ `nums.length`
+- 1 $$\le$$ `n` $$\le$$ 10<sup>4</sup>
+- 0 $$\le$$ `nums[i]` $$\le$$ `n`
 - All the numbers of `nums` are **unique**.
 </details>
 
 <details>
 <summary>Follow up</summary>
 
-Could you implement a solution using only $O(1)$ extra space complexity and $O(n)$ runtime complexity?
+Could you implement a solution using only $$O(1)$$ extra space complexity and $$O(n)$$ runtime complexity?
 
 </details>
 

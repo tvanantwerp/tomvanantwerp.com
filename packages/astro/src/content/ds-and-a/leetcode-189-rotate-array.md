@@ -12,7 +12,7 @@ Given an array, rotate the array to the right by `k` steps, where `k` is non-neg
 **Follow up**:
 
 - Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
-- Could you do it in-place with $O(1)$ extra space?
+- Could you do it in-place with $$O(1)$$ extra space?
 
 <details>
 <summary>Examples</summary>
@@ -54,7 +54,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 ### Naïve Approach
 
-Never hurts to start with a good brute-forcing. For each rotation `k`, loop through the array `num` and shift everything right by one. This will rotate the array with $O(n \times k)$ time complexity.
+Never hurts to start with a good brute-forcing. For each rotation `k`, loop through the array `num` and shift everything right by one. This will rotate the array with $$O(n \times k)$$ time complexity.
 
 ```javascript
 // Bad solution, don't use this
@@ -83,7 +83,7 @@ JavaScript's `splice` function can be a little weird, but useful once you know h
 
 I think it would've been cleaner to `splice` off the end, then `push` the remaining `nums` to the end of that splice—but, despite `console.log(nums)` reading correctly after doing this, Leetcode's solution checker didn't like that.
 
-I'm sure the fact that I didn't write some elaborate algorithm to do this is a violation of the spirit of Leetcode. Time complexity should be $O(n)$.
+I'm sure the fact that I didn't write some elaborate algorithm to do this is a violation of the spirit of Leetcode. Time complexity should be $$O(n)$$.
 
 ```javascript
 const rotate = (nums, k) => {

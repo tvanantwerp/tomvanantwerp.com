@@ -11,7 +11,7 @@ Given an integer array `nums`, return an _array_ `answer` such that `answer[i]` 
 
 The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
 
-You must write an algorithm that runs in $O(n)$ time and without using the division operation.
+You must write an algorithm that runs in $$O(n)$$ time and without using the division operation.
 
 <details>
 <summary>Examples</summary>
@@ -40,7 +40,7 @@ Output: [0,0,9,0,0]
 - The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
 </details>
 
-**Follow up**: Can you solve the problem in $O(1)$ extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+**Follow up**: Can you solve the problem in $$O(1)$$ extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
 ## My Solution
 
@@ -62,11 +62,11 @@ const productExceptSelf = nums => {
 const product = nums => nums.reduce((prev, curr) => prev * curr, 1);
 ```
 
-This is correct, but it is much too slow—it has $O(n{^2})$ time complexity. Leetcode will time out if you try this.
+This is correct, but it is much too slow—it has $$O(n{^2})$$ time complexity. Leetcode will time out if you try this.
 
 ### Better Solution
 
-Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. We'll store these values as the `prefix` array and the `suffix` array. Since we no longer check each value to the left and right, this brings us down to $O(n)$ time complexity.
+Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. We'll store these values as the `prefix` array and the `suffix` array. Since we no longer check each value to the left and right, this brings us down to $$O(n)$$ time complexity.
 
 ```javascript
 const productExceptSelf = nums => {

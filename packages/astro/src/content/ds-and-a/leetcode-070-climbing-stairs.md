@@ -79,7 +79,7 @@ n = 5 => 8
 ...
 ```
 
-In this Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $F_{n} = F_{n - 1} + F_{n - 2}$. So if we know $F_{n - 1}$ and $F_{n - 2}$, we know $F_{n}$. Easy enough to calculate!
+In this Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $$F_{n} = F_{n - 1} + F_{n - 2}$$. So if we know $$F_{n - 1}$$ and $$F_{n - 2}$$, we know $$F_{n}$$. Easy enough to calculate!
 
 ```javascript
 const climbStairs = n => {

@@ -46,7 +46,7 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 
 ## My Solution
 
-Much like [053 Maximum Subarray](/coding-questions/leetcode-053-maximum-subarray), we can use dynamic programming with [Kadane's Algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm) to solve this in $O(n)$ time. Check out the solution to that problem for a full explanation of the algorithm and what it's superior to a naïve approach.
+Much like [053 Maximum Subarray](/coding-questions/leetcode-053-maximum-subarray), we can use dynamic programming with [Kadane's Algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm) to solve this in $$O(n)$$ time. Check out the solution to that problem for a full explanation of the algorithm and what it's superior to a naïve approach.
 
 In this implementation, we have to keep track not only of the current maxium number so far, but also the minimum so far. This is because we can have negative numbers, and two negatives multiplied could give us a larger number than the product of the current number and the current maximum.
 

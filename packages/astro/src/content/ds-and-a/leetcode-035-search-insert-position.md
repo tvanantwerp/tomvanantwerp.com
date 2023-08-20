@@ -9,7 +9,7 @@ description: Given a sorted array of distinct integers and a target value, retur
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
-You must write an algorithm with $O(n \log n)$ runtime complexity.
+You must write an algorithm with $$O(n \log n)$$ runtime complexity.
 
 <details>
 <summary>Examples</summary>
@@ -51,7 +51,7 @@ Output: 4
 
 ### Binary Search - Iterative
 
-This problem is unambiguously checking to see if you know how to do a binary search. You can use binary search on a sorted array to find a target in $O(n \log n)$ time instead of the $O(n)$ it would take to check every single item. This is most useful for very large inputs. First, check the mid-point of the array. (Or if it has an even number of values, one adjecent to where the mid-point would be.) If it's the target value, return. If not, compare it to the target. If it's less than the target, check the right half of the array. If it's greater than the target, check the left half of the array. We keep narrowing down the array until we find the target, or we know where the target ought to have been.
+This problem is unambiguously checking to see if you know how to do a binary search. You can use binary search on a sorted array to find a target in $$O(n \log n)$$ time instead of the $$O(n)$$ it would take to check every single item. This is most useful for very large inputs. First, check the mid-point of the array. (Or if it has an even number of values, one adjecent to where the mid-point would be.) If it's the target value, return. If not, compare it to the target. If it's less than the target, check the right half of the array. If it's greater than the target, check the left half of the array. We keep narrowing down the array until we find the target, or we know where the target ought to have been.
 
 ```typescript
 function searchInsert(nums: number[], target: number): number {

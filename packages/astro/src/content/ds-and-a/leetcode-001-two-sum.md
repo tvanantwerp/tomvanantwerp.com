@@ -53,7 +53,7 @@ Output: [0,1]
 
 ### Naïve Solution
 
-The simplest approach is nested for loops, solving in $O(n{^2})$ time and $O(1)$ space.
+The simplest approach is nested for loops, solving in $$O(n{^2})$$ time and $$O(1)$$ space.
 
 ```javascript
 const twoSum = (nums, target) => {
@@ -69,7 +69,7 @@ const twoSum = (nums, target) => {
 
 ### Best Solution
 
-We can reduce the time complexity to $O(n)$ by increasing the space complexity to $O(n)$ in the form of a hashmap. Here I use a JavaScript object to keep track of numbers I've seen and their indices.
+We can reduce the time complexity to $$O(n)$$ by increasing the space complexity to $$O(n)$$ in the form of a hashmap. Here I use a JavaScript object to keep track of numbers I've seen and their indices.
 
 ```javascript
 const twoSum = (nums, target) => {

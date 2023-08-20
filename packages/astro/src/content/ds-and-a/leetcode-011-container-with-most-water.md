@@ -49,7 +49,7 @@ Output: 1
 
 We're imagining creating a container of water from two out of `n` sides, maximizing the amount of water we can hold by choosing the best sides for the job. This means that the area we're computing is restricted to the smaller of the two sides we use, because that's where water would flow out if you tried to add more. We are pretending any sides between the two we're choosing don't exist.
 
-To solve this problem in $O(n)$ time, we start by comparing the outermost sides. We store that area in our `maxArea` variable, then remove from the array whichever of those sides was smaller. (Remember: the smaller side is the limiting factor, so that's why we always remove the smaller one.) Now we compare again with the modified array to see if we've got a new maximum area. Repeat until there are only two sides in the array left, and by then you'll have found the maximum area.
+To solve this problem in $$O(n)$$ time, we start by comparing the outermost sides. We store that area in our `maxArea` variable, then remove from the array whichever of those sides was smaller. (Remember: the smaller side is the limiting factor, so that's why we always remove the smaller one.) Now we compare again with the modified array to see if we've got a new maximum area. Repeat until there are only two sides in the array left, and by then you'll have found the maximum area.
 
 ```javascript
 const maxArea = height => {

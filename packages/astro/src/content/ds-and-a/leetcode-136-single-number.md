@@ -34,7 +34,7 @@ Output: 4
 
 This solution avoids creating anything new in memory, such as another list or hash map to keep track. I don't really want to track numbers--just find the unique one. To make it easier to do this in a single loop over the existing array, I sort it. Then I can just compare each number to its neighbors and return whichever one doesn't have a matching neighbor.
 
-Time complexity of $O(n)$ for my operation not counting the sort. I _think_ space complexity is $O(1)$, since I created nothing new. Not sure how the sort might affect that, however.
+Time complexity of $$O(n)$$ for my operation not counting the sort. I _think_ space complexity is $$O(1)$$, since I created nothing new. Not sure how the sort might affect that, however.
 
 ```javascript
 const singleNumber = nums => {
