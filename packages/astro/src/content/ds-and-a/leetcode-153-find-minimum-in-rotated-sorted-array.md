@@ -1,5 +1,5 @@
 ---
-title: 153. Find Minimum in Rotated Sorted Array
+title: LeetCode 153. Find Minimum in Rotated Sorted Array
 description: Given a sorted rotated array of unique elements, return the minimum element of this array in logarithmic time.
 ---
 

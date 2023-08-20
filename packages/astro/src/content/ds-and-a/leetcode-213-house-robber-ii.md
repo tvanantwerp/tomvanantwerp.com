@@ -1,5 +1,5 @@
 ---
-title: 213. House Robber II
+title: LeetCode 213. House Robber II
 description: Given an integer array representing the amount of money of each house, return the maximum amount of money you can rob tonight from a circle of houses without alerting the police by robbing adjacent houses.
 ---
 
@@ -37,6 +37,7 @@ Example 3:
 Input: nums = [1,2,3]
 Output: 3
 ```
+
 </details>
 
 <details>
@@ -56,28 +57,27 @@ Re-using our previous solution, we can just return the `Math.max` of that functi
 
 ```typescript
 function rob(nums: number[]): number {
-    if (nums.length === 0) return 0;
-    if (nums.length === 1) return nums[0];
+	if (nums.length === 0) return 0;
+	if (nums.length === 1) return nums[0];
 
-    return Math.max(
-        robLinear(nums.slice(0, -1)),
-        robLinear(nums.slice(1))
-    );
-};
+	return Math.max(robLinear(nums.slice(0, -1)), robLinear(nums.slice(1)));
+}
 
 // This is our house robber function from #198.
 function robLinear(nums: number[]): number {
 	if (nums.length === 0) return 0;
 
-	let oneHouseBack = 0, twoHousesBack = 0, temp = oneHouseBack;
+	let oneHouseBack = 0,
+		twoHousesBack = 0,
+		temp = oneHouseBack;
 	for (const thisHouse of nums) {
 		temp = oneHouseBack;
-		oneHouseBack = Math.max(twoHousesBack + thisHouse, oneHouseBack)
+		oneHouseBack = Math.max(twoHousesBack + thisHouse, oneHouseBack);
 		twoHousesBack = temp;
 	}
 
-	return oneHouseBack
-};
+	return oneHouseBack;
+}
 ```
 
 [^1]: I'm trying to imagine this. It can't be a cul-de-sac, beause the road breaks the circle. Is it a little island of houses inside a traffic circle, all sharing a backyard?

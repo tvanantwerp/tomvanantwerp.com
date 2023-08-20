@@ -1,5 +1,5 @@
 ---
-title: 268. Missing Number
+title: LeetCode 268. Missing Number
 description: Given an array containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 image: img/2022-01-23-missingno.png
 ---

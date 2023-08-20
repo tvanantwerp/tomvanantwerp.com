@@ -1,5 +1,5 @@
 ---
-title: 190. Reverse Bits
+title: LeetCode 190. Reverse Bits
 description: Reverse bits of a given 32 bits unsigned integer.
 ---
 

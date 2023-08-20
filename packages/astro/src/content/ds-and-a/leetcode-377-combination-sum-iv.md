@@ -1,5 +1,5 @@
 ---
-title: 377. Combination Sum IV
+title: LeetCode 377. Combination Sum IV
 description: Given an array of distinct integers and a target integer, return the number of possible combinations that add up to target.
 ---
 

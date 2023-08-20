@@ -1,5 +1,5 @@
 ---
-title: 121. Best Time to Buy and Sell Stock
+title: LeetCode 121. Best Time to Buy and Sell Stock
 description: You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 ---
 

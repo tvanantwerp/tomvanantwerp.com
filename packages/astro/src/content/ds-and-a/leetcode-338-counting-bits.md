@@ -1,5 +1,5 @@
 ---
-title: 338. Counting Bits
+title: LeetCode 338. Counting Bits
 description: Given an integer, return an array of the number of 1 bits in each digit from 0 through the integer.
 ---
 

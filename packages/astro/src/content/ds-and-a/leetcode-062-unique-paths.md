@@ -1,5 +1,5 @@
 ---
-title: 62. Unique Paths
+title: LeetCode 62. Unique Paths
 description: Given a grid with height m and width n, calculate the unique paths from the top-left corner to the bottom-right corner while moving only right or down.
 ---
 

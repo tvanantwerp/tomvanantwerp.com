@@ -1,0 +1,27 @@
+.banner {
+	border-width: 1px;
+	border-radius: 4px;
+	border-style: solid;
+	font-family: var(--serif);
+	font-size: 0.8rem;
+	margin: 1rem 0;
+	padding: 1rem;
+
+	&--info {
+		background-color: rgba(20, 20, 140, 0.05);
+		border-color: var(--info);
+
+		@media (prefers-color-scheme: dark) {
+			background-color: rgba(60, 40, 170, 0.1);
+		}
+	}
+
+	&--warning {
+		background-color: rgba(120, 20, 20, 0.05);
+		border-color: var(--warning);
+
+		@media (prefers-color-scheme: dark) {
+			background-color: rgba(140, 80, 80, 0.05);
+		}
+	}
+}

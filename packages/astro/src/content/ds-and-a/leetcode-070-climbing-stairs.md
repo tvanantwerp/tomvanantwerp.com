@@ -1,5 +1,5 @@
 ---
-title: 70. Climbing Stairs
+title: LeetCode 70. Climbing Stairs
 description: You are climbing a staircase with a certain number of steps. With each step, you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 ---
 

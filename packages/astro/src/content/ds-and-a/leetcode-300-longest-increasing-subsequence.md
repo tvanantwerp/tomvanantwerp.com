@@ -1,5 +1,5 @@
 ---
-title: 300. Longest Increasing Subsequence
+title: LeetCode 300. Longest Increasing Subsequence
 description: Given an integer array, return the length of the longest strictly increasing subsequence.
 ---
 

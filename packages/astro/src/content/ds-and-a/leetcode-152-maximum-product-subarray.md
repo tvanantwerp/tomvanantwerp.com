@@ -1,5 +1,5 @@
 ---
-title: 152. Maximum Product Subarray
+title: LeetCode 152. Maximum Product Subarray
 description: Given an integer array, find a contiguous non-empty subarray within the array that has the largest product, and return the product.
 tags:
   - Dynamic Programming

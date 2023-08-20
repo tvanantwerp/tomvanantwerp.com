@@ -1,5 +1,5 @@
 ---
-title: 102. Binary Tree Level Order Traversal
+title: LeetCode 102. Binary Tree Level Order Traversal
 description: Given the root of a binary tree, return the level order traversal of its nodes' values.
 ---
 
@@ -38,11 +38,11 @@ Example 3:
 Input: root = []
 Output: []
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 </details>
 
@@ -53,13 +53,13 @@ This solution is fairly straightforward with a queue. We need a variable to stor
 ```typescript
 // Define our TreeNode class, provided from leetcode
 class TreeNode {
-	val: number
-	left: TreeNode | null
-	right: TreeNode | null
+	val: number;
+	left: TreeNode | null;
+	right: TreeNode | null;
 	constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-		this.val = (val===undefined ? 0 : val)
-		this.left = (left===undefined ? null : left)
-		this.right = (right===undefined ? null : right)
+		this.val = val === undefined ? 0 : val;
+		this.left = left === undefined ? null : left;
+		this.right = right === undefined ? null : right;
 	}
 }
 
@@ -94,7 +94,7 @@ function levelOrder(root: TreeNode | null): number[][] {
 	}
 
 	return output;
-};
+}
 ```
 
 If you want to get fancy, you can get the same results with a few array methods. This shouldn't be quite as time efficient, since it loops over everything in the queue twice during the while loop versus once in the previous solution. But I do so enjoy using array methods!
@@ -107,9 +107,9 @@ function levelOrder(root: TreeNode | null): number[][] {
 	while (queue.length) {
 		output.push(queue.map(node => node.val));
 		queue = queue.flatMap(node => {
-			return [node.left, node.right].filter(n => n !== null)
+			return [node.left, node.right].filter(n => n !== null);
 		});
 	}
 	return output;
-};
+}
 ```
