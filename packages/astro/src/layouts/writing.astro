@@ -4,6 +4,7 @@ import { Picture } from '@astrojs/image/components';
 
 import Base from './base.astro';
 import { readableDate } from '../utils/dates';
+import Banner from '@components/banner';
 
 interface Props {
 	content:
@@ -96,6 +97,14 @@ const { data } = content;
 						)}
 					</div>
 				</>
+			)
+		}
+		{
+			data.archived && (
+				<Banner type="warning">
+					This content is considered archived. It is out or date or no longer
+					relevant, and will not be updated in the future.
+				</Banner>
 			)
 		}
 		<slot />
