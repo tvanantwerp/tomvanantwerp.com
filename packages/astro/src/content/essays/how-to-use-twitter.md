@@ -8,6 +8,7 @@ tags:
   - Twitter
 image: /img/2022-11-03-twitter-bird.jpg
 image_alt: A blue bird inside a cooking pot.
+archived: true
 ---
 
 [The past few weeks have me reflecting on my Twitter experience.](https://twitter.com/tvanantwerp/status/1595436988647309312)
