@@ -37,11 +37,11 @@ Example 2:
 Input: nums = [9], target = 3
 Output: 0
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - `1 <= nums.length <= 200`
 - `1 <= nums[i] <= 1000`
@@ -64,7 +64,7 @@ Once we've finished all our loops, the total number of valid combinations will b
 
 ```typescript
 function combinationSum4(nums: number[], target: number): number {
-	const dp = Array.from({length: target + 1}, () => 0);
+	const dp = Array.from({ length: target + 1 }, () => 0);
 	dp[0] = 1;
 
 	for (let i = 0; i < target; i++) {
@@ -77,20 +77,20 @@ function combinationSum4(nums: number[], target: number): number {
 	}
 
 	return dp[target];
-};
+}
 ```
 
-The time complexity is $O(n * m)$, where $n$ is the `target` and $m$ is the length of `nums`. Space complexity is $O(n)$.
+The time complexity is $$O(n * m)$$, where $$n$$ is the `target` and $$m$$ is the length of `nums`. Space complexity is $$O(n)$$.
 
 ### Dynamic Programming - Top-down
 
 The top-down approach is nearly identical to the bottom-up approach. Here we loop not from `0` through `target - 1`, but instead from `1` through `target`. We don't need to check if `dp[i]` exists here before running the inner loop, because we'll be setting values to `dp[i]` instead of `dp[num + i]`. Next we loop again over `num` of `nums`. If `num <= i` (i.e., there is some value less than `i` and greater than or equal to `0` that, added to `num`, gets us to target of `i`), we'll set `dp[i]` to itself plus the combinations we've observed at `dp[i - num]`. And again, we return `dp[target]`.
 
-Just like with bottom-up, time complexity is $O(n * m)$, where $n$ is the `target` and $m$ is the length of `nums`. Space complexity is $O(n)$.
+Just like with bottom-up, time complexity is $$O(n * m)$$, where $$n$$ is the `target` and $$m$$ is the length of `nums`. Space complexity is $$O(n)$$.
 
 ```typescript
 function combinationSum4(nums: number[], target: number): number {
-	const dp = Array.from({length: target + 1}, () => 0);
+	const dp = Array.from({ length: target + 1 }, () => 0);
 	dp[0] = 1;
 
 	for (let i = 1; i <= target; i++) {
@@ -102,5 +102,5 @@ function combinationSum4(nums: number[], target: number): number {
 	}
 
 	return dp[target];
-};
+}
 ```

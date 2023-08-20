@@ -29,11 +29,11 @@ Input: nums = [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - <code>1 <= nums.length <= 10<sup>4</sup></code>
 - <code>0 <= nums[i] <= 10<sup>5</sup></code>
@@ -43,7 +43,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 
 ### Dynamic Programming
 
-This approach creates an array to store information about whether a given index is reachable or not. We initialize the first value in our `dp` cache array with the value at `nums[0]`, as this represents what number index we can reach from the `0`th index. Then for each index `i`, we check to see if we had sufficient jump range in `dp[i - 1]` to reach it, returning `false` if not. Otherwise, `dp[i]` will be the larger of `nums[i] + i` or `dp[i - 1]`, representing the farthest index we'll be able to reach from position `i`. If at any point we know we can reach an index farther than the last position of `nums`, we go ahead and return `true`. This algorithm has $O(n)$ time complexity and $O(n)$ space complexity.
+This approach creates an array to store information about whether a given index is reachable or not. We initialize the first value in our `dp` cache array with the value at `nums[0]`, as this represents what number index we can reach from the `0`th index. Then for each index `i`, we check to see if we had sufficient jump range in `dp[i - 1]` to reach it, returning `false` if not. Otherwise, `dp[i]` will be the larger of `nums[i] + i` or `dp[i - 1]`, representing the farthest index we'll be able to reach from position `i`. If at any point we know we can reach an index farther than the last position of `nums`, we go ahead and return `true`. This algorithm has $$O(n)$$ time complexity and $$O(n)$$ space complexity.
 
 ```typescript
 function canJump(nums: number[]): boolean {
@@ -59,14 +59,12 @@ function canJump(nums: number[]): boolean {
 	}
 
 	return true;
-};
+}
 ```
-
-
 
 ### Greedy Algorithm
 
-This greedy alogorithm is also $O(n)$ time complexity, but only $O(1)$ space complexity because it doesn't need an entire array to keep track of jump ranges. Instead, it optimistically keeps track of the farthest index you can reach in the `nums` array based on what you've seen so far. If, while iterating over `nums`, you hit an index greater than the farthest you've been able to reach so far, then you know you'll never reach the end and can return `false`. Otherwise, you update the range if you've got a new further range, and return if your range can take you to the end.
+This greedy alogorithm is also $$O(n)$$ time complexity, but only $$O(1)$$ space complexity because it doesn't need an entire array to keep track of jump ranges. Instead, it optimistically keeps track of the farthest index you can reach in the `nums` array based on what you've seen so far. If, while iterating over `nums`, you hit an index greater than the farthest you've been able to reach so far, then you know you'll never reach the end and can return `false`. Otherwise, you update the range if you've got a new further range, and return if your range can take you to the end.
 
 ```typescript
 function canJump(nums: number[]): boolean {
@@ -80,5 +78,5 @@ function canJump(nums: number[]): boolean {
 		if (range >= nums.length) return true;
 	}
 	return true;
-};
+}
 ```

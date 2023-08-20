@@ -36,6 +36,7 @@ Example 3:
 Input: list1 = [], list2 = [0]
 Output: [0]
 ```
+
 </details>
 
 <details>
@@ -59,12 +60,15 @@ class ListNode {
 	val: number;
 	next: ListNode | null;
 	constructor(val?: number, next?: ListNode | null) {
-		this.val = (val===undefined ? 0 : val);
-		this.next = (next===undefined ? null : next);
+		this.val = val === undefined ? 0 : val;
+		this.next = next === undefined ? null : next;
 	}
 }
 
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+function mergeTwoLists(
+	list1: ListNode | null,
+	list2: ListNode | null,
+): ListNode | null {
 	// First, check if either list is null.
 	// If so, return the other list or null if both
 	// lists are null.
@@ -77,12 +81,9 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 	// and will give errors with negative numbers! Finally,
 	// the array is stitched back together into a new list.
 	return arrayToList(
-		[
-			...listToArray(list1),
-			...listToArray(list2)
-		].sort((a, b) => a - b)
+		[...listToArray(list1), ...listToArray(list2)].sort((a, b) => a - b),
 	);
-};
+}
 
 function listToArray(list: ListNode) {
 	// Recursively traverse the list. Return values in an array.
@@ -106,19 +107,22 @@ function arrayToList(values: number[]) {
 
 ### Linked List Iterative Solution
 
-Ok, let's do this the proper way. This problem can be solved recursively or iteratively. I'm going to use the iterative solution, because there's a risk that with sufficiently long lists, you could exceed the maximum recursion depth. This solution is $O(m + n)$ time complexity.
+Ok, let's do this the proper way. This problem can be solved recursively or iteratively. I'm going to use the iterative solution, because there's a risk that with sufficiently long lists, you could exceed the maximum recursion depth. This solution is $$O(m + n)$$ time complexity.
 
 ```typescript
 class ListNode {
 	val: number;
 	next: ListNode | null;
 	constructor(val?: number, next?: ListNode | null) {
-		this.val = (val===undefined ? 0 : val);
-		this.next = (next===undefined ? null : next);
+		this.val = val === undefined ? 0 : val;
+		this.next = next === undefined ? null : next;
 	}
 }
 
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+function mergeTwoLists(
+	list1: ListNode | null,
+	list2: ListNode | null,
+): ListNode | null {
 	// First, check if either list is null.
 	// If so, return the other list or null if both
 	// lists are null.
@@ -131,7 +135,7 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 	// whichever of list1 or list2 has the smallest value.
 	if (list1.val < list2.val) {
 		result = list1;
-		list1 = list1.next
+		list1 = list1.next;
 	} else {
 		result = list2;
 		list2 = list2.next;
@@ -173,5 +177,5 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 	pointer.next = list1 || list2;
 
 	return result;
-};
+}
 ```

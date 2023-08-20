@@ -11,7 +11,7 @@ Given an integer array `nums`, return an _array_ `answer` such that `answer[i]` 
 
 The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
 
-You must write an algorithm that runs in $O(n)$ time and without using the division operation.
+You must write an algorithm that runs in $$O(n)$$ time and without using the division operation.
 
 <details>
 <summary>Examples</summary>
@@ -29,6 +29,7 @@ Example 2:
 Input: nums = [-1,1,0,-3,3]
 Output: [0,0,9,0,0]
 ```
+
 </details>
 
 <details>
@@ -39,7 +40,7 @@ Output: [0,0,9,0,0]
 - The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
 </details>
 
-**Follow up**: Can you solve the problem in $O(1)$ extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+**Follow up**: Can you solve the problem in $$O(1)$$ extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
 ## My Solution
 
@@ -52,51 +53,51 @@ This would be fairly easy without the caveat "without using the division operati
 Instead of computing total product and dividing by each value, we can compute the product of all the values to the left and all the values on the right and then multiply those.
 
 ```javascript
-const productExceptSelf = (nums) => {
-    return nums.map((_, i) => {
-        return product(nums.slice(0, i)) * product(nums.slice(i + 1))
-    })
+const productExceptSelf = nums => {
+	return nums.map((_, i) => {
+		return product(nums.slice(0, i)) * product(nums.slice(i + 1));
+	});
 };
 
-const product = nums => nums.reduce((prev, curr) => prev * curr, 1)
+const product = nums => nums.reduce((prev, curr) => prev * curr, 1);
 ```
 
-This is correct, but it is much too slow—it has $O(n{^2})$ time complexity. Leetcode will time out if you try this.
+This is correct, but it is much too slow—it has $$O(n{^2})$$ time complexity. Leetcode will time out if you try this.
 
 ### Better Solution
 
-Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. We'll store these values as the `prefix` array and the `suffix` array. Since we no longer check each value to the left and right, this brings us down to $O(n)$ time complexity.
+Computing the products to the left and right by multiplying all of those numbers each time is inefficient. Instead, we can store the result of each previous computation and multiply it by the most recent relevant number only as we move through the `nums` array. We'll store these values as the `prefix` array and the `suffix` array. Since we no longer check each value to the left and right, this brings us down to $$O(n)$$ time complexity.
 
 ```javascript
-const productExceptSelf = (nums) => {
-    let prefix = [];
-    let suffix = [];
-    let answer = [];
+const productExceptSelf = nums => {
+	let prefix = [];
+	let suffix = [];
+	let answer = [];
 
-    // Compute the prefix values by multiplying whatever the previous prefix is by the number to the immediate left of nums[i]
-    for (let i = 0; i < nums.length; i++) {
-        if (i > 0) {
-            prefix[i] = prefix[i - 1] * nums[i - 1]
-        } else {
-            prefix[i] = 1
-        }
-    }
+	// Compute the prefix values by multiplying whatever the previous prefix is by the number to the immediate left of nums[i]
+	for (let i = 0; i < nums.length; i++) {
+		if (i > 0) {
+			prefix[i] = prefix[i - 1] * nums[i - 1];
+		} else {
+			prefix[i] = 1;
+		}
+	}
 
-    // Loop backwards to compute the suffix values by multiplying the last suffix value computed by the number to the immediate right of nums[i]
-    for (let i = nums.length - 1; i >= 0; i--) {
-        if (i === nums.length - 1) {
-            suffix[i] = 1
-        } else {
-            suffix[i] = suffix[i + 1] * nums[i + 1];
-        }
-    }
+	// Loop backwards to compute the suffix values by multiplying the last suffix value computed by the number to the immediate right of nums[i]
+	for (let i = nums.length - 1; i >= 0; i--) {
+		if (i === nums.length - 1) {
+			suffix[i] = 1;
+		} else {
+			suffix[i] = suffix[i + 1] * nums[i + 1];
+		}
+	}
 
-    // Finally, fill in the answer array by multiplying prefixes and suffixes
-    for (let i = 0; i < nums.length; i++) {
-        answer[i] = prefix[i] * suffix[i]
-    }
+	// Finally, fill in the answer array by multiplying prefixes and suffixes
+	for (let i = 0; i < nums.length; i++) {
+		answer[i] = prefix[i] * suffix[i];
+	}
 
-    return answer
+	return answer;
 };
 ```
 
@@ -105,20 +106,20 @@ const productExceptSelf = (nums) => {
 The previous solution works, but isn't as space efficient as it could be. We don't actually need to store `prefix` and `suffix` arrays at all!
 
 ```javascript
-const productExceptSelf = (nums) => {
-    // First, initialize the answer array with length equal to nums' length and all values equal to 1.
-    const answer = Array.from({length: nums.length}, () => 1);
+const productExceptSelf = nums => {
+	// First, initialize the answer array with length equal to nums' length and all values equal to 1.
+	const answer = Array.from({ length: nums.length }, () => 1);
 
-    // Next, we reset the values in the answer array to serve as our prefix array. Each answer[i] will be equal to the product of all values in nums.slice(0, i).
-    for (let i = 1; i < nums.length; i++) {
-        answer[i] = answer[i - 1] * nums[i - 1];
-    }
-    // Finally, we loop backwards to simultaneously update the answer values with suffix products and compute those suffix products. We reduce space complexity by keeping our computations in the answer array rather than storing separate prefix and suffix arrays.
-    for (let j = nums.length - 1, suffix = 1; j >= 0; j--) {
-        answer[j] *= suffix;
-        suffix *= nums[j]
-    }
-    return answer;
+	// Next, we reset the values in the answer array to serve as our prefix array. Each answer[i] will be equal to the product of all values in nums.slice(0, i).
+	for (let i = 1; i < nums.length; i++) {
+		answer[i] = answer[i - 1] * nums[i - 1];
+	}
+	// Finally, we loop backwards to simultaneously update the answer values with suffix products and compute those suffix products. We reduce space complexity by keeping our computations in the answer array rather than storing separate prefix and suffix arrays.
+	for (let j = nums.length - 1, suffix = 1; j >= 0; j--) {
+		answer[j] *= suffix;
+		suffix *= nums[j];
+	}
+	return answer;
 };
 ```
 
@@ -127,17 +128,17 @@ const productExceptSelf = (nums) => {
 Can we still improve? Yes! We don't need two separate loops for computing the prefixes and suffixes while filling out the `answer` array.
 
 ```javascript
-const productExceptSelf = (nums) => {
-    const answer = Array.from({length: nums.length}, () => 1);
+const productExceptSelf = nums => {
+	const answer = Array.from({ length: nums.length }, () => 1);
 
-    for (let i = 0, prefix = 1, suffix = 1; i < nums.length; i++) {
-        answer[i] *= prefix;
-        prefix *= nums[i];
-        answer[nums.length - 1 - i] *= suffix;
-        suffix *= nums[nums.length - 1 - i];
-    }
+	for (let i = 0, prefix = 1, suffix = 1; i < nums.length; i++) {
+		answer[i] *= prefix;
+		prefix *= nums[i];
+		answer[nums.length - 1 - i] *= suffix;
+		suffix *= nums[nums.length - 1 - i];
+	}
 
-    return answer;
+	return answer;
 };
 ```
 

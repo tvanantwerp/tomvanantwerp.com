@@ -34,12 +34,14 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 1 ≤ `n` ≤ 45
+
 </details>
 
 ## My Solution
@@ -77,7 +79,7 @@ n = 5 => 8
 ...
 ```
 
-In this Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $F_{n} = F_{n - 1} + F_{n - 2}$. So if we know $F_{n - 1}$ and $F_{n - 2}$, we know $F_{n}$. Easy enough to calculate!
+In this Fibonacci sequence, the `n`th value in the sequence is equal to the sum of the previous two values. In mathematical terms, $$F_{n} = F_{n - 1} + F_{n - 2}$$. So if we know $$F_{n - 1}$$ and $$F_{n - 2}$$, we know $$F_{n}$$. Easy enough to calculate!
 
 ```javascript
 const climbStairs = n => {
@@ -113,7 +115,13 @@ const climbStairs = n => {
 We can also solve this recursively (with memoization as an added bonus):
 
 ```javascript
-const climbStairs = (n, memo = new Map([[1, 1], [2, 2]])) => {
+const climbStairs = (
+	n,
+	memo = new Map([
+		[1, 1],
+		[2, 2],
+	]),
+) => {
 	if (memo.has(n)) return memo.get(n);
 	memo.set(n, climbStairs(n - 1, memo) + climbStairs(n - 2, memo));
 	return memo.get(n);

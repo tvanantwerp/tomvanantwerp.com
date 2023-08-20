@@ -29,12 +29,14 @@ Input: n = 11111111111111111111111111111101
 Output:   3221225471 (10111111111111111111111111111111)
 Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 The input must be a **binary string** of length `32`
+
 </details>
 
 ## My Solution
@@ -46,13 +48,8 @@ If you choose to ignore that this is a problem about binary operations, you can 
 ```javascript
 const reverseBits = n => {
 	return Number.parseInt(
-		n
-			.toString(2)
-			.split("")
-			.reverse()
-			.join("")
-			.padEnd(32, "0"),
-		2
+		n.toString(2).split('').reverse().join('').padEnd(32, '0'),
+		2,
 	);
 };
 ```
@@ -72,7 +69,7 @@ const reverseBits = n => {
 		// then once, then twice, until we've shifted right 32
 		// times. By using AND to compare that bit to 1, we can
 		// add either 1 or 0 to result as appropriate.
-		result += ((n >>> i) & 1);
+		result += (n >>> i) & 1;
 		// Don't shift on the final loop!
 		if (i < 31) {
 			result <<= 1;
@@ -84,22 +81,22 @@ const reverseBits = n => {
 	// unsigned integer. You could also use Math.abs() on the
 	// result. Or in the loop, instead of left-shifting, you
 	// could multiply the result by 2 for the same effect.
-	return result >>>= 0;
+	return (result >>>= 0);
 };
 ```
 
-This is a perfectly good way to get the reversed binary value with bitwise operators. Having $O(32)$ isn't too shabby! But is there an even simpler way? Uh, yeah, sort of.
+This is a perfectly good way to get the reversed binary value with bitwise operators. Having $$O(32)$$ isn't too shabby! But is there an even simpler way? Uh, yeah, sort of.
 
 ### Next-Level Bitwise Approach
 
 ```javascript
 const reverseBits = n => {
 	let result = n;
-	result = result >>> 16 | result << 16;
-	result = (result & 0xff00ff00) >>> 8 | (result & 0x00ff00ff) << 8;
-	result = (result & 0xf0f0f0f0) >>> 4 | (result & 0x0f0f0f0f) << 4;
-	result = (result & 0xcccccccc) >>> 2 | (result & 0x33333333) << 2;
-	result = (result & 0xaaaaaaaa) >>> 1 | (result & 0x55555555) << 1;
+	result = (result >>> 16) | (result << 16);
+	result = ((result & 0xff00ff00) >>> 8) | ((result & 0x00ff00ff) << 8);
+	result = ((result & 0xf0f0f0f0) >>> 4) | ((result & 0x0f0f0f0f) << 4);
+	result = ((result & 0xcccccccc) >>> 2) | ((result & 0x33333333) << 2);
+	result = ((result & 0xaaaaaaaa) >>> 1) | ((result & 0x55555555) << 1);
 	// Don't forget to coerce to unsigned int for JavaScript!
 	return result >>> 0;
 };
@@ -148,8 +145,7 @@ With each step, we break the previously shifted sections in half and shift them.
   </p>
 </p>
 
-We've reduced our already amazing $O(32)$ to $O(1)$! This is much better optimized if you've got an absolute ton of binary numbers to reverse, though it's perhaps not the most intuitive or legible.
+We've reduced our already amazing $$O(32)$$ to $$O(1)$$! This is much better optimized if you've got an absolute ton of binary numbers to reverse, though it's perhaps not the most intuitive or legible.
 
 [^1]: For simpicity's sake, the hexidecimal numbers are omitted from the first shift because they are not strictly necessary there. But if you want to be a completionist, then `n >>> 16` is equivalent to `(n & 0xffff0000) >>> 16`, and `n << 16` is equivalent to `(n & 0x0000ffff) << 16`.
-
 [^2]: I hand-coded the HTML to highlight those shifts like a moron, so I hope you appreciate it!

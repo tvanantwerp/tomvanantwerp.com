@@ -11,7 +11,7 @@ Given an integer array `nums`, return the length of the longest strictly increas
 
 A **subsequence** is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, `[3,6,2,7]` is a subsequence of the array `[0,3,1,6,2,2,7]`.
 
-**Follow up**: Can you come up with an algorithm that runs in $O(n \log n)$ time complexity?
+**Follow up**: Can you come up with an algorithm that runs in $$O(n \log n)$$ time complexity?
 
 <details>
 <summary>Examples</summary>
@@ -37,11 +37,11 @@ Example 3:
 Input: nums = [7,7,7,7,7,7,7]
 Output: 1
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - 1 ≤ `nums.length` ≤ 2500
 - -10<sup>4</sup> ≤ `nums[i]` ≤ 10<sup>4</sup>
@@ -58,27 +58,24 @@ First we can attempt to brute-force the solution. We can't just go across the ar
 // which we're initializing to 0. We also initialize a
 // previous argument to -Infinity for comparisons.
 const lengthOfLIS = (nums: number[], i = 0, previous = -Infinity): number => {
-    // If we're past the last element of nums, return 0
-    if (i === nums.length) return 0;
+	// If we're past the last element of nums, return 0
+	if (i === nums.length) return 0;
 
-    // We use recursion to compute the length of the subsequence
-    // if we did skip nums[i] and if we instead accepted it.
-    // The +1 in the accept variable represents the increase in
-    // subsequence length if we accept the digit.
-    const skip = lengthOfLIS(nums, i + 1, previous);
-    const accept = 1 + lengthOfLIS(nums, i + 1, nums[i]);
+	// We use recursion to compute the length of the subsequence
+	// if we did skip nums[i] and if we instead accepted it.
+	// The +1 in the accept variable represents the increase in
+	// subsequence length if we accept the digit.
+	const skip = lengthOfLIS(nums, i + 1, previous);
+	const accept = 1 + lengthOfLIS(nums, i + 1, nums[i]);
 
-    // Return the greater of the subsequences if we skipped
-    // nums[i] or accepted it. Of course, we would only accept
-    // if nums[i] is actually greater than the previous value.
-    return Math.max(
-        skip,
-        (nums[i] > previous) ? accept : 0
-    )
+	// Return the greater of the subsequences if we skipped
+	// nums[i] or accepted it. Of course, we would only accept
+	// if nums[i] is actually greater than the previous value.
+	return Math.max(skip, nums[i] > previous ? accept : 0);
 };
 ```
 
-This is a functional solution, but a rather bad one. Because we're comparing two possible paths at every iteration of the loop, we're creating $O(2^{n})$ time complexity. If you actually plug this solution into LeetCode, it will timeout before solving. We must do better.
+This is a functional solution, but a rather bad one. Because we're comparing two possible paths at every iteration of the loop, we're creating $$O(2^{n})$$ time complexity. If you actually plug this solution into LeetCode, it will timeout before solving. We must do better.
 
 ### Excellent Solution: Patience Sorting
 
@@ -100,7 +97,7 @@ So imagine a sequence of cards: `2, 9, 8, 4, J, 5, A`. We would arrange them int
 
 Once organized, the number of piles is equal to the length of our longest increasing subsequence![^1]
 
-Now that we have this very simple, efficient algorithm, we just need to code it up. To make this simpler, I'm borrowing the answer to [35. Search Insert Position](/coding-questions/leetcode-035-search-insert-position/), in which we wrote a binary search algorithm that returns not just the location of a target in an array, but also the location _it would have had_ if it had been in the array. This will help us place our new values into the correct pile efficiently, since the array of nums could be quite long and an $O(n)$ search through our piles with each iteration could get expensive.[^2]
+Now that we have this very simple, efficient algorithm, we just need to code it up. To make this simpler, I'm borrowing the answer to [35. Search Insert Position](/coding-questions/leetcode-035-search-insert-position/), in which we wrote a binary search algorithm that returns not just the location of a target in an array, but also the location _it would have had_ if it had been in the array. This will help us place our new values into the correct pile efficiently, since the array of nums could be quite long and an $$O(n)$$ search through our piles with each iteration could get expensive.[^2]
 
 ```typescript
 function lengthOfLIS(nums: number[]): number {
@@ -119,15 +116,16 @@ function lengthOfLIS(nums: number[]): number {
 			// search implementation from Problem 35.
 			piles[searchInsert(piles, num)] = num;
 		}
-	})
+	});
 	return piles.length;
-};
+}
 
 // Re-used from problem 35
 function searchInsert(nums: number[], target: number): number {
 	// First, we establish upper and lower bounds for our
 	// search space, starting with 0 and the final index.
-	let low = 0, high = nums.length - 1;
+	let low = 0,
+		high = nums.length - 1;
 
 	while (low <= high) {
 		// Find the mid-point, or the number just to the left of
@@ -151,10 +149,10 @@ function searchInsert(nums: number[], target: number): number {
 	// than high and we return low. It will be equal to where the
 	// target should have been.
 	return low;
-};
+}
 ```
 
-This solution has a time complexity of $O(n \log n)$: one $n$ for iterating through the array, and $\log n$ for the binary search.
+This solution has a time complexity of $$O(n \log n)$$: one $$n$$ for iterating through the array, and $$\log n$$ for the binary search.
 
 [^1]: Note that this implementation does _not_ care that there could be multiple increasing subsequences with the same length. `2, 9, J, A` or `2, 8, J, A` or `2, 4, 5, A` or `2, 4, J, A` are all valid maximally-long increasing subsequences.
 [^2]: I like JavaScript, but the standard library could definitely include a few more nice things like a binary search implementation.

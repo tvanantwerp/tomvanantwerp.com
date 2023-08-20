@@ -63,7 +63,7 @@ Output: 7
 
 ## My Solution
 
-This solution creates a Map of the integer values in `arr` along with their count. It then iterates over the Map, comparing keys and values for equality. An initial `result` of `-1` is then replaced if a lucky integer is found, and any larger lucky integer will in turn replace a smaller one. This takes $O(n)$ time.
+This solution creates a Map of the integer values in `arr` along with their count. It then iterates over the Map, comparing keys and values for equality. An initial `result` of `-1` is then replaced if a lucky integer is found, and any larger lucky integer will in turn replace a smaller one. This takes $$O(n)$$ time.
 
 ```javascript
 const findLucky = arr => {

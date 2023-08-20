@@ -30,12 +30,14 @@ Input: x = 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
 
 0 ≤ `x` ≤ 2<sup>31</sup> - 1
+
 </details>
 
 ## My Solution
@@ -48,7 +50,7 @@ You are explicitly told in the problem not to do it this way. That said...
 function mySqrt(x: number): number {
 	// Cheater!
 	return Math.floor(x ** 0.5);
-};
+}
 ```
 
 ### Binary Search
@@ -61,7 +63,8 @@ function mySqrt(x: number): number {
 	if (x === 0) return 0;
 
 	// else, we do a binary search for the nearest int sqrt
-	let low = 0, high = x;;
+	let low = 0,
+		high = x;
 
 	while (low <= high) {
 		const mid = Math.floor(low + (high - low) / 2);
@@ -76,14 +79,14 @@ function mySqrt(x: number): number {
 	}
 
 	return high;
-};
+}
 ```
 
 ### Babylonian Method
 
 The [Babylonian Method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) is an ancient algorithm to find approximate square roots. There is a more modern and generalized version called [Newton's Method](https://en.wikipedia.org/wiki/Newton%27s_method), but Newton's Method is identical to the Babylonian Method when applied to a simple square root problem like this.
 
-This algorithm works by taking an initial guess, which we will call `r`. From this starting point, we'll need to continuously update our guess until we reach an arbitrary level of closeness to the true value of the square root. To find the next iteration of the guess, we add our guess `r` to `x / r`, then halve it all. The formula for the next guess is $r_{n + 1} = \frac{r_{n} + \frac{x}{r_{n}}}{2}$. In our case, we'll stop updating and return `r` once `r ** 2` is no longer greater than `x`
+This algorithm works by taking an initial guess, which we will call `r`. From this starting point, we'll need to continuously update our guess until we reach an arbitrary level of closeness to the true value of the square root. To find the next iteration of the guess, we add our guess `r` to `x / r`, then halve it all. The formula for the next guess is $$r_{n + 1} = \frac{r_{n} + \frac{x}{r_{n}}}{2}$$. In our case, we'll stop updating and return `r` once `r ** 2` is no longer greater than `x`
 
 ```typescript
 function mySqrt(x: number): number {
@@ -101,8 +104,8 @@ function mySqrt(x: number): number {
 		// of x / r.
 		// The bitwise OR 0 is just a short way to drop remainders.
 		// We could've also done Math.floor((r + x / r) / 2).
-		r = (r + x / r) / 2 | 0;
+		r = ((r + x / r) / 2) | 0;
 	}
 	return r;
-};
+}
 ```

@@ -37,11 +37,11 @@ Example 3:
 Input: coins = [1], amount = 0
 Output: 0
 ```
+
 </details>
 
 <details>
 <summary>Constraints</summary>
-
 
 - 1 ≤ `coins.length` ≤ 12
 - 1 ≤ `coins[i]` ≤ 2<sup>31 - 1</sup>
@@ -73,10 +73,14 @@ We'll need a more sophisticated algorithm.
 
 One approach is to use a recusive depth-first search with memoization. The memoization is important, because we're sure to repeat a lot of calculations otherwise. (E.g., if one of the coins is `1`, then we're sure to reach many possible solutions where we're calculating a remaining amount of `1` minus a coin of value `1`. No reason doing that more than once!)
 
-Time complexity is $O(n * amount)$, where $n$ is the length of `coins`. Space complexity is $O(amount)$.
+Time complexity is $$O(n * amount)$$, where $$n$$ is the length of `coins`. Space complexity is $$O(amount)$$.
 
 ```typescript
-const coinChange = (coins: number[], amount: number, memo = new Map()): number => {
+const coinChange = (
+	coins: number[],
+	amount: number,
+	memo = new Map(),
+): number => {
 	// Go ahead and return when there's no need to calculate
 	if (amount === 0) return 0;
 	if (amount < Math.min(...coins)) return -1;
@@ -116,7 +120,7 @@ Much like a fibonacci sequence, we can express the coins required to sum up to a
 
 While our previous DFS algorithm starts at the final amount and recurses to smaller and smaller calculations, this does the opposite. The dynamic programming approach is bottom-up, calculating from `amount = 0` and building up to the actual `amount`.
 
-Time complexity is $O(n * amount)$, where $n$ is the length of `coins`. Space complexity is $O(amount)$.
+Time complexity is $$O(n * amount)$$, where $$n$$ is the length of `coins`. Space complexity is $$O(amount)$$.
 
 ```typescript
 const coinChange = (coins: number[], amount: number): number => {
@@ -141,7 +145,7 @@ const coinChange = (coins: number[], amount: number): number => {
 			// Recurrence relation: the expression of the next
 			// value in a sequence in terms of the previous
 			// values in the sequence.
-			dp[i] = Math.min(dp[i], dp[i - coin] + 1)
+			dp[i] = Math.min(dp[i], dp[i - coin] + 1);
 			// We add 1 to dp[i - coin] because when i === coin,
 			// we would get back 0. But we haven't used 0 coins,
 			// so we add 1 to fix that.
@@ -151,6 +155,6 @@ const coinChange = (coins: number[], amount: number): number => {
 	// If dp[amount] is greater than the amount itself
 	// (i.e., Infintiy), then return -1.
 	// Else, return dp[amount].
-	return dp[amount] > amount ? -1 : dp[amount]
+	return dp[amount] > amount ? -1 : dp[amount];
 };
 ```
