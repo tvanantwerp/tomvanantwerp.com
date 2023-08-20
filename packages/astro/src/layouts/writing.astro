@@ -100,9 +100,16 @@ const { data } = content;
 			)
 		}
 		{
-			data.archived && (
+			data.draft && (
 				<Banner type="warning">
-					This content is considered archived. It is out or date or no longer
+					This content is a draft. It is incomplete and still being written.
+				</Banner>
+			)
+		}
+		{
+			data.archived && (
+				<Banner type="info">
+					This content is considered archived. It is out of date or no longer
 					relevant, and will not be updated in the future.
 				</Banner>
 			)
