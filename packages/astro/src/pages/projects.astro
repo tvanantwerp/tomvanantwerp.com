@@ -4,7 +4,10 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/base.astro';
 import Card from '../components/card/Card.astro';
 
-const projects = await getCollection('projects');
+const projects = await getCollection(
+	'projects',
+	({ data }) => !(data.archived || data.draft),
+);
 ---
 
 <Base content={{ data: { title: 'Projects' } }}>

@@ -4,11 +4,26 @@ import FeaturedCollection from '../components/featured-collection';
 
 import Base from '../layouts/base.astro';
 
-const essays = { name: 'Essays', posts: await getCollection('essays') };
-const notes = { name: 'Notes', posts: await getCollection('notes') };
+const essays = {
+	name: 'Essays',
+	posts: await getCollection(
+		'essays',
+		({ data }) => !(data.archived || data.draft),
+	),
+};
+const notes = {
+	name: 'Notes',
+	posts: await getCollection(
+		'notes',
+		({ data }) => !(data.archived || data.draft),
+	),
+};
 const technicalWriting = {
 	name: 'Technical Writing',
-	posts: await getCollection('technical-writing'),
+	posts: await getCollection(
+		'technical-writing',
+		({ data }) => !(data.archived || data.draft),
+	),
 };
 ---
 
