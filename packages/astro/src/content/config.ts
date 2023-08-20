@@ -1,13 +1,17 @@
 import { z, defineCollection } from 'astro:content';
 
+const imagePathRegex =
+	/^\/img\/[\w\-_:/?#[\]@!$&'()*+,;=]*\.(?:jpg|jpeg|png|webp|gif|avif)$/;
+
 const sharedSchema = z.object({
 	title: z.string(),
 	description: z.string(),
+	draft: z.boolean().optional(),
+	archived: z.boolean().optional(),
 });
 
 const standardWritingSchema = sharedSchema
 	.extend({
-		title: z.string(),
 		description: z.string(),
 		date: z
 			.string()
@@ -21,19 +25,9 @@ const standardWritingSchema = sharedSchema
 		emoji: z.string().optional(),
 		tags: z.array(z.string()).optional(),
 		layout: z.string().optional(),
-		image: z
-			.string()
-			.regex(
-				/^\/img\/[\w\-\_\:\/\?\#\[\]\@\!\$\&\'\(\)\*\+\,\;\=]*\.(?:jpg|jpeg|png|webp|gif|avif)$/,
-			)
-			.optional(),
+		image: z.string().regex(imagePathRegex).optional(),
 		image_alt: z.string().optional(),
-		splash_image: z
-			.string()
-			.regex(
-				/^\/img\/[\w\-\_\:\/\?\#\[\]\@\!\$\&\'\(\)\*\+\,\;\=]*\.(?:jpg|jpeg|png|webp|gif|avif)$/,
-			)
-			.optional(),
+		splash_image: z.string().regex(imagePathRegex).optional(),
 		canonical: z.string().url().optional(),
 		use_canonical_url: z.boolean().optional(),
 	})
