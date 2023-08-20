@@ -1,4 +1,4 @@
-{
+export default {
 	"arrowParens": "avoid",
 	"printWidth": 80,
 	"tabWidth": 2,
@@ -8,13 +8,5 @@
 	"quoteProps": "as-needed",
 	"trailingComma": "all",
 	"bracketSpacing": true,
-	"endOfLine": "lf",
-	"overrides": [
-		{
-			"files": ["*.njk", "*.nunjucks"],
-			"options": {
-				"parser": "html"
-			}
-		}
-	]
+	"endOfLine": "lf"
 }
