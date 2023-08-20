@@ -1,0 +1,15 @@
+.banner {
+	border-width: 1px;
+	border-radius: 4px;
+	border-style: solid;
+	margin: 0.5rem 0;
+	padding: 1rem;
+
+	&--info {
+		border-color: var(--info);
+	}
+
+	&--warning {
+		border-color: var(--warning);
+	}
+}

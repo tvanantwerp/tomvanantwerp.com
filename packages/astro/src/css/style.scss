@@ -31,6 +31,8 @@
 	--font-size-root: 112.5%; // 18px
 	--line-height: 1.75;
 	--nav-height: 74px;
+	--info: var(--blue-highlight);
+	--warning: var(--red-highlight);
 }
 
 @media (prefers-color-scheme: dark) {
