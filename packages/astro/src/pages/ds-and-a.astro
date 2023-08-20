@@ -3,7 +3,10 @@ import { getCollection } from 'astro:content';
 
 import Base from '../layouts/base.astro';
 
-const codingQuestions = await getCollection('ds-and-a');
+const codingQuestions = await getCollection(
+	'ds-and-a',
+	({ data }) => !(data.archived || data.draft),
+);
 ---
 
 <Base content={{ data: { title: 'Data Structures and Algorithms' } }}>
