@@ -3,21 +3,20 @@ import Base from './base.astro';
 import Banner from '@components/banner';
 
 const { content } = Astro.props;
-const { data } = content;
 ---
 
 <Base content={content}>
 	<div class="page-container--narrow">
 		<h1>{content.title}</h1>
 		{
-			data.draft && (
+			content.draft && (
 				<Banner type="warning">
 					This content is a draft. It is incomplete and still being written.
 				</Banner>
 			)
 		}
 		{
-			data.archived && (
+			content.archived && (
 				<Banner type="info">
 					This content is considered archived. It is out of date or no longer
 					relevant, and will not be updated in the future.
