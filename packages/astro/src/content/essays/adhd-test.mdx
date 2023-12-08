@@ -14,6 +14,10 @@ image_alt: Abstract art of a person's head exploding outward colorfully.
 ---
 
 import { Picture } from 'astro:assets';
+import gauge from '../../assets/img/2021-08-03-adhd-gauge.png';
+import deviations from '../../assets/img/2021-08-03-adhd-test-deviations.png';
+import testSample from "../../assets/img/2021-08-03-adhd-test-sample.png"
+import testResult from "../../assets/img/2021-08-03-adhd-test-result.png"
 
 For a couple of years now, I suspected that I may have [ADHD Predominately Inattentive](https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder_predominantly_inattentive) (ADHD-PI). I've never been hyper, or energetic in general, so I never gave ADHD much thought in the past. But I first suspected it while reading a Hacker News thread of programmers with ADHD, describing their various non-pharmaceutical interventions that they use to manage their work and lives. It struck me that many of their coping strategies were things I did too. I'm forgetful, so I write todo lists, checklists, and other reminders. I'm distractable, so I wear noise-cancelling headphones and block out external stimuli whenever I can. I forget about things without environmental triggers, so I leave dumbbells lying around so I remember to exercise. My mind wanders in conversation, so I prefer instructions in writing. Nearly every response I read made me think, "Huh, that sounds like me." Did I have ADHD and not know it? Had I learned to do all of these things as a coping mechanism without realizing what I was trying to fix?
 
@@ -26,7 +30,7 @@ After an extremely boring 20 minute [n-back](https://en.wikipedia.org/wiki/N-bac
 The data suggested that I **do not** have ADHD.
 
 <Picture
-	src="/img/2021-08-03-adhd-gauge.png"
+	src={gauge}
 	alt="An overall result of 8, where any number between 0 and 10 indicates low likelihood of ADHD."
 	pictureAttributes={{style: 'aspect-ratio: 1118/404'}}
 	widths={[400, 800, 1200]}
@@ -38,7 +42,7 @@ The test itself involved watching a series of colored shapes pop up briefly on a
 
 <figure>
 	<Picture
-		src="/img/2021-08-03-adhd-test-deviations.png"
+		src={deviations}
 		alt="Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time."
 		title="Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time."
 		pictureAttributes={{style: 'aspect-ratio: 1178/281'}}
@@ -60,7 +64,7 @@ The overall distribution of correct answers and errors was very much in line wit
 
 <figure className="images__two-side-by-side">
 	<Picture
-		src="/img/2021-08-03-adhd-test-sample.png"
+		src={testSample}
 		alt="Sample Results."
 		pictureAttributes={{style: 'aspect-ratio: 1200/740; fit: contain;'}}
 		widths={[400, 800, 1200]}
@@ -68,7 +72,7 @@ The overall distribution of correct answers and errors was very much in line wit
 		formats={['avif', 'webp', 'png']}
 	/>
 	<Picture
-		src="/img/2021-08-03-adhd-test-result.png"
+		src={testResult}
 		alt="Actual Results."
 		pictureAttributes={{style: 'aspect-ratio: 1200/740; fit: contain;'}}
 		widths={[400, 800, 1200]}

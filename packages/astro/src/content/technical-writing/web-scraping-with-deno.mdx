@@ -12,6 +12,7 @@ tags:
 ---
 
 import { Picture } from 'astro:assets';
+import copySelector from '../../assets/img/2023-03-24-copy-selector.png';
 
 _This article was originally published on the [This Dot blog](https://labs.thisdot.co/blog/web-scraping-with-deno/)._
 
@@ -145,7 +146,7 @@ Now that we're able to grab the contents of the first three pages of Deno module
 Passing the text of the page to the `DOMParser` from `deno_dom`, you can extract information using the same APIs you'd use in the browser like `querySelector` and `getElementsByTagName`. To figure out what to select for, you can use your browser's developer tools to inspect the page, and find selectors for elements you want to select. For example, in Chrome DevTools, you can right-click on an element and select "Copy > Copy selector" to get the selector for that element.
 
 <Picture
-	src="/img/2023-03-24-copy-selector.png"
+	src={copySelector}
 	alt="DevTools Copy Selector."
 	aspectRatio={924 / 808}
 	widths={[400, 700, 924]}
