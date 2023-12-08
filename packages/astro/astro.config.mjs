@@ -15,7 +15,6 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
 	site: 'https://tomvanantwerp.com',
 	integrations: [
-		image({ serviceEntryPoint: '@astrojs/image/sharp' }),
 		mdx(),
 		react(),
 		sitemap(),

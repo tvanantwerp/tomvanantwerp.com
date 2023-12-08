@@ -13,7 +13,7 @@ splash_image: /img/2022-11-28-adhd.jpg
 image_alt: Abstract art of a person's head exploding outward colorfully.
 ---
 
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
 
 For a couple of years now, I suspected that I may have [ADHD Predominately Inattentive](https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder_predominantly_inattentive) (ADHD-PI). I've never been hyper, or energetic in general, so I never gave ADHD much thought in the past. But I first suspected it while reading a Hacker News thread of programmers with ADHD, describing their various non-pharmaceutical interventions that they use to manage their work and lives. It struck me that many of their coping strategies were things I did too. I'm forgetful, so I write todo lists, checklists, and other reminders. I'm distractable, so I wear noise-cancelling headphones and block out external stimuli whenever I can. I forget about things without environmental triggers, so I leave dumbbells lying around so I remember to exercise. My mind wanders in conversation, so I prefer instructions in writing. Nearly every response I read made me think, "Huh, that sounds like me." Did I have ADHD and not know it? Had I learned to do all of these things as a coping mechanism without realizing what I was trying to fix?
 
@@ -28,7 +28,7 @@ The data suggested that I **do not** have ADHD.
 <Picture
 	src="/img/2021-08-03-adhd-gauge.png"
 	alt="An overall result of 8, where any number between 0 and 10 indicates low likelihood of ADHD."
-	aspectRatio={1118 / 404}
+	pictureAttributes={{style: 'aspect-ratio: 1118/404'}}
 	widths={[400, 800, 1200]}
 	sizes="(min-width: 1200px) 1200px, (min-width: 800px) 800px,400px"
 	formats={['avif', 'webp', 'png']}
@@ -41,7 +41,7 @@ The test itself involved watching a series of colored shapes pop up briefly on a
 		src="/img/2021-08-03-adhd-test-deviations.png"
 		alt="Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time."
 		title="Table showing deviations from the norm. I was at the 69th percentile for MicroEventsX, whatever that means. 84th percentile for impulsivity measured by comission errors, but still within one standard deviation. 38th percentile for omission errors, 34th for reaction time, and 38th for variation in reaction time."
-		aspectRatio={1178 / 281}
+		pictureAttributes={{style: 'aspect-ratio: 1178/281'}}
 		widths={[400, 800, 1200]}
 		sizes="(min-width: 1200px) 1200px, (min-width: 800px) 800px,400px"
 		formats={['avif', 'webp', 'png']}
@@ -62,20 +62,18 @@ The overall distribution of correct answers and errors was very much in line wit
 	<Picture
 		src="/img/2021-08-03-adhd-test-sample.png"
 		alt="Sample Results."
-		aspectRatio={1200 / 740}
+		pictureAttributes={{style: 'aspect-ratio: 1200/740; fit: contain;'}}
 		widths={[400, 800, 1200]}
 		sizes="(min-width: 1200px) 1200px, (min-width: 800px) 800px,400px"
 		formats={['avif', 'webp', 'png']}
-		fit="contain"
 	/>
 	<Picture
 		src="/img/2021-08-03-adhd-test-result.png"
 		alt="Actual Results."
-		aspectRatio={1200 / 740}
+		pictureAttributes={{style: 'aspect-ratio: 1200/740; fit: contain;'}}
 		widths={[400, 800, 1200]}
 		sizes="(min-width: 1200px) 1200px, (min-width: 800px) 800px,400px"
 		formats={['avif', 'webp', 'png']}
-		fit="contain"
 	/>
 	<figcaption>
 		The differences between the sample results (left) and my actual results

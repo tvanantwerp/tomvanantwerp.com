@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
 
 const { title, url, image, imageAlt } = Astro.props;
 ---
@@ -11,12 +11,10 @@ const { title, url, image, imageAlt } = Astro.props;
 			<Picture
 				src={image}
 				alt={imageAlt}
-				aspectRatio={16 / 9}
 				widths={[300, 450, 600]}
 				sizes="container(min-width: 600px) 600px,container(min-width: 450px) 450px,300px"
 				formats={['avif', 'webp']}
-				fit="cover"
-				position="center"
+				pictureAttributes={{style: "aspect-ratio: 16/9; fit: cover; position: center;"}}
 			/>
 		) : null
 	}

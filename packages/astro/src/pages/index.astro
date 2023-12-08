@@ -1,16 +1,16 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
 
 import Base from '../layouts/base.astro';
+import tom from '../assets/img/tom.png'
 ---
 
 <Base>
 	<div class="home__main">
 		<div class="home__splash">
 			<Picture
-				src="/img/tom.png"
+				src={tom}
 				alt="The avatar Tom uses on every platform since 2013. Illustrated it himself!"
-				aspectRatio={681 / 692}
 				widths={[300, 450, 681]}
 				sizes="container(min-width: 681px) 681px,container(min-width: 450px) 450px,300px"
 				formats={['avif', 'webp']}
