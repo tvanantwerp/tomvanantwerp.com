@@ -5,13 +5,15 @@ date: 2017-02-01
 tags:
   - projects
   - programmingProjects
-image: /img/taxfoundation-splash.jpg
+image: ../../assets/img/taxfoundation-splash.jpg
 image_alt: The 'About Us' page of taxfoundation.org viewed on a trendy MacBook Pro surrounded by chic decor serving no purpose.
-splash_image: /img/taxfoundation-splash.jpg
+splash_image: ../../assets/img/taxfoundation-splash.jpg
 slug: taxfoundation.org
 ---
 
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
+import oldSite from '../../assets/img/2017-02-01-old-tf-site.jpg';
+import newSite from '../../assets/img/2017-02-01-new-tf-site.jpg';
 
 The [Tax Foundation](https://taxfoundation.org) is one of America's oldest think tanks. Founded in 1937, they research and publish on how to create tax policy that funds government without unduly harming economic growth. Strategy has changed, of course, since 1937; now [taxfoundation.org](https://taxfoundation.org) is their primary publishing platform to reach policymakers and taxpayers alike.
 
@@ -21,21 +23,17 @@ Since launching its latest incarnation in early 2017, the website has seen nearl
 
 Nobody was particularly happy with the older version of taxfoundation.org's design. I'd call it dated, if it were appropriate to any known age of the web. The colors were jarring and the layouts harsh. It was not responsive, looked bad when printed, and was very difficult to modify due to previous technical decisions.
 
-{
-
 <figure className="images__two-side-by-side">
 	<Picture
-		src="/img/2017-02-01-old-tf-site.jpg"
+		src={oldSite}
 		alt="The previous incarnation of taxfoundation.org."
-		aspectRatio={1200 / 1260}
 		widths={[400, 800, 1200]}
 		sizes="container(min-width: 1200px) 1200px, container(min-width: 800px) 800px,400px"
 		formats={['avif', 'webp']}
 	/>
 	<Picture
-		src="/img/2017-02-01-new-tf-site.jpg"
+		src={newSite}
 		alt="The new incarnation of taxfoundation.org."
-		aspectRatio={1200 / 1260}
 		widths={[400, 800, 1200]}
 		sizes="container(min-width: 1200px) 1200px, container(min-width: 800px) 800px,400px"
 		formats={['avif', 'webp']}
@@ -44,7 +42,6 @@ Nobody was particularly happy with the older version of taxfoundation.org's desi
 		Compare the previous version and new version of taxfoundation.org.
 	</figcaption>
 </figure>
-}
 
 Taking inspiration from high-quality news websites, the new version of taxfoundation.org puts content legibility first. It implements lighter colors, improved typography, and plenty of white space to improve the reading experience. Since many of our visitors are older, the site layout scales to work at high magnification as well as it does at default. And not only is it now responsive for mobile devices, but it also looks good when printed.
 

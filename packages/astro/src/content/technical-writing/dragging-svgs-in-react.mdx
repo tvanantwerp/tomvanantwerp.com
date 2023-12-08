@@ -8,12 +8,14 @@ tags:
   - SVG
 ---
 
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
+import tobaccoMap from '../../assets/img/2019-04-11-map.png';
+import closeup from '../../assets/img/2019-04-11-closeup.png';
 
 I've recently started a new version of a mapping tool at work that lets people create [choropleths](https://en.wikipedia.org/wiki/Choropleth_map) from CSV files. The tool combines React and some D3 libraries to create SVG maps of the United States, including data labels.
 
 <Picture
-	src="/img/2019-04-11-map.png"
+	src={tobaccoMap}
 	alt="US choropleth showing tobacco tax rates."
 	aspectRatio={880 / 543}
 	widths={[400, 800, 1200]}
@@ -24,7 +26,7 @@ I've recently started a new version of a mapping tool at work that lets people c
 These labels are, by default, placed at the [centroid](https://en.wikipedia.org/wiki/Centroid) of the state's `path` shape, with a few offsets manually specified for some of the weirder state boundaries. But even with manual offsets, these generated labels can still be positioned poorly. I wanted the ability to click and drag these labels into a better position.
 
 <Picture
-	src="/img/2019-04-11-closeup.png"
+	src={closeup}
 	alt="Badly placed labels."
 	aspectRatio={360 / 354}
 	widths={[400, 800, 1200]}
@@ -131,4 +133,4 @@ const Label = ({ center, adjustment }) => {
 
 And that's it! We've now got a drag-able label inside our SVG, and all without needing any libraries to do it.
 
-![Drag those labels!](/img/2019-04-11-example.gif)
+![Drag those labels!](../../assets/img/2019-04-11-example.gif)

@@ -7,7 +7,7 @@ tags:
   - Essays
   - Finance
   - Robots
-image: /img/2021-07-12-eufy.jpg
+image: ../../assets/img/2021-07-12-eufy.jpg
 image_alt: A robot vacuum cleaner.
 ---
 

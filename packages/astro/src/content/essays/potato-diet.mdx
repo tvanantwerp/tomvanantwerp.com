@@ -7,11 +7,15 @@ tags:
   - Essays
   - Health
   - Diet
-image: /img/2022-07-17-potato-smiley.jpg
+image: ../../assets/img/2022-07-17-potato-smiley.jpg
 image_alt: A potato that appears as if it is smiling.
 ---
 
-import { Picture } from '@astrojs/image/components';
+import { Picture } from 'astro:assets';
+import calories from '../../assets/img/2022-07-17-potato-calories.png'
+import weight from '../../assets/img/2022-07-17-potato-weight.png'
+import calories2 from '../../assets/img/2022-07-27-calories.png'
+import loss from '../../assets/img/2022-07-27-weight-loss.png'
 
 I [previously](https://tomvanantwerp.com/essays/losing-50lbs/) lost quite a lot of weight on a ketogenic diet, combined with time-restricted feeding. But over the past year, the disruption to my routine that came from changing jobs led me down a path of getting lazy with food. I began eating all kinds of junk at all hours again. And before I knew it, I'd regained nearly everything I lost. I've been disappointed in myself, and I was ready to get serious about my diet again.
 
@@ -50,11 +54,11 @@ The fries and tots were much tastier, thanks to some (admittedly crappy seed-bas
 So from day 3 onward, I mostly ate frozen fries and tots. Sometimes I made sweet potato fries from scratch, but never more than once a day.
 
 <Picture
-	src="/img/2022-07-17-potato-calories.png"
+	src={calories}
 	alt="Breakdown of calories consumed during my week of potatoes. Very low to begin with, but goes up as I introduced frozen potato foods with oils in them."
 	title="Breakdown of calories consumed during my week of potatoes. Very low to begin with, but goes up as I introduced frozen potato foods with oils in them."
 	width={1094}
-	aspectRatio={1094 / 542}
+	pictureAttributes={{style: 'aspect-ratio: 1094/542'}}
 	widths={[400, 800, 1200]}
 	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
 	formats={['png']}
@@ -67,11 +71,11 @@ So from day 3 onward, I mostly ate frozen fries and tots. Sometimes I made sweet
 By the end of the experiment, I had lost 1.8 pounds. That's a decent bit of weight loss in a single week. _But_, I also regularly see swings of that size day-to-day. My weight during the experiment didn't trend monotonically downward, and I can't rule out that my weight loss was coincidental. I don't think one week is enough time to evaluate if a potato diet would help me lose weight.
 
 <Picture
-	src="/img/2022-07-17-potato-weight.png"
+	src={weight}
 	alt="Weight and net calories for the past two weeks. For the prior week, net calories are around 0 and weight is stable. During the diet, net calories drops by about 1,000 per day and weight starts going down erratically."
 	title="Weight and net calories for the past two weeks. For the prior week, net calories are around 0 and weight is stable. During the diet, net calories drops by about 1,000 per day and weight starts going down erratically."
 	width={2156}
-	aspectRatio={2156 / 1018}
+	pictureAttributes={{style: 'aspect-ratio: 2156/1018'}}
 	widths={[400, 800, 1200]}
 	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
 	formats={['png']}
@@ -285,22 +289,24 @@ This is hardly the first time I've dealt with mysterious abdominal pain—I've h
 Since stopping my potato diet, I've gone back to a stricter keto diet than what I was eating previously and weight loss has continued. While I miss the simplicity of "buy frozen tots, throw in air fryer", I generally feel better this way.
 
 <Picture
-	src="/img/2022-07-27-calories.png"
+	src={calories2}
 	alt="You can see the make up of calories in this chart from the potato diet, which was very high carb, and the switch to keto afterward, which is much higher fat and protein with little carbohydrate."
 	title="You can see the make up of calories in this chart from the potato diet, which was very high carb, and the switch to keto afterward, which is much higher fat and protein with little carbohydrate."
 	width={1200}
 	aspectRatio={1200 / 546}
+	pictureAttributes={{style: 'aspect-ratio: 1200/546'}}
 	widths={[400, 800, 1200]}
 	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
 	formats={['png']}
 />
 
 <Picture
-	src="/img/2022-07-27-weight-loss.png"
+	src={loss}
 	alt="Weight has continued to trend down with no observable difference between the potato diet and keto diet."
 	title="Weight has continued to trend down with no observable difference between the potato diet and keto diet."
 	width={1200}
 	aspectRatio={1200 / 544}
+	pictureAttributes={{style: 'aspect-ratio: 1200/542'}}
 	widths={[400, 800, 1200]}
 	sizes="(min-width: 1200px) 1200px,(min-width: 800px) 800px,400px"
 	formats={['png']}
