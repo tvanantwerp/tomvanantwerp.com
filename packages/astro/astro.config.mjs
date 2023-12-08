@@ -32,4 +32,7 @@ export default defineConfig({
 		],
 		syntaxHighlight: 'prism',
 	},
+	experimental: {
+		contentCollectionCache: true,
+	}
 });
