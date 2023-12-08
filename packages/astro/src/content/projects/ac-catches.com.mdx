@@ -5,9 +5,9 @@ date: 2020-05-23
 tags:
   - projects
   - programmingProjects
-image: /img/2020-05-23-ac-catches.jpg
+image: ../../assets/img/2020-05-23-ac-catches.jpg
 image_alt: The above-the-fold interface for ac-catches.com, showing all of the controls for filtering and sorting the table of Animal Crossing fish and bugs.
-splash_image: /img/2020-05-23-ac-catches.jpg
+splash_image: ../../assets/img/2020-05-23-ac-catches.jpg
 slug: ac-catches.com
 ---
 
@@ -86,7 +86,7 @@ The experience was irritating, and it did not feel like my code was better as a 
 
 Styling this tool was the most fun part of building it. I tried to emulate the style of the user interfaces within the game itself, taking inspiration from the apps on the Nook Phone, the Nook Stop, and the crafting table interface.
 
-![Dashboard of controls.](/img/ac-catches-controls.png)
+![Dashboard of controls.](../../assets/img/ac-catches-controls.png)
 
 As I mentioned earlier, I used Styled Components for my CSS. I've been a convert to CSS-in-JS for a few years now. It's a lot easier to keep track of things by grouping code by component rather than filetype.
 
@@ -146,11 +146,11 @@ export const Times = ({ times, currentTime }: ITimes) => {
 
 And here is the result: rows of easily scanable times and months! You can see how the current time and month cut through each `canvas` element, making it easy to see what's available at the exact moment.
 
-![Hour and month graphs.](/img/ac-catches-times.png)
+![Hour and month graphs.](../../assets/img/ac-catches-times.png)
 
 I also used [Framer Motion](https://www.framer.com/motion/) for the first time to add a little bit of animation to parts of the tool. This helps to give it a friendlier feel closer to the UI in Animal Crossing itself. You can see a bit of this animation when new tables pop in as you switch between fish and bug views.
 
-![Example of animations and interactivity.](/img/ac-catches-animated.gif)
+![Example of animations and interactivity.](../../assets/img/ac-catches-animated.gif)
 
 ## Result
 

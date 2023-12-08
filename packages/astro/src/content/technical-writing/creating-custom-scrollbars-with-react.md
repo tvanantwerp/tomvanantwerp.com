@@ -22,7 +22,7 @@ Styling scrollbars is no simple task. [The CSS](https://css-tricks.com/almanac/p
 
 A scroll bar has two main components: a thumb (this piece you click and drag to scroll) and a track (the space within which the thumb moves). The size of the thumb gives usually gives a hint to how large the content you can currently see is in relation to the total size of the content. That is to say, the smaller the thumb, the more content there is outside of the current view. Thumb position on the track tells you how much off-screen content there is in each scroll direction. Scrollbars sometimes also have buttons on the ends that you can click to scroll a set amount in a certain direction, though these aren't seen as often as they used to be. We'll be recreating both of these user interface elements with `div` elements.
 
-![Scrollbar](/img/2022-01-13-scrollbar.gif)
+![Scrollbar](../../assets/img/2022-01-13-scrollbar.gif)
 
 ## Hide Native Scrollbars
 
