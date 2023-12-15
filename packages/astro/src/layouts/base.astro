@@ -42,7 +42,7 @@ const canonical =
 	/>
 	<body class="layout">
 		<Navigation title={metadata.title} links={defaultNavigation} />
-		<main class="content">
+		<main class="content" transition:animate="fade">
 			<slot />
 		</main>
 		<Footer
