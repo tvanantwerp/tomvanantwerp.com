@@ -1,5 +1,5 @@
 ---
-import Head from '../components/head';
+import Head from '../components/head/Head.astro';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer/Footer.astro';
 import metadata from '../data/metadata';
@@ -28,7 +28,7 @@ const canonical =
 	new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<Head
 		title={title}
@@ -42,7 +42,7 @@ const canonical =
 	/>
 	<body class="layout">
 		<Navigation title={metadata.title} links={defaultNavigation} />
-		<main class="content">
+		<main class="content" transition:animate="fade">
 			<slot />
 		</main>
 		<Footer
