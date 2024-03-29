@@ -9,6 +9,7 @@ export type SocialUsername = {
 	name: string;
 	handle: string;
 	url: string;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	icon: any;
 };
 
@@ -26,13 +27,6 @@ const metadata: Metadata = {
 	author: 'Tom VanAntwerp',
 	image: '/img/tom_poly-cropped.png',
 	socialUsernames: [
-		{
-			id: 'twitter',
-			name: 'Twitter',
-			handle: 'tvanantwerp',
-			url: 'https://twitter.com/tvanantwerp',
-			icon: Twitter,
-		},
 		{
 			id: 'github',
 			name: 'GitHub',
@@ -60,6 +54,13 @@ const metadata: Metadata = {
 			handle: 'tvanantwerp',
 			url: 'https://www.linkedin.com/in/tvanantwerp/',
 			icon: LinkedIn,
+		},
+		{
+			id: 'twitter',
+			name: 'Twitter',
+			handle: 'tvanantwerp',
+			url: 'https://twitter.com/tvanantwerp',
+			icon: Twitter,
 		},
 	],
 };
