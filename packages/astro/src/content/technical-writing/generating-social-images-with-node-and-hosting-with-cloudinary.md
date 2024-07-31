@@ -128,3 +128,61 @@ export async function createSocialImage(name: string): Promise<Canvas> {
 	return canvas;
 }
 ```
+
+## Saving Images Locally (Optional)
+
+You’ll probably want to see how your generated images look before uploading to Cloudinary, so we’ll save them to our local disk first.
+
+For naming our images, we’ll use the `slugify` library and create a helper function with our chosen options. This helper, `slugifyName`, will convert our post name to a URL-friendly string. We’ll then create a function, `saveImageToFile`, that will save our canvas to a file in the `images` directory of our repository. The `saveImageToFile` function will take the post name, the canvas, and the export format as arguments.
+
+First, we’ll install the `slugify` package.
+
+```sh
+npm install slugify
+```
+
+Next, we’ll write the our functions.
+
+```ts
+import { existsSync, mkdirSync } from 'fs';
+import { join } from 'path';
+import { ExportFormat } from 'skia-canvas';
+import slugify from 'slugify';
+
+// We're putting this into a helper function so we can easily reuse the options later.
+function slugifyName(name: string) {
+	return slugify(name, { lower: true, strict: true, remove: /[?&#\\%<>\+]]/g });
+}
+
+export async function saveImageToFile(
+	name: string,
+	canvas: Canvas,
+	format: ExportFormat,
+) {
+	// Create the images directory if it doesn't exist.
+	if (!existsSync('./images')) {
+		mkdirSync('./images');
+	}
+	// Then we'll save our canvas image to the format of our choosing.
+	// Pixel density is set to 2 to make the image look good on high-density displays.
+	await canvas.saveAs(join('./images', `${slugifyName(name)}.${format}`), {
+		format,
+		density: 2,
+	});
+}
+```
+
+We now have everything we need to generate and save our social images.
+
+```ts
+async function createAndSaveLocally(name: string) {
+	const canvas = await createSocialImage(name);
+	await saveImageToFile(name, canvas, 'png');
+}
+
+createAndSaveLocally(
+	'Whatever example post name you want to save to an image!',
+);
+```
+
+If we run this script, it will generate our test image at `images/whatever-example-post-name-you-want-to-save-to-an-image.png`.
