@@ -186,3 +186,91 @@ createAndSaveLocally(
 ```
 
 If we run this script, it will generate our test image at `images/whatever-example-post-name-you-want-to-save-to-an-image.png`.
+
+## Uploading to Cloudinary
+
+Saving our images locally is really only necessary to make sure our generation script is outputting social images that look the way we want them to. We ultimately want to host our images with Cloudinary, and we don’t need to save the images to disk to do that. We’re next going to write a function that will upload our images to Cloudinary as buffer data, bypassing the need to save to disk first.
+
+First, we’ll install the `cloudinary` package.
+
+```sh
+npm install cloudinary
+```
+
+Next, we’ll configure Cloudinary for use. We’ll create a configuration file that references our Cloudinary account information, which we’ll save in environment variables. We’ll also create a `.env` file to store these variables.
+
+```sh
+touch .env
+touch cloudinary.config.ts
+```
+
+In the `.env` file, we’ll add our Cloudinary account information.
+
+```
+CLOUDINARY_CLOUD_NAME=your_cloud_name_here
+CLOUDINARY_API_KEY=_your_api_key_here
+CLOUDINARY_API_SECRET=your_secret_here
+```
+
+In `cloudinary.config.ts`, we’ll import the `cloudinary` package and configure it with our account information.
+
+```ts
+import { v2 as cloudinary } from 'cloudinary';
+cloudinary.config({
+	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+	api_key: process.env.CLOUDINARY_API_KEY,
+	api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+export { cloudinary };
+```
+
+For more information on how to set up and use the Cloudinary Node.js SDK, see the [documentation](https://cloudinary.com/documentation/node_quickstart).
+
+With configuration done, we can import `cloudinary` into our main script and write a function to upload our images.
+
+```ts
+import { cloudinary } from './cloudinary.config';
+
+export async function uploadToCloudinary(
+	name: string,
+	canvas: Canvas,
+	format: ExportFormat,
+) {
+	try {
+		// We'll save our images to a Cloudinary folder called 'og-images'.
+		const folder = 'og-images';
+		// We'll use the slugified name as the public_id.
+		// Note: slugifyName was defined in the previous optional section.
+		const public_id = slugifyName(name);
+		// No need to save to a local file, we can upload directly to Cloudinary with a Buffer.
+		const buffer = await canvas.toBuffer(format, { density: 2 });
+
+		console.log(`Uploading ${public_id}.`);
+		cloudinary.uploader
+			.upload_stream(
+				{
+					public_id,
+					folder,
+					format,
+					overwrite: true, // Overwrite if the image already exists.
+				},
+				(err, _) => {
+					if (err) {
+						throw new Error(`Failed to upload image for "${name}"`, {
+							cause: err,
+						});
+					}
+				},
+			)
+			.end(buffer);
+	} catch (error) {
+		console.error(error);
+	}
+}
+```
+
+This function will upload our images to Cloudinary. We’ll use the slugified name as the `public_id` and save the images to a Cloudinary folder named `og-images`. We’ll also overwrite the image if it already exists.
+
+Instead of uploading a file, the function uses `canvas.toBuffer()` to get the image data as a buffer. We then use `cloudinary.uploader.upload_stream()` to upload the image to Cloudinary. We execute everything in a `try` block and catch any errors that occur, logging them to the console for review. Since this function could be used to upload many images, we don’t want a single upload error to crash our script and stop all other uploads.
+
+For more details on the Cloudinary Upload API, see the [API documentation](https://cloudinary.com/documentation/image_upload_api_reference) and the [Node.js SDK documentation](https://cloudinary.com/documentation/node_image_and_video_upload).
