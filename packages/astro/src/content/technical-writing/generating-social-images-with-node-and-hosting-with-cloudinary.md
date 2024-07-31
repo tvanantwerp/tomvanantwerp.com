@@ -328,3 +328,17 @@ export async function uploadToCloudinary(
 	}
 }
 ```
+
+## Notes on URLs and SEO
+
+Once your images are uploaded to Cloudinary, you’ll want to use the Cloudinary URLs in your site’s metadata. You may not want to use the ordinary URLs generated during upload. For example, if we had a post titled “Example Post Name”, our image’s URL would be `https://res.cloudinary.com/{{cloudinary_cloud_name}}/image/upload/og-images/example-post-name.png`. This is long and unwieldy, and it’s not great for SEO.
+
+But, you have options! Cloudinary allows for customizing your image URLs for better SEO. Their [documentation](https://cloudinary.com/blog/how_to_dynamically_create_seo_friendly_urls_for_your_site_s_images) explains how to do this. You can modify URLs to not need `image/upload`, to include dynamic SEO suffixes, or to use your own domain.
+
+## Conclusion
+
+Automating the generation and hosting of social cover images makes it much easier to produce timely content without stressing over how it will look on social media. By combining Skia Canvas and [Cloudinary](https://cloudinary.com/), we were able to create and host social images with minimal effort. Automating social image generation allows you to focus more on creating great content than dealing with the technical details of image hosting and optimization.
+
+If you found this blog post helpful and want to discuss it in more detail, head over to the [Cloudinary Community forum](https://community.cloudinary.com/) and its associated [Discord](https://community.cloudinary.com/).
+
+The full code from this post is [available on GitHub](https://github.com/tvanantwerp/automated-social-images).
