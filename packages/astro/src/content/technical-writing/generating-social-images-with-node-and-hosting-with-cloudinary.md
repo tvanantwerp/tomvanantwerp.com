@@ -274,3 +274,57 @@ This function will upload our images to Cloudinary. We’ll use the slugified na
 Instead of uploading a file, the function uses `canvas.toBuffer()` to get the image data as a buffer. We then use `cloudinary.uploader.upload_stream()` to upload the image to Cloudinary. We execute everything in a `try` block and catch any errors that occur, logging them to the console for review. Since this function could be used to upload many images, we don’t want a single upload error to crash our script and stop all other uploads.
 
 For more details on the Cloudinary Upload API, see the [API documentation](https://cloudinary.com/documentation/image_upload_api_reference) and the [Node.js SDK documentation](https://cloudinary.com/documentation/node_image_and_video_upload).
+
+## Avoiding Redundant Uploads
+
+Let’s assume we’ll use this script with a statically generated blog site. Our website might have dozens, hundreds, or thousands of pages. Most of the time, when our site is rebuilt, the content of the pages won’t change. If our social images haven’t changed, then we really don’t need to upload them to Cloudinary at all.
+
+To solve this problem, we’ll modify our upload function to check if an image already exists in Cloudinary. If it does, we’ll skip the upload. If it doesn’t, we’ll upload the image.
+
+We can’t just check for the image name, because we might’ve modified our image generation code to implement a new style. We’ll need to actually check that the images are different. To do this, we’ll create a unique hash from the image data and store it with our upload in the image’s [context](https://cloudinary.com/documentation/image_upload_api_reference#context). Then, before we attempt an upload, we’ll check if the image already exists in Cloudinary and if the hash matches.
+
+```ts
+import { createHash } from 'crypto';
+
+function getImageHash(buffer: Buffer) {
+	return createHash('md5').update(buffer).digest('hex');
+}
+
+export async function uploadToCloudinary(
+	name: string,
+	canvas: Canvas,
+	format: ExportFormat,
+) {
+	try {
+		const folder = 'og-images';
+		// We'll use the slugified name as the public_id.
+		const public_id = slugifyName(name);
+		// No need to save to a local file, we can upload directly to Cloudinary with a Buffer.
+		const buffer = await canvas.toBuffer(format, { density: 2 });
+
+		// We'll use the hash of the image to prevent duplicates.
+		const hash = getImageHash(buffer);
+
+		// Then we'll check if an image with the same ID already exists in Cloudinary.
+		const existingResources = await cloudinary.api
+			.resource(`${folder}/${public_id}`, {
+				context: true,
+			})
+			.catch(error => {
+				if (error.error.http_code !== 404) {
+					throw error;
+				}
+			});
+
+		// If the image exists and the hashes match, the image hasn't changed!
+		if (existingResources && existingResources.context?.custom?.hash === hash) {
+			console.log(`No change to ${public_id}. Skipping upload.`);
+			return;
+		} else {
+			// The upload code will execute here...
+		}
+	} catch (error) {
+		console.error(error);
+	}
+}
+```
