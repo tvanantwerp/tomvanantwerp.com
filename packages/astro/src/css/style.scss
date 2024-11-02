@@ -10,7 +10,7 @@
 	--dark-color: var(--light-bg);
 	--dark-bg-transparent: var(--light-color-transparent);
 	--dark-color-transparent: var(--light-bg-transparent);
-	--blue-highlight: rgb(42, 153, 238);
+	--blue-highlight: rgb(7, 137, 236);
 	--red-highlight: rgb(237, 102, 116);
 	--pink-highlight: rgb(255, 125, 233);
 	--purple-highlight: rgb(179, 146, 240);
@@ -49,6 +49,9 @@ html {
 	background-color: var(--background-color);
 	color: var(--color);
 	font-size: var(--font-size-root);
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
 }
 
 html,
